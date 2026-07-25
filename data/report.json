@@ -1,0 +1,179 @@
+{
+  "generatedAt": "2026-07-25T23:53:55.979Z",
+  "durationMs": 434,
+  "durationSec": 0.4,
+  "requested": 1025,
+  "succeeded": 1025,
+  "failedIds": [],
+  "missingNames": [],
+  "statWarnings": [],
+  "genCounts": {
+    "1": 151,
+    "2": 100,
+    "3": 135,
+    "4": 107,
+    "5": 156,
+    "6": 72,
+    "7": 88,
+    "8": 96,
+    "9": 120
+  },
+  "stageDistribution": {
+    "base": 340,
+    "middle": 117,
+    "final": 367,
+    "base+final": 201
+  },
+  "requiresTradeCount": 26,
+  "statTotal": {
+    "min": 175,
+    "max": 720,
+    "avg": 427.69,
+    "top10": [
+      {
+        "id": 493,
+        "slug": "arceus",
+        "total": 720
+      },
+      {
+        "id": 890,
+        "slug": "eternatus",
+        "total": 690
+      },
+      {
+        "id": 150,
+        "slug": "mewtwo",
+        "total": 680
+      },
+      {
+        "id": 249,
+        "slug": "lugia",
+        "total": 680
+      },
+      {
+        "id": 250,
+        "slug": "ho-oh",
+        "total": 680
+      },
+      {
+        "id": 384,
+        "slug": "rayquaza",
+        "total": 680
+      },
+      {
+        "id": 483,
+        "slug": "dialga",
+        "total": 680
+      },
+      {
+        "id": 484,
+        "slug": "palkia",
+        "total": 680
+      },
+      {
+        "id": 487,
+        "slug": "giratina",
+        "total": 680
+      },
+      {
+        "id": 643,
+        "slug": "reshiram",
+        "total": 680
+      }
+    ],
+    "bottom10": [
+      {
+        "id": 746,
+        "slug": "wishiwashi",
+        "total": 175
+      },
+      {
+        "id": 824,
+        "slug": "blipbug",
+        "total": 180
+      },
+      {
+        "id": 191,
+        "slug": "sunkern",
+        "total": 180
+      },
+      {
+        "id": 872,
+        "slug": "snom",
+        "total": 185
+      },
+      {
+        "id": 298,
+        "slug": "azurill",
+        "total": 190
+      },
+      {
+        "id": 401,
+        "slug": "kricketot",
+        "total": 194
+      },
+      {
+        "id": 265,
+        "slug": "wurmple",
+        "total": 195
+      },
+      {
+        "id": 13,
+        "slug": "weedle",
+        "total": 195
+      },
+      {
+        "id": 10,
+        "slug": "caterpie",
+        "total": 195
+      },
+      {
+        "id": 280,
+        "slug": "ralts",
+        "total": 198
+      }
+    ]
+  },
+  "spotChecks": [
+    {
+      "name": "총 개수 1025",
+      "pass": true,
+      "detail": "count=1025"
+    },
+    {
+      "name": "세대별 카운트 151/100/135/107/156/72/88/96/120",
+      "pass": true,
+      "detail": "actual=151/100/135/107/156/72/88/96/120"
+    },
+    {
+      "name": "뮤츠(150).total === 680 && isLegendary",
+      "pass": true,
+      "detail": "total=680 legendary=true"
+    },
+    {
+      "name": "잉어킹(129).atk === 10",
+      "pass": true,
+      "detail": "atk=10"
+    },
+    {
+      "name": "후딘(65).requiresTrade === true",
+      "pass": true,
+      "detail": "requiresTrade=true"
+    },
+    {
+      "name": "이브이(133) stage=[base], 8종 진화형 전부 [final]",
+      "pass": true,
+      "detail": "eevee=[\"base\"]"
+    },
+    {
+      "name": "메타몽(132) stage=[base,final]",
+      "pass": true,
+      "detail": "stage=[\"base\",\"final\"]"
+    },
+    {
+      "name": "타입 개수 1~2",
+      "pass": true,
+      "detail": "위반 id=없음"
+    }
+  ]
+}

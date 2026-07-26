@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useReducer, useRef } from "react";
+import { useEffect, useMemo, useReducer, useRef, useState } from "react";
 import type { Route } from "./+types/home";
 import { countPool, drawRandom, filterPool } from "../../src/lib/filter";
 import { ALL_POKEMON, BY_ID } from "../lib/pokedex";
@@ -8,6 +8,14 @@ import { defaultFilters, filtersToSearch, searchToFilters } from "../lib/urlFilt
 import { FilterPanel } from "../components/FilterPanel";
 import { DisplayOptionsBar } from "../components/DisplayOptions";
 import { PokemonCard } from "../components/PokemonCard";
+import { Tabs } from "../components/Tabs";
+
+// 상단 탭 정의
+type TabKey = "starting" | "settings";
+const TABS = [
+  { key: "starting", label: "스타팅" },
+  { key: "settings", label: "설정" },
+] as const;
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -106,11 +114,33 @@ export default function Home() {
 
   const canAdd = candidatesForAdd().length > 0;
 
+  // 상단 탭 (화면 전환용 view 상태 — 뽑기 결과와 무관)
+  const [tab, setTab] = useState<TabKey>("starting");
+
   return (
     <main className="mx-auto max-w-6xl p-4 text-gray-900 dark:text-gray-100">
-      <h1 className="mb-4 text-2xl font-bold">랜덤 포켓몬 뽑기</h1>
+      <h1 className="mb-3 text-2xl font-bold">랜덤 포켓몬 뽑기</h1>
 
-      <div className="flex flex-col gap-6 md:flex-row">
+      {/* 상단 탭 */}
+      <div className="mb-5">
+        <Tabs tabs={TABS as unknown as { key: string; label: string }[]} active={tab} onChange={(k) => setTab(k as TabKey)} />
+      </div>
+
+      {/* 설정 탭 (작업 예정) */}
+      {tab === "settings" && (
+        <div role="tabpanel" id="panel-settings" aria-labelledby="tab-settings">
+          <p className="py-16 text-center text-gray-400">설정 (작업 예정)</p>
+        </div>
+      )}
+
+      {/* 스타팅 탭 */}
+      <div
+        role="tabpanel"
+        id="panel-starting"
+        aria-labelledby="tab-starting"
+        hidden={tab !== "starting"}
+        className="flex flex-col gap-6 md:flex-row"
+      >
         {/* ── 좌: 필터 패널 (모바일은 상단 접이식) ── */}
         <aside className="md:w-80 md:shrink-0">
           <details open>

@@ -29,6 +29,7 @@ function mk(
       spe: 0,
       total,
     },
+    abilities: overrides.abilities ?? [],
   };
 }
 

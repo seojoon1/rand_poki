@@ -34,6 +34,12 @@ export interface Stats {
   total: number;
 }
 
+// 특성 참조: 슬러그 + 숨김특성 여부. 다국어 이름은 data/abilities.json 에서 조회.
+export interface AbilityRef {
+  slug: string;
+  isHidden: boolean;
+}
+
 export interface Pokemon {
   id: number;
   slug: string;
@@ -46,6 +52,7 @@ export interface Pokemon {
   isMythical: boolean;
   requiresTrade: boolean;
   stats: Stats;
+  abilities: AbilityRef[];
 }
 
 export interface FilterOptions {

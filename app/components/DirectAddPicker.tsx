@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Pokemon } from "../../src/lib/filter";
 import type { LangCode } from "../lib/pokedex";
 import { ALL_POKEMON, nameOf, typeName, TYPE_COLOR } from "../lib/pokedex";
+import { chosungIncludes, hasChosung } from "../lib/hangul";
 
 // 목록이 1000줄을 넘으면 렌더가 무거워지므로 상위 N개만 보여준다.
 const MAX_RESULTS = 50;
@@ -13,15 +14,28 @@ const dexNo = (id: number) => String(id).padStart(3, "0");
 
 // 표시 언어 이름 · 영어 이름 · slug · 도감번호로 검색.
 // 숫자만 입력하면 도감번호 앞자리 매칭으로 좁힌다 (25 → 25, 250...).
+// 'ㅍㅋㅊ' 처럼 자음만 친 경우엔 초성 검색으로 넘어간다. 표시 언어가 한국어가
+// 아니어도 한국어 이름을 함께 뒤져서, 언어를 바꿔둔 채로도 초성으로 찾을 수 있다.
 function matches(p: Pokemon, q: string, lang: LangCode): boolean {
   if (!q) return true;
   if (/^\d+$/.test(q)) return String(p.id).startsWith(q);
+
   const needle = q.toLowerCase();
-  return (
-    nameOf(p, lang).toLowerCase().includes(needle) ||
+  const shown = nameOf(p, lang);
+  if (
+    shown.toLowerCase().includes(needle) ||
     (p.names.en ?? "").toLowerCase().includes(needle) ||
     p.slug.includes(needle)
-  );
+  ) {
+    return true;
+  }
+
+  if (hasChosung(q)) {
+    return (
+      chosungIncludes(p.names.ko ?? "", q) || chosungIncludes(shown, q)
+    );
+  }
+  return false;
 }
 
 export function DirectAddPicker({
@@ -138,7 +152,7 @@ export function DirectAddPicker({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={onKeyDown}
-            placeholder="이름 또는 도감번호"
+            placeholder="이름 · 도감번호 · 초성(ㅍㅋㅊ)"
             aria-label="추가할 포켓몬 검색"
             className="w-full rounded-md border border-gray-200 bg-gray-50 px-2 py-2 text-base dark:border-gray-600 dark:bg-gray-900/40"
           />

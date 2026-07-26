@@ -8,13 +8,14 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
+import { SITE_LANG } from "./lib/site";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang={SITE_LANG}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -12,6 +12,13 @@ import { DisplayOptionsBar } from "../components/DisplayOptions";
 import { PokemonCard } from "../components/PokemonCard";
 import { StarterPanel } from "../components/StarterPanel";
 import { Tabs } from "../components/Tabs";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_DESCRIPTION,
+  SITE_LOCALE,
+  OG_IMAGE,
+} from "../lib/site";
 
 // 상단 탭 정의
 type TabKey = "draw" | "starting" | "settings";
@@ -21,10 +28,46 @@ const TABS = [
   { key: "settings", label: "설정" },
 ] as const;
 
+// 검색·공유용 메타. canonical 은 쿼리스트링을 뺀 정규 주소로 고정한다
+// (필터가 URL 쿼리로 직렬화되므로 조합마다 중복 색인되는 것을 막는다).
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "랜덤 포켓몬 뽑기" },
-    { name: "description", content: "세대·타입·진화·종족값 조건으로 랜덤 포켓몬을 뽑아보세요." },
+    { title: `${SITE_NAME} — 세대·타입·종족값 조건 랜덤 뽑기` },
+    { name: "description", content: SITE_DESCRIPTION },
+    { tagName: "link", rel: "canonical", href: `${SITE_URL}/` },
+
+    // Open Graph (카카오톡·페이스북 등 공유 미리보기)
+    { property: "og:type", content: "website" },
+    { property: "og:site_name", content: SITE_NAME },
+    { property: "og:title", content: SITE_NAME },
+    { property: "og:description", content: SITE_DESCRIPTION },
+    { property: "og:url", content: `${SITE_URL}/` },
+    { property: "og:image", content: OG_IMAGE },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+    { property: "og:locale", content: SITE_LOCALE },
+
+    // Twitter 카드
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: SITE_NAME },
+    { name: "twitter:description", content: SITE_DESCRIPTION },
+    { name: "twitter:image", content: OG_IMAGE },
+
+    // 구조화 데이터: 설치 없이 브라우저에서 도는 도구라 WebApplication 으로 기술
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+        description: SITE_DESCRIPTION,
+        applicationCategory: "GameApplication",
+        operatingSystem: "All",
+        inLanguage: "ko-KR",
+        isAccessibleForFree: true,
+        offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+      },
+    },
   ];
 }
 

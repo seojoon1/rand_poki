@@ -31,6 +31,8 @@ const initialState: AppState = {
   display: { lang: "ko", showNumber: true, showTypes: true, showStats: true },
   result: [],
   requested: 0,
+  selectedId: null,
+  roll: null,
 };
 
 export default function Home() {

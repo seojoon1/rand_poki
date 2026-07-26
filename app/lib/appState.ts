@@ -4,6 +4,7 @@
 //   이 불변식을 appState.test.ts 에서 검증한다.
 
 import type { FilterOptions } from "../../src/lib/filter";
+import type { StarterRoll } from "../../src/lib/starter";
 import type { LangCode } from "./pokedex";
 
 // 표시 옵션 — 바뀌면 즉시 반영, 재추첨 없음
@@ -19,6 +20,8 @@ export interface AppState {
   display: DisplayOptions; // B. 표시 옵션 (즉시 반영)
   result: number[]; // C. 결과는 id 배열만 저장 (객체 복사 금지)
   requested: number; // 마지막 뽑기에서 요청한(clamp된) 마리 수 — 부족분 안내용
+  selectedId: number | null; // D. 스타팅 탭으로 넘긴 포켓몬 id
+  roll: StarterRoll | null; // D. 현재 롤 결과(특성/성격/개체값)
 }
 
 export type AppAction =
@@ -33,7 +36,11 @@ export type AppAction =
   // 초기화: 파티 비우기
   | { type: "reset" }
   // 개별 리롤: result 의 index 슬롯 하나만 새 id 로 교체
-  | { type: "rerollOne"; index: number; id: number };
+  | { type: "rerollOne"; index: number; id: number }
+  // 스타팅 선택: 포켓몬을 스타팅 탭으로 넘김 (이전 롤 초기화)
+  | { type: "selectStarter"; id: number }
+  // 스타팅 롤: 특성/성격/개체값 결과 저장 (컴포넌트에서 starter.ts 로 계산)
+  | { type: "rollStarter"; roll: StarterRoll };
 
 // 파티 최대 인원
 export const MAX_PARTY = 6;
@@ -66,6 +73,11 @@ export function appReducer(state: AppState, action: AppAction): AppState {
       next[action.index] = action.id;
       return { ...state, result: next };
     }
+    case "selectStarter":
+      // 새 스타팅 포켓몬 선택 → 이전 롤 결과는 초기화.
+      return { ...state, selectedId: action.id, roll: null };
+    case "rollStarter":
+      return { ...state, roll: action.roll };
     default:
       return state;
   }

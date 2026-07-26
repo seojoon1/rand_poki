@@ -21,6 +21,8 @@ function mkState(over: Partial<AppState> = {}): AppState {
     display: { lang: "ko", showNumber: true, showTypes: true, showStats: true },
     result: [1, 2, 3],
     requested: 3,
+    selectedId: null,
+    roll: null,
     ...over,
   };
 }
@@ -97,6 +99,34 @@ describe("appReducer: 상태 분리 불변식", () => {
     const before = mkState({ result: [1, 2], requested: 2 });
     expect(appReducer(before, { type: "rerollOne", index: 5, id: 99 })).toBe(before);
     expect(appReducer(before, { type: "rerollOne", index: -1, id: 99 })).toBe(before);
+  });
+
+  it("selectStarter 는 선택 id 를 세우고 이전 롤을 초기화", () => {
+    const before = mkState({
+      selectedId: 1,
+      roll: {
+        ability: { slug: "blaze", isHidden: false },
+        natureKey: "adamant",
+        ivs: { hp: 1, atk: 2, def: 3, spa: 4, spd: 5, spe: 6 },
+      },
+    });
+    const after = appReducer(before, { type: "selectStarter", id: 6 });
+    expect(after.selectedId).toBe(6);
+    expect(after.roll).toBeNull(); // 새 선택 → 롤 초기화
+    // 뽑기 결과는 그대로
+    expect(after.result).toEqual(before.result);
+  });
+
+  it("rollStarter 는 롤 결과만 저장 (선택 id 유지)", () => {
+    const before = mkState({ selectedId: 6, roll: null });
+    const roll = {
+      ability: { slug: "solar-power", isHidden: true },
+      natureKey: "modest",
+      ivs: { hp: 31, atk: 0, def: 15, spa: 31, spd: 20, spe: 10 },
+    };
+    const after = appReducer(before, { type: "rollStarter", roll });
+    expect(after.roll).toEqual(roll);
+    expect(after.selectedId).toBe(6);
   });
 
   it("연속 필터 변경 후에도 마지막 draw 결과가 유지된다", () => {

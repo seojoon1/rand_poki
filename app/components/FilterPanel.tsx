@@ -93,7 +93,7 @@ export function FilterPanel({
                 type="checkbox"
                 checked={filters.types.has(t)}
                 onChange={() => patch({ types: toggle(filters.types, t) })}
-                className="accent-emerald-500"
+                className="accent-accent-500"
               />
               <span
                 className={`rounded px-1.5 text-xs font-medium ${TYPE_COLOR[t]}`}
@@ -143,7 +143,7 @@ export function FilterPanel({
             <button
               type="button"
               onClick={() => patch({ statTotal: undefined })}
-              className="rounded px-1.5 text-xs font-normal text-emerald-600 hover:underline dark:text-emerald-400"
+              className="rounded px-1.5 text-xs font-normal text-accent-600 hover:underline dark:text-accent-400"
             >
               초기화
             </button>
@@ -168,7 +168,7 @@ export function FilterPanel({
               const lo = Math.min(Number(e.target.value), stHi);
               patch({ statTotal: [lo, stHi] });
             }}
-            className="pointer-events-none absolute inset-x-0 top-2 h-2 w-full appearance-none bg-transparent [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:accent-emerald-500 accent-emerald-500"
+            className="pointer-events-none absolute inset-x-0 top-2 h-2 w-full appearance-none bg-transparent [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:accent-accent-500 accent-accent-500"
           />
           <input
             type="range"
@@ -180,7 +180,7 @@ export function FilterPanel({
               const hi = Math.max(Number(e.target.value), stLo);
               patch({ statTotal: [stLo, hi] });
             }}
-            className="pointer-events-none absolute inset-x-0 top-2 h-2 w-full appearance-none bg-transparent [&::-webkit-slider-thumb]:pointer-events-auto accent-emerald-500"
+            className="pointer-events-none absolute inset-x-0 top-2 h-2 w-full appearance-none bg-transparent [&::-webkit-slider-thumb]:pointer-events-auto accent-accent-500"
           />
         </div>
       </fieldset>
@@ -223,7 +223,7 @@ function Check({
         type="checkbox"
         checked={checked}
         onChange={onChange}
-        className="accent-emerald-500"
+        className="accent-accent-500"
       />
       <span>{label}</span>
     </label>
@@ -245,7 +245,7 @@ function SelectAllToggle<T>({
     <button
       type="button"
       onClick={() => onAll(allOn ? new Set<T>() : new Set<T>(all))}
-      className="rounded px-1.5 text-xs font-normal text-emerald-600 hover:underline dark:text-emerald-400"
+      className="rounded px-1.5 text-xs font-normal text-accent-600 hover:underline dark:text-accent-400"
     >
       {allOn ? "전체 해제" : "전체 선택"}
     </button>

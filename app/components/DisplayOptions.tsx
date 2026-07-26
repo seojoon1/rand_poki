@@ -67,7 +67,7 @@ function ToggleLabel({
         type="checkbox"
         checked={checked}
         onChange={onChange}
-        className="accent-emerald-500"
+        className="accent-accent-500"
       />
       <span>{label}</span>
     </label>

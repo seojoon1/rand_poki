@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 // 시각 스케일: 0~180 을 100% 로 매핑, 180 초과는 clamp 하고 끝에 표식.
 const SCALE_MAX = 180;
 
-// 값 구간별 색상 (무채색 2단계 + 강조색 emerald 2단계).
+// 값 구간별 색상 (무채색 2단계 + 강조색 accent 2단계).
 // 색만으로 구분하지 않도록 숫자를 항상 병기한다.
 function barColor(value: number): string {
-  if (value >= 120) return "bg-emerald-500"; // 매우높음
-  if (value >= 90) return "bg-emerald-400"; // 높음
+  if (value >= 120) return "bg-accent-500"; // 매우높음
+  if (value >= 90) return "bg-accent-400"; // 높음
   if (value >= 60) return "bg-slate-400 dark:bg-slate-500"; // 보통
   return "bg-slate-300 dark:bg-slate-600"; // 낮음
 }
@@ -48,7 +48,7 @@ export function StatBar({ label, value }: { label: string; value: number }) {
         {/* clamp 표식: 180 초과 시 막대 끝에 빗금 표시 */}
         {clamped && (
           <div
-            className="absolute inset-y-0 right-0 w-1.5 bg-emerald-700"
+            className="absolute inset-y-0 right-0 w-1.5 bg-accent-700"
             title="180 초과 (스케일 최대)"
             aria-hidden="true"
           />

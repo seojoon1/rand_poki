@@ -141,7 +141,7 @@ export default function Home() {
               type="button"
               onClick={handleAddOne}
               disabled={!canAdd}
-              className="rounded-lg bg-emerald-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-gray-300 dark:disabled:bg-gray-700"
+              className="rounded-lg bg-accent-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-accent-700 disabled:cursor-not-allowed disabled:bg-gray-300 dark:disabled:bg-gray-700"
             >
               + 추가
             </button>

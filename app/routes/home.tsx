@@ -11,6 +11,7 @@ import { FilterPanel } from "../components/FilterPanel";
 import { DisplayOptionsBar } from "../components/DisplayOptions";
 import { PokemonCard } from "../components/PokemonCard";
 import { StarterPanel } from "../components/StarterPanel";
+import { DirectAddPicker } from "../components/DirectAddPicker";
 import { Tabs } from "../components/Tabs";
 import {
   SITE_URL,
@@ -263,6 +264,12 @@ export default function Home() {
             >
               + 추가
             </button>
+            <DirectAddPicker
+              lang={display.lang}
+              inParty={new Set(party.map((p) => p.id))}
+              full={party.length >= MAX_PARTY}
+              onAdd={(id) => dispatch({ type: "addOne", id })}
+            />
             <button
               type="button"
               onClick={() => dispatch({ type: "reset" })}

@@ -101,7 +101,7 @@ describe("appReducer: 상태 분리 불변식", () => {
     expect(appReducer(before, { type: "rerollOne", index: -1, id: 99 })).toBe(before);
   });
 
-  it("selectStarter 는 선택 id 를 세우고 이전 롤을 초기화", () => {
+  it("selectStarter 는 선택 id 를 세우고 기본 롤로 초기화", () => {
     const before = mkState({
       selectedId: 1,
       roll: {
@@ -112,9 +112,39 @@ describe("appReducer: 상태 분리 불변식", () => {
     });
     const after = appReducer(before, { type: "selectStarter", id: 6 });
     expect(after.selectedId).toBe(6);
-    expect(after.roll).toBeNull(); // 새 선택 → 롤 초기화
+    // 기본 롤: 개체값 전부 0, 중립 성격, 특성 없음
+    expect(after.roll?.ivs).toEqual({ hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 });
+    expect(after.roll?.natureKey).toBe("hardy");
+    expect(after.roll?.ability).toBeNull();
     // 뽑기 결과는 그대로
     expect(after.result).toEqual(before.result);
+  });
+
+  it("rerollIv/setNature/setAbility 는 롤의 해당 부분만 교체", () => {
+    const base = {
+      ability: null,
+      natureKey: "hardy",
+      ivs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 },
+    };
+    let s = mkState({ selectedId: 6, roll: base });
+    s = appReducer(s, { type: "rerollIv", stat: "atk", value: 31 });
+    expect(s.roll?.ivs.atk).toBe(31);
+    expect(s.roll?.ivs.hp).toBe(0); // 나머지 유지
+    s = appReducer(s, { type: "setNature", natureKey: "adamant" });
+    expect(s.roll?.natureKey).toBe("adamant");
+    s = appReducer(s, {
+      type: "setAbility",
+      ability: { slug: "blaze", isHidden: false },
+    });
+    expect(s.roll?.ability?.slug).toBe("blaze");
+    expect(s.roll?.ivs.atk).toBe(31); // 앞서 롤한 값 유지
+  });
+
+  it("roll 이 없으면 rerollIv/setNature/setAbility 는 무시", () => {
+    const before = mkState({ selectedId: null, roll: null });
+    expect(appReducer(before, { type: "rerollIv", stat: "hp", value: 5 })).toBe(before);
+    expect(appReducer(before, { type: "setNature", natureKey: "bold" })).toBe(before);
+    expect(appReducer(before, { type: "setAbility", ability: null })).toBe(before);
   });
 
   it("rollStarter 는 롤 결과만 저장 (선택 id 유지)", () => {

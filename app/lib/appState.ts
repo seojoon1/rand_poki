@@ -4,7 +4,9 @@
 //   이 불변식을 appState.test.ts 에서 검증한다.
 
 import type { FilterOptions } from "../../src/lib/filter";
-import type { StarterRoll } from "../../src/lib/starter";
+import type { AbilityRef } from "../../src/lib/filter";
+import type { StarterRoll, IVs } from "../../src/lib/starter";
+import { emptyRoll } from "../../src/lib/starter";
 import type { LangCode } from "./pokedex";
 
 // 표시 옵션 — 바뀌면 즉시 반영, 재추첨 없음
@@ -37,10 +39,16 @@ export type AppAction =
   | { type: "reset" }
   // 개별 리롤: result 의 index 슬롯 하나만 새 id 로 교체
   | { type: "rerollOne"; index: number; id: number }
-  // 스타팅 선택: 포켓몬을 스타팅 탭으로 넘김 (이전 롤 초기화)
+  // 스타팅 선택: 포켓몬을 스타팅 탭으로 넘김 (기본 롤로 초기화)
   | { type: "selectStarter"; id: number }
   // 스타팅 롤: 특성/성격/개체값 결과 저장 (컴포넌트에서 starter.ts 로 계산)
-  | { type: "rollStarter"; roll: StarterRoll };
+  | { type: "rollStarter"; roll: StarterRoll }
+  // 개체값 개별 롤/입력: 스탯 하나만 새 값으로 교체
+  | { type: "rerollIv"; stat: keyof IVs; value: number }
+  // 성격 지정(드롭다운/돌리기 공용)
+  | { type: "setNature"; natureKey: string }
+  // 특성 지정(돌리기)
+  | { type: "setAbility"; ability: AbilityRef | null };
 
 // 파티 최대 인원
 export const MAX_PARTY = 6;
@@ -74,10 +82,26 @@ export function appReducer(state: AppState, action: AppAction): AppState {
       return { ...state, result: next };
     }
     case "selectStarter":
-      // 새 스타팅 포켓몬 선택 → 이전 롤 결과는 초기화.
-      return { ...state, selectedId: action.id, roll: null };
+      // 새 스타팅 포켓몬 선택 → 기본 롤(개체값 0/중립 성격/특성 없음)로 초기화.
+      return { ...state, selectedId: action.id, roll: emptyRoll() };
     case "rollStarter":
       return { ...state, roll: action.roll };
+    case "rerollIv":
+      // 롤 결과가 있을 때만 해당 스탯 하나 교체.
+      if (!state.roll) return state;
+      return {
+        ...state,
+        roll: {
+          ...state.roll,
+          ivs: { ...state.roll.ivs, [action.stat]: action.value },
+        },
+      };
+    case "setNature":
+      if (!state.roll) return state;
+      return { ...state, roll: { ...state.roll, natureKey: action.natureKey } };
+    case "setAbility":
+      if (!state.roll) return state;
+      return { ...state, roll: { ...state.roll, ability: action.ability } };
     default:
       return state;
   }

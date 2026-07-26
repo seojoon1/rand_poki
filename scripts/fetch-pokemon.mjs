@@ -156,7 +156,31 @@ function slimPokemon(json) {
     name: json.name,
     types: json.types,
     stats: json.stats,
+    // 특성: slot/숨김여부/슬러그만 (스타팅 탭에서 특성 롤에 사용)
+    abilities: (json.abilities ?? []).map((a) => ({
+      name: a.ability?.name,
+      is_hidden: a.is_hidden,
+      slot: a.slot,
+    })),
   };
+}
+
+// names[] (species/ability 공통 형식) → { ko,en,ja,... } 다국어 맵.
+// 비어있는 언어는 en 폴백. ja 없으면 ja-hrkt 폴백.
+function extractNames(namesArr) {
+  const raw = {};
+  let jaHrkt = null;
+  for (const n of namesArr ?? []) {
+    const lang = n.language.name.toLowerCase();
+    if (lang === "ja-hrkt") jaHrkt = n.name;
+    const key = NAME_LANG_MAP[lang];
+    if (key) raw[key] = n.name;
+  }
+  if (!raw.ja && jaHrkt) raw.ja = jaHrkt;
+  const en = raw.en ?? null;
+  const out = {};
+  for (const lang of OUTPUT_LANGS) out[lang] = raw[lang] ?? en;
+  return out;
 }
 
 // ── 진행률 (stderr 한 줄 갱신) ────────────────────────────────────────
@@ -298,6 +322,7 @@ async function main() {
 
   // ── 3단계: 조립 ─────────────────────────────────────────────────────
   const pokemonOut = [];
+  const abilitySlugSet = new Set(); // 등장한 모든 특성 슬러그 (이름 수집용)
   for (const id of ids) {
     const entry = perId.get(id);
     if (!entry) continue; // 수집 실패분은 스킵 (failedIds 에 이미 기록)
@@ -350,6 +375,13 @@ async function main() {
     }
     stats.total = STAT_KEYS.reduce((sum, k) => sum + stats[k], 0);
 
+    // abilities: slot 순서대로 [{ slug, isHidden }]
+    const abilities = [...(pokemon.abilities ?? [])]
+      .filter((a) => a.name)
+      .sort((a, b) => a.slot - b.slot)
+      .map((a) => ({ slug: a.name, isHidden: !!a.is_hidden }));
+    for (const a of abilities) abilitySlugSet.add(a.slug);
+
     // gen: generation.name 로마숫자 파싱
     const gen = romanGenToInt(species.generation.name);
 
@@ -381,6 +413,7 @@ async function main() {
       isBaby: species.is_baby,
       requiresTrade: ci.requiresTrade,
       stats,
+      abilities,
       dex,
     });
   }
@@ -397,6 +430,35 @@ async function main() {
   await writeFile(
     path.join(DATA_DIR, "pokemon.json"),
     JSON.stringify(output, null, 2)
+  );
+
+  // ── 3.5단계: 특성 다국어 이름 수집 → data/abilities.json ────────────
+  // 특성은 여러 포켓몬이 공유하므로 슬러그 기준 1회만 요청한다.
+  const abilitySlugs = [...abilitySlugSet].sort();
+  const abilityNames = {}; // slug → { ko,en,ja,... }
+  let abDone = 0;
+  await Promise.all(
+    abilitySlugs.map((slug) =>
+      sem.run(async () => {
+        try {
+          const ab = await fetchCached("ability", slug, {
+            transform: (j) => ({ name: j.name, names: j.names }),
+          });
+          abilityNames[slug] = extractNames(ab.names);
+        } catch (err) {
+          abilityNames[slug] = null; // 실패 시 null (UI 에서 슬러그 폴백)
+          process.stderr.write(`\n[실패] ability ${slug}: ${err.message}\n`);
+        } finally {
+          abDone++;
+          progress("ability", abDone, abilitySlugs.length);
+        }
+      })
+    )
+  );
+  progressDone();
+  await writeFile(
+    path.join(DATA_DIR, "abilities.json"),
+    JSON.stringify(abilityNames, null, 2)
   );
 
   // ── 4단계: 리포트 + 검증 스팟체크 ──────────────────────────────────
@@ -512,6 +574,7 @@ async function main() {
     durationSec: Math.round(durationMs / 100) / 10,
     requested: ids.length,
     succeeded: pokemonOut.length,
+    uniqueAbilities: abilitySlugs.length,
     failedIds: failedIds.sort((a, b) => a - b),
     missingNames,
     statWarnings,

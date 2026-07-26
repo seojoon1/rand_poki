@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-07-25T23:53:55.979Z",
-  "durationMs": 434,
-  "durationSec": 0.4,
+  "generatedAt": "2026-07-26T01:12:05.339Z",
+  "durationMs": 15480,
+  "durationSec": 15.5,
   "requested": 1025,
   "succeeded": 1025,
+  "uniqueAbilities": 284,
   "failedIds": [],
   "missingNames": [],
   "statWarnings": [],

@@ -1,0 +1,2842 @@
+{
+  "adaptability": {
+    "ko": "적응력",
+    "en": "Adaptability",
+    "ja": "てきおうりょく",
+    "de": "Anpassung",
+    "fr": "Adaptabilité",
+    "es": "Adaptable",
+    "it": "Adattabilità",
+    "zh": "适应力"
+  },
+  "aftermath": {
+    "ko": "유폭",
+    "en": "Aftermath",
+    "ja": "ゆうばく",
+    "de": "Finalschlag",
+    "fr": "Boom Final",
+    "es": "Detonación",
+    "it": "Scoppio",
+    "zh": "引爆"
+  },
+  "anger-shell": {
+    "ko": "분노의껍질",
+    "en": "Anger Shell",
+    "ja": "いかりのこうら",
+    "de": "Wutpanzer",
+    "fr": "Courroupace",
+    "es": "Coraza Ira",
+    "it": "Iraguscio",
+    "zh": "愤怒甲壳"
+  },
+  "analytic": {
+    "ko": "애널라이즈",
+    "en": "Analytic",
+    "ja": "アナライズ",
+    "de": "Analyse",
+    "fr": "Analyste",
+    "es": "Cálculo Final",
+    "it": "Ponderazione",
+    "zh": "分析"
+  },
+  "anticipation": {
+    "ko": "위험예지",
+    "en": "Anticipation",
+    "ja": "きけんよち",
+    "de": "Vorahnung",
+    "fr": "Anticipation",
+    "es": "Anticipación",
+    "it": "Presagio",
+    "zh": "危险预知"
+  },
+  "aroma-veil": {
+    "ko": "아로마베일",
+    "en": "Aroma Veil",
+    "ja": "アロマベール",
+    "de": "Dufthülle",
+    "fr": "Aroma-Voile",
+    "es": "Velo Aroma",
+    "it": "Aromavelo",
+    "zh": "芳香幕"
+  },
+  "air-lock": {
+    "ko": "에어록",
+    "en": "Air Lock",
+    "ja": "エアロック",
+    "de": "Klimaschutz",
+    "fr": "Air Lock",
+    "es": "Bucle Aire",
+    "it": "Riparo",
+    "zh": "气闸"
+  },
+  "bad-dreams": {
+    "ko": "나이트메어",
+    "en": "Bad Dreams",
+    "ja": "ナイトメア",
+    "de": "Alptraum",
+    "fr": "Mauvais Rêve",
+    "es": "Mal Sueño",
+    "it": "Sogniamari",
+    "zh": "梦魇"
+  },
+  "beast-boost": {
+    "ko": "비스트부스트",
+    "en": "Beast Boost",
+    "ja": "ビーストブースト",
+    "de": "Bestien-Boost",
+    "fr": "Boost Chimère",
+    "es": "Ultraimpulso",
+    "it": "Ultraboost",
+    "zh": "异兽提升"
+  },
+  "battle-armor": {
+    "ko": "전투무장",
+    "en": "Battle Armor",
+    "ja": "カブトアーマー",
+    "de": "Kampfpanzer",
+    "fr": "Armurbaston",
+    "es": "Armadura Batalla",
+    "it": "Lottascudo",
+    "zh": "战斗盔甲"
+  },
+  "beads-of-ruin": {
+    "ko": "재앙의구슬",
+    "en": "Beads of Ruin",
+    "ja": "わざわいのたま",
+    "de": "Unheilsjuwelen",
+    "fr": "Perles du Fléau",
+    "es": "Abalorio Debacle",
+    "it": "Monile Nefasto",
+    "zh": "灾祸之玉"
+  },
+  "berserk": {
+    "ko": "발끈",
+    "en": "Berserk",
+    "ja": "ぎゃくじょう",
+    "de": "Wutausbruch",
+    "fr": "Folle Furie",
+    "es": "Cólera",
+    "it": "Furore",
+    "zh": "怒火冲天"
+  },
+  "bulletproof": {
+    "ko": "방탄",
+    "en": "Bulletproof",
+    "ja": "ぼうだん",
+    "de": "Kugelsicher",
+    "fr": "Pare-Balles",
+    "es": "Antibalas",
+    "it": "Antiproiettile",
+    "zh": "防弹"
+  },
+  "blaze": {
+    "ko": "맹화",
+    "en": "Blaze",
+    "ja": "もうか",
+    "de": "Großbrand",
+    "fr": "Brasier",
+    "es": "Mar Llamas",
+    "it": "Aiutofuoco",
+    "zh": "猛火"
+  },
+  "big-pecks": {
+    "ko": "부풀린가슴",
+    "en": "Big Pecks",
+    "ja": "はとむね",
+    "de": "Brustbieter",
+    "fr": "Cœur de Coq",
+    "es": "Sacapecho",
+    "it": "Pettinfuori",
+    "zh": "健壮胸肌"
+  },
+  "cheek-pouch": {
+    "ko": "볼주머니",
+    "en": "Cheek Pouch",
+    "ja": "ほおぶくろ",
+    "de": "Backentaschen",
+    "fr": "Bajoues",
+    "es": "Carrillo",
+    "it": "Guancegonfie",
+    "zh": "颊囊"
+  },
+  "clear-body": {
+    "ko": "클리어바디",
+    "en": "Clear Body",
+    "ja": "クリアボディ",
+    "de": "Neutraltorso",
+    "fr": "Corps Sain",
+    "es": "Cuerpo Puro",
+    "it": "Corpochiaro",
+    "zh": "恒净之躯"
+  },
+  "chlorophyll": {
+    "ko": "엽록소",
+    "en": "Chlorophyll",
+    "ja": "ようりょくそ",
+    "de": "Chlorophyll",
+    "fr": "Chlorophylle",
+    "es": "Clorofila",
+    "it": "Clorofilla",
+    "zh": "叶绿素"
+  },
+  "cloud-nine": {
+    "ko": "날씨부정",
+    "en": "Cloud Nine",
+    "ja": "ノーてんき",
+    "de": "Wolke Sieben",
+    "fr": "Ciel Gris",
+    "es": "Aclimatación",
+    "it": "Antimeteo",
+    "zh": "无关天气"
+  },
+  "commander": {
+    "ko": "사령탑",
+    "en": "Commander",
+    "ja": "しれいとう",
+    "de": "Kommandant",
+    "fr": "Commandant",
+    "es": "Comandar",
+    "it": "Torre di Comando",
+    "zh": "发号施令"
+  },
+  "anger-point": {
+    "ko": "분노의경혈",
+    "en": "Anger Point",
+    "ja": "いかりのつぼ",
+    "de": "Kurzschluss",
+    "fr": "Colérique",
+    "es": "Irascible",
+    "it": "Grancollera",
+    "zh": "愤怒穴位"
+  },
+  "compound-eyes": {
+    "ko": "복안",
+    "en": "Compound Eyes",
+    "ja": "ふくがん",
+    "de": "Facettenauge",
+    "fr": "Œil Composé",
+    "es": "Ojo Compuesto",
+    "it": "Insettocchi",
+    "zh": "复眼"
+  },
+  "color-change": {
+    "ko": "변색",
+    "en": "Color Change",
+    "ja": "へんしょく",
+    "de": "Farbwechsel",
+    "fr": "Homochromie",
+    "es": "Cambio Color",
+    "it": "Cambiacolore",
+    "zh": "变色"
+  },
+  "competitive": {
+    "ko": "승기",
+    "en": "Competitive",
+    "ja": "かちき",
+    "de": "Unbeugsamkeit",
+    "fr": "Battant",
+    "es": "Tenacidad",
+    "it": "Tenacia",
+    "zh": "好胜"
+  },
+  "armor-tail": {
+    "ko": "테일아머",
+    "en": "Armor Tail",
+    "ja": "テイルアーマー",
+    "de": "Schweifrüstung",
+    "fr": "Armure Caudale",
+    "es": "Cola Armadura",
+    "it": "Codarmatura",
+    "zh": "尾甲"
+  },
+  "arena-trap": {
+    "ko": "개미지옥",
+    "en": "Arena Trap",
+    "ja": "ありじごく",
+    "de": "Ausweglos",
+    "fr": "Piège Sable",
+    "es": "Trampa Arena",
+    "it": "Trappoarena",
+    "zh": "沙穴"
+  },
+  "contrary": {
+    "ko": "심술꾸러기",
+    "en": "Contrary",
+    "ja": "あまのじゃく",
+    "de": "Umkehrung",
+    "fr": "Contestation",
+    "es": "Respondón",
+    "it": "Inversione",
+    "zh": "唱反调"
+  },
+  "battery": {
+    "ko": "배터리",
+    "en": "Battery",
+    "ja": "バッテリー",
+    "de": "Batterie",
+    "fr": "Batterie",
+    "es": "Batería",
+    "it": "Batteria",
+    "zh": "蓄电池"
+  },
+  "costar": {
+    "ko": "협연",
+    "en": "Costar",
+    "ja": "きょうえん",
+    "de": "Synchronauftritt",
+    "fr": "Collab",
+    "es": "Unísono",
+    "it": "Coprotagonismo",
+    "zh": "同台共演"
+  },
+  "corrosion": {
+    "ko": "부식",
+    "en": "Corrosion",
+    "ja": "ふしょく",
+    "de": "Korrosion",
+    "fr": "Corrosion",
+    "es": "Corrosión",
+    "it": "Corrosione",
+    "zh": "腐蚀"
+  },
+  "cotton-down": {
+    "ko": "솜털",
+    "en": "Cotton Down",
+    "ja": "わたげ",
+    "de": "Wollflaum",
+    "fr": "Effilochage",
+    "es": "Pelusa",
+    "it": "Lanugine",
+    "zh": "棉絮"
+  },
+  "cud-chew": {
+    "ko": "되새김질",
+    "en": "Cud Chew",
+    "ja": "はんすう",
+    "de": "Wiederkäuer",
+    "fr": "Ruminant",
+    "es": "Rumia",
+    "it": "Ruminante",
+    "zh": "反刍"
+  },
+  "cursed-body": {
+    "ko": "저주받은바디",
+    "en": "Cursed Body",
+    "ja": "のろわれボディ",
+    "de": "Tastfluch",
+    "fr": "Corps Maudit",
+    "es": "Cuerpo Maldito",
+    "it": "Corpofunesto",
+    "zh": "诅咒之躯"
+  },
+  "cute-charm": {
+    "ko": "헤롱헤롱바디",
+    "en": "Cute Charm",
+    "ja": "メロメロボディ",
+    "de": "Charmebolzen",
+    "fr": "Joli Sourire",
+    "es": "Gran Encanto",
+    "it": "Incantevole",
+    "zh": "迷人之躯"
+  },
+  "damp": {
+    "ko": "습기",
+    "en": "Damp",
+    "ja": "しめりけ",
+    "de": "Feuchtigkeit",
+    "fr": "Moiteur",
+    "es": "Humedad",
+    "it": "Umidità",
+    "zh": "湿气"
+  },
+  "chilling-neigh": {
+    "ko": "백의울음",
+    "en": "Chilling Neigh",
+    "ja": "しろのいななき",
+    "de": "Helles Wiehern",
+    "fr": "Blanche Ruade",
+    "es": "Relincho Blanco",
+    "it": "Nitrito Bianco",
+    "zh": "苍白嘶鸣"
+  },
+  "dauntless-shield": {
+    "ko": "불굴의방패",
+    "en": "Dauntless Shield",
+    "ja": "ふくつのたて",
+    "de": "Wackerer Schild",
+    "fr": "Égide Inflexible",
+    "es": "Escudo Recio",
+    "it": "Scudo Saldo",
+    "zh": "不屈之盾"
+  },
+  "defiant": {
+    "ko": "오기",
+    "en": "Defiant",
+    "ja": "まけんき",
+    "de": "Siegeswille",
+    "fr": "Acharné",
+    "es": "Competitivo",
+    "it": "Agonismo",
+    "zh": "不服输"
+  },
+  "defeatist": {
+    "ko": "무기력",
+    "en": "Defeatist",
+    "ja": "よわき",
+    "de": "Schwächling",
+    "fr": "Défaitiste",
+    "es": "Flaqueza",
+    "it": "Sconforto",
+    "zh": "软弱"
+  },
+  "aura-break": {
+    "ko": "오라브레이크",
+    "en": "Aura Break",
+    "ja": "オーラブレイク",
+    "de": "Aura-Umkehr",
+    "fr": "Aura Inversée",
+    "es": "Rompeaura",
+    "it": "Frangiaura",
+    "zh": "气场破坏"
+  },
+  "download": {
+    "ko": "다운로드",
+    "en": "Download",
+    "ja": "ダウンロード",
+    "de": "Download",
+    "fr": "Télécharge",
+    "es": "Descarga",
+    "it": "Download",
+    "zh": "下载"
+  },
+  "dragons-maw": {
+    "ko": "용의턱",
+    "en": "Dragon’s Maw",
+    "ja": "りゅうのあぎと",
+    "de": "Drachenkiefer",
+    "fr": "Dent de Dragon",
+    "es": "Mandíbula Dragón",
+    "it": "Dragomascelle",
+    "zh": "龙颚"
+  },
+  "disguise": {
+    "ko": "탈",
+    "en": "Disguise",
+    "ja": "ばけのかわ",
+    "de": "Kostümspuk",
+    "fr": "Fantômasque",
+    "es": "Disfraz",
+    "it": "Fantasmanto",
+    "zh": "画皮"
+  },
+  "drought": {
+    "ko": "가뭄",
+    "en": "Drought",
+    "ja": "ひでり",
+    "de": "Dürre",
+    "fr": "Sécheresse",
+    "es": "Sequía",
+    "it": "Siccità",
+    "zh": "日照"
+  },
+  "earth-eater": {
+    "ko": "흙먹기",
+    "en": "Earth Eater",
+    "ja": "どしょく",
+    "de": "Bodenschmaus",
+    "fr": "Absorbe-Terre",
+    "es": "Geofagia",
+    "it": "Mangiaterra",
+    "zh": "食土"
+  },
+  "effect-spore": {
+    "ko": "포자",
+    "en": "Effect Spore",
+    "ja": "ほうし",
+    "de": "Sporenwirt",
+    "fr": "Pose Spore",
+    "es": "Efecto Espora",
+    "it": "Spargispora",
+    "zh": "孢子"
+  },
+  "comatose": {
+    "ko": "절대안깸",
+    "en": "Comatose",
+    "ja": "ぜったいねむり",
+    "de": "Dauerschlaf",
+    "fr": "Hypersommeil",
+    "es": "Letargo Perenne",
+    "it": "Sonno Assoluto",
+    "zh": "绝对睡眠"
+  },
+  "electric-surge": {
+    "ko": "일렉트릭메이커",
+    "en": "Electric Surge",
+    "ja": "エレキメイカー",
+    "de": "Elektro-Erzeuger",
+    "fr": "Créa-Élec",
+    "es": "Electrogénesis",
+    "it": "Elettrogenesi",
+    "zh": "电气制造者"
+  },
+  "electromorphosis": {
+    "ko": "전기로바꾸기",
+    "en": "Electromorphosis",
+    "ja": "でんきにかえる",
+    "de": "Dynamo",
+    "fr": "Grecharge",
+    "es": "Dinamo",
+    "it": "Convertivolt",
+    "zh": "电力转换"
+  },
+  "fairy-aura": {
+    "ko": "페어리오라",
+    "en": "Fairy Aura",
+    "ja": "フェアリーオーラ",
+    "de": "Feenaura",
+    "fr": "Aura Féérique",
+    "es": "Aura Feérica",
+    "it": "Aurafolletto",
+    "zh": "妖精气场"
+  },
+  "filter": {
+    "ko": "필터",
+    "en": "Filter",
+    "ja": "フィルター",
+    "de": "Filter",
+    "fr": "Filtre",
+    "es": "Filtro",
+    "it": "Filtro",
+    "zh": "过滤"
+  },
+  "dark-aura": {
+    "ko": "다크오라",
+    "en": "Dark Aura",
+    "ja": "ダークオーラ",
+    "de": "Dunkelaura",
+    "fr": "Aura Ténébreuse",
+    "es": "Aura Oscura",
+    "it": "Auratetra",
+    "zh": "暗黑气场"
+  },
+  "flame-body": {
+    "ko": "불꽃몸",
+    "en": "Flame Body",
+    "ja": "ほのおのからだ",
+    "de": "Flammkörper",
+    "fr": "Corps Ardent",
+    "es": "Cuerpo Llama",
+    "it": "Corpodifuoco",
+    "zh": "火焰之躯"
+  },
+  "flash-fire": {
+    "ko": "타오르는불꽃",
+    "en": "Flash Fire",
+    "ja": "もらいび",
+    "de": "Feuerfänger",
+    "fr": "Torche",
+    "es": "Absorbe Fuego",
+    "it": "Fuocardore",
+    "zh": "引火"
+  },
+  "dancer": {
+    "ko": "무희",
+    "en": "Dancer",
+    "ja": "おどりこ",
+    "de": "Tänzer",
+    "fr": "Danseuse",
+    "es": "Pareja de Baile",
+    "it": "Sincrodanza",
+    "zh": "舞者"
+  },
+  "flower-gift": {
+    "ko": "플라워기프트",
+    "en": "Flower Gift",
+    "ja": "フラワーギフト",
+    "de": "Pflanzengabe",
+    "fr": "Don Floral",
+    "es": "Don Floral",
+    "it": "Regalfiore",
+    "zh": "花之礼"
+  },
+  "dazzling": {
+    "ko": "비비드바디",
+    "en": "Dazzling",
+    "ja": "ビビッドボディ",
+    "de": "Buntkörper",
+    "fr": "Corps Coloré",
+    "es": "Cuerpo Vívido",
+    "it": "Corposgargiante",
+    "zh": "鲜艳之躯"
+  },
+  "flower-veil": {
+    "ko": "플라워베일",
+    "en": "Flower Veil",
+    "ja": "フラワーベール",
+    "de": "Blütenhülle",
+    "fr": "Flora-Voile",
+    "es": "Velo Flor",
+    "it": "Fiorvelo",
+    "zh": "花幕"
+  },
+  "forecast": {
+    "ko": "기분파",
+    "en": "Forecast",
+    "ja": "てんきや",
+    "de": "Prognose",
+    "fr": "Météo",
+    "es": "Predicción",
+    "it": "Previsioni",
+    "zh": "阴晴不定"
+  },
+  "early-bird": {
+    "ko": "일찍기상",
+    "en": "Early Bird",
+    "ja": "はやおき",
+    "de": "Frühwecker",
+    "fr": "Matinal",
+    "es": "Madrugar",
+    "it": "Sveglialampo",
+    "zh": "早起"
+  },
+  "fluffy": {
+    "ko": "복슬복슬",
+    "en": "Fluffy",
+    "ja": "もふもふ",
+    "de": "Flauschigkeit",
+    "fr": "Boule de Poils",
+    "es": "Peluche",
+    "it": "Morbidone",
+    "zh": "毛茸茸"
+  },
+  "forewarn": {
+    "ko": "예지몽",
+    "en": "Forewarn",
+    "ja": "よちむ",
+    "de": "Vorwarnung",
+    "fr": "Prédiction",
+    "es": "Alerta",
+    "it": "Premonizione",
+    "zh": "预知梦"
+  },
+  "drizzle": {
+    "ko": "잔비",
+    "en": "Drizzle",
+    "ja": "あめふらし",
+    "de": "Niesel",
+    "fr": "Crachin",
+    "es": "Llovizna",
+    "it": "Piovischio",
+    "zh": "降雨"
+  },
+  "dry-skin": {
+    "ko": "건조피부",
+    "en": "Dry Skin",
+    "ja": "かんそうはだ",
+    "de": "Trockenheit",
+    "fr": "Peau Sèche",
+    "es": "Piel Seca",
+    "it": "Pellearsa",
+    "zh": "干燥皮肤"
+  },
+  "friend-guard": {
+    "ko": "프렌드가드",
+    "en": "Friend Guard",
+    "ja": "フレンドガード",
+    "de": "Freundeshut",
+    "fr": "Garde-Ami",
+    "es": "Compiescolta",
+    "it": "Amicoscudo",
+    "zh": "友情防守"
+  },
+  "frisk": {
+    "ko": "통찰",
+    "en": "Frisk",
+    "ja": "おみとおし",
+    "de": "Schnüffler",
+    "fr": "Fouille",
+    "es": "Cacheo",
+    "it": "Indagine",
+    "zh": "察觉"
+  },
+  "fur-coat": {
+    "ko": "퍼코트",
+    "en": "Fur Coat",
+    "ja": "ファーコート",
+    "de": "Fellkleid",
+    "fr": "Toison Épaisse",
+    "es": "Pelaje Recio",
+    "it": "Foltopelo",
+    "zh": "毛皮大衣"
+  },
+  "gluttony": {
+    "ko": "먹보",
+    "en": "Gluttony",
+    "ja": "くいしんぼう",
+    "de": "Völlerei",
+    "fr": "Gloutonnerie",
+    "es": "Gula",
+    "it": "Voracità",
+    "zh": "贪吃鬼"
+  },
+  "gale-wings": {
+    "ko": "질풍날개",
+    "en": "Gale Wings",
+    "ja": "はやてのつばさ",
+    "de": "Orkanschwingen",
+    "fr": "Ailes Bourrasque",
+    "es": "Alas Vendaval",
+    "it": "Aliraffica",
+    "zh": "疾风之翼"
+  },
+  "good-as-gold": {
+    "ko": "황금몸",
+    "en": "Good as Gold",
+    "ja": "おうごんのからだ",
+    "de": "Goldkörper",
+    "fr": "Corps en Or",
+    "es": "Cuerpo Áureo",
+    "it": "Corpo Aureo",
+    "zh": "黄金之躯"
+  },
+  "gooey": {
+    "ko": "미끈미끈",
+    "en": "Gooey",
+    "ja": "ぬめぬめ",
+    "de": "Viskosität",
+    "fr": "Poisseux",
+    "es": "Baba",
+    "it": "Viscosità",
+    "zh": "黏滑"
+  },
+  "emergency-exit": {
+    "ko": "위기회피",
+    "en": "Emergency Exit",
+    "ja": "ききかいひ",
+    "de": "Rückzug",
+    "fr": "Repli Tactique",
+    "es": "Retirada",
+    "it": "Passoindietro",
+    "zh": "危险回避"
+  },
+  "grassy-surge": {
+    "ko": "그래스메이커",
+    "en": "Grassy Surge",
+    "ja": "グラスメイカー",
+    "de": "Gras-Erzeuger",
+    "fr": "Créa-Herbe",
+    "es": "Herbogénesis",
+    "it": "Erbogenesi",
+    "zh": "青草制造者"
+  },
+  "guts": {
+    "ko": "근성",
+    "en": "Guts",
+    "ja": "こんじょう",
+    "de": "Adrenalin",
+    "fr": "Cran",
+    "es": "Agallas",
+    "it": "Dentistretti",
+    "zh": "毅力"
+  },
+  "guard-dog": {
+    "ko": "파수견",
+    "en": "Guard Dog",
+    "ja": "ばんけん",
+    "de": "Wachhund",
+    "fr": "Chien de Garde",
+    "es": "Perro Guardián",
+    "it": "Cane da Guardia",
+    "zh": "看门犬"
+  },
+  "hadron-engine": {
+    "ko": "하드론엔진",
+    "en": "Hadron Engine",
+    "ja": "ハドロンエンジン",
+    "de": "Hadronen-Motor",
+    "fr": "Moteur à Hadrons",
+    "es": "Motor Hadrónico",
+    "it": "Motore Adronico",
+    "zh": "强子引擎"
+  },
+  "flare-boost": {
+    "ko": "열폭주",
+    "en": "Flare Boost",
+    "ja": "ねつぼうそう",
+    "de": "Hitzewahn",
+    "fr": "Rage Brûlure",
+    "es": "Ímpetu Ardiente",
+    "it": "Bruciaimpeto",
+    "zh": "受热激升"
+  },
+  "harvest": {
+    "ko": "수확",
+    "en": "Harvest",
+    "ja": "しゅうかく",
+    "de": "Reiche Ernte",
+    "fr": "Récolte",
+    "es": "Cosecha",
+    "it": "Coglibacche",
+    "zh": "收获"
+  },
+  "healer": {
+    "ko": "치유의마음",
+    "en": "Healer",
+    "ja": "いやしのこころ",
+    "de": "Heilherz",
+    "fr": "Cœur Soin",
+    "es": "Alma Cura",
+    "it": "Curacuore",
+    "zh": "治愈之心"
+  },
+  "heatproof": {
+    "ko": "내열",
+    "en": "Heatproof",
+    "ja": "たいねつ",
+    "de": "Hitzeschutz",
+    "fr": "Ignifugé",
+    "es": "Ignífugo",
+    "it": "Antifuoco",
+    "zh": "耐热"
+  },
+  "heavy-metal": {
+    "ko": "헤비메탈",
+    "en": "Heavy Metal",
+    "ja": "ヘヴィメタル",
+    "de": "Schwermetall",
+    "fr": "Heavy Metal",
+    "es": "Metal Pesado",
+    "it": "Metalpesante",
+    "zh": "重金属"
+  },
+  "hospitality": {
+    "ko": "대접",
+    "en": "Hospitality",
+    "ja": "おもてなし",
+    "de": "Gastlichkeit",
+    "fr": "Aux Petits Soins",
+    "es": "Hospitalidad",
+    "it": "Ospitalità",
+    "zh": "款待"
+  },
+  "honey-gather": {
+    "ko": "꿀모으기",
+    "en": "Honey Gather",
+    "ja": "みつあつめ",
+    "de": "Honigmaul",
+    "fr": "Cherche Miel",
+    "es": "Recogemiel",
+    "it": "Mielincetta",
+    "zh": "采蜜"
+  },
+  "huge-power": {
+    "ko": "천하장사",
+    "en": "Huge Power",
+    "ja": "ちからもち",
+    "de": "Kraftkoloss",
+    "fr": "Coloforce",
+    "es": "Potencia",
+    "it": "Macroforza",
+    "zh": "大力士"
+  },
+  "hunger-switch": {
+    "ko": "꼬르륵스위치",
+    "en": "Hunger Switch",
+    "ja": "はらぺこスイッチ",
+    "de": "Heißhunger",
+    "fr": "Déclic Fringale",
+    "es": "Mutapetito",
+    "it": "Pancialterna",
+    "zh": "饱了又饿"
+  },
+  "hydration": {
+    "ko": "촉촉바디",
+    "en": "Hydration",
+    "ja": "うるおいボディ",
+    "de": "Hydration",
+    "fr": "Hydratation",
+    "es": "Hidratación",
+    "it": "Idratazione",
+    "zh": "湿润之躯"
+  },
+  "hyper-cutter": {
+    "ko": "괴력집게",
+    "en": "Hyper Cutter",
+    "ja": "かいりきバサミ",
+    "de": "Scherenmacht",
+    "fr": "Hyper Cutter",
+    "es": "Corte Fuerte",
+    "it": "Ipertaglio",
+    "zh": "怪力钳"
+  },
+  "ice-body": {
+    "ko": "아이스바디",
+    "en": "Ice Body",
+    "ja": "アイスボディ",
+    "de": "Eishaut",
+    "fr": "Corps Gel",
+    "es": "Gélido",
+    "it": "Corpogelo",
+    "zh": "冰冻之躯"
+  },
+  "ice-scales": {
+    "ko": "얼음인분",
+    "en": "Ice Scales",
+    "ja": "こおりのりんぷん",
+    "de": "Eisflügelstaub",
+    "fr": "Écailles Glacées",
+    "es": "Escama de Hielo",
+    "it": "Geloscaglie",
+    "zh": "冰鳞粉"
+  },
+  "illusion": {
+    "ko": "일루전",
+    "en": "Illusion",
+    "ja": "イリュージョン",
+    "de": "Trugbild",
+    "fr": "Illusion",
+    "es": "Ilusión",
+    "it": "Illusione",
+    "zh": "幻觉"
+  },
+  "illuminate": {
+    "ko": "발광",
+    "en": "Illuminate",
+    "ja": "はっこう",
+    "de": "Erleuchtung",
+    "fr": "Lumiattirance",
+    "es": "Iluminación",
+    "it": "Risplendi",
+    "zh": "发光"
+  },
+  "grass-pelt": {
+    "ko": "풀모피",
+    "en": "Grass Pelt",
+    "ja": "くさのけがわ",
+    "de": "Pflanzenpelz",
+    "fr": "Toison Herbue",
+    "es": "Manto Frondoso",
+    "it": "Peloderba",
+    "zh": "草之毛皮"
+  },
+  "immunity": {
+    "ko": "면역",
+    "en": "Immunity",
+    "ja": "めんえき",
+    "de": "Immunität",
+    "fr": "Vaccin",
+    "es": "Inmunidad",
+    "it": "Immunità",
+    "zh": "免疫"
+  },
+  "imposter": {
+    "ko": "괴짜",
+    "en": "Imposter",
+    "ja": "かわりもの",
+    "de": "Doppelgänger",
+    "fr": "Imposteur",
+    "es": "Impostor",
+    "it": "Sosia",
+    "zh": "变身者"
+  },
+  "infiltrator": {
+    "ko": "틈새포착",
+    "en": "Infiltrator",
+    "ja": "すりぬけ",
+    "de": "Schwebedurch",
+    "fr": "Infiltration",
+    "es": "Allanamiento",
+    "it": "Intrapasso",
+    "zh": "穿透"
+  },
+  "full-metal-body": {
+    "ko": "메탈프로텍트",
+    "en": "Full Metal Body",
+    "ja": "メタルプロテクト",
+    "de": "Metallprotektor",
+    "fr": "Métallo-Garde",
+    "es": "Guardia Metálica",
+    "it": "Metalprotezione",
+    "zh": "金属防护"
+  },
+  "innards-out": {
+    "ko": "내용물분출",
+    "en": "Innards Out",
+    "ja": "とびだすなかみ",
+    "de": "Magenkrempler",
+    "fr": "Expuls’Organes",
+    "es": "Revés",
+    "it": "Espellinterno",
+    "zh": "飞出的内在物"
+  },
+  "inner-focus": {
+    "ko": "정신력",
+    "en": "Inner Focus",
+    "ja": "せいしんりょく",
+    "de": "Konzentrator",
+    "fr": "Attention",
+    "es": "Fuerza Mental",
+    "it": "Forza Interiore",
+    "zh": "精神力"
+  },
+  "gulp-missile": {
+    "ko": "그대로꿀꺽미사일",
+    "en": "Gulp Missile",
+    "ja": "うのミサイル",
+    "de": "Würggeschoss",
+    "fr": "Dégobage",
+    "es": "Tragamisil",
+    "it": "Inghiottimissile",
+    "zh": "一口导弹"
+  },
+  "insomnia": {
+    "ko": "불면",
+    "en": "Insomnia",
+    "ja": "ふみん",
+    "de": "Insomnia",
+    "fr": "Insomnia",
+    "es": "Insomnio",
+    "it": "Insonnia",
+    "zh": "不眠"
+  },
+  "intimidate": {
+    "ko": "위협",
+    "en": "Intimidate",
+    "ja": "いかく",
+    "de": "Bedroher",
+    "fr": "Intimidation",
+    "es": "Intimidación",
+    "it": "Prepotenza",
+    "zh": "威吓"
+  },
+  "iron-barbs": {
+    "ko": "철가시",
+    "en": "Iron Barbs",
+    "ja": "てつのトゲ",
+    "de": "Eisenstachel",
+    "fr": "Épine de Fer",
+    "es": "Punta Acero",
+    "it": "Spineferrate",
+    "zh": "铁刺"
+  },
+  "iron-fist": {
+    "ko": "철주먹",
+    "en": "Iron Fist",
+    "ja": "てつのこぶし",
+    "de": "Eisenfaust",
+    "fr": "Poing de Fer",
+    "es": "Puño Férreo",
+    "it": "Ferropugno",
+    "zh": "铁拳"
+  },
+  "klutz": {
+    "ko": "서투름",
+    "en": "Klutz",
+    "ja": "ぶきよう",
+    "de": "Tollpatsch",
+    "fr": "Maladresse",
+    "es": "Zoquete",
+    "it": "Impaccio",
+    "zh": "笨拙"
+  },
+  "keen-eye": {
+    "ko": "날카로운눈",
+    "en": "Keen Eye",
+    "ja": "するどいめ",
+    "de": "Adlerauge",
+    "fr": "Regard Vif",
+    "es": "Vista Lince",
+    "it": "Sguardofermo",
+    "zh": "锐利目光"
+  },
+  "grim-neigh": {
+    "ko": "흑의울음",
+    "en": "Grim Neigh",
+    "ja": "くろのいななき",
+    "de": "Dunkles Wiehern",
+    "fr": "Sombre Ruade",
+    "es": "Relincho Negro",
+    "it": "Nitrito Nero",
+    "zh": "漆黑嘶鸣"
+  },
+  "hustle": {
+    "ko": "의욕",
+    "en": "Hustle",
+    "ja": "はりきり",
+    "de": "Übereifer",
+    "fr": "Agitation",
+    "es": "Entusiasmo",
+    "it": "Tuttafretta",
+    "zh": "活力"
+  },
+  "ice-face": {
+    "ko": "아이스페이스",
+    "en": "Ice Face",
+    "ja": "アイスフェイス",
+    "de": "Tiefkühlkopf",
+    "fr": "Tête de Gel",
+    "es": "Cara de Hielo",
+    "it": "Gelofaccia",
+    "zh": "结冻头"
+  },
+  "leaf-guard": {
+    "ko": "리프가드",
+    "en": "Leaf Guard",
+    "ja": "リーフガード",
+    "de": "Floraschild",
+    "fr": "Feuille Garde",
+    "es": "Defensa Hoja",
+    "it": "Fogliamanto",
+    "zh": "叶子防守"
+  },
+  "ball-fetch": {
+    "ko": "볼줍기",
+    "en": "Ball Fetch",
+    "ja": "たまひろい",
+    "de": "Apport",
+    "fr": "Ramasse Ball",
+    "es": "Recogebolas",
+    "it": "Raccattapalle",
+    "zh": "捡球"
+  },
+  "libero": {
+    "ko": "리베로",
+    "en": "Libero",
+    "ja": "リベロ",
+    "de": "Libero",
+    "fr": "Libéro",
+    "es": "Líbero",
+    "it": "Libero",
+    "zh": "自由者"
+  },
+  "levitate": {
+    "ko": "부유",
+    "en": "Levitate",
+    "ja": "ふゆう",
+    "de": "Schwebe",
+    "fr": "Lévitation",
+    "es": "Levitación",
+    "it": "Levitazione",
+    "zh": "飘浮"
+  },
+  "lightning-rod": {
+    "ko": "피뢰침",
+    "en": "Lightning Rod",
+    "ja": "ひらいしん",
+    "de": "Blitzfänger",
+    "fr": "Paratonnerre",
+    "es": "Pararrayos",
+    "it": "Parafulmine",
+    "zh": "避雷针"
+  },
+  "light-metal": {
+    "ko": "라이트메탈",
+    "en": "Light Metal",
+    "ja": "ライトメタル",
+    "de": "Leichtmetall",
+    "fr": "Light Metal",
+    "es": "Metal Liviano",
+    "it": "Metalleggero",
+    "zh": "轻金属"
+  },
+  "limber": {
+    "ko": "유연",
+    "en": "Limber",
+    "ja": "じゅうなん",
+    "de": "Flexibilität",
+    "fr": "Échauffement",
+    "es": "Flexibilidad",
+    "it": "Scioltezza",
+    "zh": "柔软"
+  },
+  "liquid-ooze": {
+    "ko": "해감액",
+    "en": "Liquid Ooze",
+    "ja": "ヘドロえき",
+    "de": "Kloakensoße",
+    "fr": "Suintement",
+    "es": "Lodo Líquido",
+    "it": "Melma",
+    "zh": "污泥浆"
+  },
+  "lingering-aroma": {
+    "ko": "가시지않는향기",
+    "en": "Lingering Aroma",
+    "ja": "とれないにおい",
+    "de": "Duftschwade",
+    "fr": "Odeur Tenace",
+    "es": "Olor Persistente",
+    "it": "Odore Tenace",
+    "zh": "甩不掉的气味"
+  },
+  "justified": {
+    "ko": "정의의마음",
+    "en": "Justified",
+    "ja": "せいぎのこころ",
+    "de": "Redlichkeit",
+    "fr": "Cœur Noble",
+    "es": "Justiciero",
+    "it": "Giustizia",
+    "zh": "正义之心"
+  },
+  "magic-guard": {
+    "ko": "매직가드",
+    "en": "Magic Guard",
+    "ja": "マジックガード",
+    "de": "Magieschild",
+    "fr": "Garde Magik",
+    "es": "Muro Mágico",
+    "it": "Magicscudo",
+    "zh": "魔法防守"
+  },
+  "magic-bounce": {
+    "ko": "매직미러",
+    "en": "Magic Bounce",
+    "ja": "マジックミラー",
+    "de": "Magiespiegel",
+    "fr": "Miroir Magik",
+    "es": "Espejo Mágico",
+    "it": "Magispecchio",
+    "zh": "魔法镜"
+  },
+  "long-reach": {
+    "ko": "원격",
+    "en": "Long Reach",
+    "ja": "えんかく",
+    "de": "Langstrecke",
+    "fr": "Longue Portée",
+    "es": "Remoto",
+    "it": "Distacco",
+    "zh": "远隔"
+  },
+  "marvel-scale": {
+    "ko": "이상한비늘",
+    "en": "Marvel Scale",
+    "ja": "ふしぎなうろこ",
+    "de": "Notschutz",
+    "fr": "Écaille Spéciale",
+    "es": "Escama Especial",
+    "it": "Pelledura",
+    "zh": "神奇鳞片"
+  },
+  "magnet-pull": {
+    "ko": "자력",
+    "en": "Magnet Pull",
+    "ja": "じりょく",
+    "de": "Magnetfalle",
+    "fr": "Magnépiège",
+    "es": "Imán",
+    "it": "Magnetismo",
+    "zh": "磁力"
+  },
+  "intrepid-sword": {
+    "ko": "불요의검",
+    "en": "Intrepid Sword",
+    "ja": "ふとうのけん",
+    "de": "Kühnes Schwert",
+    "fr": "Lame Indomptable",
+    "es": "Espada Indómita",
+    "it": "Spada Indomita",
+    "zh": "不挠之剑"
+  },
+  "mega-launcher": {
+    "ko": "메가런처",
+    "en": "Mega Launcher",
+    "ja": "メガランチャー",
+    "de": "Megawumme",
+    "fr": "Méga Blaster",
+    "es": "Megadisparador",
+    "it": "Megalancio",
+    "zh": "超级发射器"
+  },
+  "misty-surge": {
+    "ko": "미스트메이커",
+    "en": "Misty Surge",
+    "ja": "ミストメイカー",
+    "de": "Nebel-Erzeuger",
+    "fr": "Créa-Brume",
+    "es": "Nebulogénesis",
+    "it": "Nebbiogenesi",
+    "zh": "薄雾制造者"
+  },
+  "minus": {
+    "ko": "마이너스",
+    "en": "Minus",
+    "ja": "マイナス",
+    "de": "Minus",
+    "fr": "Moins",
+    "es": "Menos",
+    "it": "Meno",
+    "zh": "负电"
+  },
+  "mirror-armor": {
+    "ko": "미러아머",
+    "en": "Mirror Armor",
+    "ja": "ミラーアーマー",
+    "de": "Spiegelrüstung",
+    "fr": "Armure Miroir",
+    "es": "Coraza Reflejo",
+    "it": "Blindospecchio",
+    "zh": "镜甲"
+  },
+  "mold-breaker": {
+    "ko": "틀깨기",
+    "en": "Mold Breaker",
+    "ja": "かたやぶり",
+    "de": "Überbrückung",
+    "fr": "Brise Moule",
+    "es": "Rompemoldes",
+    "it": "Rompiforma",
+    "zh": "破格"
+  },
+  "moody": {
+    "ko": "변덕쟁이",
+    "en": "Moody",
+    "ja": "ムラっけ",
+    "de": "Gefühlswippe",
+    "fr": "Lunatique",
+    "es": "Veleta",
+    "it": "Altalena",
+    "zh": "心情不定"
+  },
+  "motor-drive": {
+    "ko": "전기엔진",
+    "en": "Motor Drive",
+    "ja": "でんきエンジン",
+    "de": "Starthilfe",
+    "fr": "Motorisé",
+    "es": "Electromotor",
+    "it": "Elettrorapid",
+    "zh": "电气引擎"
+  },
+  "moxie": {
+    "ko": "자기과신",
+    "en": "Moxie",
+    "ja": "じしんかじょう",
+    "de": "Hochmut",
+    "fr": "Impudence",
+    "es": "Autoestima",
+    "it": "Arroganza",
+    "zh": "自信过度"
+  },
+  "multitype": {
+    "ko": "멀티타입",
+    "en": "Multitype",
+    "ja": "マルチタイプ",
+    "de": "Variabilität",
+    "fr": "Multi-Type",
+    "es": "Multitipo",
+    "it": "Multitipo",
+    "zh": "多属性"
+  },
+  "liquid-voice": {
+    "ko": "촉촉보이스",
+    "en": "Liquid Voice",
+    "ja": "うるおいボイス",
+    "de": "Plätscherstimme",
+    "fr": "Hydrata-Son",
+    "es": "Voz Fluida",
+    "it": "Idrovoce",
+    "zh": "湿润之声"
+  },
+  "mycelium-might": {
+    "ko": "균사의힘",
+    "en": "Mycelium Might",
+    "ja": "きんしのちから",
+    "de": "Myzelienkraft",
+    "fr": "Force Fongique",
+    "es": "Poder Fúngico",
+    "it": "Micoforza",
+    "zh": "菌丝之力"
+  },
+  "natural-cure": {
+    "ko": "자연회복",
+    "en": "Natural Cure",
+    "ja": "しぜんかいふく",
+    "de": "Innere Kraft",
+    "fr": "Médic Nature",
+    "es": "Cura Natural",
+    "it": "Alternacura",
+    "zh": "自然回复"
+  },
+  "no-guard": {
+    "ko": "노가드",
+    "en": "No Guard",
+    "ja": "ノーガード",
+    "de": "Schildlos",
+    "fr": "Annule Garde",
+    "es": "Indefenso",
+    "it": "Nullodifesa",
+    "zh": "无防守"
+  },
+  "neutralizing-gas": {
+    "ko": "화학변화가스",
+    "en": "Neutralizing Gas",
+    "ja": "かがくへんかガス",
+    "de": "Reaktionsgas",
+    "fr": "Gaz Inhibiteur",
+    "es": "Gas Reactivo",
+    "it": "Gas Reagente",
+    "zh": "化学变化气体"
+  },
+  "oblivious": {
+    "ko": "둔감",
+    "en": "Oblivious",
+    "ja": "どんかん",
+    "de": "Dösigkeit",
+    "fr": "Benêt",
+    "es": "Despiste",
+    "it": "Indifferenza",
+    "zh": "迟钝"
+  },
+  "orichalcum-pulse": {
+    "ko": "진홍빛고동",
+    "en": "Orichalcum Pulse",
+    "ja": "ひひいろのこどう",
+    "de": "Orichalkum-Puls",
+    "fr": "Pouls Orichalque",
+    "es": "Latido Oricalco",
+    "it": "Ritmo d’Oricalco",
+    "zh": "绯红脉动"
+  },
+  "overcoat": {
+    "ko": "방진",
+    "en": "Overcoat",
+    "ja": "ぼうじん",
+    "de": "Partikelschutz",
+    "fr": "Envelocape",
+    "es": "Funda",
+    "it": "Copricapo",
+    "zh": "防尘"
+  },
+  "overgrow": {
+    "ko": "심록",
+    "en": "Overgrow",
+    "ja": "しんりょく",
+    "de": "Notdünger",
+    "fr": "Engrais",
+    "es": "Espesura",
+    "it": "Erbaiuto",
+    "zh": "茂盛"
+  },
+  "own-tempo": {
+    "ko": "마이페이스",
+    "en": "Own Tempo",
+    "ja": "マイペース",
+    "de": "Tempomacher",
+    "fr": "Tempo Perso",
+    "es": "Ritmo Propio",
+    "it": "Mente Locale",
+    "zh": "我行我素"
+  },
+  "perish-body": {
+    "ko": "멸망의바디",
+    "en": "Perish Body",
+    "ja": "ほろびのボディ",
+    "de": "Unheilskörper",
+    "fr": "Corps Condamné",
+    "es": "Cuerpo Mortal",
+    "it": "Ultimotocco",
+    "zh": "灭亡之躯"
+  },
+  "pickpocket": {
+    "ko": "나쁜손버릇",
+    "en": "Pickpocket",
+    "ja": "わるいてぐせ",
+    "de": "Langfinger",
+    "fr": "Pickpocket",
+    "es": "Hurto",
+    "it": "Arraffalesto",
+    "zh": "顺手牵羊"
+  },
+  "plus": {
+    "ko": "플러스",
+    "en": "Plus",
+    "ja": "プラス",
+    "de": "Plus",
+    "fr": "Plus",
+    "es": "Más",
+    "it": "Più",
+    "zh": "正电"
+  },
+  "poison-heal": {
+    "ko": "포이즌힐",
+    "en": "Poison Heal",
+    "ja": "ポイズンヒール",
+    "de": "Aufheber",
+    "fr": "Soin Poison",
+    "es": "Antídoto",
+    "it": "Velencura",
+    "zh": "毒疗"
+  },
+  "merciless": {
+    "ko": "무도한행동",
+    "en": "Merciless",
+    "ja": "ひとでなし",
+    "de": "Quälerei",
+    "fr": "Cruauté",
+    "es": "Ensañamiento",
+    "it": "Spietatezza",
+    "zh": "不仁不义"
+  },
+  "magma-armor": {
+    "ko": "마그마의무장",
+    "en": "Magma Armor",
+    "ja": "マグマのよろい",
+    "de": "Magmapanzer",
+    "fr": "Armumagma",
+    "es": "Escudo Magma",
+    "it": "Magmascudo",
+    "zh": "熔岩铠甲"
+  },
+  "poison-point": {
+    "ko": "독가시",
+    "en": "Poison Point",
+    "ja": "どくのトゲ",
+    "de": "Giftdorn",
+    "fr": "Point Poison",
+    "es": "Punto Tóxico",
+    "it": "Velenopunto",
+    "zh": "毒刺"
+  },
+  "poison-puppeteer": {
+    "ko": "독조종",
+    "en": "Poison Puppeteer",
+    "ja": "どくくぐつ",
+    "de": "Giftpuppenspiel",
+    "fr": "Emprise Toxique",
+    "es": "Títere Tóxico",
+    "it": "Malia Tossica",
+    "zh": "毒傀儡"
+  },
+  "mummy": {
+    "ko": "미라",
+    "en": "Mummy",
+    "ja": "ミイラ",
+    "de": "Mumie",
+    "fr": "Momie",
+    "es": "Momia",
+    "it": "Mummia",
+    "zh": "木乃伊"
+  },
+  "poison-touch": {
+    "ko": "독수",
+    "en": "Poison Touch",
+    "ja": "どくしゅ",
+    "de": "Giftgriff",
+    "fr": "Toxitouche",
+    "es": "Toque Tóxico",
+    "it": "Velentocco",
+    "zh": "毒手"
+  },
+  "normalize": {
+    "ko": "노말스킨",
+    "en": "Normalize",
+    "ja": "ノーマルスキン",
+    "de": "Regulierung",
+    "fr": "Normalise",
+    "es": "Normalidad",
+    "it": "Normalità",
+    "zh": "一般皮肤"
+  },
+  "prankster": {
+    "ko": "짓궂은마음",
+    "en": "Prankster",
+    "ja": "いたずらごころ",
+    "de": "Strolch",
+    "fr": "Farceur",
+    "es": "Bromista",
+    "it": "Burla",
+    "zh": "恶作剧之心"
+  },
+  "pressure": {
+    "ko": "프레셔",
+    "en": "Pressure",
+    "ja": "プレッシャー",
+    "de": "Erzwinger",
+    "fr": "Pression",
+    "es": "Presión",
+    "it": "Pressione",
+    "zh": "压迫感"
+  },
+  "prism-armor": {
+    "ko": "프리즘아머",
+    "en": "Prism Armor",
+    "ja": "プリズムアーマー",
+    "de": "Prismarüstung",
+    "fr": "Prisme-Armure",
+    "es": "Armadura Prisma",
+    "it": "Scudoprisma",
+    "zh": "棱镜装甲"
+  },
+  "propeller-tail": {
+    "ko": "스크루지느러미",
+    "en": "Propeller Tail",
+    "ja": "スクリューおびれ",
+    "de": "Schraubflosse",
+    "fr": "Propulseur",
+    "es": "Hélice Caudal",
+    "it": "Elicopinna",
+    "zh": "螺旋尾鳍"
+  },
+  "multiscale": {
+    "ko": "멀티스케일",
+    "en": "Multiscale",
+    "ja": "マルチスケイル",
+    "de": "Multischuppe",
+    "fr": "Multiécaille",
+    "es": "Multiescamas",
+    "it": "Multisquame",
+    "zh": "多重鳞片"
+  },
+  "opportunist": {
+    "ko": "편승",
+    "en": "Opportunist",
+    "ja": "びんじょう",
+    "de": "Profiteur",
+    "fr": "Opportuniste",
+    "es": "Oportunista",
+    "it": "Scrocco",
+    "zh": "跟风"
+  },
+  "protean": {
+    "ko": "변환자재",
+    "en": "Protean",
+    "ja": "へんげんじざい",
+    "de": "Wandlungskunst",
+    "fr": "Protéen",
+    "es": "Mutatipo",
+    "it": "Mutatipo",
+    "zh": "变幻自如"
+  },
+  "psychic-surge": {
+    "ko": "사이코메이커",
+    "en": "Psychic Surge",
+    "ja": "サイコメイカー",
+    "de": "Psycho-Erzeuger",
+    "fr": "Créa-Psy",
+    "es": "Psicogénesis",
+    "it": "Psicogenesi",
+    "zh": "精神制造者"
+  },
+  "purifying-salt": {
+    "ko": "정화의소금",
+    "en": "Purifying Salt",
+    "ja": "きよめのしお",
+    "de": "Läutersalz",
+    "fr": "Sel Purificateur",
+    "es": "Sal Purificadora",
+    "it": "Sale Purificante",
+    "zh": "洁净之盐"
+  },
+  "pure-power": {
+    "ko": "순수한힘",
+    "en": "Pure Power",
+    "ja": "ヨガパワー",
+    "de": "Mentalkraft",
+    "fr": "Force Pure",
+    "es": "Energía Pura",
+    "it": "Forzapura",
+    "zh": "瑜伽之力"
+  },
+  "quark-drive": {
+    "ko": "쿼크차지",
+    "en": "Quark Drive",
+    "ja": "クォークチャージ",
+    "de": "Quantenantrieb",
+    "fr": "Charge Quantique",
+    "es": "Carga Cuark",
+    "it": "Carica Quark",
+    "zh": "夸克充能"
+  },
+  "quick-feet": {
+    "ko": "속보",
+    "en": "Quick Feet",
+    "ja": "はやあし",
+    "de": "Rasanz",
+    "fr": "Pied Véloce",
+    "es": "Pies Rápidos",
+    "it": "Piedisvelti",
+    "zh": "飞毛腿"
+  },
+  "rain-dish": {
+    "ko": "젖은접시",
+    "en": "Rain Dish",
+    "ja": "あめうけざら",
+    "de": "Regengenuss",
+    "fr": "Cuvette",
+    "es": "Cura Lluvia",
+    "it": "Copripioggia",
+    "zh": "雨盘"
+  },
+  "rattled": {
+    "ko": "주눅",
+    "en": "Rattled",
+    "ja": "びびり",
+    "de": "Hasenfuß",
+    "fr": "Phobique",
+    "es": "Cobardía",
+    "it": "Paura",
+    "zh": "胆怯"
+  },
+  "pixilate": {
+    "ko": "페어리스킨",
+    "en": "Pixilate",
+    "ja": "フェアリースキン",
+    "de": "Feenschicht",
+    "fr": "Peau Féérique",
+    "es": "Piel Feérica",
+    "it": "Pellefolletto",
+    "zh": "妖精皮肤"
+  },
+  "refrigerate": {
+    "ko": "프리즈스킨",
+    "en": "Refrigerate",
+    "ja": "フリーズスキン",
+    "de": "Frostschicht",
+    "fr": "Peau Gelée",
+    "es": "Piel Helada",
+    "it": "Pellegelo",
+    "zh": "冰冻皮肤"
+  },
+  "reckless": {
+    "ko": "이판사판",
+    "en": "Reckless",
+    "ja": "すてみ",
+    "de": "Achtlos",
+    "fr": "Téméraire",
+    "es": "Audaz",
+    "it": "Temerarietà",
+    "zh": "舍身"
+  },
+  "regenerator": {
+    "ko": "재생력",
+    "en": "Regenerator",
+    "ja": "さいせいりょく",
+    "de": "Belebekraft",
+    "fr": "Régé-Force",
+    "es": "Regeneración",
+    "it": "Rigenergia",
+    "zh": "再生力"
+  },
+  "receiver": {
+    "ko": "리시버",
+    "en": "Receiver",
+    "ja": "レシーバー",
+    "de": "Receiver",
+    "fr": "Receveur",
+    "es": "Receptor",
+    "it": "Ricezione",
+    "zh": "接球手"
+  },
+  "ripen": {
+    "ko": "숙성",
+    "en": "Ripen",
+    "ja": "じゅくせい",
+    "de": "Heranreifen",
+    "fr": "Mûrissement",
+    "es": "Maduración",
+    "it": "Maturazione",
+    "zh": "熟成"
+  },
+  "rivalry": {
+    "ko": "투쟁심",
+    "en": "Rivalry",
+    "ja": "とうそうしん",
+    "de": "Rivalität",
+    "fr": "Rivalité",
+    "es": "Rivalidad",
+    "it": "Antagonismo",
+    "zh": "斗争心"
+  },
+  "rock-head": {
+    "ko": "돌머리",
+    "en": "Rock Head",
+    "ja": "いしあたま",
+    "de": "Steinhaupt",
+    "fr": "Tête de Roc",
+    "es": "Cabeza Roca",
+    "it": "Testadura",
+    "zh": "坚硬脑袋"
+  },
+  "rks-system": {
+    "ko": "AR시스템",
+    "en": "RKS System",
+    "ja": "ＡＲシステム",
+    "de": "Alpha-System",
+    "fr": "Système Alpha",
+    "es": "Sistema Alfa",
+    "it": "Sistema Primevo",
+    "zh": "ＡＲ系统"
+  },
+  "rocky-payload": {
+    "ko": "바위나르기",
+    "en": "Rocky Payload",
+    "ja": "いわはこび",
+    "de": "Steinträger",
+    "fr": "Porte-Roche",
+    "es": "Transportarrocas",
+    "it": "Portamassi",
+    "zh": "搬岩"
+  },
+  "rough-skin": {
+    "ko": "까칠한피부",
+    "en": "Rough Skin",
+    "ja": "さめはだ",
+    "de": "Rauhaut",
+    "fr": "Peau Dure",
+    "es": "Piel Tosca",
+    "it": "Cartavetro",
+    "zh": "粗糙皮肤"
+  },
+  "run-away": {
+    "ko": "도주",
+    "en": "Run Away",
+    "ja": "にげあし",
+    "de": "Angsthase",
+    "fr": "Fuite",
+    "es": "Fuga",
+    "it": "Fugafacile",
+    "zh": "逃跑"
+  },
+  "power-spot": {
+    "ko": "파워스폿",
+    "en": "Power Spot",
+    "ja": "パワースポット",
+    "de": "Kraftquelle",
+    "fr": "Cercle d’Énergie",
+    "es": "Fuente Energía",
+    "it": "Fonte Energetica",
+    "zh": "能量点"
+  },
+  "sand-spit": {
+    "ko": "모래뿜기",
+    "en": "Sand Spit",
+    "ja": "すなはき",
+    "de": "Sandspeier",
+    "fr": "Expul’Sable",
+    "es": "Expulsarena",
+    "it": "Sputasabbia",
+    "zh": "吐沙"
+  },
+  "sand-veil": {
+    "ko": "모래숨기",
+    "en": "Sand Veil",
+    "ja": "すながくれ",
+    "de": "Sandschleier",
+    "fr": "Voile Sable",
+    "es": "Velo Arena",
+    "it": "Sabbiavelo",
+    "zh": "沙隐"
+  },
+  "sap-sipper": {
+    "ko": "초식",
+    "en": "Sap Sipper",
+    "ja": "そうしょく",
+    "de": "Vegetarier",
+    "fr": "Herbivore",
+    "es": "Herbívoro",
+    "it": "Mangiaerba",
+    "zh": "食草"
+  },
+  "sand-stream": {
+    "ko": "모래날림",
+    "en": "Sand Stream",
+    "ja": "すなおこし",
+    "de": "Sandsturm",
+    "fr": "Sable Volant",
+    "es": "Chorro Arena",
+    "it": "Sabbiafiume",
+    "zh": "扬沙"
+  },
+  "schooling": {
+    "ko": "어군",
+    "en": "Schooling",
+    "ja": "ぎょぐん",
+    "de": "Fischschwarm",
+    "fr": "Banc",
+    "es": "Banco",
+    "it": "Banco",
+    "zh": "鱼群"
+  },
+  "scrappy": {
+    "ko": "배짱",
+    "en": "Scrappy",
+    "ja": "きもったま",
+    "de": "Rauflust",
+    "fr": "Querelleur",
+    "es": "Intrépido",
+    "it": "Nervisaldi",
+    "zh": "胆量"
+  },
+  "queenly-majesty": {
+    "ko": "여왕의위엄",
+    "en": "Queenly Majesty",
+    "ja": "じょおうのいげん",
+    "de": "Majestät",
+    "fr": "Prestance Royale",
+    "es": "Regia Presencia",
+    "it": "Regalità",
+    "zh": "女王的威严"
+  },
+  "seed-sower": {
+    "ko": "넘치는씨",
+    "en": "Seed Sower",
+    "ja": "こぼれダネ",
+    "de": "Streusaat",
+    "fr": "Semencier",
+    "es": "Disemillar",
+    "it": "Spargisemi",
+    "zh": "掉出种子"
+  },
+  "serene-grace": {
+    "ko": "하늘의은총",
+    "en": "Serene Grace",
+    "ja": "てんのめぐみ",
+    "de": "Edelmut",
+    "fr": "Sérénité",
+    "es": "Dicha",
+    "it": "Leggiadro",
+    "zh": "天恩"
+  },
+  "shadow-shield": {
+    "ko": "스펙터가드",
+    "en": "Shadow Shield",
+    "ja": "ファントムガード",
+    "de": "Phantomschutz",
+    "fr": "Spectro-Bouclier",
+    "es": "Guardia Espectro",
+    "it": "Spettroguardia",
+    "zh": "幻影防守"
+  },
+  "shadow-tag": {
+    "ko": "그림자밟기",
+    "en": "Shadow Tag",
+    "ja": "かげふみ",
+    "de": "Wegsperre",
+    "fr": "Marque Ombre",
+    "es": "Sombra Trampa",
+    "it": "Pedinombra",
+    "zh": "踩影"
+  },
+  "shed-skin": {
+    "ko": "탈피",
+    "en": "Shed Skin",
+    "ja": "だっぴ",
+    "de": "Expidermis",
+    "fr": "Mue",
+    "es": "Mudar",
+    "it": "Muta",
+    "zh": "蜕皮"
+  },
+  "sheer-force": {
+    "ko": "우격다짐",
+    "en": "Sheer Force",
+    "ja": "ちからずく",
+    "de": "Rohe Gewalt",
+    "fr": "Sans Limite",
+    "es": "Potencia Bruta",
+    "it": "Forzabruta",
+    "zh": "强行"
+  },
+  "sand-force": {
+    "ko": "모래의힘",
+    "en": "Sand Force",
+    "ja": "すなのちから",
+    "de": "Sandgewalt",
+    "fr": "Force Sable",
+    "es": "Poder Arena",
+    "it": "Silicoforza",
+    "zh": "沙之力"
+  },
+  "shell-armor": {
+    "ko": "조가비갑옷",
+    "en": "Shell Armor",
+    "ja": "シェルアーマー",
+    "de": "Panzerhaut",
+    "fr": "Coque Armure",
+    "es": "Caparazón",
+    "it": "Guscioscudo",
+    "zh": "硬壳盔甲"
+  },
+  "sand-rush": {
+    "ko": "모래헤치기",
+    "en": "Sand Rush",
+    "ja": "すなかき",
+    "de": "Sandscharrer",
+    "fr": "Baigne Sable",
+    "es": "Ímpetu Arena",
+    "it": "Remasabbia",
+    "zh": "拨沙"
+  },
+  "shield-dust": {
+    "ko": "인분",
+    "en": "Shield Dust",
+    "ja": "りんぷん",
+    "de": "Puderabwehr",
+    "fr": "Écran Poudre",
+    "es": "Polvo Escudo",
+    "it": "Polvoscudo",
+    "zh": "鳞粉"
+  },
+  "shields-down": {
+    "ko": "리밋실드",
+    "en": "Shields Down",
+    "ja": "リミットシールド",
+    "de": "Limitschild",
+    "fr": "Bouclier-Carcan",
+    "es": "Escudo Limitado",
+    "it": "Scudosoglia",
+    "zh": "界限盾壳"
+  },
+  "simple": {
+    "ko": "단순",
+    "en": "Simple",
+    "ja": "たんじゅん",
+    "de": "Wankelmut",
+    "fr": "Simple",
+    "es": "Simple",
+    "it": "Disinvoltura",
+    "zh": "单纯"
+  },
+  "skill-link": {
+    "ko": "스킬링크",
+    "en": "Skill Link",
+    "ja": "スキルリンク",
+    "de": "Wertelink",
+    "fr": "Multi-Coups",
+    "es": "Encadenado",
+    "it": "Abillegame",
+    "zh": "连续攻击"
+  },
+  "pickup": {
+    "ko": "픽업",
+    "en": "Pickup",
+    "ja": "ものひろい",
+    "de": "Mitnahme",
+    "fr": "Ramassage",
+    "es": "Recogida",
+    "it": "Raccolta",
+    "zh": "捡拾"
+  },
+  "slush-rush": {
+    "ko": "눈치우기",
+    "en": "Slush Rush",
+    "ja": "ゆきかき",
+    "de": "Schneescharrer",
+    "fr": "Chasse-Neige",
+    "es": "Quitanieves",
+    "it": "Spalaneve",
+    "zh": "拨雪"
+  },
+  "sniper": {
+    "ko": "스나이퍼",
+    "en": "Sniper",
+    "ja": "スナイパー",
+    "de": "Superschütze",
+    "fr": "Sniper",
+    "es": "Francotirador",
+    "it": "Cecchino",
+    "zh": "狙击手"
+  },
+  "snow-cloak": {
+    "ko": "눈숨기",
+    "en": "Snow Cloak",
+    "ja": "ゆきがくれ",
+    "de": "Schneemantel",
+    "fr": "Rideau Neige",
+    "es": "Manto Níveo",
+    "it": "Mantelneve",
+    "zh": "雪隐"
+  },
+  "snow-warning": {
+    "ko": "눈퍼뜨리기",
+    "en": "Snow Warning",
+    "ja": "ゆきふらし",
+    "de": "Hagelalarm",
+    "fr": "Alerte Neige",
+    "es": "Nevada",
+    "it": "Scendineve",
+    "zh": "降雪"
+  },
+  "solar-power": {
+    "ko": "선파워",
+    "en": "Solar Power",
+    "ja": "サンパワー",
+    "de": "Solarkraft",
+    "fr": "Force Soleil",
+    "es": "Poder Solar",
+    "it": "Solarpotere",
+    "zh": "太阳之力"
+  },
+  "magician": {
+    "ko": "매지션",
+    "en": "Magician",
+    "ja": "マジシャン",
+    "de": "Zauberer",
+    "fr": "Magicien",
+    "es": "Prestidigitador",
+    "it": "Prestigiatore",
+    "zh": "魔术师"
+  },
+  "screen-cleaner": {
+    "ko": "배리어프리",
+    "en": "Screen Cleaner",
+    "ja": "バリアフリー",
+    "de": "Hemmungslos",
+    "fr": "Brise-Barrière",
+    "es": "Antibarrera",
+    "it": "Annullabarriere",
+    "zh": "除障"
+  },
+  "soul-heart": {
+    "ko": "소울하트",
+    "en": "Soul-Heart",
+    "ja": "ソウルハート",
+    "de": "Seelenherz",
+    "fr": "Animacœur",
+    "es": "Coránima",
+    "it": "Cuoreanima",
+    "zh": "魂心"
+  },
+  "soundproof": {
+    "ko": "방음",
+    "en": "Soundproof",
+    "ja": "ぼうおん",
+    "de": "Lärmschutz",
+    "fr": "Anti-Bruit",
+    "es": "Insonorizar",
+    "it": "Antisuono",
+    "zh": "隔音"
+  },
+  "stakeout": {
+    "ko": "잠복",
+    "en": "Stakeout",
+    "ja": "はりこみ",
+    "de": "Beschattung",
+    "fr": "Filature",
+    "es": "Vigilante",
+    "it": "Sorveglianza",
+    "zh": "蹲守"
+  },
+  "speed-boost": {
+    "ko": "가속",
+    "en": "Speed Boost",
+    "ja": "かそく",
+    "de": "Temposchub",
+    "fr": "Turbo",
+    "es": "Impulso",
+    "it": "Acceleratore",
+    "zh": "加速"
+  },
+  "sharpness": {
+    "ko": "예리함",
+    "en": "Sharpness",
+    "ja": "きれあじ",
+    "de": "Scharfkantig",
+    "fr": "Incisif",
+    "es": "Cortante",
+    "it": "Affilama",
+    "zh": "锋锐"
+  },
+  "stalwart": {
+    "ko": "굳건한신념",
+    "en": "Stalwart",
+    "ja": "すじがねいり",
+    "de": "Stahlrückgrat",
+    "fr": "Nerfs d’Acier",
+    "es": "Acérrimo",
+    "it": "Volontà di Ferro",
+    "zh": "坚毅"
+  },
+  "stamina": {
+    "ko": "지구력",
+    "en": "Stamina",
+    "ja": "じきゅうりょく",
+    "de": "Zähigkeit",
+    "fr": "Endurance",
+    "es": "Firmeza",
+    "it": "Sopportazione",
+    "zh": "持久力"
+  },
+  "stance-change": {
+    "ko": "배틀스위치",
+    "en": "Stance Change",
+    "ja": "バトルスイッチ",
+    "de": "Taktikwechsel",
+    "fr": "Déclic Tactique",
+    "es": "Cambio Táctico",
+    "it": "Accendilotta",
+    "zh": "战斗切换"
+  },
+  "static": {
+    "ko": "정전기",
+    "en": "Static",
+    "ja": "せいでんき",
+    "de": "Statik",
+    "fr": "Statik",
+    "es": "Electricidad Estática",
+    "it": "Statico",
+    "zh": "静电"
+  },
+  "steelworker": {
+    "ko": "강철술사",
+    "en": "Steelworker",
+    "ja": "はがねつかい",
+    "de": "Stahlprofi",
+    "fr": "Expert Acier",
+    "es": "Acero Templado",
+    "it": "Tempracciaio",
+    "zh": "钢能力者"
+  },
+  "stench": {
+    "ko": "악취",
+    "en": "Stench",
+    "ja": "あくしゅう",
+    "de": "Duftnote",
+    "fr": "Puanteur",
+    "es": "Hedor",
+    "it": "Tanfo",
+    "zh": "恶臭"
+  },
+  "sticky-hold": {
+    "ko": "점착",
+    "en": "Sticky Hold",
+    "ja": "ねんちゃく",
+    "de": "Klebekörper",
+    "fr": "Glu",
+    "es": "Viscosidad",
+    "it": "Antifurto",
+    "zh": "黏着"
+  },
+  "storm-drain": {
+    "ko": "마중물",
+    "en": "Storm Drain",
+    "ja": "よびみず",
+    "de": "Sturmsog",
+    "fr": "Lavabo",
+    "es": "Colector",
+    "it": "Acquascolo",
+    "zh": "引水"
+  },
+  "strong-jaw": {
+    "ko": "옹골찬턱",
+    "en": "Strong Jaw",
+    "ja": "がんじょうあご",
+    "de": "Titankiefer",
+    "fr": "Prognathe",
+    "es": "Mandíbula Fuerte",
+    "it": "Ferromascella",
+    "zh": "强壮之颚"
+  },
+  "sturdy": {
+    "ko": "옹골참",
+    "en": "Sturdy",
+    "ja": "がんじょう",
+    "de": "Robustheit",
+    "fr": "Fermeté",
+    "es": "Robustez",
+    "it": "Vigore",
+    "zh": "结实"
+  },
+  "punk-rock": {
+    "ko": "펑크록",
+    "en": "Punk Rock",
+    "ja": "パンクロック",
+    "de": "Punk Rock",
+    "fr": "Punk Rock",
+    "es": "Punk Rock",
+    "it": "Punk Rock",
+    "zh": "庞克摇滚"
+  },
+  "protosynthesis": {
+    "ko": "고대활성",
+    "en": "Protosynthesis",
+    "ja": "こだいかっせい",
+    "de": "Paläosynthese",
+    "fr": "Paléosynthèse",
+    "es": "Paleosíntesis",
+    "it": "Paleoattivazione",
+    "zh": "古代活性"
+  },
+  "slow-start": {
+    "ko": "슬로스타트",
+    "en": "Slow Start",
+    "ja": "スロースタート",
+    "de": "Saumselig",
+    "fr": "Début Calme",
+    "es": "Inicio Lento",
+    "it": "Lentoinizio",
+    "zh": "慢启动"
+  },
+  "super-luck": {
+    "ko": "대운",
+    "en": "Super Luck",
+    "ja": "きょううん",
+    "de": "Glückspilz",
+    "fr": "Chanceux",
+    "es": "Afortunado",
+    "it": "Supersorte",
+    "zh": "超幸运"
+  },
+  "supreme-overlord": {
+    "ko": "총대장",
+    "en": "Supreme Overlord",
+    "ja": "そうだいしょう",
+    "de": "Feldherr",
+    "fr": "Général Suprême",
+    "es": "General Supremo",
+    "it": "Generale Supremo",
+    "zh": "大将"
+  },
+  "stall": {
+    "ko": "시간벌기",
+    "en": "Stall",
+    "ja": "あとだし",
+    "de": "Zeitspiel",
+    "fr": "Frein",
+    "es": "Rezagado",
+    "it": "Rallentatore",
+    "zh": "慢出"
+  },
+  "sweet-veil": {
+    "ko": "스위트베일",
+    "en": "Sweet Veil",
+    "ja": "スイートベール",
+    "de": "Zuckerhülle",
+    "fr": "Gluco-Voile",
+    "es": "Velo Dulce",
+    "it": "Dolcevelo",
+    "zh": "甜幕"
+  },
+  "solid-rock": {
+    "ko": "하드록",
+    "en": "Solid Rock",
+    "ja": "ハードロック",
+    "de": "Felskern",
+    "fr": "Solide Roc",
+    "es": "Roca Sólida",
+    "it": "Solidroccia",
+    "zh": "坚硬岩石"
+  },
+  "sword-of-ruin": {
+    "ko": "재앙의검",
+    "en": "Sword of Ruin",
+    "ja": "わざわいのつるぎ",
+    "de": "Unheilsschwert",
+    "fr": "Épée du Fléau",
+    "es": "Espada Debacle",
+    "it": "Spada Nefasta",
+    "zh": "灾祸之剑"
+  },
+  "swift-swim": {
+    "ko": "쓱쓱",
+    "en": "Swift Swim",
+    "ja": "すいすい",
+    "de": "Wassertempo",
+    "fr": "Glissade",
+    "es": "Nado Rápido",
+    "it": "Nuotovelox",
+    "zh": "悠游自如"
+  },
+  "steadfast": {
+    "ko": "불굴의마음",
+    "en": "Steadfast",
+    "ja": "ふくつのこころ",
+    "de": "Felsenfest",
+    "fr": "Impassible",
+    "es": "Impasible",
+    "it": "Cuordeciso",
+    "zh": "不屈之心"
+  },
+  "symbiosis": {
+    "ko": "공생",
+    "en": "Symbiosis",
+    "ja": "きょうせい",
+    "de": "Nutznießer",
+    "fr": "Symbiose",
+    "es": "Simbiosis",
+    "it": "Simbiosi",
+    "zh": "共生"
+  },
+  "steely-spirit": {
+    "ko": "강철정신",
+    "en": "Steely Spirit",
+    "ja": "はがねのせいしん",
+    "de": "Stählerner Wille",
+    "fr": "Boost Acier",
+    "es": "Alma Acerada",
+    "it": "Spiritoferreo",
+    "zh": "钢之意志"
+  },
+  "synchronize": {
+    "ko": "싱크로",
+    "en": "Synchronize",
+    "ja": "シンクロ",
+    "de": "Synchro",
+    "fr": "Synchro",
+    "es": "Sincronía",
+    "it": "Sincronismo",
+    "zh": "同步"
+  },
+  "steam-engine": {
+    "ko": "증기기관",
+    "en": "Steam Engine",
+    "ja": "じょうききかん",
+    "de": "Dampfantrieb",
+    "fr": "Turbine",
+    "es": "Combustible",
+    "it": "Vapormacchina",
+    "zh": "蒸汽机"
+  },
+  "tangled-feet": {
+    "ko": "갈지자걸음",
+    "en": "Tangled Feet",
+    "ja": "ちどりあし",
+    "de": "Fußangel",
+    "fr": "Pieds Confus",
+    "es": "Tumbos",
+    "it": "Intricopiedi",
+    "zh": "蹒跚"
+  },
+  "tablets-of-ruin": {
+    "ko": "재앙의목간",
+    "en": "Tablets of Ruin",
+    "ja": "わざわいのおふだ",
+    "de": "Unheilstafeln",
+    "fr": "Bois du Fléau",
+    "es": "Tablilla Debacle",
+    "it": "Amuleto Nefasto",
+    "zh": "灾祸之简"
+  },
+  "telepathy": {
+    "ko": "텔레파시",
+    "en": "Telepathy",
+    "ja": "テレパシー",
+    "de": "Telepathie",
+    "fr": "Télépathe",
+    "es": "Telepatía",
+    "it": "Telepatia",
+    "zh": "心灵感应"
+  },
+  "technician": {
+    "ko": "테크니션",
+    "en": "Technician",
+    "ja": "テクニシャン",
+    "de": "Techniker",
+    "fr": "Technicien",
+    "es": "Experto",
+    "it": "Tecnico",
+    "zh": "技术高手"
+  },
+  "tera-shift": {
+    "ko": "테라체인지",
+    "en": "Tera Shift",
+    "ja": "テラスチェンジ",
+    "de": "Tera-Wandel",
+    "fr": "Téramorphose",
+    "es": "Teracambio",
+    "it": "Teramorfosi",
+    "zh": "太晶变形"
+  },
+  "thermal-exchange": {
+    "ko": "열교환",
+    "en": "Thermal Exchange",
+    "ja": "ねつこうかん",
+    "de": "Thermowandel",
+    "fr": "Thermodynamique",
+    "es": "Termoconversión",
+    "it": "Termoscambio",
+    "zh": "热交换"
+  },
+  "thick-fat": {
+    "ko": "두꺼운지방",
+    "en": "Thick Fat",
+    "ja": "あついしぼう",
+    "de": "Speckschicht",
+    "fr": "Isograisse",
+    "es": "Sebo",
+    "it": "Grassospesso",
+    "zh": "厚脂肪"
+  },
+  "torrent": {
+    "ko": "급류",
+    "en": "Torrent",
+    "ja": "げきりゅう",
+    "de": "Sturzbach",
+    "fr": "Torrent",
+    "es": "Torrente",
+    "it": "Acquaiuto",
+    "zh": "激流"
+  },
+  "tinted-lens": {
+    "ko": "색안경",
+    "en": "Tinted Lens",
+    "ja": "いろめがね",
+    "de": "Aufwertung",
+    "fr": "Lentiteintée",
+    "es": "Cromolente",
+    "it": "Lentifumé",
+    "zh": "有色眼镜"
+  },
+  "toxic-boost": {
+    "ko": "독폭주",
+    "en": "Toxic Boost",
+    "ja": "どくぼうそう",
+    "de": "Giftwahn",
+    "fr": "Rage Poison",
+    "es": "Ímpetu Tóxico",
+    "it": "Velenimpeto",
+    "zh": "中毒激升"
+  },
+  "suction-cups": {
+    "ko": "흡반",
+    "en": "Suction Cups",
+    "ja": "きゅうばん",
+    "de": "Saugnapf",
+    "fr": "Ventouse",
+    "es": "Ventosas",
+    "it": "Ventose",
+    "zh": "吸盘"
+  },
+  "toxic-chain": {
+    "ko": "독사슬",
+    "en": "Toxic Chain",
+    "ja": "どくのくさり",
+    "de": "Giftkette",
+    "fr": "Chaîne Toxique",
+    "es": "Cadena Tóxica",
+    "it": "Catena Tossica",
+    "zh": "毒锁链"
+  },
+  "toxic-debris": {
+    "ko": "독치장",
+    "en": "Toxic Debris",
+    "ja": "どくげしょう",
+    "de": "Giftbelag",
+    "fr": "Dépôt Toxique",
+    "es": "Capa Tóxica",
+    "it": "Mantossina",
+    "zh": "毒满地"
+  },
+  "transistor": {
+    "ko": "트랜지스터",
+    "en": "Transistor",
+    "ja": "トランジスタ",
+    "de": "Transistor",
+    "fr": "Transistor",
+    "es": "Transistor",
+    "it": "Transistor",
+    "zh": "电晶体"
+  },
+  "truant": {
+    "ko": "게으름",
+    "en": "Truant",
+    "ja": "なまけ",
+    "de": "Schnarchnase",
+    "fr": "Absentéisme",
+    "es": "Ausente",
+    "it": "Pigrone",
+    "zh": "懒惰"
+  },
+  "supersweet-syrup": {
+    "ko": "감미로운꿀",
+    "en": "Supersweet Syrup",
+    "ja": "かんろなミツ",
+    "de": "Süßer Nektar",
+    "fr": "Nectar Mielleux",
+    "es": "Néctar Dulce",
+    "it": "Sciroppo Sublime",
+    "zh": "甘露之蜜"
+  },
+  "unaware": {
+    "ko": "천진",
+    "en": "Unaware",
+    "ja": "てんねん",
+    "de": "Unkenntnis",
+    "fr": "Inconscient",
+    "es": "Ignorante",
+    "it": "Imprudenza",
+    "zh": "纯朴"
+  },
+  "unburden": {
+    "ko": "곡예",
+    "en": "Unburden",
+    "ja": "かるわざ",
+    "de": "Entlastung",
+    "fr": "Délestage",
+    "es": "Liviano",
+    "it": "Agiltecnica",
+    "zh": "轻装"
+  },
+  "unseen-fist": {
+    "ko": "보이지않는주먹",
+    "en": "Unseen Fist",
+    "ja": "ふかしのこぶし",
+    "de": "Verborgene Faust",
+    "fr": "Poing Invisible",
+    "es": "Puño Invisible",
+    "it": "Pugni Invisibili",
+    "zh": "无形拳"
+  },
+  "vessel-of-ruin": {
+    "ko": "재앙의그릇",
+    "en": "Vessel of Ruin",
+    "ja": "わざわいのうつわ",
+    "de": "Unheilsgefäß",
+    "fr": "Urne du Fléau",
+    "es": "Caldero Debacle",
+    "it": "Vaso Nefasto",
+    "zh": "灾祸之鼎"
+  },
+  "swarm": {
+    "ko": "벌레의알림",
+    "en": "Swarm",
+    "ja": "むしのしらせ",
+    "de": "Hexaplaga",
+    "fr": "Essaim",
+    "es": "Enjambre",
+    "it": "Aiutinsetto",
+    "zh": "虫之预感"
+  },
+  "victory-star": {
+    "ko": "승리의별",
+    "en": "Victory Star",
+    "ja": "しょうりのほし",
+    "de": "Triumphstern",
+    "fr": "Victorieux",
+    "es": "Tinovictoria",
+    "it": "Vittorstella",
+    "zh": "胜利之星"
+  },
+  "teravolt": {
+    "ko": "테라볼티지",
+    "en": "Teravolt",
+    "ja": "テラボルテージ",
+    "de": "Teravolt",
+    "fr": "Téra-Voltage",
+    "es": "Terravoltaje",
+    "it": "Teravolt",
+    "zh": "兆级电压"
+  },
+  "tough-claws": {
+    "ko": "단단한발톱",
+    "en": "Tough Claws",
+    "ja": "かたいツメ",
+    "de": "Krallenwucht",
+    "fr": "Griffe Dure",
+    "es": "Garra Dura",
+    "it": "Unghiedure",
+    "zh": "硬爪"
+  },
+  "triage": {
+    "ko": "힐링시프트",
+    "en": "Triage",
+    "ja": "ヒーリングシフト",
+    "de": "Heilwandel",
+    "fr": "Prioguérison",
+    "es": "Primer Auxilio",
+    "it": "Primacura",
+    "zh": "先行治疗"
+  },
+  "unnerve": {
+    "ko": "긴장감",
+    "en": "Unnerve",
+    "ja": "きんちょうかん",
+    "de": "Anspannung",
+    "fr": "Tension",
+    "es": "Nerviosismo",
+    "it": "Agitazione",
+    "zh": "紧张感"
+  },
+  "vital-spirit": {
+    "ko": "의기양양",
+    "en": "Vital Spirit",
+    "ja": "やるき",
+    "de": "Munterkeit",
+    "fr": "Esprit Vital",
+    "es": "Espíritu Vital",
+    "it": "Spiritovivo",
+    "zh": "干劲"
+  },
+  "wandering-spirit": {
+    "ko": "떠도는영혼",
+    "en": "Wandering Spirit",
+    "ja": "さまようたましい",
+    "de": "Rastlose Seele",
+    "fr": "Âme Vagabonde",
+    "es": "Alma Errante",
+    "it": "Anima Errante",
+    "zh": "游魂"
+  },
+  "water-bubble": {
+    "ko": "수포",
+    "en": "Water Bubble",
+    "ja": "すいほう",
+    "de": "Wasserblase",
+    "fr": "Aquabulle",
+    "es": "Pompa",
+    "it": "Bolladacqua",
+    "zh": "水泡"
+  },
+  "water-compaction": {
+    "ko": "꾸덕꾸덕굳기",
+    "en": "Water Compaction",
+    "ja": "みずがため",
+    "de": "Verklumpen",
+    "fr": "Sable Humide",
+    "es": "Hidrorrefuerzo",
+    "it": "Idrorinforzo",
+    "zh": "遇水凝固"
+  },
+  "water-absorb": {
+    "ko": "저수",
+    "en": "Water Absorb",
+    "ja": "ちょすい",
+    "de": "H2O-Absorber",
+    "fr": "Absorbe-Eau",
+    "es": "Absorbe Agua",
+    "it": "Assorbacqua",
+    "zh": "储水"
+  },
+  "turboblaze": {
+    "ko": "터보블레이즈",
+    "en": "Turboblaze",
+    "ja": "ターボブレイズ",
+    "de": "Turbobrand",
+    "fr": "Turbo Brasier",
+    "es": "Turbollama",
+    "it": "Piroturbina",
+    "zh": "涡轮火焰"
+  },
+  "water-veil": {
+    "ko": "수의베일",
+    "en": "Water Veil",
+    "ja": "みずのベール",
+    "de": "Aquahülle",
+    "fr": "Ignifu-Voile",
+    "es": "Velo Agua",
+    "it": "Idrovelo",
+    "zh": "水幕"
+  },
+  "trace": {
+    "ko": "트레이스",
+    "en": "Trace",
+    "ja": "トレース",
+    "de": "Erfassen",
+    "fr": "Calque",
+    "es": "Calco",
+    "it": "Traccia",
+    "zh": "复制"
+  },
+  "volt-absorb": {
+    "ko": "축전",
+    "en": "Volt Absorb",
+    "ja": "ちくでん",
+    "de": "Voltabsorber",
+    "fr": "Absorbe-Volt",
+    "es": "Absorbe Electricidad",
+    "it": "Assorbivolt",
+    "zh": "蓄电"
+  },
+  "weak-armor": {
+    "ko": "깨어진갑옷",
+    "en": "Weak Armor",
+    "ja": "くだけるよろい",
+    "de": "Bruchrüstung",
+    "fr": "Armurouillée",
+    "es": "Armadura Frágil",
+    "it": "Sottilguscio",
+    "zh": "碎裂铠甲"
+  },
+  "well-baked-body": {
+    "ko": "노릇노릇바디",
+    "en": "Well-Baked Body",
+    "ja": "こんがりボディ",
+    "de": "Knusperkruste",
+    "fr": "Bien Cuit",
+    "es": "Cuerpo Horneado",
+    "it": "Bentostato",
+    "zh": "焦香之躯"
+  },
+  "white-smoke": {
+    "ko": "하얀연기",
+    "en": "White Smoke",
+    "ja": "しろいけむり",
+    "de": "Pulverrauch",
+    "fr": "Écran Fumée",
+    "es": "Humo Blanco",
+    "it": "Fumochiaro",
+    "zh": "白色烟雾"
+  },
+  "wind-power": {
+    "ko": "풍력발전",
+    "en": "Wind Power",
+    "ja": "ふうりょくでんき",
+    "de": "Windkraft",
+    "fr": "Turbine Éolienne",
+    "es": "Energía Eólica",
+    "it": "Energia Eolica",
+    "zh": "风力发电"
+  },
+  "zero-to-hero": {
+    "ko": "마이티체인지",
+    "en": "Zero to Hero",
+    "ja": "マイティチェンジ",
+    "de": "Superwechsel",
+    "fr": "Supermutation",
+    "es": "Cambio Heroico",
+    "it": "Supercambio",
+    "zh": "全能变身"
+  },
+  "wind-rider": {
+    "ko": "바람타기",
+    "en": "Wind Rider",
+    "ja": "かぜのり",
+    "de": "Windreiter",
+    "fr": "Aéroporté",
+    "es": "Surcavientos",
+    "it": "Vento Propizio",
+    "zh": "乘风"
+  },
+  "wimp-out": {
+    "ko": "도망태세",
+    "en": "Wimp Out",
+    "ja": "にげごし",
+    "de": "Reißaus",
+    "fr": "Escampette",
+    "es": "Huida",
+    "it": "Fuggifuggi",
+    "zh": "跃跃欲逃"
+  },
+  "zen-mode": {
+    "ko": "달마모드",
+    "en": "Zen Mode",
+    "ja": "ダルマモード",
+    "de": "Trance-Modus",
+    "fr": "Mode Transe",
+    "es": "Modo Daruma",
+    "it": "Stato Zen",
+    "zh": "达摩模式"
+  },
+  "wonder-guard": {
+    "ko": "불가사의부적",
+    "en": "Wonder Guard",
+    "ja": "ふしぎなまもり",
+    "de": "Wunderwache",
+    "fr": "Garde Mystik",
+    "es": "Superguarda",
+    "it": "Magidifesa",
+    "zh": "神奇守护"
+  },
+  "wonder-skin": {
+    "ko": "미라클스킨",
+    "en": "Wonder Skin",
+    "ja": "ミラクルスキン",
+    "de": "Wunderhaut",
+    "fr": "Peau Miracle",
+    "es": "Piel Milagro",
+    "it": "Splendicute",
+    "zh": "奇迹皮肤"
+  }
+}

@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useReducer, useRef, useState } from "react";
 import type { Route } from "./+types/home";
 import { countPool, drawRandom, filterPool } from "../../src/lib/filter";
-import { rollStarter } from "../../src/lib/starter";
+import { rollIV, rollNature, rollAbility } from "../../src/lib/starter";
+import type { IVs } from "../../src/lib/starter";
 import { ALL_POKEMON, BY_ID } from "../lib/pokedex";
 import { appReducer, MAX_PARTY } from "../lib/appState";
 import type { AppState } from "../lib/appState";
@@ -129,9 +130,24 @@ export default function Home() {
     setTab("starting");
   };
   const selectedPokemon = selectedId != null ? BY_ID.get(selectedId) ?? null : null;
-  const handleRollStarter = () => {
-    if (!selectedPokemon) return;
-    dispatch({ type: "rollStarter", roll: rollStarter(selectedPokemon, Math.random) });
+
+  // 스타팅 개별 롤/설정 핸들러 (starter.ts 재사용)
+  const starterHandlers = {
+    onRerollIv: (stat: keyof IVs) =>
+      dispatch({ type: "rerollIv", stat, value: rollIV(Math.random) }),
+    onSetIv: (stat: keyof IVs, value: number) =>
+      dispatch({ type: "rerollIv", stat, value }),
+    onRerollNature: () =>
+      dispatch({ type: "setNature", natureKey: rollNature(Math.random).key }),
+    onSetNature: (natureKey: string) =>
+      dispatch({ type: "setNature", natureKey }),
+    onRerollAbility: () => {
+      if (!selectedPokemon) return;
+      dispatch({
+        type: "setAbility",
+        ability: rollAbility(selectedPokemon.abilities, Math.random),
+      });
+    },
   };
 
   return (
@@ -150,7 +166,7 @@ export default function Home() {
             pokemon={selectedPokemon}
             roll={roll}
             lang={display.lang}
-            onRoll={handleRollStarter}
+            handlers={starterHandlers}
           />
         </div>
       )}

@@ -1,11 +1,26 @@
-// 스타팅 탭 화면: 뽑기에서 선택한 포켓몬의 특성/성격/개체값(0~31)을 랜덤으로 롤.
+// 스타팅 탭: 좌측 '능력치 설정'(특성/개체값/성격을 하나씩 롤·선택) +
+// 우측 '최종 능력치'(레벨50 실능력치, 기본+보너스 2톤 막대).
 import type { Pokemon } from "../../src/lib/filter";
-import type { StarterRoll, NatureStat } from "../../src/lib/starter";
-import { getNature } from "../../src/lib/starter";
+import type { StarterRoll, IVs, NatureStat } from "../../src/lib/starter";
+import { NATURES, getNature, finalStats } from "../../src/lib/starter";
 import type { LangCode } from "../lib/pokedex";
 import { abilityName, nameOf, typeName, TYPE_COLOR } from "../lib/pokedex";
 
-// 성격 보정 스탯 → 한국어 라벨
+// 스탯 메타: 표시 순서 + 한국어 라벨 + 최종능력치 막대 색상(기본/보너스 2톤)
+const STAT_META: {
+  key: keyof IVs;
+  label: string;
+  base: string;
+  bonus: string;
+}[] = [
+  { key: "hp", label: "HP", base: "bg-red-500", bonus: "bg-red-300" },
+  { key: "atk", label: "공격", base: "bg-orange-500", bonus: "bg-orange-300" },
+  { key: "def", label: "방어", base: "bg-amber-400", bonus: "bg-amber-200" },
+  { key: "spa", label: "특공", base: "bg-blue-500", bonus: "bg-blue-300" },
+  { key: "spd", label: "특방", base: "bg-green-500", bonus: "bg-green-300" },
+  { key: "spe", label: "스피드", base: "bg-pink-500", bonus: "bg-pink-300" },
+];
+
 const NATURE_STAT_LABEL: Record<NatureStat, string> = {
   atk: "공격",
   def: "방어",
@@ -14,31 +29,28 @@ const NATURE_STAT_LABEL: Record<NatureStat, string> = {
   spe: "스피드",
 };
 
-// 개체값 표시 순서
-const IV_ROWS: { key: keyof StarterRoll["ivs"]; label: string }[] = [
-  { key: "hp", label: "HP" },
-  { key: "atk", label: "공격" },
-  { key: "def", label: "방어" },
-  { key: "spa", label: "특공" },
-  { key: "spd", label: "특방" },
-  { key: "spe", label: "스피드" },
-];
-
 const IV_MAX = 31;
+
+export interface StarterHandlers {
+  onRerollIv: (stat: keyof IVs) => void;
+  onSetIv: (stat: keyof IVs, value: number) => void;
+  onRerollNature: () => void;
+  onSetNature: (natureKey: string) => void;
+  onRerollAbility: () => void;
+}
 
 export function StarterPanel({
   pokemon,
   roll,
   lang,
-  onRoll,
+  handlers,
 }: {
   pokemon: Pokemon | null;
   roll: StarterRoll | null;
   lang: LangCode;
-  onRoll: () => void;
+  handlers: StarterHandlers;
 }) {
-  // 아직 선택 안 함
-  if (!pokemon) {
+  if (!pokemon || !roll) {
     return (
       <p className="py-16 text-center text-gray-400">
         <strong>뽑기</strong> 탭에서 포켓몬의 <strong>스타팅 선택</strong>을
@@ -47,143 +59,192 @@ export function StarterPanel({
     );
   }
 
+  const nature = getNature(roll.natureKey);
+  const fs = finalStats(pokemon.stats, roll.ivs, roll.natureKey);
+  // 막대 스케일: 6스탯 최종값 중 최댓값 기준 (상대 비교)
+  const maxTotal = Math.max(...STAT_META.map((m) => fs[m.key].total), 1);
+  const noAbilities = pokemon.abilities.length === 0;
+
   return (
-    <div className="mx-auto max-w-md space-y-5">
-      {/* 선택된 포켓몬 */}
-      <div className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-        <div className="flex items-baseline gap-2">
-          <span className="font-mono text-sm text-gray-400">
-            #{String(pokemon.id).padStart(3, "0")}
+    <div className="grid gap-6 md:grid-cols-2">
+      {/* ── 좌: 능력치 설정 ── */}
+      <section className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+        <h2 className="mb-3 font-bold">능력치 설정</h2>
+
+        {/* 특성 */}
+        <div className="mb-2 flex items-center gap-2">
+          <span className="w-14 shrink-0 text-sm text-gray-500 dark:text-gray-400">
+            특성
           </span>
-          <h2 className="text-xl font-bold">{nameOf(pokemon, lang)}</h2>
-        </div>
-        <div className="mt-2 flex gap-1.5">
-          {pokemon.types.map((t) => (
-            <span
-              key={t}
-              className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${TYPE_COLOR[t]}`}
-            >
-              {typeName(t, lang)}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* 롤 버튼 */}
-      <button
-        type="button"
-        onClick={onRoll}
-        className="w-full rounded-lg bg-accent-600 px-5 py-3 text-lg font-bold text-white transition-colors hover:bg-accent-700"
-      >
-        🎲 {roll ? "다시 돌리기" : "돌리기"}
-      </button>
-
-      {/* 롤 결과 */}
-      {roll && (
-        <div className="space-y-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-          {/* 특성 */}
-          <div>
-            <div className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-              특성
-            </div>
+          <div className="flex flex-1 items-center gap-1.5 rounded-md border border-gray-200 bg-gray-50 px-2 py-1.5 text-sm dark:border-gray-600 dark:bg-gray-900/40">
             {roll.ability ? (
-              <div className="flex items-center gap-2">
-                <span className="text-lg font-semibold">
+              <>
+                <span className="font-medium">
                   {abilityName(roll.ability.slug, lang)}
                 </span>
                 {roll.ability.isHidden && (
-                  <span className="rounded bg-accent-100 px-1.5 py-0.5 text-xs font-medium text-accent-700 dark:bg-accent-950 dark:text-accent-300">
-                    숨김특성
+                  <span className="rounded bg-accent-100 px-1 text-xs font-medium text-accent-700 dark:bg-accent-950 dark:text-accent-300">
+                    숨김
                   </span>
                 )}
-              </div>
+              </>
             ) : (
-              <span className="text-gray-400">특성 정보 없음</span>
+              <span className="text-gray-400">—</span>
             )}
           </div>
-
-          {/* 성격 */}
-          <div>
-            <div className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-              성격
-            </div>
-            <NatureLine natureKey={roll.natureKey} />
-          </div>
-
-          {/* 개체값 */}
-          <div>
-            <div className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-              개체값 (0~31)
-            </div>
-            <div className="space-y-1.5">
-              {IV_ROWS.map((row) => (
-                <IvBar
-                  key={row.key}
-                  label={row.label}
-                  value={roll.ivs[row.key]}
-                />
-              ))}
-            </div>
-          </div>
+          <RollButton
+            onClick={handlers.onRerollAbility}
+            disabled={noAbilities}
+            label="특성 다시 뽑기"
+          />
         </div>
-      )}
-    </div>
-  );
-}
 
-// 성격 한 줄: "고집 (공격↑ 특공↓)" / 중립이면 "성실 (보정 없음)"
-function NatureLine({ natureKey }: { natureKey: string }) {
-  const n = getNature(natureKey);
-  if (!n) return <span className="text-gray-400">{natureKey}</span>;
-  const neutral = n.up === null || n.down === null;
-  return (
-    <div className="flex items-center gap-2">
-      <span className="text-lg font-semibold">{n.ko}</span>
-      {neutral ? (
-        <span className="text-sm text-gray-400">보정 없음</span>
-      ) : (
-        <span className="text-sm">
-          <span className="text-red-600 dark:text-red-400">
-            {NATURE_STAT_LABEL[n.up!]}↑
-          </span>{" "}
-          <span className="text-blue-600 dark:text-blue-400">
-            {NATURE_STAT_LABEL[n.down!]}↓
+        {/* 개체값 6종 */}
+        {STAT_META.map((m) => (
+          <div key={m.key} className="mb-2 flex items-center gap-2">
+            <span className="w-14 shrink-0 text-sm font-medium">{m.label}</span>
+            <input
+              type="number"
+              min={0}
+              max={IV_MAX}
+              value={roll.ivs[m.key]}
+              aria-label={`${m.label} 개체값`}
+              onChange={(e) => {
+                const v = Number(e.target.value);
+                const clamped = Number.isFinite(v)
+                  ? Math.max(0, Math.min(IV_MAX, Math.floor(v)))
+                  : 0;
+                handlers.onSetIv(m.key, clamped);
+              }}
+              className={`flex-1 rounded-md border px-2 py-1.5 text-center text-sm tabular-nums dark:bg-gray-900/40 ${
+                roll.ivs[m.key] === IV_MAX
+                  ? "border-accent-500 bg-accent-50 font-semibold text-accent-700 dark:border-accent-400 dark:text-accent-300"
+                  : "border-gray-200 bg-gray-50 dark:border-gray-600"
+              }`}
+            />
+            <RollButton
+              onClick={() => handlers.onRerollIv(m.key)}
+              label={`${m.label} 개체값 다시 뽑기`}
+            />
+          </div>
+        ))}
+
+        {/* 성격 */}
+        <div className="mt-3 flex items-center gap-2">
+          <span className="w-14 shrink-0 text-sm text-gray-500 dark:text-gray-400">
+            성격
           </span>
-        </span>
-      )}
+          <select
+            value={roll.natureKey}
+            aria-label="성격 선택"
+            onChange={(e) => handlers.onSetNature(e.target.value)}
+            className="flex-1 rounded-md border border-gray-200 bg-gray-50 px-2 py-1.5 text-sm dark:border-gray-600 dark:bg-gray-900/40"
+          >
+            {NATURES.map((n) => (
+              <option key={n.key} value={n.key}>
+                {n.ko}
+              </option>
+            ))}
+          </select>
+          <RollButton
+            onClick={handlers.onRerollNature}
+            label="성격 다시 뽑기"
+          />
+        </div>
+        <p className="mt-1.5 text-center text-xs text-gray-500 dark:text-gray-400">
+          {nature && nature.up && nature.down ? (
+            <>
+              <span className="text-red-600 dark:text-red-400">
+                {NATURE_STAT_LABEL[nature.up]}↑
+              </span>{" "}
+              <span className="text-blue-600 dark:text-blue-400">
+                {NATURE_STAT_LABEL[nature.down]}↓
+              </span>
+            </>
+          ) : (
+            "능력치 변화 없음"
+          )}
+        </p>
+      </section>
+
+      {/* ── 우: 최종 능력치 ── */}
+      <section className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+        {/* 선택 포켓몬 헤더 */}
+        <div className="mb-3 flex items-center gap-2">
+          <span className="font-mono text-sm text-gray-400">
+            #{String(pokemon.id).padStart(3, "0")}
+          </span>
+          <h2 className="text-lg font-bold">{nameOf(pokemon, lang)}</h2>
+          <span className="ml-auto flex gap-1">
+            {pokemon.types.map((t) => (
+              <span
+                key={t}
+                className={`rounded-full px-2 py-0.5 text-xs font-semibold ${TYPE_COLOR[t]}`}
+              >
+                {typeName(t, lang)}
+              </span>
+            ))}
+          </span>
+        </div>
+
+        <div className="mb-2 border-l-4 border-accent-500 pl-2 text-sm font-semibold">
+          최종 능력치 (기본+보너스) · Lv.50
+        </div>
+
+        <div className="space-y-2">
+          {STAT_META.map((m) => {
+            const s = fs[m.key];
+            const basePct = (s.basePart / maxTotal) * 100;
+            const bonusPct = (s.bonus / maxTotal) * 100;
+            return (
+              <div key={m.key} className="flex items-center gap-2 text-sm">
+                <span className="w-12 shrink-0 text-gray-500 dark:text-gray-400">
+                  {m.label}
+                </span>
+                <div
+                  className="flex h-4 flex-1 overflow-hidden rounded bg-gray-200 dark:bg-gray-700"
+                  role="meter"
+                  aria-label={`${m.label} 최종 능력치`}
+                  aria-valuenow={s.total}
+                  aria-valuemin={0}
+                  aria-valuemax={maxTotal}
+                >
+                  {/* 기본(진한색) + 보너스(연한색) 2톤 */}
+                  <div className={m.base} style={{ width: `${basePct}%` }} />
+                  <div className={m.bonus} style={{ width: `${bonusPct}%` }} />
+                </div>
+                <span className="w-9 shrink-0 text-right font-bold tabular-nums">
+                  {s.total}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 }
 
-// 개체값 막대 (0~31 스케일). 31 은 강조.
-function IvBar({ label, value }: { label: string; value: number }) {
-  const perfect = value === IV_MAX;
-  const pct = (value / IV_MAX) * 100;
+// 공통 '돌리기' 버튼 (accent 색 — 디자인 시스템 일관성)
+function RollButton({
+  onClick,
+  label,
+  disabled = false,
+}: {
+  onClick: () => void;
+  label: string;
+  disabled?: boolean;
+}) {
   return (
-    <div className="flex items-center gap-2 text-sm">
-      <span className="w-12 shrink-0 text-gray-500 dark:text-gray-400">
-        {label}
-      </span>
-      <span
-        className={`w-8 shrink-0 text-right tabular-nums font-medium ${
-          perfect ? "text-accent-600 dark:text-accent-400" : ""
-        }`}
-      >
-        {value}
-      </span>
-      <div
-        className="h-2.5 flex-1 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700"
-        role="meter"
-        aria-label={label}
-        aria-valuenow={value}
-        aria-valuemin={0}
-        aria-valuemax={IV_MAX}
-      >
-        <div
-          className={`h-full rounded-full ${perfect ? "bg-accent-500" : "bg-slate-400 dark:bg-slate-500"}`}
-          style={{ width: `${pct}%` }}
-        />
-      </div>
-    </div>
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      aria-label={label}
+      title={label}
+      className="shrink-0 rounded-md bg-accent-600 px-2.5 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-accent-700 disabled:cursor-not-allowed disabled:bg-gray-300 dark:disabled:bg-gray-700"
+    >
+      돌리기
+    </button>
   );
 }

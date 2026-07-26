@@ -9,6 +9,8 @@ export function PokemonCard({
   display,
   onReroll,
   canReroll = true,
+  onSelectStarter,
+  isSelected = false,
 }: {
   pokemon: Pokemon;
   display: DisplayOptions;
@@ -16,6 +18,10 @@ export function PokemonCard({
   onReroll?: () => void;
   // 후보가 없어 교체 불가하면 비활성화
   canReroll?: boolean;
+  // 스타팅 탭으로 이 포켓몬 넘기기. 없으면 버튼 미표시.
+  onSelectStarter?: () => void;
+  // 현재 스타팅으로 선택된 카드인지
+  isSelected?: boolean;
 }) {
   const { lang, showNumber, showTypes, showStats } = display;
   const name = nameOf(pokemon, lang);
@@ -78,6 +84,22 @@ export function PokemonCard({
             </span>
           </div>
         </div>
+      )}
+
+      {/* 스타팅 선택 */}
+      {onSelectStarter && (
+        <button
+          type="button"
+          onClick={onSelectStarter}
+          aria-pressed={isSelected}
+          className={`mt-3 w-full rounded-lg border px-3 py-1.5 text-sm font-semibold transition-colors ${
+            isSelected
+              ? "border-accent-600 bg-accent-50 text-accent-700 dark:border-accent-400 dark:bg-accent-950 dark:text-accent-300"
+              : "border-gray-300 text-gray-600 hover:border-accent-500 hover:text-accent-600 dark:border-gray-600 dark:text-gray-300 dark:hover:border-accent-400"
+          }`}
+        >
+          {isSelected ? "✓ 스타팅 선택됨" : "스타팅 선택"}
+        </button>
       )}
     </article>
   );

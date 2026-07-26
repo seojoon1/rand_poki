@@ -2,6 +2,7 @@
 // data/pokemon.json 을 빌드 타임에 import 한다 (런타임 fetch 금지).
 
 import rawData from "../../data/pokemon.json";
+import rawAbilities from "../../data/abilities.json";
 import type { Pokemon, PokemonType, Stage } from "../../src/lib/filter";
 
 // JSON 은 types 가 string[] 로 추론되므로 Pokemon[] 로 단언한다.
@@ -110,4 +111,15 @@ function enTypeName(t: PokemonType): string {
 
 export function typeName(t: PokemonType, lang: LangCode): string {
   return TYPE_NAME[lang]?.[t] ?? enTypeName(t);
+}
+
+// ── 특성 이름 (data/abilities.json: slug → 언어별 이름) ─────────────
+const ABILITY_NAMES = rawAbilities as Record<
+  string,
+  Record<LangCode, string> | null
+>;
+export function abilityName(slug: string, lang: LangCode): string {
+  const n = ABILITY_NAMES[slug];
+  if (!n) return slug; // 이름 데이터 없으면 슬러그 폴백
+  return n[lang] ?? n.en ?? slug;
 }

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useReducer, useRef, useState } from "react";
 import type { Route } from "./+types/home";
 import { countPool, drawRandom, filterPool } from "../../src/lib/filter";
+import { rollStarter } from "../../src/lib/starter";
 import { ALL_POKEMON, BY_ID } from "../lib/pokedex";
 import { appReducer, MAX_PARTY } from "../lib/appState";
 import type { AppState } from "../lib/appState";
@@ -8,6 +9,7 @@ import { defaultFilters, filtersToSearch, searchToFilters } from "../lib/urlFilt
 import { FilterPanel } from "../components/FilterPanel";
 import { DisplayOptionsBar } from "../components/DisplayOptions";
 import { PokemonCard } from "../components/PokemonCard";
+import { StarterPanel } from "../components/StarterPanel";
 import { Tabs } from "../components/Tabs";
 
 // 상단 탭 정의
@@ -37,7 +39,7 @@ const initialState: AppState = {
 
 export default function Home() {
   const [state, dispatch] = useReducer(appReducer, initialState);
-  const { filters, display, result } = state;
+  const { filters, display, result, selectedId, roll } = state;
 
   // ── URL ↔ filters 동기화 ───────────────────────────────────────────
   const hydrated = useRef(false);
@@ -120,6 +122,18 @@ export default function Home() {
   // 상단 탭 (화면 전환용 view 상태 — 뽑기 결과와 무관)
   const [tab, setTab] = useState<TabKey>("draw");
 
+  // ── 스타팅: 선택 & 롤 ───────────────────────────────────────────────
+  // 뽑기 카드에서 선택하면 스타팅 탭으로 넘기고 탭 전환까지.
+  const handleSelectStarter = (id: number) => {
+    dispatch({ type: "selectStarter", id });
+    setTab("starting");
+  };
+  const selectedPokemon = selectedId != null ? BY_ID.get(selectedId) ?? null : null;
+  const handleRollStarter = () => {
+    if (!selectedPokemon) return;
+    dispatch({ type: "rollStarter", roll: rollStarter(selectedPokemon, Math.random) });
+  };
+
   return (
     <main className="mx-auto max-w-6xl p-4 text-gray-900 dark:text-gray-100">
       <h1 className="mb-3 text-2xl font-bold">랜덤 포켓몬 뽑기</h1>
@@ -129,10 +143,15 @@ export default function Home() {
         <Tabs tabs={TABS as unknown as { key: string; label: string }[]} active={tab} onChange={(k) => setTab(k as TabKey)} />
       </div>
 
-      {/* 스타팅 탭 (작업 예정) */}
+      {/* 스타팅 탭 */}
       {tab === "starting" && (
         <div role="tabpanel" id="panel-starting" aria-labelledby="tab-starting">
-          <p className="py-16 text-center text-gray-400">스타팅 (작업 예정)</p>
+          <StarterPanel
+            pokemon={selectedPokemon}
+            roll={roll}
+            lang={display.lang}
+            onRoll={handleRollStarter}
+          />
         </div>
       )}
 
@@ -230,6 +249,8 @@ export default function Home() {
                       display={display}
                       onReroll={() => handleRerollOne(i)}
                       canReroll={candidatesForSlot(i).length > 0}
+                      onSelectStarter={() => handleSelectStarter(p.id)}
+                      isSelected={selectedId === p.id}
                     />
                   ))}
                 </div>

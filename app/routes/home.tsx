@@ -11,8 +11,9 @@ import { PokemonCard } from "../components/PokemonCard";
 import { Tabs } from "../components/Tabs";
 
 // 상단 탭 정의
-type TabKey = "starting" | "settings";
+type TabKey = "draw" | "starting" | "settings";
 const TABS = [
+  { key: "draw", label: "뽑기" },
   { key: "starting", label: "스타팅" },
   { key: "settings", label: "설정" },
 ] as const;
@@ -115,7 +116,7 @@ export default function Home() {
   const canAdd = candidatesForAdd().length > 0;
 
   // 상단 탭 (화면 전환용 view 상태 — 뽑기 결과와 무관)
-  const [tab, setTab] = useState<TabKey>("starting");
+  const [tab, setTab] = useState<TabKey>("draw");
 
   return (
     <main className="mx-auto max-w-6xl p-4 text-gray-900 dark:text-gray-100">
@@ -126,6 +127,13 @@ export default function Home() {
         <Tabs tabs={TABS as unknown as { key: string; label: string }[]} active={tab} onChange={(k) => setTab(k as TabKey)} />
       </div>
 
+      {/* 스타팅 탭 (작업 예정) */}
+      {tab === "starting" && (
+        <div role="tabpanel" id="panel-starting" aria-labelledby="tab-starting">
+          <p className="py-16 text-center text-gray-400">스타팅 (작업 예정)</p>
+        </div>
+      )}
+
       {/* 설정 탭 (작업 예정) */}
       {tab === "settings" && (
         <div role="tabpanel" id="panel-settings" aria-labelledby="tab-settings">
@@ -133,12 +141,12 @@ export default function Home() {
         </div>
       )}
 
-      {/* 스타팅 탭 */}
+      {/* 뽑기 탭 (기존 화면) */}
       <div
         role="tabpanel"
-        id="panel-starting"
-        aria-labelledby="tab-starting"
-        hidden={tab !== "starting"}
+        id="panel-draw"
+        aria-labelledby="tab-draw"
+        hidden={tab !== "draw"}
         className="flex flex-col gap-6 md:flex-row"
       >
         {/* ── 좌: 필터 패널 (모바일은 상단 접이식) ── */}

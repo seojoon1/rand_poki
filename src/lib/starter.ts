@@ -1,7 +1,7 @@
 // 스타팅 포켓몬 개체 롤: 특성 / 성격 / 개체값(IV 0~31).
 // 순수 함수 모듈. rng 주입 가능(기본 Math.random)해 테스트에서 시드 고정.
 
-import type { AbilityRef, Pokemon } from "./filter";
+import type { AbilityRef, Pokemon, Stats } from "./filter";
 
 // 성격이 보정하는 스탯 키 (HP 는 성격 영향 없음)
 export type NatureStat = "atk" | "def" | "spa" | "spd" | "spe";
@@ -106,5 +106,78 @@ export function rollStarter(
     ability: rollAbility(pokemon.abilities, rng),
     natureKey: rollNature(rng).key,
     ivs: rollIVs(rng),
+  };
+}
+
+// 중립 성격 키 (보정 없음)
+export const NEUTRAL_NATURE = "hardy";
+
+// 스타팅 선택 직후의 기본 상태: 특성 없음 / 중립 성격 / 개체값 전부 0.
+// 이후 각 항목을 개별 '돌리기' 로 채운다.
+export function emptyRoll(): StarterRoll {
+  return {
+    ability: null,
+    natureKey: NEUTRAL_NATURE,
+    ivs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 },
+  };
+}
+
+// ── 실능력치 계산 (레벨 50, 노력치 0) ───────────────────────────────
+// HP    = floor((2*종족값 + IV) * L/100) + L + 10
+// 그 외 = floor( (floor((2*종족값 + IV) * L/100) + 5) * 성격보정 )
+//   성격보정: 상승 스탯 ×1.1, 하락 스탯 ×0.9, 그 외 ×1.0
+export const DEFAULT_LEVEL = 50;
+
+export interface FinalStat {
+  total: number; // 최종 실능력치
+  basePart: number; // IV 0 일 때의 값 (막대의 '기본' 부분)
+  bonus: number; // IV 로 늘어난 양 (막대의 '보너스' 부분)
+}
+export type FinalStats = Record<keyof IVs, FinalStat>;
+
+function natureMult(nature: NatureDef | undefined, stat: NatureStat): number {
+  if (!nature) return 1;
+  if (nature.up === stat) return 1.1;
+  if (nature.down === stat) return 0.9;
+  return 1;
+}
+
+function statValue(
+  base: number,
+  iv: number,
+  level: number,
+  isHP: boolean,
+  mult: number
+): number {
+  const core = Math.floor(((2 * base + iv) * level) / 100);
+  if (isHP) return core + level + 10;
+  return Math.floor((core + 5) * mult);
+}
+
+export function finalStats(
+  base: Stats,
+  ivs: IVs,
+  natureKey: string,
+  level: number = DEFAULT_LEVEL
+): FinalStats {
+  const nature = getNature(natureKey);
+  const mk = (
+    statKey: keyof IVs,
+    baseVal: number,
+    iv: number
+  ): FinalStat => {
+    const isHP = statKey === "hp";
+    const mult = isHP ? 1 : natureMult(nature, statKey as NatureStat);
+    const total = statValue(baseVal, iv, level, isHP, mult);
+    const basePart = statValue(baseVal, 0, level, isHP, mult);
+    return { total, basePart, bonus: total - basePart };
+  };
+  return {
+    hp: mk("hp", base.hp, ivs.hp),
+    atk: mk("atk", base.atk, ivs.atk),
+    def: mk("def", base.def, ivs.def),
+    spa: mk("spa", base.spa, ivs.spa),
+    spd: mk("spd", base.spd, ivs.spd),
+    spe: mk("spe", base.spe, ivs.spe),
   };
 }

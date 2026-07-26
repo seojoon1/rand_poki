@@ -7,8 +7,10 @@ import {
   rollNature,
   rollAbility,
   rollStarter,
+  emptyRoll,
+  finalStats,
 } from "./starter";
-import type { AbilityRef } from "./filter";
+import type { AbilityRef, Stats } from "./filter";
 
 // 시드 고정 RNG (선형 합동 생성기)
 function seededRng(seed: number): () => number {
@@ -111,6 +113,51 @@ describe("성격/특성 롤", () => {
       if (p) seen.add(p.slug);
     }
     expect(seen.has("hidden")).toBe(true);
+  });
+});
+
+describe("emptyRoll", () => {
+  it("개체값 0, 중립 성격, 특성 없음", () => {
+    const r = emptyRoll();
+    expect(r.ivs).toEqual({ hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 });
+    expect(getNature(r.natureKey)?.up).toBeNull();
+    expect(r.ability).toBeNull();
+  });
+});
+
+describe("finalStats (레벨 50 실능력치)", () => {
+  // 피츄 종족값
+  const pichu: Stats = {
+    hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60, total: 205,
+  };
+
+  it("목업 케이스: 피츄 + 특정 IV/중립성격 = 80/50/34/53/51/65", () => {
+    const ivs = { hp: 0, atk: 11, def: 29, spa: 27, spd: 23, spe: 0 };
+    const fs = finalStats(pichu, ivs, "hardy");
+    expect(fs.hp.total).toBe(80);
+    expect(fs.atk.total).toBe(50);
+    expect(fs.def.total).toBe(34);
+    expect(fs.spa.total).toBe(53);
+    expect(fs.spd.total).toBe(51);
+    expect(fs.spe.total).toBe(65);
+  });
+
+  it("basePart + bonus = total (IV 0 이면 bonus 0)", () => {
+    const fs = finalStats(pichu, { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 }, "hardy");
+    for (const k of ["hp", "atk", "def", "spa", "spd", "spe"] as const) {
+      expect(fs[k].bonus).toBe(0);
+      expect(fs[k].basePart).toBe(fs[k].total);
+    }
+  });
+
+  it("성격 보정: 상승 스탯 ×1.1, 하락 스탯 ×0.9 (HP 제외)", () => {
+    const ivs = { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 };
+    const neutral = finalStats(pichu, ivs, "hardy");
+    const adamant = finalStats(pichu, ivs, "adamant"); // atk↑ spa↓
+    expect(adamant.atk.total).toBeGreaterThan(neutral.atk.total);
+    expect(adamant.spa.total).toBeLessThan(neutral.spa.total);
+    // HP 는 성격 영향 없음
+    expect(adamant.hp.total).toBe(neutral.hp.total);
   });
 });
 

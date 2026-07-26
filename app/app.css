@@ -30,3 +30,24 @@ body {
     color-scheme: dark;
   }
 }
+
+/* 값이 확정될 때 살짝 튀는 pop 애니메이션 (스타팅 롤) */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animate-pop {
+  animation: pop 300ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-pop {
+    animation: none;
+  }
+}

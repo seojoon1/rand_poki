@@ -35,6 +35,7 @@ export function PokemonCard({
             #{String(pokemon.id).padStart(3, "0")}
           </span>
         )}
+        {/* 이름은 포켓몬 위키 링크 */}
         <h3 className="text-lg font-bold"><a href={`https://pokemon.fandom.com/ko/wiki/${name}_(포켓몬)`} target="_blank" rel="noopener noreferrer">{name}</a></h3>
         {onReroll && (
           <button

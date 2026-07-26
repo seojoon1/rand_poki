@@ -1,4 +1,11 @@
-import { useEffect, useMemo, useReducer, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useRef,
+  useState,
+} from "react";
 import type { Route } from "./+types/home";
 import { countPool, drawRandom, filterPool } from "../../src/lib/filter";
 import { rollIV, rollNature, rollAbility } from "../../src/lib/starter";
@@ -12,6 +19,11 @@ import { DisplayOptionsBar } from "../components/DisplayOptions";
 import { PokemonCard } from "../components/PokemonCard";
 import { StarterPanel } from "../components/StarterPanel";
 import { DirectAddPicker } from "../components/DirectAddPicker";
+import {
+  GuideDialog,
+  hasSeenGuide,
+  markGuideSeen,
+} from "../components/GuideDialog";
 import { Tabs } from "../components/Tabs";
 import {
   SITE_URL,
@@ -167,6 +179,19 @@ export default function Home() {
   // 상단 탭 (화면 전환용 view 상태 — 뽑기 결과와 무관)
   const [tab, setTab] = useState<TabKey>("draw");
 
+  // ── 사용 설명서 ─────────────────────────────────────────────────────
+  // 서버 렌더에서는 항상 닫힌 상태로 그리고, 마운트 후 첫 방문일 때만 연다
+  // (localStorage 를 렌더 중에 읽으면 하이드레이션이 어긋난다).
+  const [guideOpen, setGuideOpen] = useState(false);
+  useEffect(() => {
+    if (!hasSeenGuide()) setGuideOpen(true);
+  }, []);
+  // 어떤 경로로 닫히든(버튼·Esc·백드롭) '봤음'으로 기록한다.
+  const closeGuide = useCallback(() => {
+    setGuideOpen(false);
+    markGuideSeen();
+  }, []);
+
   // ── 스타팅: 선택 & 롤 ───────────────────────────────────────────────
   // 뽑기 카드에서 선택하면 스타팅 탭으로 넘기고 탭 전환까지.
   const handleSelectStarter = (id: number) => {
@@ -196,7 +221,18 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-6xl p-4 text-gray-900 dark:text-gray-100">
-      <h1 className="mb-3 text-2xl font-bold">랜덤 포켓몬 뽑기</h1>
+      <div className="mb-3 flex items-center gap-3">
+        <h1 className="text-2xl font-bold">랜덤 포켓몬 뽑기</h1>
+        <button
+          type="button"
+          onClick={() => setGuideOpen(true)}
+          className="ml-auto shrink-0 rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-semibold text-gray-600 transition-colors hover:border-accent-500 hover:text-accent-600 dark:border-gray-600 dark:text-gray-300 dark:hover:border-accent-400"
+        >
+          ? 사용법
+        </button>
+      </div>
+
+      <GuideDialog open={guideOpen} onClose={closeGuide} />
 
       {/* 상단 탭 */}
       <div className="mb-5">

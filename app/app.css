@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* ──────────────────────────────────────────────────────────────
+   디자인 시스템 토큰
+   강조색(accent): 이로치(색이 다른) 메타몽의 하늘빛 블루.
+   Tailwind v4 의 `dark:` 변형은 기본적으로 prefers-color-scheme 를
+   따르므로 사용자 시스템 설정에 맞춰 라이트/다크가 자동 전환된다.
+   → 컴포넌트에서는 bg-accent-600, text-accent-500, accent-accent-500 처럼
+     이 토큰만 사용하고 특정 색상(emerald 등)을 직접 쓰지 않는다.
+   ────────────────────────────────────────────────────────────── */
+@theme {
+  --color-accent-50: #eef7ff;
+  --color-accent-100: #d9edff;
+  --color-accent-200: #bce0ff;
+  --color-accent-300: #8ecdff;
+  --color-accent-400: #59b0fb;
+  --color-accent-500: #3391ec; /* 기본 강조 (막대/폼 컨트롤) */
+  --color-accent-600: #2176d2; /* 기본 버튼 배경 */
+  --color-accent-700: #1c5eac; /* 버튼 hover */
+  --color-accent-800: #1d4f8a;
+  --color-accent-900: #1d4372;
+  --color-accent-950: #142a4a;
+}
+
 html,
 body {
   @apply bg-white dark:bg-gray-950;

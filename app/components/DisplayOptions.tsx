@@ -34,6 +34,11 @@ export function DisplayOptionsBar({
       </label>
 
       <ToggleLabel
+        label="이미지"
+        checked={display.showImage}
+        onChange={() => onChange({ showImage: !display.showImage })}
+      />
+      <ToggleLabel
         label="도감번호"
         checked={display.showNumber}
         onChange={() => onChange({ showNumber: !display.showNumber })}

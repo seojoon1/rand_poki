@@ -12,6 +12,7 @@ import type { LangCode } from "./pokedex";
 // 표시 옵션 — 바뀌면 즉시 반영, 재추첨 없음
 export interface DisplayOptions {
   lang: LangCode;
+  showImage: boolean;
   showNumber: boolean;
   showTypes: boolean;
   showStats: boolean;
@@ -35,6 +36,8 @@ export type AppAction =
   | { type: "draw"; ids: number[]; requested: number }
   // 추가: 카드 한 장을 파티 끝에 덧붙임 (최대 6장)
   | { type: "addOne"; id: number }
+  // 삭제: result 의 index 슬롯 하나만 파티에서 제거
+  | { type: "removeOne"; index: number }
   // 초기화: 파티 비우기
   | { type: "reset" }
   // 개별 리롤: result 의 index 슬롯 하나만 새 id 로 교체
@@ -71,6 +74,12 @@ export function appReducer(state: AppState, action: AppAction): AppState {
       // 최대 6장까지만 덧붙인다.
       if (state.result.length >= MAX_PARTY) return state;
       return { ...state, result: [...state.result, action.id] };
+    case "removeOne": {
+      // 해당 슬롯만 파티에서 빼고 나머지는 순서 유지.
+      if (action.index < 0 || action.index >= state.result.length) return state;
+      const next = state.result.filter((_, i) => i !== action.index);
+      return { ...state, result: next };
+    }
     case "reset":
       // 파티 비우기.
       return { ...state, result: [], requested: 0 };

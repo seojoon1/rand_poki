@@ -8,6 +8,7 @@ import { NATURES, getNature, finalStats } from "../../src/lib/starter";
 import type { LangCode } from "../lib/pokedex";
 import { abilityName, nameOf, typeName, TYPE_COLOR } from "../lib/pokedex";
 import { isMuted, setMuted, tick, land, jackpot } from "../lib/sound";
+import { Sprite } from "./Sprite";
 
 // 스탯 메타: 표시 순서 + 한국어 라벨 + 최종능력치 막대 색상(기본/보너스 2톤)
 const STAT_META: {
@@ -103,11 +104,14 @@ export function StarterPanel({
   pokemon,
   roll,
   lang,
+  showImage = true,
   handlers,
 }: {
   pokemon: Pokemon | null;
   roll: StarterRoll | null;
   lang: LangCode;
+  // 뽑기 탭의 표시 옵션과 같은 스위치 (끄면 도트 이미지를 숨긴다)
+  showImage?: boolean;
   handlers: StarterHandlers;
 }) {
   if (!pokemon || !roll) {
@@ -177,6 +181,9 @@ export function StarterPanel({
       {/* ── 우: 최종 능력치 ── */}
       <section className="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
         <div className="mb-4 flex items-center gap-2">
+          {showImage && (
+            <Sprite id={pokemon.id} name={nameOf(pokemon, lang)} size={64} />
+          )}
           <span className="font-mono text-base text-gray-400">
             #{String(pokemon.id).padStart(3, "0")}
           </span>

@@ -6,6 +6,7 @@ import type { Pokemon } from "../../src/lib/filter";
 import type { LangCode } from "../lib/pokedex";
 import { ALL_POKEMON, nameOf, typeName, TYPE_COLOR } from "../lib/pokedex";
 import { chosungIncludes, hasChosung } from "../lib/hangul";
+import { Sprite } from "./Sprite";
 
 // 목록이 1000줄을 넘으면 렌더가 무거워지므로 상위 N개만 보여준다.
 const MAX_RESULTS = 50;
@@ -188,6 +189,7 @@ export function DirectAddPicker({
                   <span className="w-9 shrink-0 font-mono text-xs text-gray-400">
                     {dexNo(p.id)}
                   </span>
+                  <Sprite id={p.id} name="" size={32} />
                   <span className="truncate font-medium">{nameOf(p, lang)}</span>
                   <span className="ml-auto flex shrink-0 gap-1">
                     {already ? (

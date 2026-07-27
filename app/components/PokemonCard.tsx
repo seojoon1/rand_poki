@@ -2,6 +2,7 @@
 import type { Pokemon } from "../../src/lib/filter";
 import type { DisplayOptions } from "../lib/appState";
 import { STAT_ROWS, TYPE_COLOR, typeName, nameOf } from "../lib/pokedex";
+import { Sprite } from "./Sprite";
 import { StatBar } from "./StatBar";
 
 export function PokemonCard({
@@ -9,6 +10,7 @@ export function PokemonCard({
   display,
   onReroll,
   canReroll = true,
+  onRemove,
   onSelectStarter,
   isSelected = false,
 }: {
@@ -18,17 +20,19 @@ export function PokemonCard({
   onReroll?: () => void;
   // 후보가 없어 교체 불가하면 비활성화
   canReroll?: boolean;
+  // 이 카드만 파티에서 삭제. 없으면 버튼을 렌더하지 않는다.
+  onRemove?: () => void;
   // 스타팅 탭으로 이 포켓몬 넘기기. 없으면 버튼 미표시.
   onSelectStarter?: () => void;
   // 현재 스타팅으로 선택된 카드인지
   isSelected?: boolean;
 }) {
-  const { lang, showNumber, showTypes, showStats } = display;
+  const { lang, showImage, showNumber, showTypes, showStats } = display;
   const name = nameOf(pokemon, lang);
 
   return (
     <article className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-      {/* 헤더: 도감번호 + 이름 + 개별 리롤 버튼 */}
+      {/* 헤더: 도감번호 + 이름 + 개별 리롤/삭제 버튼 */}
       <header className="mb-3 flex items-baseline gap-2">
         {showNumber && (
           <span className="tabular-nums text-sm font-mono text-gray-400">
@@ -37,19 +41,39 @@ export function PokemonCard({
         )}
         {/* 이름은 포켓몬 위키 링크 */}
         <h3 className="text-lg font-bold"><a href={`https://pokemon.fandom.com/ko/wiki/${name}_(포켓몬)#출현장소`} target="_blank" rel="noopener noreferrer">{name}</a></h3>
-        {onReroll && (
-          <button
-            type="button"
-            onClick={onReroll}
-            disabled={!canReroll}
-            aria-label={`${name} 다시 뽑기`}
-            title="이 카드만 다시 뽑기"
-            className="ml-auto shrink-0 rounded-md px-2 py-1 text-sm text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-800 disabled:cursor-not-allowed disabled:opacity-40 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-100"
-          >
-            🎲 리롤
-          </button>
-        )}
+        <div className="ml-auto flex shrink-0 items-center gap-1">
+          {onReroll && (
+            <button
+              type="button"
+              onClick={onReroll}
+              disabled={!canReroll}
+              aria-label={`${name} 다시 뽑기`}
+              title="이 카드만 다시 뽑기"
+              className="rounded-md px-2 py-1 text-sm text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-800 disabled:cursor-not-allowed disabled:opacity-40 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-100"
+            >
+              🎲 리롤
+            </button>
+          )}
+          {onRemove && (
+            <button
+              type="button"
+              onClick={onRemove}
+              aria-label={`${name} 삭제`}
+              title="이 카드만 삭제"
+              className="rounded-md px-2 py-1 text-sm text-gray-500 transition-colors hover:bg-red-50 hover:text-red-600 dark:text-gray-400 dark:hover:bg-red-950 dark:hover:text-red-400"
+            >
+              ✕ 삭제
+            </button>
+          )}
+        </div>
       </header>
+
+      {/* 도트 이미지 */}
+      {showImage && (
+        <div className="mb-3 flex justify-center rounded-lg bg-gray-50 py-2 dark:bg-gray-900/40">
+          <Sprite id={pokemon.id} name={name} size={112} />
+        </div>
+      )}
 
       {/* 타입 뱃지 */}
       {showTypes && (

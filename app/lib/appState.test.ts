@@ -18,7 +18,13 @@ function mkFilters(over: Partial<FilterOptions> = {}): FilterOptions {
 function mkState(over: Partial<AppState> = {}): AppState {
   return {
     filters: mkFilters(),
-    display: { lang: "ko", showNumber: true, showTypes: true, showStats: true },
+    display: {
+      lang: "ko",
+      showImage: true,
+      showNumber: true,
+      showTypes: true,
+      showStats: true,
+    },
     result: [1, 2, 3],
     requested: 3,
     selectedId: null,
@@ -99,6 +105,19 @@ describe("appReducer: 상태 분리 불변식", () => {
     const before = mkState({ result: [1, 2], requested: 2 });
     expect(appReducer(before, { type: "rerollOne", index: 5, id: 99 })).toBe(before);
     expect(appReducer(before, { type: "rerollOne", index: -1, id: 99 })).toBe(before);
+  });
+
+  it("removeOne 은 해당 슬롯만 빼고 순서를 유지한다", () => {
+    const before = mkState({ result: [1, 2, 3], requested: 3 });
+    const after = appReducer(before, { type: "removeOne", index: 1 });
+    expect(after.result).toEqual([1, 3]);
+    expect(after.requested).toBe(3); // 요청 수는 그대로
+  });
+
+  it("removeOne 의 index 가 범위를 벗어나면 상태 불변", () => {
+    const before = mkState({ result: [1, 2], requested: 2 });
+    expect(appReducer(before, { type: "removeOne", index: 5 })).toBe(before);
+    expect(appReducer(before, { type: "removeOne", index: -1 })).toBe(before);
   });
 
   it("selectStarter 는 선택 id 를 세우고 기본 롤로 초기화", () => {

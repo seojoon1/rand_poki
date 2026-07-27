@@ -58,6 +58,13 @@ export function nameOf(p: Pokemon, lang: LangCode): string {
   return p.names[lang] ?? p.names.en ?? p.slug;
 }
 
+// ── 도트 스프라이트 ──────────────────────────────────────────────────
+// scripts/fetch-sprites.mjs 가 public/sprites/{id}.png (96x96) 로 받아둔다.
+// 외부 CDN 을 런타임에 때리지 않으므로 경로는 id 로만 만든다.
+export function spriteUrl(id: number): string {
+  return `/sprites/${id}.png`;
+}
+
 // ── 진화 단계 라벨 (한국어) ──────────────────────────────────────────
 export const STAGE_LABEL: Record<Stage, string> = {
   base: "기본",

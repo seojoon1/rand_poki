@@ -87,7 +87,13 @@ export function meta({}: Route.MetaArgs) {
 // 리듀서 초기 상태 (URL 은 마운트 후 클라이언트에서 읽어 하이드레이션 불일치 방지)
 const initialState: AppState = {
   filters: defaultFilters(),
-  display: { lang: "ko", showNumber: true, showTypes: true, showStats: true },
+  display: {
+    lang: "ko",
+    showImage: true,
+    showNumber: true,
+    showTypes: true,
+    showStats: true,
+  },
   result: [],
   requested: 0,
   selectedId: null,
@@ -246,6 +252,7 @@ export default function Home() {
             pokemon={selectedPokemon}
             roll={roll}
             lang={display.lang}
+            showImage={display.showImage}
             handlers={starterHandlers}
           />
         </div>
@@ -351,6 +358,7 @@ export default function Home() {
                       display={display}
                       onReroll={() => handleRerollOne(i)}
                       canReroll={candidatesForSlot(i).length > 0}
+                      onRemove={() => dispatch({ type: "removeOne", index: i })}
                       onSelectStarter={() => handleSelectStarter(p.id)}
                       isSelected={selectedId === p.id}
                     />

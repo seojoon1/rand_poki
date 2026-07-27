@@ -369,6 +369,11 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      {/* 푸터: 탭과 무관하게 항상 맨 아래 */}
+      <footer className="mt-10 border-t border-gray-200 pt-4 text-center text-sm text-gray-400 dark:border-gray-700 dark:text-gray-500">
+        made by seojoon1
+      </footer>
     </main>
   );
 }

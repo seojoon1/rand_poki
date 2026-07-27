@@ -1,45 +1,63 @@
+<div align="center">
+
+<img src="public/sprites/25.png" width="80" alt="피카츄">
+<img src="public/sprites/6.png" width="80" alt="리자몽">
+<img src="public/sprites/9.png" width="80" alt="거북왕">
+<img src="public/sprites/3.png" width="80" alt="이상해꽃">
+<img src="public/sprites/150.png" width="80" alt="뮤츠">
+
 # 랜덤 포켓몬 뽑기
 
-세대 · 타입 · 진화 단계 · 종족값 조건으로 랜덤 포켓몬을 뽑고,
-개체값 · 성격 · 특성까지 돌려 스타팅 포켓몬을 정하는 웹앱.
+**세대 · 타입 · 종족값을 정해두고 랜덤으로 파티를 굴린다.**
+마음에 드는 한 마리는 스타팅으로 데려가 개체값 · 성격 · 특성까지 돌린다.
 
-**https://rand-poki.vercel.app**
+### [▶ rand-poki.vercel.app](https://rand-poki.vercel.app)
 
-전국도감 1~1025번 데이터를 정적 JSON으로 내장하므로 런타임에 외부 API를 호출하지 않는다.
+<sub>
+전국도감 1~1025번 · 8개국어 · 도트 이미지 전부 내장 —
+런타임에 외부 API를 한 번도 부르지 않는다
+</sub>
 
----
+<br>
 
-## 기능
+![React Router](https://img.shields.io/badge/React_Router_v8-CA4245?logo=reactrouter&logoColor=white)
+![React](https://img.shields.io/badge/React_19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_v4-06B6D4?logo=tailwindcss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
 
-첫 방문에는 **사용 설명서 팝업**이 한 번 뜬다. 이후에는 헤더의 `? 사용법` 버튼으로 언제든 다시 열 수 있다.
-
-### 뽑기 탭
-
-- **필터** — 세대(1~9) · 타입(18종, `any`/`exact` 모드) · 2타입만 · 진화 단계(기본/중간/최종) ·
-  종족값 총합 범위 · 전설/환상 제외 · 같은 진화 계열 중복 방지
-- **조건이 바뀌어도 이미 뽑힌 결과는 그대로 둔다.** 재추첨은 버튼을 눌러야 일어난다
-- 필터 조건은 URL 쿼리스트링에 직렬화되어 그대로 공유할 수 있다 (결과 자체는 넣지 않는다)
-- **직접 추가** — 랜덤 대신 원하는 포켓몬을 검색해서 넣는다.
-  이름 · 도감번호 · **한글 초성**(`ㅍㅋㅊ` → 피카츄)으로 찾을 수 있다
-- 파티 최대 6마리, 카드별 개별 리롤 · 개별 삭제
-- 카드에 **도트 스프라이트**(96×96)를 띄운다. 이미지는 `public/sprites/`에서 자체 제공하며
-  런타임에 외부 CDN을 호출하지 않는다
-- 표시 옵션(언어 8종 · 이미지 · 도감번호 · 타입 · 종족값)은 즉시 반영되며 재추첨을 일으키지 않는다
-
-### 스타팅 탭
-
-뽑기 탭에서 카드의 **스타팅 선택**을 누르면 넘어온다.
-
-- 특성 · 개체값 6종 · 성격을 **하나씩** 돌리거나 직접 지정
-- 돌릴 때 슬롯머신식 스핀 애니메이션 + 효과음
-- 레벨 50 기준 실능력치를 기본/보너스 2톤 막대로 표시
-
-효과음은 오디오 파일 없이 Web Audio로 합성한다([`app/lib/sound.ts`](app/lib/sound.ts)).
-🔊 토글 상태는 `localStorage`에 남는다.
+</div>
 
 ---
 
-## 빠른 시작
+## 🎲 이런 걸 한다
+
+**조건을 걸고 뽑는다**
+세대(1~9) · 타입 18종(`아무거나`/`정확히`) · 2타입만 · 진화 단계 · 종족값 총합 범위 ·
+전설/환상 제외 · 같은 진화 계열 중복 방지. 조건에 맞는 마리 수가 실시간으로 보인다.
+
+**조건을 바꿔도 뽑은 건 안 날아간다**
+재추첨은 버튼을 눌러야 일어난다. 필터를 이리저리 만져봐도 파티는 그대로다.
+
+**카드 단위로 손본다**
+파티는 최대 6마리. 마음에 안 드는 카드만 🎲 리롤하거나 ✕ 삭제한다.
+특정 포켓몬을 꽂고 싶으면 **직접 추가** — 이름 · 도감번호는 물론
+**초성**으로도 찾는다 (`ㅍㅋㅊ` → 피카츄).
+
+**스타팅을 정한다**
+특성 · 개체값 6종 · 성격을 하나씩 돌리거나 직접 지정하고,
+레벨 50 실능력치를 막대로 본다. 돌릴 때는 슬롯머신처럼 스핀하고 소리도 난다
+(오디오 파일 없이 Web Audio로 합성).
+
+**링크로 공유한다**
+필터 조건이 주소에 담긴다. 결과는 안 담기니 같은 조건으로 각자 뽑으면 된다.
+
+<sub>표시 옵션에서 언어 8종 · 도트 이미지 · 도감번호 · 타입 · 종족값을 즉시 끄고 켤 수 있다.
+첫 방문에는 사용 설명서가 한 번 뜨고, 이후엔 `? 사용법` 버튼으로 다시 연다.</sub>
+
+---
+
+## 🛠 만들기
 
 > **Node 22.22 이상**이 필요하다. 그 아래에서는 `react-router` CLI가 실행을 거부한다.
 
@@ -55,10 +73,14 @@ npm run dev        # http://localhost:5173
 | `npm start` | 빌드 결과 서빙 |
 | `npm test` | 순수 로직 단위 테스트 (vitest) |
 | `npm run typecheck` | 라우트 타입 생성 + `tsc` |
+| `npm run fetch:sprites` | 도트 이미지 내려받기 |
 
 ---
 
-## 구조
+<details>
+<summary><b>📁 구조와 설계 원칙</b></summary>
+
+<br>
 
 ```
 app/
@@ -66,7 +88,7 @@ app/
     home.tsx           탭 3개(뽑기/스타팅/설정)를 관리하는 단일 화면
     robots.ts          /robots.txt  (리소스 라우트)
     sitemap.ts         /sitemap.xml (리소스 라우트)
-  components/          FilterPanel · PokemonCard · StarterPanel · DirectAddPicker …
+  components/          FilterPanel · PokemonCard · StarterPanel · DirectAddPicker · Sprite …
   lib/
     appState.ts        리듀서 (앱 상태 전이의 단일 진입점)
     pokedex.ts         데이터 로딩 + 타입 색상/이름 등 UI 메타
@@ -83,8 +105,6 @@ scripts/fetch-pokemon.mjs
 scripts/fetch-sprites.mjs
 ```
 
-### 설계 원칙
-
 - **순수 로직은 React 밖에.** `src/lib`, `app/lib/{appState,urlFilters,hangul}` 는 DOM에
   의존하지 않는 순수 모듈이고, 테스트는 이들만 대상으로 한다
 - **결과는 id 배열로만 저장한다.** 포켓몬 객체를 복사해 상태에 넣지 않고 렌더 시점에 조회한다
@@ -92,9 +112,12 @@ scripts/fetch-sprites.mjs
 - **디자인 토큰만 사용.** 강조색은 [`app/app.css`](app/app.css)의 `accent-*` 토큰을 쓰고
   컴포넌트에서 특정 색(emerald 등)을 직접 지정하지 않는다. 다크 모드는 `prefers-color-scheme` 자동 전환
 
----
+</details>
 
-## 데이터 갱신
+<details>
+<summary><b>🔄 데이터 갱신</b></summary>
+
+<br>
 
 ```bash
 node scripts/fetch-pokemon.mjs
@@ -117,16 +140,17 @@ PokeAPI 스프라이트 저장소에서 `front_default` 도트(96×96)를 받아
 `public/sprites/{id}.png`로 저장한다 (1025장, 약 3MB). 이미 있는 파일은 건너뛴다.
 이것도 빌드 타임 1회성이며 산출물이 커밋되어 있다 — 앱은 자기 도메인의 정적 파일만 쓴다.
 
----
+</details>
 
-## 검색 노출 (SEO)
+<details>
+<summary><b>🔍 검색 노출 (SEO)</b></summary>
 
-### 1. 도메인
+<br>
 
-배포 주소는 `https://rand-poki.vercel.app` 이며 [`app/lib/site.ts`](app/lib/site.ts)의
-`SITE_URL`에 기본값으로 들어 있다. canonical · sitemap · robots · OG 태그가 전부 이 값을 참조한다.
-
-커스텀 도메인을 붙이거나 프리뷰 배포에서 다른 주소를 써야 하면 빌드 시 주입한다.
+**1. 도메인** — 배포 주소는 `https://rand-poki.vercel.app` 이며
+[`app/lib/site.ts`](app/lib/site.ts)의 `SITE_URL`에 기본값으로 들어 있다.
+canonical · sitemap · robots · OG 태그가 전부 이 값을 참조한다.
+커스텀 도메인을 붙이거나 프리뷰 배포에서 다른 주소를 쓰려면 빌드 시 주입한다.
 
 ```bash
 VITE_SITE_URL=https://실제도메인 npm run build
@@ -134,18 +158,15 @@ VITE_SITE_URL=https://실제도메인 npm run build
 
 환경변수는 빌드 타임에 인라인되므로 **런타임이 아니라 빌드 시점에** 주입해야 한다.
 
-### 2. 공유 미리보기 이미지
-
-[`public/og.svg`](public/og.svg)가 원본 카드(1200×630)다. 카카오톡·네이버·트위터
-크롤러는 SVG를 지원하지 않으므로 PNG로 변환해 `public/og.png`로 저장해야 미리보기가 뜬다.
+**2. 공유 미리보기 이미지** — [`public/og.svg`](public/og.svg)가 원본 카드(1200×630)다.
+카카오톡·네이버·트위터 크롤러는 SVG를 지원하지 않으므로 PNG로 변환해
+`public/og.png`로 저장해야 미리보기가 뜬다.
 
 ```bash
 npx svgexport public/og.svg public/og.png 1200:630
 ```
 
-### 3. 포털 등록 (코드로 못 하는 부분)
-
-배포 후 직접 해야 한다.
+**3. 포털 등록** (코드로 못 하는 부분, 배포 후 직접)
 
 - **네이버** — [서치어드바이저](https://searchadvisor.naver.com)에 사이트 등록 →
   소유확인 HTML 파일을 `public/`에 넣고 재배포 → 사이트맵(`/sitemap.xml`) 제출
@@ -154,14 +175,15 @@ npx svgexport public/og.svg public/og.png 1200:630
 
 `/robots.txt`는 네이버(`Yeti`)·다음(`Daumoa`) 크롤러를 명시적으로 허용해 두었다.
 
-### 4. 이미 적용된 것
-
-`<html lang="ko">` · canonical · Open Graph · Twitter 카드 ·
+**4. 이미 적용된 것** — `<html lang="ko">` · canonical · Open Graph · Twitter 카드 ·
 JSON-LD(`WebApplication`) · `/robots.txt` · `/sitemap.xml`
 
----
+</details>
 
-## 배포
+<details>
+<summary><b>🚀 배포</b></summary>
+
+<br>
 
 [`react-router.config.ts`](react-router.config.ts)에서 `ssr: true`로 서버 렌더링을 쓴다.
 `/robots.txt`와 `/sitemap.xml`은 **서버 라우트**라서 정적 호스팅만으로는 404가 나므로,
@@ -175,9 +197,12 @@ docker build -t rand-poki .
 docker run -p 3000:3000 rand-poki
 ```
 
----
+</details>
 
-## 알려진 과제
+<details>
+<summary><b>📌 알려진 과제</b></summary>
+
+<br>
 
 - **클라이언트 번들이 크다.** `data/pokemon.json`(1.2MB)을 통째로 번들에 인라인해서
   홈 청크가 650KB 남짓이다. 필터에 필요한 필드만 추린 경량 인덱스로 줄일 여지가 있다
@@ -186,3 +211,18 @@ docker run -p 3000:3000 rand-poki
   `URLS` 배열에 추가하면 된다
 - 설정 탭은 아직 자리만 잡혀 있다
 - 초성 검색은 부분 일치라 `ㄹㅈ`가 `깨비드릴조`도 잡는다 (`ㅅㅎ`로 `이상해씨`를 찾는 것과 같은 성질)
+
+</details>
+
+---
+
+<div align="center">
+<sub>
+
+이미지·데이터 출처 [PokeAPI](https://pokeapi.co) · 포켓몬 및 관련 상표는 닌텐도/게임프리크/크리처스의 자산이며
+이 프로젝트는 비영리 팬메이드다
+
+**made by [seojoon1](https://github.com/seojoon1)**
+
+</sub>
+</div>

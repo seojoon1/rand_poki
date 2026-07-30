@@ -3,7 +3,12 @@
 
 import rawData from "../../data/pokemon.json";
 import rawAbilities from "../../data/abilities.json";
-import type { Pokemon, PokemonType, Stage } from "../../src/lib/filter";
+import type {
+  Pokemon,
+  PokemonForm,
+  PokemonType,
+  Stage,
+} from "../../src/lib/filter";
 
 // JSON 은 types 가 string[] 로 추론되므로 Pokemon[] 로 단언한다.
 // (fetch-pokemon.mjs 가 스키마를 보장한다.)
@@ -63,6 +68,44 @@ export function nameOf(p: Pokemon, lang: LangCode): string {
 // 외부 CDN 을 런타임에 때리지 않으므로 경로는 id 로만 만든다.
 export function spriteUrl(id: number): string {
   return `/sprites/${id}.png`;
+}
+
+// ── 다른 모습(리전폼/고유 폼) ────────────────────────────────────────
+// 카드/스타팅 화면은 "원종 + 선택된 폼"을 하나로 합친 PokemonView 를 받는다.
+// 도감번호·이름·진화 계열은 원종 것을 쓰고, 타입·종족값·특성·스프라이트만
+// 폼 것으로 갈아끼운다. Pokemon 을 그대로 확장하므로 기존 컴포넌트가
+// 필드 접근을 바꾸지 않아도 된다.
+export interface PokemonView extends Pokemon {
+  spriteId: number; // 스프라이트 파일 id (폼이면 폼 id)
+  formIndex: number | null; // forms 배열 인덱스, null 이면 원종
+  formLabel: string | null; // 현재 언어의 폼 라벨, 원종이면 null
+}
+
+// 폼 라벨 조회: 해당 언어가 없으면 en, 그것도 없으면 슬러그 폴백
+export function formNameOf(f: PokemonForm, lang: LangCode): string {
+  return f.formNames[lang] ?? f.formNames.en ?? f.slug;
+}
+
+// formIndex 가 null 이거나 범위를 벗어나면 원종 그대로 돌려준다.
+export function viewOf(
+  p: Pokemon,
+  formIndex: number | null,
+  lang: LangCode
+): PokemonView {
+  const form =
+    formIndex != null ? (p.forms[formIndex] ?? null) : null;
+  if (!form) {
+    return { ...p, spriteId: p.id, formIndex: null, formLabel: null };
+  }
+  return {
+    ...p,
+    types: form.types,
+    stats: form.stats,
+    abilities: form.abilities,
+    spriteId: form.id,
+    formIndex,
+    formLabel: formNameOf(form, lang),
+  };
 }
 
 // ── 진화 단계 라벨 (한국어) ──────────────────────────────────────────

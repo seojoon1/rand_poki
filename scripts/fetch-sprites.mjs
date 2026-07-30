@@ -6,7 +6,7 @@
 // 주의: 런타임에 외부 CDN을 때리지 않는다. fetch-pokemon.mjs 와 마찬가지로
 //       빌드 타임 1회성이며, 이미 받은 파일은 건너뛴다(= 재실행이 싸다).
 
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -23,6 +23,9 @@ const MAX_RETRY = 3;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const OUT_DIR = path.join(ROOT, "public", "sprites");
+// 리전폼/고유 폼 스프라이트 id 는 data/pokemon.json 의 forms[] 에서 읽는다
+// (폼 id 는 10000번대라 범위 순회로는 알 수 없다).
+const DATA_FILE = path.join(ROOT, "data", "pokemon.json");
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -60,6 +63,21 @@ async function main() {
   const ids = [];
   for (let i = FIRST_ID; i <= LAST_ID; i++) ids.push(i);
 
+  // 폼 스프라이트: data/pokemon.json 이 있을 때만 (없으면 원종만 받는다).
+  let formIds = [];
+  if (existsSync(DATA_FILE)) {
+    const data = JSON.parse(await readFile(DATA_FILE, "utf8"));
+    formIds = (data.pokemon ?? []).flatMap((p) =>
+      (p.forms ?? []).map((f) => f.id)
+    );
+    ids.push(...formIds);
+  } else {
+    process.stderr.write(
+      "[안내] data/pokemon.json 이 없어 폼 스프라이트는 건너뜁니다 " +
+        "(fetch-pokemon.mjs 를 먼저 실행하세요).\n"
+    );
+  }
+
   const failed = [];
   let fetched = 0;
   let skipped = 0;
@@ -87,7 +105,8 @@ async function main() {
 
   const sec = Math.round((Date.now() - startedAt) / 100) / 10;
   process.stderr.write(
-    `완료: 새로 받음 ${fetched}, 건너뜀 ${skipped}, 실패 ${failed.length}, ${sec}s\n`
+    `완료: 원종 ${LAST_ID} + 폼 ${formIds.length}, 새로 받음 ${fetched}, ` +
+      `건너뜀 ${skipped}, 실패 ${failed.length}, ${sec}s\n`
   );
   if (failed.length) {
     process.stderr.write(`실패 id: ${failed.sort((a, b) => a - b).join(",")}\n`);

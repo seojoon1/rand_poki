@@ -3,6 +3,9 @@ import { appReducer } from "./appState";
 import type { AppState } from "./appState";
 import type { FilterOptions, PokemonType, Stage } from "../../src/lib/filter";
 
+// 파티 슬롯 헬퍼: 원종 모습(form: null) 슬롯 목록을 짧게 쓴다.
+const slots = (...ids: number[]) => ids.map((id) => ({ id, form: null }));
+
 // 테스트용 최소 필터 (pokedex/JSON import 없이 구성)
 function mkFilters(over: Partial<FilterOptions> = {}): FilterOptions {
   return {
@@ -25,9 +28,10 @@ function mkState(over: Partial<AppState> = {}): AppState {
       showTypes: true,
       showStats: true,
     },
-    result: [1, 2, 3],
+    result: slots(1, 2, 3),
     requested: 3,
     selectedId: null,
+    selectedForm: null,
     roll: null,
     ...over,
   };
@@ -42,7 +46,7 @@ describe("appReducer: 상태 분리 불변식", () => {
     });
     // 조건은 바뀌었지만 결과는 그대로여야 한다
     expect(after.result).toBe(before.result);
-    expect(after.result).toEqual([1, 2, 3]);
+    expect(after.result).toEqual(slots(1, 2, 3));
     expect([...after.filters.gens]).toEqual([2, 3]);
   });
 
@@ -65,7 +69,7 @@ describe("appReducer: 상태 분리 불변식", () => {
       ids: [6, 9, 25],
       requested: 3,
     });
-    expect(after.result).toEqual([6, 9, 25]);
+    expect(after.result).toEqual(slots(6, 9, 25));
     expect(after.requested).toBe(3);
     // 필터/표시는 그대로
     expect(after.filters).toBe(before.filters);
@@ -73,20 +77,20 @@ describe("appReducer: 상태 분리 불변식", () => {
   });
 
   it("addOne 은 파티 끝에 덧붙인다", () => {
-    const before = mkState({ result: [1, 2], requested: 2 });
+    const before = mkState({ result: slots(1, 2), requested: 2 });
     const after = appReducer(before, { type: "addOne", id: 3 });
-    expect(after.result).toEqual([1, 2, 3]);
+    expect(after.result).toEqual(slots(1, 2, 3));
   });
 
   it("addOne 은 6장을 넘기지 않는다", () => {
-    const before = mkState({ result: [1, 2, 3, 4, 5, 6], requested: 6 });
+    const before = mkState({ result: slots(1, 2, 3, 4, 5, 6), requested: 6 });
     const after = appReducer(before, { type: "addOne", id: 7 });
     expect(after).toBe(before); // 변화 없음
     expect(after.result).toHaveLength(6);
   });
 
   it("reset 은 파티를 비운다", () => {
-    const before = mkState({ result: [1, 2, 3], requested: 3 });
+    const before = mkState({ result: slots(1, 2, 3), requested: 3 });
     const after = appReducer(before, { type: "reset" });
     expect(after.result).toEqual([]);
     expect(after.requested).toBe(0);
@@ -95,27 +99,27 @@ describe("appReducer: 상태 분리 불변식", () => {
   });
 
   it("rerollOne 은 해당 슬롯만 교체하고 나머지는 유지", () => {
-    const before = mkState({ result: [1, 2, 3], requested: 3 });
+    const before = mkState({ result: slots(1, 2, 3), requested: 3 });
     const after = appReducer(before, { type: "rerollOne", index: 1, id: 99 });
-    expect(after.result).toEqual([1, 99, 3]);
+    expect(after.result).toEqual(slots(1, 99, 3));
     expect(after.requested).toBe(3); // 요청 수는 그대로
   });
 
   it("rerollOne 의 index 가 범위를 벗어나면 상태 불변", () => {
-    const before = mkState({ result: [1, 2], requested: 2 });
+    const before = mkState({ result: slots(1, 2), requested: 2 });
     expect(appReducer(before, { type: "rerollOne", index: 5, id: 99 })).toBe(before);
     expect(appReducer(before, { type: "rerollOne", index: -1, id: 99 })).toBe(before);
   });
 
   it("removeOne 은 해당 슬롯만 빼고 순서를 유지한다", () => {
-    const before = mkState({ result: [1, 2, 3], requested: 3 });
+    const before = mkState({ result: slots(1, 2, 3), requested: 3 });
     const after = appReducer(before, { type: "removeOne", index: 1 });
-    expect(after.result).toEqual([1, 3]);
+    expect(after.result).toEqual(slots(1, 3));
     expect(after.requested).toBe(3); // 요청 수는 그대로
   });
 
   it("removeOne 의 index 가 범위를 벗어나면 상태 불변", () => {
-    const before = mkState({ result: [1, 2], requested: 2 });
+    const before = mkState({ result: slots(1, 2), requested: 2 });
     expect(appReducer(before, { type: "removeOne", index: 5 })).toBe(before);
     expect(appReducer(before, { type: "removeOne", index: -1 })).toBe(before);
   });
@@ -129,7 +133,7 @@ describe("appReducer: 상태 분리 불변식", () => {
         ivs: { hp: 1, atk: 2, def: 3, spa: 4, spd: 5, spe: 6 },
       },
     });
-    const after = appReducer(before, { type: "selectStarter", id: 6 });
+    const after = appReducer(before, { type: "selectStarter", id: 6, form: null });
     expect(after.selectedId).toBe(6);
     // 기본 롤: 개체값 전부 0, 중립 성격, 특성 없음
     expect(after.roll?.ivs).toEqual({ hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 });
@@ -178,11 +182,49 @@ describe("appReducer: 상태 분리 불변식", () => {
     expect(after.selectedId).toBe(6);
   });
 
+  it("setForm 은 해당 슬롯의 모습만 바꾸고 포켓몬은 그대로 둔다", () => {
+    const before = mkState({ result: slots(1, 2, 3), requested: 3 });
+    const after = appReducer(before, { type: "setForm", index: 1, form: 0 });
+    expect(after.result).toEqual([
+      { id: 1, form: null },
+      { id: 2, form: 0 }, // 같은 포켓몬, 다른 모습
+      { id: 3, form: null },
+    ]);
+  });
+
+  it("setForm 의 form: null 은 원종 모습으로 되돌린다", () => {
+    const before = mkState({ result: [{ id: 26, form: 0 }], requested: 1 });
+    const after = appReducer(before, { type: "setForm", index: 0, form: null });
+    expect(after.result).toEqual([{ id: 26, form: null }]);
+  });
+
+  it("setForm 의 index 가 범위를 벗어나면 상태 불변", () => {
+    const before = mkState({ result: slots(1, 2), requested: 2 });
+    expect(appReducer(before, { type: "setForm", index: 5, form: 0 })).toBe(before);
+    expect(appReducer(before, { type: "setForm", index: -1, form: 0 })).toBe(before);
+  });
+
+  it("rerollOne 은 다른 포켓몬이 되므로 폼 선택을 원종으로 되돌린다", () => {
+    const before = mkState({
+      result: [{ id: 26, form: 0 }, { id: 2, form: null }],
+      requested: 2,
+    });
+    const after = appReducer(before, { type: "rerollOne", index: 0, id: 52 });
+    expect(after.result[0]).toEqual({ id: 52, form: null });
+  });
+
+  it("selectStarter 는 선택한 모습까지 함께 넘긴다", () => {
+    const before = mkState({ selectedId: null, selectedForm: null });
+    const after = appReducer(before, { type: "selectStarter", id: 26, form: 0 });
+    expect(after.selectedId).toBe(26);
+    expect(after.selectedForm).toBe(0);
+  });
+
   it("연속 필터 변경 후에도 마지막 draw 결과가 유지된다", () => {
     let s = mkState({ result: [], requested: 0 });
     s = appReducer(s, { type: "draw", ids: [10, 20], requested: 2 });
     s = appReducer(s, { type: "setFilters", filters: mkFilters({ gens: new Set([5]) }) });
     s = appReducer(s, { type: "patchDisplay", patch: { showTypes: false } });
-    expect(s.result).toEqual([10, 20]);
+    expect(s.result).toEqual(slots(10, 20));
   });
 });

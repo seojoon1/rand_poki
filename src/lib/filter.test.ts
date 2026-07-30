@@ -30,6 +30,7 @@ function mk(
       total,
     },
     abilities: overrides.abilities ?? [],
+    forms: overrides.forms ?? [],
   };
 }
 

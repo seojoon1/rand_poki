@@ -40,6 +40,19 @@ export interface AbilityRef {
   isHidden: boolean;
 }
 
+// 다른 모습(리전폼/고유 폼). 원종과 타입·종족값·특성이 다른 것만 데이터에 있다.
+// id 는 원종과 별개인 폼 전용 id(10000번대)로, 스프라이트 파일명에 쓴다.
+// 도감번호·진화 계열·이름은 원종(Pokemon)을 그대로 따른다.
+export interface PokemonForm {
+  id: number;
+  slug: string;
+  isRegional: boolean; // 알로라/가라르/히스이/팔데아 폼
+  formNames: Record<string, string>; // 언어별 폼 라벨 ("알로라의 모습")
+  types: PokemonType[];
+  stats: Stats;
+  abilities: AbilityRef[];
+}
+
 export interface Pokemon {
   id: number;
   slug: string;
@@ -53,6 +66,9 @@ export interface Pokemon {
   requiresTrade: boolean;
   stats: Stats;
   abilities: AbilityRef[];
+  // 다른 모습 목록 (없으면 빈 배열). 추첨은 원종 단위로만 하므로 필터 조건에는
+  // 관여하지 않는다 — 카드에서 폼을 골라 표시만 바꾼다.
+  forms: PokemonForm[];
 }
 
 export interface FilterOptions {

@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Pokemon } from "../../src/lib/filter";
 import type { StarterRoll, IVs, NatureStat } from "../../src/lib/starter";
 import { NATURES, getNature, finalStats } from "../../src/lib/starter";
-import type { LangCode } from "../lib/pokedex";
+import type { LangCode, PokemonView } from "../lib/pokedex";
 import { abilityName, nameOf, typeName, TYPE_COLOR } from "../lib/pokedex";
 import { isMuted, setMuted, tick, land, jackpot } from "../lib/sound";
 import { Sprite } from "./Sprite";
@@ -107,7 +107,8 @@ export function StarterPanel({
   showImage = true,
   handlers,
 }: {
-  pokemon: Pokemon | null;
+  // 뽑기 카드에서 고른 모습이 반영된 뷰 (종족값·타입·특성이 폼 것으로 들어온다)
+  pokemon: PokemonView | null;
   roll: StarterRoll | null;
   lang: LangCode;
   // 뽑기 탭의 표시 옵션과 같은 스위치 (끄면 도트 이미지를 숨긴다)
@@ -182,12 +183,24 @@ export function StarterPanel({
       <section className="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
         <div className="mb-4 flex items-center gap-2">
           {showImage && (
-            <Sprite id={pokemon.id} name={nameOf(pokemon, lang)} size={64} />
+            <Sprite
+              id={pokemon.spriteId}
+              name={nameOf(pokemon, lang)}
+              size={64}
+            />
           )}
           <span className="font-mono text-base text-gray-400">
             #{String(pokemon.id).padStart(3, "0")}
           </span>
-          <h2 className="text-xl font-bold">{nameOf(pokemon, lang)}</h2>
+          <h2 className="text-xl font-bold">
+            {nameOf(pokemon, lang)}
+            {/* 리전폼 등 다른 모습이면 이름 옆에 라벨을 붙인다 */}
+            {pokemon.formLabel && (
+              <span className="ml-1.5 align-middle text-xs font-semibold text-accent-600 dark:text-accent-400">
+                {pokemon.formLabel}
+              </span>
+            )}
+          </h2>
           <span className="ml-auto flex gap-1">
             {pokemon.types.map((t) => (
               <span

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-26T01:12:05.339Z",
-  "durationMs": 15480,
-  "durationSec": 15.5,
+  "generatedAt": "2026-07-30T12:32:52.636Z",
+  "durationMs": 466,
+  "durationSec": 0.5,
   "requested": 1025,
   "succeeded": 1025,
-  "uniqueAbilities": 284,
+  "uniqueAbilities": 301,
   "failedIds": [],
   "missingNames": [],
   "statWarnings": [],
@@ -26,6 +26,11 @@
     "base+final": 201
   },
   "requiresTradeCount": 26,
+  "forms": {
+    "total": 127,
+    "regional": 58,
+    "speciesWithForms": 97
+  },
   "statTotal": {
     "min": 175,
     "max": 720,
@@ -170,6 +175,31 @@
       "name": "메타몽(132) stage=[base,final]",
       "pass": true,
       "detail": "stage=[\"base\",\"final\"]"
+    },
+    {
+      "name": "라이츄(26) 알로라 폼 = electric/psychic",
+      "pass": true,
+      "detail": "types=electric,psychic"
+    },
+    {
+      "name": "로토무(479) 폼 5종",
+      "pass": true,
+      "detail": "forms=5"
+    },
+    {
+      "name": "외형 폼 제외: 비비용(666)/안농(201) 폼 0개",
+      "pass": true,
+      "detail": "vivillon=0 unown=0"
+    },
+    {
+      "name": "메가/원시/거다이맥스 폼 미포함",
+      "pass": true,
+      "detail": "위반=없음"
+    },
+    {
+      "name": "폼 타입 개수 1~2",
+      "pass": true,
+      "detail": "위반=없음"
     },
     {
       "name": "타입 개수 1~2",

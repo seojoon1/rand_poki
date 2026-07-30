@@ -10,7 +10,7 @@ import type { Route } from "./+types/home";
 import { countPool, drawRandom, filterPool } from "../../src/lib/filter";
 import { rollIV, rollNature, rollAbility } from "../../src/lib/starter";
 import type { IVs } from "../../src/lib/starter";
-import { ALL_POKEMON, BY_ID } from "../lib/pokedex";
+import { ALL_POKEMON, BY_ID, viewOf } from "../lib/pokedex";
 import { appReducer, MAX_PARTY } from "../lib/appState";
 import type { AppState } from "../lib/appState";
 import { defaultFilters, filtersToSearch, searchToFilters } from "../lib/urlFilters";
@@ -97,12 +97,13 @@ const initialState: AppState = {
   result: [],
   requested: 0,
   selectedId: null,
+  selectedForm: null,
   roll: null,
 };
 
 export default function Home() {
   const [state, dispatch] = useReducer(appReducer, initialState);
-  const { filters, display, result, selectedId, roll } = state;
+  const { filters, display, result, selectedId, selectedForm, roll } = state;
 
   // ── URL ↔ filters 동기화 ───────────────────────────────────────────
   const hydrated = useRef(false);
@@ -127,10 +128,14 @@ export default function Home() {
     [filters]
   );
 
-  // 결과 id → Pokemon 조회 (렌더 시점에 조회 → 언어 전환이 재추첨 없이 동작)
+  // 결과 슬롯 → PokemonView 조회 (렌더 시점에 조회 → 언어/모습 전환이 재추첨 없이 동작)
   const party = useMemo(
-    () => result.map((id) => BY_ID.get(id)).filter((p): p is NonNullable<typeof p> => !!p),
-    [result]
+    () =>
+      result.flatMap((slot) => {
+        const p = BY_ID.get(slot.id);
+        return p ? [viewOf(p, slot.form, display.lang)] : [];
+      }),
+    [result, display.lang]
   );
 
   // ── 개별 리롤: 해당 슬롯 하나만 교체 ────────────────────────────────
@@ -138,14 +143,16 @@ export default function Home() {
   //        + (자기 자신과도 다른) 포켓몬.
   const candidatesForSlot = (index: number) => {
     const pool = filterPool(ALL_POKEMON, filters);
-    const currentId = result[index];
-    const otherIds = new Set(result.filter((_, i) => i !== index));
+    const currentId = result[index]?.id;
+    const otherIds = new Set(
+      result.filter((_, i) => i !== index).map((s) => s.id)
+    );
     let cands = pool.filter((p) => !otherIds.has(p.id) && p.id !== currentId);
     if (filters.uniqueChain) {
       const otherChains = new Set(
         result
           .filter((_, i) => i !== index)
-          .map((id) => BY_ID.get(id)?.chainId)
+          .map((s) => BY_ID.get(s.id)?.chainId)
       );
       cands = cands.filter((p) => !otherChains.has(p.chainId));
     }
@@ -164,10 +171,10 @@ export default function Home() {
   const candidatesForAdd = () => {
     if (result.length >= MAX_PARTY) return [];
     const pool = filterPool(ALL_POKEMON, filters);
-    const usedIds = new Set(result);
+    const usedIds = new Set(result.map((s) => s.id));
     let cands = pool.filter((p) => !usedIds.has(p.id));
     if (filters.uniqueChain) {
-      const usedChains = new Set(result.map((id) => BY_ID.get(id)?.chainId));
+      const usedChains = new Set(result.map((s) => BY_ID.get(s.id)?.chainId));
       cands = cands.filter((p) => !usedChains.has(p.chainId));
     }
     return cands;
@@ -200,11 +207,15 @@ export default function Home() {
 
   // ── 스타팅: 선택 & 롤 ───────────────────────────────────────────────
   // 뽑기 카드에서 선택하면 스타팅 탭으로 넘기고 탭 전환까지.
-  const handleSelectStarter = (id: number) => {
-    dispatch({ type: "selectStarter", id });
+  // 카드에서 고른 모습까지 함께 넘긴다 (알로라 나인테일이면 얼음/페어리 종족값으로).
+  const handleSelectStarter = (id: number, form: number | null) => {
+    dispatch({ type: "selectStarter", id, form });
     setTab("starting");
   };
-  const selectedPokemon = selectedId != null ? BY_ID.get(selectedId) ?? null : null;
+  const selectedBase = selectedId != null ? BY_ID.get(selectedId) ?? null : null;
+  const selectedPokemon = selectedBase
+    ? viewOf(selectedBase, selectedForm, display.lang)
+    : null;
 
   // 스타팅 개별 롤/설정 핸들러 (starter.ts 재사용)
   const starterHandlers = {
@@ -359,9 +370,16 @@ export default function Home() {
                       onReroll={() => handleRerollOne(i)}
                       canReroll={candidatesForSlot(i).length > 0}
                       onRemove={() => dispatch({ type: "removeOne", index: i })}
+                      onSetForm={(form) =>
+                        dispatch({ type: "setForm", index: i, form })
+                      }
                       stackName={party.length > 1}
-                      onSelectStarter={() => handleSelectStarter(p.id)}
-                      isSelected={selectedId === p.id}
+                      onSelectStarter={() =>
+                        handleSelectStarter(p.id, p.formIndex)
+                      }
+                      isSelected={
+                        selectedId === p.id && selectedForm === p.formIndex
+                      }
                     />
                   ))}
                 </div>

@@ -44,6 +44,45 @@ const NAME_LANG_MAP = {
 };
 const OUTPUT_LANGS = ["ko", "en", "ja", "de", "fr", "es", "it", "zh"];
 
+// ── 리전폼 / 고유 폼 수집 규칙 ────────────────────────────────────────
+// species.varieties 의 non-default 항목(= 다른 모습) 중 아래 규칙으로 고른다.
+//   1) 제외: 메가진화·원시회귀·거다이맥스·따르머·모자 피카츄 (성능 이벤트성 폼)
+//   2) 포함: 리전폼(알로라/가라르/히스이/팔데아)은 무조건
+//   3) 포함: 그 외에도 타입·종족값·특성이 원종과 하나라도 다르면 (로토무/데오키시스 등)
+// → 무늬만 다른 외형 폼(비비용 무늬, 안농 문자, 트리미앙 등)은 3)에서 걸러진다.
+// 겉모습이 아니라 특성만 다른 변종도 제외한다 (배틀본드 개굴닌자 등).
+const EXCLUDE_FORM_RE =
+  /-(mega|gmax|primal|eternamax|totem|starter|cap|battle-bond|own-tempo|power-construct)(-|$)/;
+const REGIONAL_FORM_RE = /-(alola|galar|hisui|paldea)(-|$)/;
+
+// 리전폼 한국어 라벨 폴백. PokeAPI form_names 에 ko 가 없는 신규 폼
+// (팔데아 우파, 흰줄무늬 배싱기 등)을 위한 최소한의 안전망.
+const REGIONAL_KO_LABEL = {
+  alola: "알로라의 모습",
+  galar: "가라르의 모습",
+  hisui: "히스이의 모습",
+  paldea: "팔데아의 모습",
+};
+
+// 한국어 폼 라벨 보정. PokeAPI 에 ko 가 없는 폼을 채우고,
+// 같은 종에서 라벨이 겹치는 폼(불비달마 달마모드 2종)을 구분한다.
+const FORM_KO_LABEL = {
+  "dialga-origin": "오리진폼",
+  "palkia-origin": "오리진폼",
+  "basculin-white-striped": "흰 줄무늬의 모습",
+  "basculegion-female": "암컷의 모습",
+  "oinkologne-female": "암컷의 모습",
+  "enamorus-therian": "영물폼",
+  "squawkabilly-yellow-plumage": "노란 깃털",
+  "squawkabilly-white-plumage": "흰 깃털",
+  "palafin-hero": "히어로의 모습",
+  "gimmighoul-roaming": "도보의 모습",
+  "terapagos-terastal": "테라스탈폼",
+  "terapagos-stellar": "스텔라폼",
+  "minior-red": "코어의 모습",
+  "darmanitan-galar-zen": "가라르 달마모드",
+};
+
 // /pokemon 의 stat.name → 우리 종족값 키
 const STAT_MAP = {
   hp: "hp",
@@ -165,6 +204,68 @@ function slimPokemon(json) {
   };
 }
 
+// ── /pokemon 응답 → 우리 스키마 조각 (원종/폼 공용) ──────────────────
+// types: slot 순서대로 (길이 1 또는 2)
+function toTypes(pokemon) {
+  return [...pokemon.types]
+    .sort((a, b) => a.slot - b.slot)
+    .map((t) => t.type.name);
+}
+
+// stats: base_stat 매핑 + total 계산. 누락 키는 0 으로 채우고 목록을 함께 돌려준다.
+function toStats(pokemon) {
+  const stats = {};
+  for (const s of pokemon.stats) {
+    const key = STAT_MAP[s.stat.name];
+    if (key) stats[key] = s.base_stat;
+  }
+  const missing = STAT_KEYS.filter((k) => stats[k] == null);
+  for (const k of missing) stats[k] = 0;
+  stats.total = STAT_KEYS.reduce((sum, k) => sum + stats[k], 0);
+  return { stats, missing };
+}
+
+// abilities: slot 순서대로 [{ slug, isHidden }]
+function toAbilities(pokemon) {
+  return [...(pokemon.abilities ?? [])]
+    .filter((a) => a.name)
+    .sort((a, b) => a.slot - b.slot)
+    .map((a) => ({ slug: a.name, isHidden: !!a.is_hidden }));
+}
+
+// 타입+종족값+특성을 한 줄로 요약한 지문. 원종과의 비교, 폼끼리의 중복 제거에 쓴다.
+function formSignature({ types, stats, abilities }) {
+  return [
+    types.join(","),
+    STAT_KEYS.map((k) => stats[k]).join(","),
+    abilities.map((a) => `${a.slug}:${a.isHidden ? 1 : 0}`).join(","),
+  ].join("|");
+}
+
+// 폼 이름 다국어 맵. form_names[] 를 쓰고, 비면 리전 라벨 → 슬러그 접미사 순으로 폴백.
+// (formName 은 "알로라의 모습" 처럼 원종 이름에 덧붙이는 라벨이다.)
+function formNames(formJson, slug) {
+  const fromApi = extractNames(formJson.form_names);
+  // 슬러그 접미사 (species 이름을 떼어낸 나머지): "rattata-alola" → "alola"
+  const suffix = slug.split("-").slice(1).join("-");
+  const humanized = suffix
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+
+  const out = {};
+  for (const lang of OUTPUT_LANGS) out[lang] = fromApi[lang] ?? humanized;
+  // ko 라벨이 아예 없는 리전폼은 한국어 라벨로 교체
+  // (extractNames 는 없는 언어를 en 으로 채우므로 원본 배열에서 직접 확인한다.)
+  const hasKo = (formJson.form_names ?? []).some(
+    (n) => n.language.name.toLowerCase() === "ko"
+  );
+  const region = slug.match(REGIONAL_FORM_RE)?.[1];
+  if (region && !hasKo) out.ko = REGIONAL_KO_LABEL[region];
+  if (FORM_KO_LABEL[slug]) out.ko = FORM_KO_LABEL[slug];
+  return out;
+}
+
 // names[] (species/ability 공통 형식) → { ko,en,ja,... } 다국어 맵.
 // 비어있는 언어는 en 폴백. ja 없으면 ja-hrkt 폴백.
 function extractNames(namesArr) {
@@ -268,7 +369,7 @@ async function main() {
         try {
           const species = await fetchCached("pokemon-species", id);
 
-          // default variety 만 사용 (메가/리전폼 제외)
+          // 원종: default variety (도감번호와 1:1 대응)
           const defaultVar = species.varieties.find((v) => v.is_default);
           const pokeKey = defaultVar
             ? idFromUrl(defaultVar.pokemon.url)
@@ -278,7 +379,24 @@ async function main() {
             transform: slimPokemon,
           });
 
-          perId.set(id, { species, pokemon });
+          // 다른 모습: non-default varieties 중 제외 규칙을 통과한 것만 받아둔다.
+          // (포함 판정은 원종과 비교가 필요하므로 조립 단계에서 한다.)
+          const variants = [];
+          for (const v of species.varieties) {
+            if (v.is_default) continue;
+            const slug = v.pokemon.name;
+            if (EXCLUDE_FORM_RE.test(slug)) continue;
+            const formId = idFromUrl(v.pokemon.url);
+            const vp = await fetchCached("pokemon", formId, {
+              transform: slimPokemon,
+            });
+            const fj = await fetchCached("pokemon-form", slug, {
+              transform: (j) => ({ name: j.name, form_names: j.form_names }),
+            });
+            variants.push({ id: formId, slug, pokemon: vp, form: fj });
+          }
+
+          perId.set(id, { species, pokemon, variants });
           const chainId = idFromUrl(species.evolution_chain.url);
           if (chainId != null) chainIdSet.add(chainId);
         } catch (err) {
@@ -326,7 +444,7 @@ async function main() {
   for (const id of ids) {
     const entry = perId.get(id);
     if (!entry) continue; // 수집 실패분은 스킵 (failedIds 에 이미 기록)
-    const { species, pokemon } = entry;
+    const { species, pokemon, variants } = entry;
 
     // names: species.names[] 매핑 + 폴백 처리
     const rawNames = {}; // 우리 키 → 이름 (직접 매핑된 것만)
@@ -353,34 +471,52 @@ async function main() {
       }
     }
 
-    // types: slot 순서대로 (길이 1 또는 2)
-    const types = [...pokemon.types]
-      .sort((a, b) => a.slot - b.slot)
-      .map((t) => t.type.name);
+    const types = toTypes(pokemon);
 
-    // stats: base_stat 매핑 + total 직접 계산
-    const stats = {};
-    for (const s of pokemon.stats) {
-      const key = STAT_MAP[s.stat.name];
-      if (key) stats[key] = s.base_stat;
-    }
-    const missingStat = STAT_KEYS.filter((k) => stats[k] == null);
+    const { stats, missing: missingStat } = toStats(pokemon);
     if (missingStat.length) {
       statWarnings.push(id);
       process.stderr.write(
         `\n[경고] id=${id} 종족값 누락: ${missingStat.join(", ")}\n`
       );
-      // 누락분은 0 으로 채워 total 계산이 깨지지 않게 함
-      for (const k of missingStat) stats[k] = 0;
     }
-    stats.total = STAT_KEYS.reduce((sum, k) => sum + stats[k], 0);
 
-    // abilities: slot 순서대로 [{ slug, isHidden }]
-    const abilities = [...(pokemon.abilities ?? [])]
-      .filter((a) => a.name)
-      .sort((a, b) => a.slot - b.slot)
-      .map((a) => ({ slug: a.name, isHidden: !!a.is_hidden }));
+    const abilities = toAbilities(pokemon);
     for (const a of abilities) abilitySlugSet.add(a.slug);
+
+    // ── 다른 모습(리전폼/고유 폼) ─────────────────────────────────────
+    // 리전폼은 무조건, 그 외는 원종과 타입/종족값/특성이 다를 때만 채택.
+    // 성능이 완전히 같은 폼은 첫 하나만 남긴다 (메테노 코어 색 7종 등).
+    const baseSig = formSignature({ types, stats, abilities });
+    const seenSigs = new Set([baseSig]);
+    const forms = [];
+    for (const v of variants ?? []) {
+      const fTypes = toTypes(v.pokemon);
+      const { stats: fStats } = toStats(v.pokemon);
+      const fAbilities = toAbilities(v.pokemon);
+      const sig = formSignature({
+        types: fTypes,
+        stats: fStats,
+        abilities: fAbilities,
+      });
+      const isRegional = REGIONAL_FORM_RE.test(v.slug);
+      // 리전폼은 성능이 같아도(팔데아 우파 등은 다르지만) 항상 싣는다.
+      if (!isRegional) {
+        if (seenSigs.has(sig)) continue;
+        seenSigs.add(sig);
+      }
+
+      for (const a of fAbilities) abilitySlugSet.add(a.slug);
+      forms.push({
+        id: v.id,
+        slug: v.slug,
+        isRegional,
+        formNames: formNames(v.form, v.slug),
+        types: fTypes,
+        stats: fStats,
+        abilities: fAbilities,
+      });
+    }
 
     // gen: generation.name 로마숫자 파싱
     const gen = romanGenToInt(species.generation.name);
@@ -414,6 +550,7 @@ async function main() {
       requiresTrade: ci.requiresTrade,
       stats,
       abilities,
+      forms,
       dex,
     });
   }
@@ -477,6 +614,14 @@ async function main() {
 
   // requiresTrade 총 개수
   const tradeCount = pokemonOut.filter((p) => p.requiresTrade).length;
+
+  // 폼 통계: 총 개수 / 리전폼 개수 / 폼을 가진 종 수
+  const allForms = pokemonOut.flatMap((p) => p.forms);
+  const formStats = {
+    total: allForms.length,
+    regional: allForms.filter((f) => f.isRegional).length,
+    speciesWithForms: pokemonOut.filter((p) => p.forms.length > 0).length,
+  };
 
   // 종족값 총합 분포
   const totals = pokemonOut.map((p) => p.stats.total);
@@ -559,6 +704,52 @@ async function main() {
     ditto ? `stage=${JSON.stringify(ditto.stage)}` : "없음"
   );
 
+  // 폼 스팟체크: 리전폼(라이츄 알로라 = 전기/에스퍼), 고유폼(로토무 5종)
+  const raichu = find(26);
+  const raichuAlola = raichu?.forms.find((f) => f.slug === "raichu-alola");
+  check(
+    "라이츄(26) 알로라 폼 = electric/psychic",
+    !!raichuAlola && raichuAlola.types.join(",") === "electric,psychic",
+    raichuAlola ? `types=${raichuAlola.types.join(",")}` : "없음"
+  );
+
+  const rotom = find(479);
+  check(
+    "로토무(479) 폼 5종",
+    !!rotom && rotom.forms.length === 5,
+    rotom ? `forms=${rotom.forms.length}` : "없음"
+  );
+
+  // 외형만 다른 폼은 제외되어야 한다 (비비용 무늬 20종, 안농 문자 27종)
+  const vivillon = find(666);
+  const unown = find(201);
+  check(
+    "외형 폼 제외: 비비용(666)/안농(201) 폼 0개",
+    !!vivillon && vivillon.forms.length === 0 && !!unown && unown.forms.length === 0,
+    `vivillon=${vivillon?.forms.length} unown=${unown?.forms.length}`
+  );
+
+  // 메가/거다이맥스는 수집 대상이 아니다
+  const megaOrGmax = pokemonOut
+    .flatMap((p) => p.forms)
+    .filter((f) => /-(mega|gmax|primal)(-|$)/.test(f.slug))
+    .map((f) => f.slug);
+  check(
+    "메가/원시/거다이맥스 폼 미포함",
+    megaOrGmax.length === 0,
+    `위반=${megaOrGmax.slice(0, 5).join(",") || "없음"}`
+  );
+
+  const badFormTypes = pokemonOut
+    .flatMap((p) => p.forms)
+    .filter((f) => f.types.length < 1 || f.types.length > 2)
+    .map((f) => f.slug);
+  check(
+    "폼 타입 개수 1~2",
+    badFormTypes.length === 0,
+    `위반=${badFormTypes.join(",") || "없음"}`
+  );
+
   const badTypes = pokemonOut
     .filter((p) => p.types.length < 1 || p.types.length > 2)
     .map((p) => p.id);
@@ -581,6 +772,7 @@ async function main() {
     genCounts,
     stageDistribution: stageDist,
     requiresTradeCount: tradeCount,
+    forms: formStats,
     statTotal: {
       min: totalMin,
       max: totalMax,
@@ -598,7 +790,8 @@ async function main() {
   // 콘솔 요약
   const failedChecks = spotChecks.filter((c) => !c.pass).length;
   process.stderr.write(
-    `\n완료: ${pokemonOut.length}마리, ${Math.round(durationMs / 100) / 10}s, ` +
+    `\n완료: ${pokemonOut.length}마리 + 다른 모습 ${formStats.total}종` +
+      `(리전폼 ${formStats.regional}), ${Math.round(durationMs / 100) / 10}s, ` +
       `실패 ${failedIds.length}, 스팟체크 ${spotChecks.length - failedChecks}/${spotChecks.length} 통과\n`
   );
   process.stderr.write("→ data/pokemon.json, data/report.json 저장됨\n");

@@ -18,12 +18,20 @@ export interface DisplayOptions {
   showStats: boolean;
 }
 
+// 파티 한 칸. 추첨은 원종 단위이고, 리전폼/고유 폼은 뽑은 뒤 칸마다 고른다.
+// form 은 Pokemon.forms 의 인덱스이고 null 이면 원종 모습이다.
+export interface PartySlot {
+  id: number;
+  form: number | null;
+}
+
 export interface AppState {
   filters: FilterOptions; // A. 뽑기 조건 (버튼 눌러야 재추첨)
   display: DisplayOptions; // B. 표시 옵션 (즉시 반영)
-  result: number[]; // C. 결과는 id 배열만 저장 (객체 복사 금지)
+  result: PartySlot[]; // C. 결과는 id(+폼 인덱스)만 저장 (객체 복사 금지)
   requested: number; // 마지막 뽑기에서 요청한(clamp된) 마리 수 — 부족분 안내용
   selectedId: number | null; // D. 스타팅 탭으로 넘긴 포켓몬 id
+  selectedForm: number | null; // D. 스타팅으로 넘긴 폼 인덱스 (원종이면 null)
   roll: StarterRoll | null; // D. 현재 롤 결과(특성/성격/개체값)
 }
 
@@ -42,8 +50,10 @@ export type AppAction =
   | { type: "reset" }
   // 개별 리롤: result 의 index 슬롯 하나만 새 id 로 교체
   | { type: "rerollOne"; index: number; id: number }
-  // 스타팅 선택: 포켓몬을 스타팅 탭으로 넘김 (기본 롤로 초기화)
-  | { type: "selectStarter"; id: number }
+  // 모습 변경: index 슬롯의 폼만 교체 (null = 원종). 포켓몬 자체는 그대로.
+  | { type: "setForm"; index: number; form: number | null }
+  // 스타팅 선택: 포켓몬(+선택된 모습)을 스타팅 탭으로 넘김 (기본 롤로 초기화)
+  | { type: "selectStarter"; id: number; form: number | null }
   // 스타팅 롤: 특성/성격/개체값 결과 저장 (컴포넌트에서 starter.ts 로 계산)
   | { type: "rollStarter"; roll: StarterRoll }
   // 개체값 개별 롤/입력: 스탯 하나만 새 값으로 교체
@@ -68,12 +78,19 @@ export function appReducer(state: AppState, action: AppAction): AppState {
         display: { ...state.display, ...action.patch },
       };
     case "draw":
-      // 여러 장 한 번에: result 전체 교체.
-      return { ...state, result: action.ids, requested: action.requested };
+      // 여러 장 한 번에: result 전체 교체. 새로 뽑은 칸은 원종 모습으로 시작.
+      return {
+        ...state,
+        result: action.ids.map((id) => ({ id, form: null })),
+        requested: action.requested,
+      };
     case "addOne":
       // 최대 6장까지만 덧붙인다.
       if (state.result.length >= MAX_PARTY) return state;
-      return { ...state, result: [...state.result, action.id] };
+      return {
+        ...state,
+        result: [...state.result, { id: action.id, form: null }],
+      };
     case "removeOne": {
       // 해당 슬롯만 파티에서 빼고 나머지는 순서 유지.
       if (action.index < 0 || action.index >= state.result.length) return state;
@@ -85,14 +102,27 @@ export function appReducer(state: AppState, action: AppAction): AppState {
       return { ...state, result: [], requested: 0 };
     case "rerollOne": {
       // 해당 슬롯만 새 id 로 교체 (나머지 카드는 유지).
+      // 다른 포켓몬이 되므로 폼 선택은 원종으로 되돌린다.
       if (action.index < 0 || action.index >= state.result.length) return state;
       const next = state.result.slice();
-      next[action.index] = action.id;
+      next[action.index] = { id: action.id, form: null };
+      return { ...state, result: next };
+    }
+    case "setForm": {
+      // 모습만 교체 — 어떤 포켓몬이 뽑혔는지는 건드리지 않는다.
+      if (action.index < 0 || action.index >= state.result.length) return state;
+      const next = state.result.slice();
+      next[action.index] = { ...next[action.index], form: action.form };
       return { ...state, result: next };
     }
     case "selectStarter":
       // 새 스타팅 포켓몬 선택 → 기본 롤(개체값 0/중립 성격/특성 없음)로 초기화.
-      return { ...state, selectedId: action.id, roll: emptyRoll() };
+      return {
+        ...state,
+        selectedId: action.id,
+        selectedForm: action.form,
+        roll: emptyRoll(),
+      };
     case "rollStarter":
       return { ...state, roll: action.roll };
     case "rerollIv":

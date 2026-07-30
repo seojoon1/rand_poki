@@ -1,4 +1,4 @@
-// 포켓몬 카드 (이미지 없음). 도감번호/이름/타입/종족값을 표시 옵션에 따라 렌더.
+// 포켓몬 카드. 도트 이미지/도감번호/이름/타입/종족값을 표시 옵션에 따라 렌더.
 import type { Pokemon } from "../../src/lib/filter";
 import type { DisplayOptions } from "../lib/appState";
 import { STAT_ROWS, TYPE_COLOR, typeName, nameOf } from "../lib/pokedex";
@@ -13,6 +13,7 @@ export function PokemonCard({
   onRemove,
   onSelectStarter,
   isSelected = false,
+  stackName = false,
 }: {
   pokemon: Pokemon;
   display: DisplayOptions;
@@ -26,22 +27,44 @@ export function PokemonCard({
   onSelectStarter?: () => void;
   // 현재 스타팅으로 선택된 카드인지
   isSelected?: boolean;
+  // 카드가 좁을 때(파티 2마리 이상) 이름을 도감번호 아래 줄로 내린다.
+  // 한 줄에 번호+이름+버튼을 같이 두면 긴 이름이 글자 단위로 쪼개진다.
+  stackName?: boolean;
 }) {
   const { lang, showImage, showNumber, showTypes, showStats } = display;
   const name = nameOf(pokemon, lang);
 
   return (
     <article className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-      {/* 헤더: 도감번호 + 이름 + 개별 리롤/삭제 버튼 */}
-      <header className="mb-3 flex items-baseline gap-2">
+      {/* 헤더: 도감번호 + 이름 + 개별 리롤/삭제 버튼.
+          stackName 이면 order 로 이름을 마지막으로 보내고 w-full 로 줄을 넘긴다
+          → 1행 [#번호 … 리롤 삭제] / 2행 [이름]. 마크업은 한 벌만 유지한다. */}
+      <header className="mb-3 flex flex-wrap items-baseline gap-x-2">
         {showNumber && (
-          <span className="tabular-nums text-sm font-mono text-gray-400">
+          <span className="order-1 tabular-nums text-sm font-mono text-gray-400">
             #{String(pokemon.id).padStart(3, "0")}
           </span>
         )}
-        {/* 이름은 포켓몬 위키 링크 */}
-        <h3 className="text-lg font-bold"><a href={`https://pokemon.fandom.com/ko/wiki/${name}_(포켓몬)#출현장소`} target="_blank" rel="noopener noreferrer">{name}</a></h3>
-        <div className="ml-auto flex shrink-0 items-center gap-1">
+        {/* 이름은 포켓몬 위키 링크. break-keep 으로 한국어 이름이 글자 단위로
+            쪼개지지 않게 한다 (줄이 넘칠 땐 단어째로 넘어간다). */}
+        <h3
+          className={`text-lg font-bold leading-tight break-keep ${
+            stackName ? "order-3 mt-0.5 w-full" : "order-2"
+          }`}
+        >
+          <a
+            href={`https://pokemon.fandom.com/ko/wiki/${name}_(포켓몬)#출현장소`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {name}
+          </a>
+        </h3>
+        <div
+          className={`ml-auto flex shrink-0 items-center gap-1 ${
+            stackName ? "order-2" : "order-3"
+          }`}
+        >
           {onReroll && (
             <button
               type="button"

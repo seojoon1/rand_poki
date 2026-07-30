@@ -359,6 +359,7 @@ export default function Home() {
                       onReroll={() => handleRerollOne(i)}
                       canReroll={candidatesForSlot(i).length > 0}
                       onRemove={() => dispatch({ type: "removeOne", index: i })}
+                      stackName={party.length > 1}
                       onSelectStarter={() => handleSelectStarter(p.id)}
                       isSelected={selectedId === p.id}
                     />

@@ -12,7 +12,7 @@ import type { Route } from "./+types/root";
 import { SITE_LANG } from "./lib/site";
 import "./app.css";
 
-export const links: Route.LinksFunction = () => [];
+export const links: Route.LinksFunction = () => [{rel:"icon", href:"/favicon.png"}];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

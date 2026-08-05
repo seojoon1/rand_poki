@@ -66,7 +66,7 @@ export function PokemonCard({
           }`}
         >
           <a
-            href={`https://pokemon.fandom.com/ko/wiki/${name}_(포켓몬)#출현장소`}
+            href={`https://pokemon.fandom.com/ko/wiki/${name}_(포켓몬)`}
             target="_blank"
             rel="noopener noreferrer"
           >

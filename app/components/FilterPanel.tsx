@@ -92,7 +92,7 @@ export function FilterPanel({
       {/* 2. 게임 — 항목이 22개라 기본 접어둔다 */}
       <fieldset className="rounded-lg border border-gray-200 p-3 dark:border-gray-700">
         <legend className="flex items-center gap-2 px-1 font-semibold">
-          게임
+          버전(예: 소드/실드, 블2화2)
           <button
             type="button"
             onClick={() => patch({ gameMask: allGamesOn ? 0 : undefined })}

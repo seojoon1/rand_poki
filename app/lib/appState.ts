@@ -61,7 +61,15 @@ export type AppAction =
   // 성격 지정(드롭다운/돌리기 공용)
   | { type: "setNature"; natureKey: string }
   // 특성 지정(돌리기)
-  | { type: "setAbility"; ability: AbilityRef | null };
+  | { type: "setAbility"; ability: AbilityRef | null }
+  // 복원: localStorage 에 저장돼 있던 파티/스타팅을 되살림 (마운트 직후 1회)
+  | {
+      type: "hydrate";
+      result: PartySlot[];
+      selectedId: number | null;
+      selectedForm: number | null;
+      roll: StarterRoll | null;
+    };
 
 // 파티 최대 인원
 export const MAX_PARTY = 6;
@@ -141,6 +149,17 @@ export function appReducer(state: AppState, action: AppAction): AppState {
     case "setAbility":
       if (!state.roll) return state;
       return { ...state, roll: { ...state.roll, ability: action.ability } };
+    case "hydrate":
+      // 저장본 복원. 조건(filters)/표시 옵션(display)은 건드리지 않는다 —
+      // filters 는 URL 이, display 는 초기값이 각각 진실의 원천이다.
+      return {
+        ...state,
+        result: action.result.slice(0, MAX_PARTY),
+        requested: 0,
+        selectedId: action.selectedId,
+        selectedForm: action.selectedForm,
+        roll: action.roll,
+      };
     default:
       return state;
   }

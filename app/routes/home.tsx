@@ -14,6 +14,7 @@ import { ALL_POKEMON, BY_ID, viewOf } from "../lib/pokedex";
 import { appReducer, MAX_PARTY } from "../lib/appState";
 import type { AppState } from "../lib/appState";
 import { defaultFilters, filtersToSearch, searchToFilters } from "../lib/urlFilters";
+import { loadParty, saveParty } from "../lib/storage";
 import { FilterPanel } from "../components/FilterPanel";
 import { DisplayOptionsBar } from "../components/DisplayOptions";
 import { PokemonCard } from "../components/PokemonCard";
@@ -121,6 +122,24 @@ export default function Home() {
     const url = `${window.location.pathname}${search}`;
     window.history.replaceState(null, "", url);
   }, [filters]);
+
+  // ── localStorage ↔ 파티/스타팅 동기화 ──────────────────────────────
+  // URL 과 같은 이유로 서버 렌더에는 항상 빈 파티를 그리고, 마운트 후에만
+  // 저장본을 읽어 복원한다 (렌더 중 localStorage 접근 = 하이드레이션 불일치).
+  // restored 는 ref 가 아니라 state 여야 한다 — dispatch(hydrate) 와 같은 배치로
+  // 반영돼야 아래 저장 이펙트가 '복원된' 파티를 보고 돌기 때문이다. ref 로 두면
+  // 복원 직후 한 번은 초기 빈 파티가 저장돼 저장본이 지워진다.
+  const [restored, setRestored] = useState(false);
+  useEffect(() => {
+    const saved = loadParty((id) => BY_ID.has(id));
+    if (saved) dispatch({ type: "hydrate", ...saved });
+    setRestored(true);
+  }, []);
+  // 복원 전에는 저장하지 않는다 — 초기 빈 상태로 저장본을 덮어쓰면 안 된다.
+  useEffect(() => {
+    if (!restored) return;
+    saveParty({ result, selectedId, selectedForm, roll });
+  }, [restored, result, selectedId, selectedForm, roll]);
 
   // ── 실시간 카운트 (체크박스 토글마다) — 경량 countPool 사용 ─────────
   const poolCount = useMemo(

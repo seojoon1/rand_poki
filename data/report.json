@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-30T12:32:52.636Z",
-  "durationMs": 466,
-  "durationSec": 0.5,
+  "generatedAt": "2026-08-05T04:48:17.258Z",
+  "durationMs": 4318,
+  "durationSec": 4.3,
   "requested": 1025,
   "succeeded": 1025,
   "uniqueAbilities": 301,
@@ -30,6 +30,34 @@
     "total": 127,
     "regional": 58,
     "speciesWithForms": 97
+  },
+  "games": {
+    "versionGroupCount": 22,
+    "countsByGame": {
+      "red-blue": 151,
+      "yellow": 151,
+      "gold-silver": 251,
+      "crystal": 251,
+      "ruby-sapphire": 202,
+      "emerald": 202,
+      "firered-leafgreen": 151,
+      "diamond-pearl": 151,
+      "platinum": 210,
+      "heartgold-soulsilver": 256,
+      "black-white": 156,
+      "black-2-white-2": 301,
+      "x-y": 454,
+      "omega-ruby-alpha-sapphire": 211,
+      "sun-moon": 302,
+      "ultra-sun-ultra-moon": 403,
+      "lets-go-pikachu-lets-go-eevee": 153,
+      "sword-shield": 584,
+      "brilliant-diamond-shining-pearl": 151,
+      "legends-arceus": 242,
+      "scarlet-violet": 664,
+      "legends-za": 364
+    },
+    "noGameCount": 0
   },
   "statTotal": {
     "min": 175,

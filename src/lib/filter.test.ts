@@ -20,6 +20,8 @@ function mk(
     isLegendary: overrides.isLegendary ?? false,
     isMythical: overrides.isMythical ?? false,
     requiresTrade: overrides.requiresTrade ?? false,
+    // 기본은 모든 게임에서 입수 가능 (게임 조건 테스트에서만 덮어쓴다)
+    vg: overrides.vg ?? ~0,
     stats: overrides.stats ?? {
       hp: 0,
       atk: 0,
@@ -265,5 +267,71 @@ describe("countPool == filterPool.length", () => {
       statTotal: [350, 550],
     });
     expect(countPool(pool, opts)).toBe(filterPool(pool, opts).length);
+  });
+});
+
+// ── 게임(버전 그룹) 조건 ─────────────────────────────────────────────
+// vg 는 비트마스크다. 여기서는 비트 0 = 게임A, 비트 1 = 게임B, 비트 2 = 게임C 로 둔다.
+const GAME_A = 1 << 0;
+const GAME_B = 1 << 1;
+const GAME_C = 1 << 2;
+
+describe("게임 조건 (gameMask)", () => {
+  const pool = [
+    mk(1, { types: ["fire"], vg: GAME_A }), // A 에만
+    mk(2, { types: ["fire"], vg: GAME_B }), // B 에만
+    mk(3, { types: ["fire"], vg: GAME_A | GAME_B }), // A·B 둘 다
+    mk(4, { types: ["fire"], vg: 0 }), // 어느 게임에도 없음
+  ];
+  const opts = (over: Partial<FilterOptions> = {}) =>
+    baseOpts({ types: new Set<PokemonType>(["fire"]), ...over });
+
+  it("gameMask 가 undefined 면 조건 없음 — 전부 통과", () => {
+    const ids = filterPool(pool, opts()).map((p) => p.id);
+    expect(ids).toEqual([1, 2, 3, 4]);
+  });
+
+  it("한 게임만 고르면 그 게임에 나오는 종만 통과", () => {
+    const ids = filterPool(pool, opts({ gameMask: GAME_A })).map((p) => p.id);
+    expect(ids).toEqual([1, 3]);
+  });
+
+  it("여러 게임은 합집합 — 하나에서라도 얻을 수 있으면 통과", () => {
+    const ids = filterPool(pool, opts({ gameMask: GAME_A | GAME_B })).map(
+      (p) => p.id
+    );
+    expect(ids).toEqual([1, 2, 3]);
+  });
+
+  it("어느 게임에도 없는 종은 게임을 고르는 순간 빠진다", () => {
+    const ids = filterPool(pool, opts({ gameMask: GAME_C })).map((p) => p.id);
+    expect(ids).toEqual([]);
+  });
+
+  it("게임을 하나도 안 고르면(0) 빈 결과", () => {
+    expect(filterPool(pool, opts({ gameMask: 0 }))).toEqual([]);
+    expect(countPool(pool, opts({ gameMask: 0 }))).toBe(0);
+  });
+
+  it("countPool 이 filterPool.length 와 일치", () => {
+    const o = opts({ gameMask: GAME_A | GAME_C });
+    expect(countPool(pool, o)).toBe(filterPool(pool, o).length);
+  });
+
+  it("다른 조건과 AND 로 결합된다", () => {
+    const mixed = [
+      mk(10, { types: ["fire"], gen: 1, vg: GAME_A }),
+      mk(11, { types: ["water"], gen: 1, vg: GAME_A }),
+      mk(12, { types: ["fire"], gen: 2, vg: GAME_A }),
+    ];
+    const ids = filterPool(
+      mixed,
+      baseOpts({
+        types: new Set<PokemonType>(["fire"]),
+        gens: new Set([1]),
+        gameMask: GAME_A,
+      })
+    ).map((p) => p.id);
+    expect(ids).toEqual([10]);
   });
 });

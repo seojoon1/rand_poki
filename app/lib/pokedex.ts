@@ -12,7 +12,10 @@ import type {
 
 // JSON 은 types 가 string[] 로 추론되므로 Pokemon[] 로 단언한다.
 // (fetch-pokemon.mjs 가 스키마를 보장한다.)
-const data = rawData as unknown as { pokemon: Pokemon[] };
+const data = rawData as unknown as {
+  pokemon: Pokemon[];
+  versionGroups: VersionGroup[];
+};
 
 // 전체 포켓몬 배열 (불변으로 취급)
 export const ALL_POKEMON: Pokemon[] = data.pokemon;
@@ -30,6 +33,48 @@ export const ALL_TYPES: PokemonType[] = [
   "dark", "fairy",
 ];
 export const ALL_STAGES: Stage[] = ["base", "middle", "final"];
+
+// ── 게임(버전 그룹) ─────────────────────────────────────────────────
+// 배열 순서 = Pokemon.vg 의 비트 인덱스. 스크립트가 만든 순서를 그대로 쓰며,
+// 앱에서 인덱스를 다시 정의하지 않는다 (양쪽이 어긋날 여지를 없앤다).
+export interface VersionGroup {
+  key: string; // "sword-shield"
+  gen: number;
+  label: string; // "소드·실드" (한국 정식 발매명)
+  versions: string[]; // ["sword", "shield"]
+  pokedexes: string[]; // ["galar", "isle-of-armor", "crown-tundra"]
+}
+
+export const VERSION_GROUPS: VersionGroup[] = data.versionGroups;
+
+// 전체 선택 마스크 (모든 게임 비트가 켜진 값)
+export const ALL_GAMES_MASK = VERSION_GROUPS.reduce(
+  (m, _, i) => m | (1 << i),
+  0
+);
+
+const GAME_BIT = new Map(VERSION_GROUPS.map((vg, i) => [vg.key, 1 << i]));
+
+// 게임 키 목록 → 비트마스크. 모르는 키는 무시한다.
+export function gamesToMask(keys: Iterable<string>): number {
+  let mask = 0;
+  for (const k of keys) mask |= GAME_BIT.get(k) ?? 0;
+  return mask;
+}
+
+// 비트마스크 → 게임 키 목록 (VERSION_GROUPS 순서 유지)
+export function maskToGames(mask: number): string[] {
+  return VERSION_GROUPS.filter((_, i) => (mask & (1 << i)) !== 0).map(
+    (vg) => vg.key
+  );
+}
+
+// 세대별로 묶은 게임 목록 (필터 UI 의 그룹 헤더용)
+export const GAMES_BY_GEN: { gen: number; games: VersionGroup[] }[] =
+  ALL_GENS.map((gen) => ({
+    gen,
+    games: VERSION_GROUPS.filter((vg) => vg.gen === gen),
+  })).filter((g) => g.games.length > 0);
 
 // 종족값 총합 범위 (슬라이더 경계)
 export const STAT_TOTAL_MIN = 175;

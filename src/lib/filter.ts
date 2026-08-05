@@ -64,6 +64,9 @@ export interface Pokemon {
   isLegendary: boolean;
   isMythical: boolean;
   requiresTrade: boolean;
+  // 게임(버전 그룹)별 입수 가능 여부 비트마스크. 비트 i = versionGroups[i].
+  // 판정 기준은 해당 게임 지역도감 등재 여부 (야생·스타팅·화석·선물·진화 포함).
+  vg: number;
   stats: Stats;
   abilities: AbilityRef[];
   // 다른 모습 목록 (없으면 빈 배열). 추첨은 원종 단위로만 하므로 필터 조건에는
@@ -80,6 +83,10 @@ export interface FilterOptions {
   statTotal?: [number, number]; // 종족값 총합 범위, 없으면 무제한
   excludeLegendary?: boolean; // isLegendary || isMythical 제외
   uniqueChain?: boolean; // 같은 진화 계열 중복 방지 (drawRandom 에서 사용)
+  // 게임(버전 그룹) 조건 — 선택한 게임들의 비트마스크.
+  // undefined = 조건 없음(전체 게임). 0 = 아무 게임도 안 고름 → 통과 없음.
+  // 키↔마스크 변환은 pokedex.ts 가 맡는다 (이 모듈은 데이터에 의존하지 않는다).
+  gameMask?: number;
 }
 
 // ── 단일 포켓몬 판정 (filterPool/countPool 공용) ─────────────────────
@@ -133,14 +140,19 @@ function matches(p: Pokemon, opts: FilterOptions): boolean {
   // 전설/환상 제외
   if (opts.excludeLegendary && (p.isLegendary || p.isMythical)) return false;
 
+  // 게임: 고른 게임 중 하나에서라도 얻을 수 있으면 통과.
+  // undefined 면 조건 자체가 없다 (전체 게임).
+  if (opts.gameMask !== undefined && (p.vg & opts.gameMask) === 0) return false;
+
   return true;
 }
 
 // ── 1) filterPool ────────────────────────────────────────────────────
 // 조건에 맞는 포켓몬 배열을 반환한다.
 export function filterPool(all: Pokemon[], opts: FilterOptions): Pokemon[] {
-  // gens 또는 types 가 빈 집합이면 결과는 빈 배열 (에러 던지지 않음).
+  // gens/types 가 빈 집합이거나 고른 게임이 하나도 없으면 빈 배열 (에러 던지지 않음).
   if (opts.gens.size === 0 || opts.types.size === 0) return [];
+  if (opts.gameMask === 0) return [];
 
   const out: Pokemon[] = [];
   for (const p of all) {
@@ -192,6 +204,7 @@ export function drawRandom(
 // 결과 배열을 만들지 않는 경량 버전 (체크박스 토글마다 호출됨).
 export function countPool(all: Pokemon[], opts: FilterOptions): number {
   if (opts.gens.size === 0 || opts.types.size === 0) return 0;
+  if (opts.gameMask === 0) return 0;
 
   let n = 0;
   for (const p of all) {

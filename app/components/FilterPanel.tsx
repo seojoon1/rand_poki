@@ -10,6 +10,10 @@ import {
   STAGE_LABEL,
   TYPE_COLOR,
   typeName,
+  ALL_GAMES_MASK,
+  GAMES_BY_GEN,
+  VERSION_GROUPS,
+  gamesToMask,
 } from "../lib/pokedex";
 
 // Set 토글 헬퍼: 있으면 빼고 없으면 넣은 새 Set 반환 (불변)
@@ -31,6 +35,18 @@ export function FilterPanel({
 }) {
   // 부분 변경 헬퍼
   const patch = (p: Partial<FilterOptions>) => onChange({ ...filters, ...p });
+
+  // 게임 조건: undefined(조건 없음)는 전체 선택과 같게 보여준다.
+  // 반대로 전체가 켜지면 다시 undefined 로 되돌려 URL 에 vg 가 안 붙게 한다.
+  const gameMask = filters.gameMask ?? ALL_GAMES_MASK;
+  const allGamesOn = gameMask === ALL_GAMES_MASK;
+  const gameCount = VERSION_GROUPS.filter(
+    (vg) => (gameMask & gamesToMask([vg.key])) !== 0
+  ).length;
+  const toggleGame = (key: string) => {
+    const next = gameMask ^ gamesToMask([key]);
+    patch({ gameMask: next === ALL_GAMES_MASK ? undefined : next });
+  };
 
   // 종족값 슬라이더 현재값 (미설정이면 전체 범위 표시하되 필터는 무제한)
   const stActive = !!filters.statTotal;
@@ -73,7 +89,51 @@ export function FilterPanel({
         </div>
       </fieldset>
 
-      {/* 2. 타입 */}
+      {/* 2. 게임 — 항목이 22개라 기본 접어둔다 */}
+      <fieldset className="rounded-lg border border-gray-200 p-3 dark:border-gray-700">
+        <legend className="flex items-center gap-2 px-1 font-semibold">
+          버전(예: 소드/실드, 블2화2)
+          <button
+            type="button"
+            onClick={() => patch({ gameMask: allGamesOn ? 0 : undefined })}
+            className="rounded px-1.5 text-xs font-normal text-accent-600 hover:underline dark:text-accent-400"
+          >
+            {allGamesOn ? "전체 해제" : "전체 선택"}
+          </button>
+        </legend>
+        <details>
+          <summary className="cursor-pointer list-none text-gray-600 dark:text-gray-300">
+            {allGamesOn
+              ? "전체 게임 ▾"
+              : `${gameCount}개 게임 선택됨 ▾`}
+          </summary>
+          <p className="mt-2 text-xs leading-relaxed text-gray-500 dark:text-gray-400">
+            해당 게임의 지역도감에 실린 포켓몬만 뽑습니다 (야생·스타팅·화석·선물·진화
+            포함). 버전 독점은 구분하지 않습니다.
+          </p>
+          <div className="mt-2 space-y-2">
+            {GAMES_BY_GEN.map(({ gen, games }) => (
+              <div key={gen}>
+                <div className="text-xs font-semibold text-gray-400 dark:text-gray-500">
+                  {gen}세대
+                </div>
+                <div className="mt-0.5 grid grid-cols-1 gap-0.5">
+                  {games.map((vg) => (
+                    <Check
+                      key={vg.key}
+                      label={vg.label}
+                      checked={(gameMask & gamesToMask([vg.key])) !== 0}
+                      onChange={() => toggleGame(vg.key)}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </details>
+      </fieldset>
+
+      {/* 3. 타입 */}
       <fieldset className="rounded-lg border border-gray-200 p-3 dark:border-gray-700">
         <legend className="flex items-center gap-2 px-1 font-semibold">
           타입
@@ -120,7 +180,7 @@ export function FilterPanel({
         </div>
       </fieldset>
 
-      {/* 3. 진화 단계 */}
+      {/* 4. 진화 단계 */}
       <fieldset className="rounded-lg border border-gray-200 p-3 dark:border-gray-700">
         <legend className="px-1 font-semibold">진화 단계</legend>
         <div className="mt-1 flex gap-3">
@@ -135,7 +195,7 @@ export function FilterPanel({
         </div>
       </fieldset>
 
-      {/* 4. 종족값 총합 (듀얼 핸들 슬라이더) */}
+      {/* 5. 종족값 총합 (듀얼 핸들 슬라이더) */}
       <fieldset className="rounded-lg border border-gray-200 p-3 dark:border-gray-700">
         <legend className="flex items-center gap-2 px-1 font-semibold">
           종족값 총합
@@ -185,7 +245,7 @@ export function FilterPanel({
         </div>
       </fieldset>
 
-      {/* 5. 기타 */}
+      {/* 6. 기타 */}
       <fieldset className="rounded-lg border border-gray-200 p-3 dark:border-gray-700">
         <legend className="px-1 font-semibold">기타</legend>
         <div className="mt-1 space-y-1">

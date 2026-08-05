@@ -8,6 +8,9 @@ import {
   ALL_STAGES,
   STAT_TOTAL_MIN,
   STAT_TOTAL_MAX,
+  ALL_GAMES_MASK,
+  gamesToMask,
+  maskToGames,
 } from "./pokedex";
 
 // 기본 필터: 세대/타입/단계 전부 켜짐, 종족값 무제한
@@ -21,6 +24,7 @@ export function defaultFilters(): FilterOptions {
     statTotal: undefined,
     excludeLegendary: false,
     uniqueChain: false,
+    gameMask: undefined, // 조건 없음 = 전체 게임
   };
 }
 
@@ -40,6 +44,11 @@ export function filtersToSearch(f: FilterOptions): string {
   if (f.statTotal) p.set("st", `${f.statTotal[0]}-${f.statTotal[1]}`);
   if (f.excludeLegendary) p.set("nol", "1");
   if (f.uniqueChain) p.set("uc", "1");
+  // 게임: 전체 선택(또는 조건 없음)이면 생략. 마스크 숫자 대신 키를 쓴다 —
+  // 비트 순서가 바뀌어도 URL 이 엉뚱한 게임을 가리키지 않도록.
+  if (f.gameMask !== undefined && f.gameMask !== ALL_GAMES_MASK) {
+    p.set("vg", maskToGames(f.gameMask).join("."));
+  }
 
   const q = p.toString();
   return q ? `?${q}` : "";
@@ -83,6 +92,11 @@ export function searchToFilters(search: string): FilterOptions {
   }
   if (p.get("nol") === "1") f.excludeLegendary = true;
   if (p.get("uc") === "1") f.uniqueChain = true;
+  // 게임: 모르는 키는 gamesToMask 가 무시한다. 빈 값이면 0(= 아무 게임도 없음)
+  // 이 되는데, 이는 "전체 해제" 상태를 그대로 복원한 것이라 의도된 동작이다.
+  if (p.has("vg")) {
+    f.gameMask = gamesToMask((p.get("vg") ?? "").split("."));
+  }
 
   return f;
 }

@@ -1,6 +1,281 @@
 {
-  "generatedAt": "2026-07-30T12:32:52.636Z",
+  "generatedAt": "2026-08-05T04:48:17.258Z",
   "count": 1025,
+  "versionGroups": [
+    {
+      "key": "red-blue",
+      "gen": 1,
+      "label": "레드·블루",
+      "versions": [
+        "red",
+        "blue"
+      ],
+      "pokedexes": [
+        "kanto"
+      ]
+    },
+    {
+      "key": "yellow",
+      "gen": 1,
+      "label": "피카츄",
+      "versions": [
+        "yellow"
+      ],
+      "pokedexes": [
+        "kanto"
+      ]
+    },
+    {
+      "key": "gold-silver",
+      "gen": 2,
+      "label": "골드·실버",
+      "versions": [
+        "gold",
+        "silver"
+      ],
+      "pokedexes": [
+        "original-johto"
+      ]
+    },
+    {
+      "key": "crystal",
+      "gen": 2,
+      "label": "크리스탈",
+      "versions": [
+        "crystal"
+      ],
+      "pokedexes": [
+        "original-johto"
+      ]
+    },
+    {
+      "key": "ruby-sapphire",
+      "gen": 3,
+      "label": "루비·사파이어",
+      "versions": [
+        "ruby",
+        "sapphire"
+      ],
+      "pokedexes": [
+        "hoenn"
+      ]
+    },
+    {
+      "key": "emerald",
+      "gen": 3,
+      "label": "에메랄드",
+      "versions": [
+        "emerald"
+      ],
+      "pokedexes": [
+        "hoenn"
+      ]
+    },
+    {
+      "key": "firered-leafgreen",
+      "gen": 3,
+      "label": "파이어레드·리프그린",
+      "versions": [
+        "firered",
+        "leafgreen"
+      ],
+      "pokedexes": [
+        "kanto"
+      ]
+    },
+    {
+      "key": "diamond-pearl",
+      "gen": 4,
+      "label": "디아루가·펄기아",
+      "versions": [
+        "diamond",
+        "pearl"
+      ],
+      "pokedexes": [
+        "original-sinnoh"
+      ]
+    },
+    {
+      "key": "platinum",
+      "gen": 4,
+      "label": "기라티나",
+      "versions": [
+        "platinum"
+      ],
+      "pokedexes": [
+        "extended-sinnoh"
+      ]
+    },
+    {
+      "key": "heartgold-soulsilver",
+      "gen": 4,
+      "label": "하트골드·소울실버",
+      "versions": [
+        "heartgold",
+        "soulsilver"
+      ],
+      "pokedexes": [
+        "updated-johto"
+      ]
+    },
+    {
+      "key": "black-white",
+      "gen": 5,
+      "label": "블랙·화이트",
+      "versions": [
+        "black",
+        "white"
+      ],
+      "pokedexes": [
+        "original-unova"
+      ]
+    },
+    {
+      "key": "black-2-white-2",
+      "gen": 5,
+      "label": "블랙 2·화이트 2",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "pokedexes": [
+        "updated-unova"
+      ]
+    },
+    {
+      "key": "x-y",
+      "gen": 6,
+      "label": "X·Y",
+      "versions": [
+        "x",
+        "y"
+      ],
+      "pokedexes": [
+        "kalos-central",
+        "kalos-coastal",
+        "kalos-mountain"
+      ]
+    },
+    {
+      "key": "omega-ruby-alpha-sapphire",
+      "gen": 6,
+      "label": "오메가루비·알파사파이어",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "pokedexes": [
+        "updated-hoenn"
+      ]
+    },
+    {
+      "key": "sun-moon",
+      "gen": 7,
+      "label": "썬·문",
+      "versions": [
+        "sun",
+        "moon"
+      ],
+      "pokedexes": [
+        "original-alola",
+        "original-melemele",
+        "original-akala",
+        "original-ulaula",
+        "original-poni"
+      ]
+    },
+    {
+      "key": "ultra-sun-ultra-moon",
+      "gen": 7,
+      "label": "울트라썬·울트라문",
+      "versions": [
+        "ultra-sun",
+        "ultra-moon"
+      ],
+      "pokedexes": [
+        "updated-alola",
+        "updated-melemele",
+        "updated-akala",
+        "updated-ulaula",
+        "updated-poni"
+      ]
+    },
+    {
+      "key": "lets-go-pikachu-lets-go-eevee",
+      "gen": 7,
+      "label": "레츠고! 피카츄·레츠고! 이브이",
+      "versions": [
+        "lets-go-pikachu",
+        "lets-go-eevee"
+      ],
+      "pokedexes": [
+        "letsgo-kanto"
+      ]
+    },
+    {
+      "key": "sword-shield",
+      "gen": 8,
+      "label": "소드·실드",
+      "versions": [
+        "sword",
+        "shield"
+      ],
+      "pokedexes": [
+        "galar",
+        "isle-of-armor",
+        "crown-tundra"
+      ]
+    },
+    {
+      "key": "brilliant-diamond-shining-pearl",
+      "gen": 8,
+      "label": "브릴리언트 다이아몬드·샤이닝 펄",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "pokedexes": [
+        "original-sinnoh"
+      ]
+    },
+    {
+      "key": "legends-arceus",
+      "gen": 8,
+      "label": "LEGENDS 아르세우스",
+      "versions": [
+        "legends-arceus"
+      ],
+      "pokedexes": [
+        "hisui"
+      ]
+    },
+    {
+      "key": "scarlet-violet",
+      "gen": 9,
+      "label": "스칼렛·바이올렛",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "pokedexes": [
+        "paldea",
+        "kitakami",
+        "blueberry"
+      ]
+    },
+    {
+      "key": "legends-za",
+      "gen": 9,
+      "label": "LEGENDS Z-A",
+      "versions": [
+        "legends-za"
+      ],
+      "pokedexes": [
+        "lumiose-city",
+        "hyperspace"
+      ]
+    }
+  ],
   "pokemon": [
     {
       "id": 1,
@@ -59,7 +334,8 @@
         "isle-of-armor": 68,
         "blueberry": 164,
         "lumiose-city": 148
-      }
+      },
+      "vg": 3347023
     },
     {
       "id": 2,
@@ -118,7 +394,8 @@
         "isle-of-armor": 69,
         "blueberry": 165,
         "lumiose-city": 149
-      }
+      },
+      "vg": 3347023
     },
     {
       "id": 3,
@@ -178,7 +455,8 @@
         "blueberry": 166,
         "lumiose-city": 150,
         "champions": 3
-      }
+      },
+      "vg": 3347023
     },
     {
       "id": 4,
@@ -237,7 +515,8 @@
         "galar": 378,
         "blueberry": 167,
         "lumiose-city": 151
-      }
+      },
+      "vg": 3347023
     },
     {
       "id": 5,
@@ -296,7 +575,8 @@
         "galar": 379,
         "blueberry": 168,
         "lumiose-city": 152
-      }
+      },
+      "vg": 3347023
     },
     {
       "id": 6,
@@ -357,7 +637,8 @@
         "blueberry": 169,
         "lumiose-city": 153,
         "champions": 6
-      }
+      },
+      "vg": 3347023
     },
     {
       "id": 7,
@@ -415,7 +696,8 @@
         "isle-of-armor": 71,
         "blueberry": 170,
         "lumiose-city": 154
-      }
+      },
+      "vg": 3347023
     },
     {
       "id": 8,
@@ -473,7 +755,8 @@
         "isle-of-armor": 72,
         "blueberry": 171,
         "lumiose-city": 155
-      }
+      },
+      "vg": 3347023
     },
     {
       "id": 9,
@@ -532,7 +815,8 @@
         "blueberry": 172,
         "lumiose-city": 156,
         "champions": 9
-      }
+      },
+      "vg": 3347023
     },
     {
       "id": 10,
@@ -594,7 +878,8 @@
         "updated-akala": 8,
         "letsgo-kanto": 10,
         "galar": 13
-      }
+      },
+      "vg": 250447
     },
     {
       "id": 11,
@@ -652,7 +937,8 @@
         "updated-akala": 9,
         "letsgo-kanto": 11,
         "galar": 14
-      }
+      },
+      "vg": 250447
     },
     {
       "id": 12,
@@ -715,7 +1001,8 @@
         "updated-akala": 10,
         "letsgo-kanto": 12,
         "galar": 15
-      }
+      },
+      "vg": 250447
     },
     {
       "id": 13,
@@ -772,7 +1059,8 @@
         "kalos-central": 26,
         "letsgo-kanto": 13,
         "lumiose-city": 18
-      }
+      },
+      "vg": 2167375
     },
     {
       "id": 14,
@@ -825,7 +1113,8 @@
         "kalos-central": 27,
         "letsgo-kanto": 14,
         "lumiose-city": 19
-      }
+      },
+      "vg": 2167375
     },
     {
       "id": 15,
@@ -884,7 +1173,8 @@
         "letsgo-kanto": 15,
         "lumiose-city": 20,
         "champions": 15
-      }
+      },
+      "vg": 2167375
     },
     {
       "id": 16,
@@ -945,7 +1235,8 @@
         "kalos-central": 17,
         "letsgo-kanto": 16,
         "lumiose-city": 21
-      }
+      },
+      "vg": 2167375
     },
     {
       "id": 17,
@@ -1006,7 +1297,8 @@
         "kalos-central": 18,
         "letsgo-kanto": 17,
         "lumiose-city": 22
-      }
+      },
+      "vg": 2167375
     },
     {
       "id": 18,
@@ -1068,7 +1360,8 @@
         "letsgo-kanto": 18,
         "lumiose-city": 23,
         "champions": 18
-      }
+      },
+      "vg": 2167375
     },
     {
       "id": 19,
@@ -1180,7 +1473,8 @@
         "updated-ulaula": 6,
         "updated-poni": 6,
         "letsgo-kanto": 19
-      }
+      },
+      "vg": 117327
     },
     {
       "id": 20,
@@ -1292,7 +1586,8 @@
         "updated-ulaula": 7,
         "updated-poni": 7,
         "letsgo-kanto": 20
-      }
+      },
+      "vg": 117327
     },
     {
       "id": 21,
@@ -1356,7 +1651,8 @@
         "updated-ulaula": 40,
         "updated-poni": 33,
         "letsgo-kanto": 21
-      }
+      },
+      "vg": 119375
     },
     {
       "id": 22,
@@ -1420,7 +1716,8 @@
         "updated-ulaula": 41,
         "updated-poni": 34,
         "letsgo-kanto": 22
-      }
+      },
+      "vg": 119375
     },
     {
       "id": 23,
@@ -1484,7 +1781,8 @@
         "letsgo-kanto": 23,
         "kitakami": 18,
         "lumiose-city": 60
-      }
+      },
+      "vg": 3248719
     },
     {
       "id": 24,
@@ -1549,7 +1847,8 @@
         "kitakami": 19,
         "lumiose-city": 61,
         "champions": 24
-      }
+      },
+      "vg": 3248719
     },
     {
       "id": 25,
@@ -1620,7 +1919,8 @@
         "kitakami": 21,
         "lumiose-city": 53,
         "champions": 25
-      }
+      },
+      "vg": 4191231
     },
     {
       "id": 26,
@@ -1726,7 +2026,8 @@
         "kitakami": 22,
         "lumiose-city": 54,
         "champions": 26
-      }
+      },
+      "vg": 4191231
     },
     {
       "id": 27,
@@ -1830,7 +2131,8 @@
         "isle-of-armor": 168,
         "kitakami": 116,
         "blueberry": 155
-      }
+      },
+      "vg": 1309311
     },
     {
       "id": 28,
@@ -1934,7 +2236,8 @@
         "isle-of-armor": 169,
         "kitakami": 117,
         "blueberry": 156
-      }
+      },
+      "vg": 1309311
     },
     {
       "id": 29,
@@ -1994,7 +2297,8 @@
         "kalos-coastal": 104,
         "letsgo-kanto": 29,
         "crown-tundra": 65
-      }
+      },
+      "vg": 201295
     },
     {
       "id": 30,
@@ -2054,7 +2358,8 @@
         "kalos-coastal": 105,
         "letsgo-kanto": 30,
         "crown-tundra": 66
-      }
+      },
+      "vg": 201295
     },
     {
       "id": 31,
@@ -2115,7 +2420,8 @@
         "kalos-coastal": 106,
         "letsgo-kanto": 31,
         "crown-tundra": 67
-      }
+      },
+      "vg": 201295
     },
     {
       "id": 32,
@@ -2175,7 +2481,8 @@
         "kalos-coastal": 107,
         "letsgo-kanto": 32,
         "crown-tundra": 68
-      }
+      },
+      "vg": 201295
     },
     {
       "id": 33,
@@ -2235,7 +2542,8 @@
         "kalos-coastal": 108,
         "letsgo-kanto": 33,
         "crown-tundra": 69
-      }
+      },
+      "vg": 201295
     },
     {
       "id": 34,
@@ -2296,7 +2604,8 @@
         "kalos-coastal": 109,
         "letsgo-kanto": 34,
         "crown-tundra": 70
-      }
+      },
+      "vg": 201295
     },
     {
       "id": 35,
@@ -2366,7 +2675,8 @@
         "hisui": 200,
         "kitakami": 152,
         "lumiose-city": 56
-      }
+      },
+      "vg": 4180943
     },
     {
       "id": 36,
@@ -2437,7 +2747,8 @@
         "kitakami": 153,
         "lumiose-city": 57,
         "champions": 36
-      }
+      },
+      "vg": 4180943
     },
     {
       "id": 37,
@@ -2540,7 +2851,8 @@
         "hisui": 168,
         "kitakami": 37,
         "blueberry": 157
-      }
+      },
+      "vg": 1829503
     },
     {
       "id": 38,
@@ -2645,7 +2957,8 @@
         "kitakami": 38,
         "blueberry": 158,
         "champions": 38
-      }
+      },
+      "vg": 1829503
     },
     {
       "id": 39,
@@ -2716,7 +3029,8 @@
         "isle-of-armor": 12,
         "paldea": 60,
         "hyperspace": 77
-      }
+      },
+      "vg": 3406463
     },
     {
       "id": 40,
@@ -2787,7 +3101,8 @@
         "isle-of-armor": 13,
         "paldea": 61,
         "hyperspace": 78
-      }
+      },
+      "vg": 3406463
     },
     {
       "id": 41,
@@ -2862,7 +3177,8 @@
         "crown-tundra": 144,
         "hisui": 34,
         "hyperspace": 94
-      }
+      },
+      "vg": 3144703
     },
     {
       "id": 42,
@@ -2937,7 +3253,8 @@
         "crown-tundra": 145,
         "hisui": 35,
         "hyperspace": 95
-      }
+      },
+      "vg": 3144703
     },
     {
       "id": 43,
@@ -2997,7 +3314,8 @@
         "letsgo-kanto": 43,
         "galar": 55,
         "blueberry": 62
-      }
+      },
+      "vg": 1258111
     },
     {
       "id": 44,
@@ -3057,7 +3375,8 @@
         "letsgo-kanto": 44,
         "galar": 56,
         "blueberry": 63
-      }
+      },
+      "vg": 1258111
     },
     {
       "id": 45,
@@ -3118,7 +3437,8 @@
         "galar": 57,
         "blueberry": 64,
         "champions": 45
-      }
+      },
+      "vg": 1258111
     },
     {
       "id": 46,
@@ -3184,7 +3504,8 @@
         "updated-ulaula": 72,
         "letsgo-kanto": 46,
         "hisui": 53
-      }
+      },
+      "vg": 639567
     },
     {
       "id": 47,
@@ -3250,7 +3571,8 @@
         "updated-ulaula": 73,
         "letsgo-kanto": 47,
         "hisui": 54
-      }
+      },
+      "vg": 639567
     },
     {
       "id": 48,
@@ -3311,7 +3633,8 @@
         "letsgo-kanto": 48,
         "paldea": 256,
         "blueberry": 8
-      }
+      },
+      "vg": 1114703
     },
     {
       "id": 49,
@@ -3372,7 +3695,8 @@
         "letsgo-kanto": 49,
         "paldea": 257,
         "blueberry": 9
-      }
+      },
+      "vg": 1114703
     },
     {
       "id": 50,
@@ -3487,7 +3811,8 @@
         "galar": 164,
         "paldea": 148,
         "blueberry": 66
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 51,
@@ -3602,7 +3927,8 @@
         "galar": 165,
         "paldea": 149,
         "blueberry": 67
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 52,
@@ -3753,7 +4079,8 @@
         "galar": 182,
         "paldea": 141,
         "hyperspace": 4
-      }
+      },
+      "vg": 3392079
     },
     {
       "id": 53,
@@ -3863,7 +4190,8 @@
         "galar": 184,
         "paldea": 142,
         "hyperspace": 5
-      }
+      },
+      "vg": 3392079
     },
     {
       "id": 54,
@@ -3940,7 +4268,8 @@
         "isle-of-armor": 146,
         "hisui": 68,
         "paldea": 55
-      }
+      },
+      "vg": 2096127
     },
     {
       "id": 55,
@@ -4017,7 +4346,8 @@
         "isle-of-armor": 147,
         "hisui": 69,
         "paldea": 56
-      }
+      },
+      "vg": 2096127
     },
     {
       "id": 56,
@@ -4084,7 +4414,8 @@
         "paldea": 158,
         "kitakami": 99,
         "hyperspace": 1
-      }
+      },
+      "vg": 3261007
     },
     {
       "id": 57,
@@ -4151,7 +4482,8 @@
         "paldea": 159,
         "kitakami": 100,
         "hyperspace": 2
-      }
+      },
+      "vg": 3261007
     },
     {
       "id": 58,
@@ -4261,7 +4593,8 @@
         "hisui": 150,
         "paldea": 213,
         "kitakami": 78
-      }
+      },
+      "vg": 1821263
     },
     {
       "id": 59,
@@ -4372,7 +4705,8 @@
         "paldea": 214,
         "kitakami": 79,
         "champions": 59
-      }
+      },
+      "vg": 1821263
     },
     {
       "id": 60,
@@ -4439,7 +4773,8 @@
         "letsgo-kanto": 60,
         "isle-of-armor": 142,
         "kitakami": 39
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 61,
@@ -4506,7 +4841,8 @@
         "letsgo-kanto": 61,
         "isle-of-armor": 143,
         "kitakami": 40
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 62,
@@ -4574,7 +4910,8 @@
         "letsgo-kanto": 62,
         "isle-of-armor": 144,
         "kitakami": 41
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 63,
@@ -4645,7 +4982,8 @@
         "isle-of-armor": 31,
         "hisui": 58,
         "lumiose-city": 62
-      }
+      },
+      "vg": 3142655
     },
     {
       "id": 64,
@@ -4716,7 +5054,8 @@
         "isle-of-armor": 32,
         "hisui": 59,
         "lumiose-city": 63
-      }
+      },
+      "vg": 3142655
     },
     {
       "id": 65,
@@ -4788,7 +5127,8 @@
         "hisui": 60,
         "lumiose-city": 64,
         "champions": 65
-      }
+      },
+      "vg": 3142655
     },
     {
       "id": 66,
@@ -4861,7 +5201,8 @@
         "galar": 138,
         "hisui": 154,
         "lumiose-city": 125
-      }
+      },
+      "vg": 3142655
     },
     {
       "id": 67,
@@ -4934,7 +5275,8 @@
         "galar": 139,
         "hisui": 155,
         "lumiose-city": 126
-      }
+      },
+      "vg": 3142655
     },
     {
       "id": 68,
@@ -5008,7 +5350,8 @@
         "hisui": 156,
         "lumiose-city": 127,
         "champions": 68
-      }
+      },
+      "vg": 3142655
     },
     {
       "id": 69,
@@ -5066,7 +5409,8 @@
         "letsgo-kanto": 69,
         "kitakami": 23,
         "lumiose-city": 74
-      }
+      },
+      "vg": 3215951
     },
     {
       "id": 70,
@@ -5124,7 +5468,8 @@
         "letsgo-kanto": 70,
         "kitakami": 24,
         "lumiose-city": 75
-      }
+      },
+      "vg": 3215951
     },
     {
       "id": 71,
@@ -5183,7 +5528,8 @@
         "kitakami": 25,
         "lumiose-city": 76,
         "champions": 71
-      }
+      },
+      "vg": 3215951
     },
     {
       "id": 72,
@@ -5260,7 +5606,8 @@
         "isle-of-armor": 40,
         "hisui": 170,
         "blueberry": 50
-      }
+      },
+      "vg": 2094079
     },
     {
       "id": 73,
@@ -5337,7 +5684,8 @@
         "isle-of-armor": 41,
         "hisui": 171,
         "blueberry": 51
-      }
+      },
+      "vg": 2094079
     },
     {
       "id": 74,
@@ -5451,7 +5799,8 @@
         "hisui": 46,
         "kitakami": 80,
         "blueberry": 96
-      }
+      },
+      "vg": 1963007
     },
     {
       "id": 75,
@@ -5565,7 +5914,8 @@
         "hisui": 47,
         "kitakami": 81,
         "blueberry": 97
-      }
+      },
+      "vg": 1963007
     },
     {
       "id": 76,
@@ -5679,7 +6029,8 @@
         "hisui": 48,
         "kitakami": 82,
         "blueberry": 98
-      }
+      },
+      "vg": 1963007
     },
     {
       "id": 77,
@@ -5784,7 +6135,8 @@
         "galar": 333,
         "crown-tundra": 105,
         "hisui": 23
-      }
+      },
+      "vg": 984015
     },
     {
       "id": 78,
@@ -5890,7 +6242,8 @@
         "galar": 334,
         "crown-tundra": 106,
         "hisui": 24
-      }
+      },
+      "vg": 984015
     },
     {
       "id": 79,
@@ -6002,7 +6355,8 @@
         "paldea": 324,
         "blueberry": 75,
         "lumiose-city": 137
-      }
+      },
+      "vg": 3396175
     },
     {
       "id": 80,
@@ -6116,7 +6470,8 @@
         "blueberry": 76,
         "lumiose-city": 138,
         "champions": 80
-      }
+      },
+      "vg": 3396175
     },
     {
       "id": 81,
@@ -6190,7 +6545,8 @@
         "hisui": 177,
         "paldea": 209,
         "blueberry": 116
-      }
+      },
+      "vg": 1833855
     },
     {
       "id": 82,
@@ -6264,7 +6620,8 @@
         "hisui": 178,
         "paldea": 210,
         "blueberry": 117
-      }
+      },
+      "vg": 1833855
     },
     {
       "id": 83,
@@ -6364,7 +6721,8 @@
         "letsgo-kanto": 83,
         "galar": 218,
         "hyperspace": 7
-      }
+      },
+      "vg": 2298447
     },
     {
       "id": 84,
@@ -6427,7 +6785,8 @@
         "updated-hoenn": 95,
         "letsgo-kanto": 84,
         "blueberry": 1
-      }
+      },
+      "vg": 1127039
     },
     {
       "id": 85,
@@ -6490,7 +6849,8 @@
         "updated-hoenn": 96,
         "letsgo-kanto": 85,
         "blueberry": 2
-      }
+      },
+      "vg": 1127039
     },
     {
       "id": 86,
@@ -6552,7 +6912,8 @@
         "updated-melemele": 115,
         "letsgo-kanto": 86,
         "blueberry": 143
-      }
+      },
+      "vg": 1149519
     },
     {
       "id": 87,
@@ -6615,7 +6976,8 @@
         "updated-melemele": 116,
         "letsgo-kanto": 87,
         "blueberry": 144
-      }
+      },
+      "vg": 1149519
     },
     {
       "id": 88,
@@ -6727,7 +7089,8 @@
         "letsgo-kanto": 88,
         "paldea": 194,
         "blueberry": 68
-      }
+      },
+      "vg": 1174143
     },
     {
       "id": 89,
@@ -6839,7 +7202,8 @@
         "letsgo-kanto": 89,
         "paldea": 195,
         "blueberry": 69
-      }
+      },
+      "vg": 1174143
     },
     {
       "id": 90,
@@ -6905,7 +7269,8 @@
         "galar": 150,
         "isle-of-armor": 131,
         "paldea": 329
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 91,
@@ -6972,7 +7337,8 @@
         "galar": 151,
         "isle-of-armor": 132,
         "paldea": 330
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 92,
@@ -7040,7 +7406,8 @@
         "paldea": 68,
         "kitakami": 118,
         "lumiose-city": 65
-      }
+      },
+      "vg": 4182991
     },
     {
       "id": 93,
@@ -7108,7 +7475,8 @@
         "paldea": 69,
         "kitakami": 119,
         "lumiose-city": 66
-      }
+      },
+      "vg": 4182991
     },
     {
       "id": 94,
@@ -7177,7 +7545,8 @@
         "kitakami": 120,
         "lumiose-city": 67,
         "champions": 94
-      }
+      },
+      "vg": 4182991
     },
     {
       "id": 95,
@@ -7244,7 +7613,8 @@
         "galar": 178,
         "hisui": 118,
         "lumiose-city": 197
-      }
+      },
+      "vg": 3087311
     },
     {
       "id": 96,
@@ -7309,7 +7679,8 @@
         "updated-poni": 20,
         "letsgo-kanto": 96,
         "paldea": 66
-      }
+      },
+      "vg": 1163855
     },
     {
       "id": 97,
@@ -7374,7 +7745,8 @@
         "updated-poni": 21,
         "letsgo-kanto": 97,
         "paldea": 67
-      }
+      },
+      "vg": 1163855
     },
     {
       "id": 98,
@@ -7434,7 +7806,8 @@
         "letsgo-kanto": 98,
         "galar": 98,
         "isle-of-armor": 38
-      }
+      },
+      "vg": 197199
     },
     {
       "id": 99,
@@ -7494,7 +7867,8 @@
         "letsgo-kanto": 99,
         "galar": 99,
         "isle-of-armor": 39
-      }
+      },
+      "vg": 197199
     },
     {
       "id": 100,
@@ -7600,7 +7974,8 @@
         "letsgo-kanto": 100,
         "hisui": 192,
         "paldea": 207
-      }
+      },
+      "vg": 1651327
     },
     {
       "id": 101,
@@ -7706,7 +8081,8 @@
         "letsgo-kanto": 101,
         "hisui": 193,
         "paldea": 208
-      }
+      },
+      "vg": 1651327
     },
     {
       "id": 102,
@@ -7768,7 +8144,8 @@
         "letsgo-kanto": 102,
         "isle-of-armor": 205,
         "blueberry": 3
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 103,
@@ -7869,7 +8246,8 @@
         "letsgo-kanto": 103,
         "isle-of-armor": 206,
         "blueberry": 4
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 104,
@@ -7934,7 +8312,8 @@
         "letsgo-kanto": 104,
         "isle-of-armor": 170,
         "hyperspace": 9
-      }
+      },
+      "vg": 2347599
     },
     {
       "id": 105,
@@ -8042,7 +8421,8 @@
         "letsgo-kanto": 105,
         "isle-of-armor": 171,
         "hyperspace": 10
-      }
+      },
+      "vg": 2347599
     },
     {
       "id": 106,
@@ -8102,7 +8482,8 @@
         "letsgo-kanto": 106,
         "galar": 108,
         "blueberry": 93
-      }
+      },
+      "vg": 1245775
     },
     {
       "id": 107,
@@ -8162,7 +8543,8 @@
         "letsgo-kanto": 107,
         "galar": 109,
         "blueberry": 94
-      }
+      },
+      "vg": 1245775
     },
     {
       "id": 108,
@@ -8227,7 +8609,8 @@
         "letsgo-kanto": 108,
         "isle-of-armor": 54,
         "hisui": 125
-      }
+      },
+      "vg": 760655
     },
     {
       "id": 109,
@@ -8290,7 +8673,8 @@
         "letsgo-kanto": 109,
         "galar": 250,
         "kitakami": 135
-      }
+      },
+      "vg": 1256063
     },
     {
       "id": 110,
@@ -8396,7 +8780,8 @@
         "letsgo-kanto": 110,
         "galar": 251,
         "kitakami": 136
-      }
+      },
+      "vg": 1256063
     },
     {
       "id": 111,
@@ -8464,7 +8849,8 @@
         "isle-of-armor": 183,
         "hisui": 120,
         "blueberry": 5
-      }
+      },
+      "vg": 1782655
     },
     {
       "id": 112,
@@ -8532,7 +8918,8 @@
         "isle-of-armor": 184,
         "hisui": 121,
         "blueberry": 6
-      }
+      },
+      "vg": 1782655
     },
     {
       "id": 113,
@@ -8606,7 +8993,8 @@
         "hisui": 87,
         "paldea": 44,
         "blueberry": 17
-      }
+      },
+      "vg": 2081743
     },
     {
       "id": 114,
@@ -8668,7 +9056,8 @@
         "letsgo-kanto": 114,
         "isle-of-armor": 80,
         "hisui": 95
-      }
+      },
+      "vg": 723791
     },
     {
       "id": 115,
@@ -8735,7 +9124,8 @@
         "isle-of-armor": 172,
         "lumiose-city": 223,
         "champions": 115
-      }
+      },
+      "vg": 2347599
     },
     {
       "id": 116,
@@ -8798,7 +9188,8 @@
         "letsgo-kanto": 116,
         "isle-of-armor": 198,
         "blueberry": 52
-      }
+      },
+      "vg": 1258111
     },
     {
       "id": 117,
@@ -8861,7 +9252,8 @@
         "letsgo-kanto": 117,
         "isle-of-armor": 199,
         "blueberry": 53
-      }
+      },
+      "vg": 1258111
     },
     {
       "id": 118,
@@ -8932,7 +9324,8 @@
         "letsgo-kanto": 118,
         "galar": 146,
         "isle-of-armor": 94
-      }
+      },
+      "vg": 521215
     },
     {
       "id": 119,
@@ -9003,7 +9396,8 @@
         "letsgo-kanto": 119,
         "galar": 147,
         "isle-of-armor": 95
-      }
+      },
+      "vg": 521215
     },
     {
       "id": 120,
@@ -9071,7 +9465,8 @@
         "letsgo-kanto": 120,
         "isle-of-armor": 98,
         "lumiose-city": 36
-      }
+      },
+      "vg": 2357887
     },
     {
       "id": 121,
@@ -9141,7 +9536,8 @@
         "isle-of-armor": 99,
         "lumiose-city": 37,
         "champions": 121
-      }
+      },
+      "vg": 2357887
     },
     {
       "id": 122,
@@ -9252,7 +9648,8 @@
         "crown-tundra": 11,
         "hisui": 77,
         "hyperspace": 109
-      }
+      },
+      "vg": 3118031
     },
     {
       "id": 123,
@@ -9323,7 +9720,8 @@
         "paldea": 260,
         "blueberry": 19,
         "lumiose-city": 176
-      }
+      },
+      "vg": 3920719
     },
     {
       "id": 124,
@@ -9386,7 +9784,8 @@
         "updated-melemele": 110,
         "letsgo-kanto": 124,
         "crown-tundra": 14
-      }
+      },
+      "vg": 234063
     },
     {
       "id": 125,
@@ -9449,7 +9848,8 @@
         "crown-tundra": 16,
         "hisui": 183,
         "blueberry": 11
-      }
+      },
+      "vg": 1821519
     },
     {
       "id": 126,
@@ -9512,7 +9912,8 @@
         "crown-tundra": 19,
         "hisui": 175,
         "blueberry": 14
-      }
+      },
+      "vg": 1821519
     },
     {
       "id": 127,
@@ -9584,7 +9985,8 @@
         "isle-of-armor": 120,
         "lumiose-city": 178,
         "champions": 127
-      }
+      },
+      "vg": 2357887
     },
     {
       "id": 128,
@@ -9780,7 +10182,8 @@
         "paldea": 223,
         "blueberry": 22,
         "champions": 128
-      }
+      },
+      "vg": 1299023
     },
     {
       "id": 129,
@@ -9857,7 +10260,8 @@
         "paldea": 134,
         "kitakami": 43,
         "lumiose-city": 32
-      }
+      },
+      "vg": 4191231
     },
     {
       "id": 130,
@@ -9936,7 +10340,8 @@
         "kitakami": 44,
         "lumiose-city": 33,
         "champions": 130
-      }
+      },
+      "vg": 4191231
     },
     {
       "id": 131,
@@ -10006,7 +10411,8 @@
         "galar": 361,
         "crown-tundra": 190,
         "blueberry": 145
-      }
+      },
+      "vg": 1301071
     },
     {
       "id": 132,
@@ -10071,7 +10477,8 @@
         "isle-of-armor": 207,
         "paldea": 212,
         "champions": 132
-      }
+      },
+      "vg": 1301071
     },
     {
       "id": 133,
@@ -10142,7 +10549,8 @@
         "hisui": 25,
         "paldea": 179,
         "lumiose-city": 100
-      }
+      },
+      "vg": 3922767
     },
     {
       "id": 134,
@@ -10210,7 +10618,8 @@
         "paldea": 180,
         "lumiose-city": 101,
         "champions": 134
-      }
+      },
+      "vg": 3922767
     },
     {
       "id": 135,
@@ -10278,7 +10687,8 @@
         "paldea": 181,
         "lumiose-city": 102,
         "champions": 135
-      }
+      },
+      "vg": 3922767
     },
     {
       "id": 136,
@@ -10346,7 +10756,8 @@
         "paldea": 182,
         "lumiose-city": 103,
         "champions": 136
-      }
+      },
+      "vg": 3922767
     },
     {
       "id": 137,
@@ -10413,7 +10824,8 @@
         "hisui": 133,
         "blueberry": 129,
         "hyperspace": 11
-      }
+      },
+      "vg": 3916623
     },
     {
       "id": 138,
@@ -10475,7 +10887,8 @@
         "updated-akala": 128,
         "letsgo-kanto": 138,
         "crown-tundra": 123
-      }
+      },
+      "vg": 229967
     },
     {
       "id": 139,
@@ -10537,7 +10950,8 @@
         "updated-akala": 129,
         "letsgo-kanto": 139,
         "crown-tundra": 124
-      }
+      },
+      "vg": 229967
     },
     {
       "id": 140,
@@ -10599,7 +11013,8 @@
         "updated-akala": 130,
         "letsgo-kanto": 140,
         "crown-tundra": 125
-      }
+      },
+      "vg": 229967
     },
     {
       "id": 141,
@@ -10661,7 +11076,8 @@
         "updated-akala": 131,
         "letsgo-kanto": 141,
         "crown-tundra": 126
-      }
+      },
+      "vg": 229967
     },
     {
       "id": 142,
@@ -10729,7 +11145,8 @@
         "crown-tundra": 127,
         "lumiose-city": 192,
         "champions": 142
-      }
+      },
+      "vg": 2347599
     },
     {
       "id": 143,
@@ -10800,7 +11217,8 @@
         "hisui": 52,
         "kitakami": 103,
         "champions": 143
-      }
+      },
+      "vg": 2085839
     },
     {
       "id": 144,
@@ -10894,7 +11312,8 @@
         "kalos-coastal": 151,
         "letsgo-kanto": 144,
         "crown-tundra": 202
-      }
+      },
+      "vg": 201295
     },
     {
       "id": 145,
@@ -10987,7 +11406,8 @@
         "kalos-coastal": 152,
         "letsgo-kanto": 145,
         "crown-tundra": 203
-      }
+      },
+      "vg": 201295
     },
     {
       "id": 146,
@@ -11080,7 +11500,8 @@
         "kalos-coastal": 153,
         "letsgo-kanto": 146,
         "crown-tundra": 204
-      }
+      },
+      "vg": 201295
     },
     {
       "id": 147,
@@ -11143,7 +11564,8 @@
         "crown-tundra": 194,
         "paldea": 347,
         "lumiose-city": 145
-      }
+      },
+      "vg": 3396175
     },
     {
       "id": 148,
@@ -11206,7 +11628,8 @@
         "crown-tundra": 195,
         "paldea": 348,
         "lumiose-city": 146
-      }
+      },
+      "vg": 3396175
     },
     {
       "id": 149,
@@ -11271,7 +11694,8 @@
         "paldea": 349,
         "lumiose-city": 147,
         "champions": 149
-      }
+      },
+      "vg": 3396175
     },
     {
       "id": 150,
@@ -11329,7 +11753,8 @@
         "kalos-mountain": 151,
         "letsgo-kanto": 150,
         "lumiose-city": 232
-      }
+      },
+      "vg": 2167375
     },
     {
       "id": 151,
@@ -11380,7 +11805,8 @@
         "original-johto": 250,
         "updated-johto": 255,
         "letsgo-kanto": 151
-      }
+      },
+      "vg": 66127
     },
     {
       "id": 152,
@@ -11434,7 +11860,8 @@
         "updated-johto": 1,
         "blueberry": 173,
         "lumiose-city": 1
-      }
+      },
+      "vg": 3146252
     },
     {
       "id": 153,
@@ -11488,7 +11915,8 @@
         "updated-johto": 2,
         "blueberry": 174,
         "lumiose-city": 2
-      }
+      },
+      "vg": 3146252
     },
     {
       "id": 154,
@@ -11543,7 +11971,8 @@
         "blueberry": 175,
         "lumiose-city": 3,
         "champions": 154
-      }
+      },
+      "vg": 3146252
     },
     {
       "id": 155,
@@ -11597,7 +12026,8 @@
         "updated-johto": 4,
         "hisui": 4,
         "blueberry": 176
-      }
+      },
+      "vg": 1573388
     },
     {
       "id": 156,
@@ -11651,7 +12081,8 @@
         "updated-johto": 5,
         "hisui": 5,
         "blueberry": 177
-      }
+      },
+      "vg": 1573388
     },
     {
       "id": 157,
@@ -11745,7 +12176,8 @@
         "hisui": 6,
         "blueberry": 178,
         "champions": 157
-      }
+      },
+      "vg": 1573388
     },
     {
       "id": 158,
@@ -11799,7 +12231,8 @@
         "updated-johto": 7,
         "blueberry": 179,
         "lumiose-city": 7
-      }
+      },
+      "vg": 3146252
     },
     {
       "id": 159,
@@ -11853,7 +12286,8 @@
         "updated-johto": 8,
         "blueberry": 180,
         "lumiose-city": 8
-      }
+      },
+      "vg": 3146252
     },
     {
       "id": 160,
@@ -11908,7 +12342,8 @@
         "blueberry": 181,
         "lumiose-city": 9,
         "champions": 160
-      }
+      },
+      "vg": 3146252
     },
     {
       "id": 161,
@@ -11966,7 +12401,8 @@
         "updated-johto": 19,
         "kalos-central": 109,
         "kitakami": 26
-      }
+      },
+      "vg": 1053196
     },
     {
       "id": 162,
@@ -12024,7 +12460,8 @@
         "updated-johto": 20,
         "kalos-central": 110,
         "kitakami": 27
-      }
+      },
+      "vg": 1053196
     },
     {
       "id": 163,
@@ -12088,7 +12525,8 @@
         "updated-akala": 113,
         "galar": 19,
         "kitakami": 45
-      }
+      },
+      "vg": 1479564
     },
     {
       "id": 164,
@@ -12152,7 +12590,8 @@
         "updated-akala": 114,
         "galar": 20,
         "kitakami": 46
-      }
+      },
+      "vg": 1479564
     },
     {
       "id": 165,
@@ -12216,7 +12655,8 @@
         "updated-alola": 20,
         "updated-melemele": 20,
         "updated-ulaula": 8
-      }
+      },
+      "vg": 53772
     },
     {
       "id": 166,
@@ -12280,7 +12720,8 @@
         "updated-alola": 21,
         "updated-melemele": 21,
         "updated-ulaula": 9
-      }
+      },
+      "vg": 53772
     },
     {
       "id": 167,
@@ -12346,7 +12787,8 @@
         "updated-ulaula": 10,
         "kitakami": 1,
         "lumiose-city": 58
-      }
+      },
+      "vg": 3199500
     },
     {
       "id": 168,
@@ -12413,7 +12855,8 @@
         "kitakami": 2,
         "lumiose-city": 59,
         "champions": 168
-      }
+      },
+      "vg": 3199500
     },
     {
       "id": 169,
@@ -12486,7 +12929,8 @@
         "crown-tundra": 146,
         "hisui": 36,
         "hyperspace": 96
-      }
+      },
+      "vg": 3079100
     },
     {
       "id": 170,
@@ -12553,7 +12997,8 @@
         "galar": 220,
         "isle-of-armor": 188,
         "blueberry": 78
-      }
+      },
+      "vg": 1241660
     },
     {
       "id": 171,
@@ -12620,7 +13065,8 @@
         "galar": 221,
         "isle-of-armor": 189,
         "blueberry": 79
-      }
+      },
+      "vg": 1241660
     },
     {
       "id": 172,
@@ -12688,7 +13134,8 @@
         "paldea": 73,
         "kitakami": 20,
         "lumiose-city": 52
-      }
+      },
+      "vg": 4125628
     },
     {
       "id": 173,
@@ -12756,7 +13203,8 @@
         "hisui": 199,
         "kitakami": 151,
         "lumiose-city": 55
-      }
+      },
+      "vg": 4115340
     },
     {
       "id": 174,
@@ -12825,7 +13273,8 @@
         "isle-of-armor": 11,
         "paldea": 59,
         "hyperspace": 76
-      }
+      },
+      "vg": 3340860
     },
     {
       "id": 175,
@@ -12884,7 +13333,8 @@
         "updated-johto": 46,
         "galar": 257,
         "hisui": 127
-      }
+      },
+      "vg": 656140
     },
     {
       "id": 176,
@@ -12944,7 +13394,8 @@
         "updated-johto": 47,
         "galar": 258,
         "hisui": 128
-      }
+      },
+      "vg": 656140
     },
     {
       "id": 177,
@@ -13006,7 +13457,8 @@
         "updated-alola": 252,
         "updated-akala": 153,
         "galar": 92
-      }
+      },
+      "vg": 172604
     },
     {
       "id": 178,
@@ -13068,7 +13520,8 @@
         "updated-alola": 253,
         "updated-akala": 154,
         "galar": 93
-      }
+      },
+      "vg": 172604
     },
     {
       "id": 179,
@@ -13127,7 +13580,8 @@
         "updated-akala": 63,
         "paldea": 101,
         "lumiose-city": 24
-      }
+      },
+      "vg": 3185164
     },
     {
       "id": 180,
@@ -13186,7 +13640,8 @@
         "updated-akala": 64,
         "paldea": 102,
         "lumiose-city": 25
-      }
+      },
+      "vg": 3185164
     },
     {
       "id": 181,
@@ -13246,7 +13701,8 @@
         "paldea": 103,
         "lumiose-city": 26,
         "champions": 181
-      }
+      },
+      "vg": 3185164
     },
     {
       "id": 182,
@@ -13303,7 +13759,8 @@
         "updated-hoenn": 94,
         "galar": 58,
         "blueberry": 65
-      }
+      },
+      "vg": 1192508
     },
     {
       "id": 183,
@@ -13368,7 +13825,8 @@
         "updated-hoenn": 56,
         "isle-of-armor": 140,
         "paldea": 47
-      }
+      },
+      "vg": 1457084
     },
     {
       "id": 184,
@@ -13434,7 +13892,8 @@
         "isle-of-armor": 141,
         "paldea": 48,
         "champions": 184
-      }
+      },
+      "vg": 1457084
     },
     {
       "id": 185,
@@ -13503,7 +13962,8 @@
         "hisui": 124,
         "paldea": 88,
         "kitakami": 84
-      }
+      },
+      "vg": 2020236
     },
     {
       "id": 186,
@@ -13569,7 +14029,8 @@
         "isle-of-armor": 145,
         "kitakami": 42,
         "champions": 186
-      }
+      },
+      "vg": 1233420
     },
     {
       "id": 187,
@@ -13628,7 +14089,8 @@
         "updated-johto": 67,
         "kalos-central": 135,
         "paldea": 16
-      }
+      },
+      "vg": 1053196
     },
     {
       "id": 188,
@@ -13687,7 +14149,8 @@
         "updated-johto": 68,
         "kalos-central": 136,
         "paldea": 17
-      }
+      },
+      "vg": 1053196
     },
     {
       "id": 189,
@@ -13746,7 +14209,8 @@
         "updated-johto": 69,
         "kalos-central": 137,
         "paldea": 18
-      }
+      },
+      "vg": 1053196
     },
     {
       "id": 190,
@@ -13808,7 +14272,8 @@
         "updated-poni": 115,
         "hisui": 78,
         "kitakami": 47
-      }
+      },
+      "vg": 1868684
     },
     {
       "id": 191,
@@ -13866,7 +14331,8 @@
         "updated-johto": 103,
         "updated-unova": 20,
         "paldea": 31
-      }
+      },
+      "vg": 1051148
     },
     {
       "id": 192,
@@ -13924,7 +14390,8 @@
         "updated-johto": 104,
         "updated-unova": 21,
         "paldea": 32
-      }
+      },
+      "vg": 1051148
     },
     {
       "id": 193,
@@ -13986,7 +14453,8 @@
         "kalos-coastal": 87,
         "hisui": 105,
         "kitakami": 3
-      }
+      },
+      "vg": 1579788
     },
     {
       "id": 194,
@@ -14094,7 +14562,8 @@
         "isle-of-armor": 58,
         "paldea": 53,
         "kitakami": 5
-      }
+      },
+      "vg": 1446796
     },
     {
       "id": 195,
@@ -14158,7 +14627,8 @@
         "galar": 101,
         "isle-of-armor": 59,
         "kitakami": 6
-      }
+      },
+      "vg": 1446796
     },
     {
       "id": 196,
@@ -14224,7 +14694,8 @@
         "paldea": 183,
         "lumiose-city": 104,
         "champions": 196
-      }
+      },
+      "vg": 3857164
     },
     {
       "id": 197,
@@ -14290,7 +14761,8 @@
         "paldea": 184,
         "lumiose-city": 105,
         "champions": 197
-      }
+      },
+      "vg": 3857164
     },
     {
       "id": 198,
@@ -14356,7 +14828,8 @@
         "updated-melemele": 78,
         "hisui": 140,
         "paldea": 232
-      }
+      },
+      "vg": 1889164
     },
     {
       "id": 199,
@@ -14468,7 +14941,8 @@
         "blueberry": 77,
         "lumiose-city": 139,
         "champions": 199
-      }
+      },
+      "vg": 3330572
     },
     {
       "id": 200,
@@ -14525,7 +14999,8 @@
         "updated-poni": 119,
         "hisui": 197,
         "paldea": 114
-      }
+      },
+      "vg": 1885068
     },
     {
       "id": 201,
@@ -14577,7 +15052,8 @@
         "extended-sinnoh": 114,
         "updated-johto": 61,
         "hisui": 142
-      }
+      },
+      "vg": 787340
     },
     {
       "id": 202,
@@ -14633,7 +15109,8 @@
         "kalos-coastal": 119,
         "updated-hoenn": 168,
         "galar": 217
-      }
+      },
+      "vg": 143932
     },
     {
       "id": 203,
@@ -14696,7 +15173,8 @@
         "updated-hoenn": 171,
         "paldea": 192,
         "blueberry": 25
-      }
+      },
+      "vg": 1319868
     },
     {
       "id": 204,
@@ -14752,7 +15230,8 @@
         "updated-alola": 268,
         "updated-ulaula": 89,
         "paldea": 258
-      }
+      },
+      "vg": 1081868
     },
     {
       "id": 205,
@@ -14810,7 +15289,8 @@
         "updated-ulaula": 90,
         "paldea": 259,
         "champions": 205
-      }
+      },
+      "vg": 1081868
     },
     {
       "id": 206,
@@ -14873,7 +15353,8 @@
         "isle-of-armor": 52,
         "paldea": 188,
         "kitakami": 160
-      }
+      },
+      "vg": 1219084
     },
     {
       "id": 207,
@@ -14935,7 +15416,8 @@
         "kalos-mountain": 115,
         "hisui": 185,
         "kitakami": 121
-      }
+      },
+      "vg": 1579788
     },
     {
       "id": 208,
@@ -15001,7 +15483,8 @@
         "hisui": 119,
         "lumiose-city": 198,
         "champions": 208
-      }
+      },
+      "vg": 3021708
     },
     {
       "id": 209,
@@ -15063,7 +15546,8 @@
         "updated-alola": 339,
         "updated-poni": 86,
         "blueberry": 151
-      }
+      },
+      "vg": 1102348
     },
     {
       "id": 210,
@@ -15125,7 +15609,8 @@
         "updated-alola": 340,
         "updated-poni": 87,
         "blueberry": 152
-      }
+      },
+      "vg": 1102348
     },
     {
       "id": 211,
@@ -15232,7 +15717,8 @@
         "blueberry": 146,
         "hyperspace": 37,
         "champions": 211
-      }
+      },
+      "vg": 3805708
     },
     {
       "id": 212,
@@ -15302,7 +15788,8 @@
         "blueberry": 20,
         "lumiose-city": 177,
         "champions": 212
-      }
+      },
+      "vg": 3855116
     },
     {
       "id": 213,
@@ -15364,7 +15851,8 @@
         "kalos-mountain": 14,
         "galar": 227,
         "crown-tundra": 170
-      }
+      },
+      "vg": 137740
     },
     {
       "id": 214,
@@ -15436,7 +15924,8 @@
         "kitakami": 49,
         "lumiose-city": 179,
         "champions": 214
-      }
+      },
+      "vg": 4111292
     },
     {
       "id": 215,
@@ -15550,7 +16039,8 @@
         "hisui": 202,
         "paldea": 230,
         "kitakami": 170
-      }
+      },
+      "vg": 2022284
     },
     {
       "id": 216,
@@ -15609,7 +16099,8 @@
         "kalos-mountain": 132,
         "hisui": 112,
         "paldea": 215
-      }
+      },
+      "vg": 1577484
     },
     {
       "id": 217,
@@ -15668,7 +16159,8 @@
         "kalos-mountain": 133,
         "hisui": 113,
         "paldea": 216
-      }
+      },
+      "vg": 1577484
     },
     {
       "id": 218,
@@ -15728,7 +16220,8 @@
         "kalos-mountain": 12,
         "updated-hoenn": 108,
         "kitakami": 144
-      }
+      },
+      "vg": 1061436
     },
     {
       "id": 219,
@@ -15789,7 +16282,8 @@
         "kalos-mountain": 13,
         "updated-hoenn": 109,
         "kitakami": 145
-      }
+      },
+      "vg": 1061436
     },
     {
       "id": 220,
@@ -15853,7 +16347,8 @@
         "crown-tundra": 7,
         "hisui": 212,
         "kitakami": 50
-      }
+      },
+      "vg": 1710860
     },
     {
       "id": 221,
@@ -15917,7 +16412,8 @@
         "crown-tundra": 8,
         "hisui": 213,
         "kitakami": 51
-      }
+      },
+      "vg": 1710860
     },
     {
       "id": 222,
@@ -16023,7 +16519,8 @@
         "updated-melemele": 135,
         "updated-akala": 44,
         "galar": 236
-      }
+      },
+      "vg": 195132
     },
     {
       "id": 223,
@@ -16089,7 +16586,8 @@
         "galar": 148,
         "isle-of-armor": 44,
         "hisui": 146
-      }
+      },
+      "vg": 957324
     },
     {
       "id": 224,
@@ -16155,7 +16653,8 @@
         "galar": 149,
         "isle-of-armor": 45,
         "hisui": 147
-      }
+      },
+      "vg": 957324
     },
     {
       "id": 225,
@@ -16223,7 +16722,8 @@
         "crown-tundra": 120,
         "paldea": 354,
         "lumiose-city": 168
-      }
+      },
+      "vg": 3332620
     },
     {
       "id": 226,
@@ -16290,7 +16790,8 @@
         "galar": 355,
         "isle-of-armor": 47,
         "hisui": 165
-      }
+      },
+      "vg": 957324
     },
     {
       "id": 227,
@@ -16362,7 +16863,8 @@
         "blueberry": 113,
         "lumiose-city": 216,
         "champions": 227
-      }
+      },
+      "vg": 3340860
     },
     {
       "id": 228,
@@ -16426,7 +16928,8 @@
         "paldea": 25,
         "kitakami": 123,
         "lumiose-city": 91
-      }
+      },
+      "vg": 3183372
     },
     {
       "id": 229,
@@ -16491,7 +16994,8 @@
         "kitakami": 124,
         "lumiose-city": 92,
         "champions": 229
-      }
+      },
+      "vg": 3183372
     },
     {
       "id": 230,
@@ -16553,7 +17057,8 @@
         "updated-hoenn": 195,
         "isle-of-armor": 200,
         "blueberry": 54
-      }
+      },
+      "vg": 1192508
     },
     {
       "id": 231,
@@ -16608,7 +17113,8 @@
         "updated-johto": 200,
         "updated-hoenn": 172,
         "paldea": 122
-      }
+      },
+      "vg": 1057340
     },
     {
       "id": 232,
@@ -16663,7 +17169,8 @@
         "updated-johto": 201,
         "updated-hoenn": 173,
         "paldea": 123
-      }
+      },
+      "vg": 1057340
     },
     {
       "id": 233,
@@ -16728,7 +17235,8 @@
         "hisui": 134,
         "blueberry": 130,
         "hyperspace": 12
-      }
+      },
+      "vg": 3851020
     },
     {
       "id": 234,
@@ -16787,7 +17295,8 @@
         "hisui": 49,
         "paldea": 204,
         "kitakami": 53
-      }
+      },
+      "vg": 1573388
     },
     {
       "id": 235,
@@ -16850,7 +17359,8 @@
         "updated-alola": 70,
         "updated-melemele": 70,
         "blueberry": 40
-      }
+      },
+      "vg": 1102348
     },
     {
       "id": 236,
@@ -16908,7 +17418,8 @@
         "updated-johto": 145,
         "galar": 107,
         "blueberry": 92
-      }
+      },
+      "vg": 1180172
     },
     {
       "id": 237,
@@ -16966,7 +17477,8 @@
         "updated-johto": 148,
         "galar": 110,
         "blueberry": 95
-      }
+      },
+      "vg": 1180172
     },
     {
       "id": 238,
@@ -17027,7 +17539,8 @@
         "updated-alola": 109,
         "updated-melemele": 109,
         "crown-tundra": 13
-      }
+      },
+      "vg": 168460
     },
     {
       "id": 239,
@@ -17088,7 +17601,8 @@
         "crown-tundra": 15,
         "hisui": 182,
         "blueberry": 10
-      }
+      },
+      "vg": 1755916
     },
     {
       "id": 240,
@@ -17149,7 +17663,8 @@
         "crown-tundra": 18,
         "hisui": 174,
         "blueberry": 13
-      }
+      },
+      "vg": 1755916
     },
     {
       "id": 241,
@@ -17214,7 +17729,8 @@
         "updated-akala": 72,
         "updated-poni": 74,
         "isle-of-armor": 117
-      }
+      },
+      "vg": 184844
     },
     {
       "id": 242,
@@ -17286,7 +17802,8 @@
         "hisui": 88,
         "paldea": 45,
         "blueberry": 18
-      }
+      },
+      "vg": 2016140
     },
     {
       "id": 243,
@@ -17339,7 +17856,8 @@
         "national": 243,
         "original-johto": 238,
         "updated-johto": 243
-      }
+      },
+      "vg": 524
     },
     {
       "id": 244,
@@ -17392,7 +17910,8 @@
         "national": 244,
         "original-johto": 239,
         "updated-johto": 244
-      }
+      },
+      "vg": 524
     },
     {
       "id": 245,
@@ -17445,7 +17964,8 @@
         "national": 245,
         "original-johto": 240,
         "updated-johto": 245
-      }
+      },
+      "vg": 524
     },
     {
       "id": 246,
@@ -17507,7 +18027,8 @@
         "crown-tundra": 139,
         "paldea": 316,
         "lumiose-city": 206
-      }
+      },
+      "vg": 3316236
     },
     {
       "id": 247,
@@ -17565,7 +18086,8 @@
         "crown-tundra": 140,
         "paldea": 317,
         "lumiose-city": 207
-      }
+      },
+      "vg": 3316236
     },
     {
       "id": 248,
@@ -17628,7 +18150,8 @@
         "paldea": 318,
         "lumiose-city": 208,
         "champions": 248
-      }
+      },
+      "vg": 3316236
     },
     {
       "id": 249,
@@ -17682,7 +18205,8 @@
         "national": 249,
         "original-johto": 247,
         "updated-johto": 252
-      }
+      },
+      "vg": 524
     },
     {
       "id": 250,
@@ -17736,7 +18260,8 @@
         "national": 250,
         "original-johto": 248,
         "updated-johto": 253
-      }
+      },
+      "vg": 524
     },
     {
       "id": 251,
@@ -17786,7 +18311,8 @@
         "national": 251,
         "original-johto": 251,
         "updated-johto": 256
-      }
+      },
+      "vg": 524
     },
     {
       "id": 252,
@@ -17841,7 +18367,8 @@
         "updated-hoenn": 1,
         "blueberry": 182,
         "hyperspace": 39
-      }
+      },
+      "vg": 3153968
     },
     {
       "id": 253,
@@ -17896,7 +18423,8 @@
         "updated-hoenn": 2,
         "blueberry": 183,
         "hyperspace": 40
-      }
+      },
+      "vg": 3153968
     },
     {
       "id": 254,
@@ -17952,7 +18480,8 @@
         "blueberry": 184,
         "hyperspace": 41,
         "champions": 254
-      }
+      },
+      "vg": 3153968
     },
     {
       "id": 255,
@@ -18006,7 +18535,8 @@
         "updated-hoenn": 4,
         "blueberry": 185,
         "hyperspace": 42
-      }
+      },
+      "vg": 3153968
     },
     {
       "id": 256,
@@ -18061,7 +18591,8 @@
         "updated-hoenn": 5,
         "blueberry": 186,
         "hyperspace": 43
-      }
+      },
+      "vg": 3153968
     },
     {
       "id": 257,
@@ -18117,7 +18648,8 @@
         "blueberry": 187,
         "hyperspace": 44,
         "champions": 257
-      }
+      },
+      "vg": 3153968
     },
     {
       "id": 258,
@@ -18171,7 +18703,8 @@
         "updated-hoenn": 7,
         "blueberry": 188,
         "hyperspace": 45
-      }
+      },
+      "vg": 3153968
     },
     {
       "id": 259,
@@ -18226,7 +18759,8 @@
         "updated-hoenn": 8,
         "blueberry": 189,
         "hyperspace": 46
-      }
+      },
+      "vg": 3153968
     },
     {
       "id": 260,
@@ -18282,7 +18816,8 @@
         "blueberry": 190,
         "hyperspace": 47,
         "champions": 260
-      }
+      },
+      "vg": 3153968
     },
     {
       "id": 261,
@@ -18340,7 +18875,8 @@
         "kalos-mountain": 44,
         "updated-hoenn": 10,
         "kitakami": 7
-      }
+      },
+      "vg": 1060912
     },
     {
       "id": 262,
@@ -18398,7 +18934,8 @@
         "kalos-mountain": 45,
         "updated-hoenn": 11,
         "kitakami": 8
-      }
+      },
+      "vg": 1060912
     },
     {
       "id": 263,
@@ -18500,7 +19037,8 @@
         "updated-hoenn": 12,
         "galar": 31,
         "crown-tundra": 71
-      }
+      },
+      "vg": 143408
     },
     {
       "id": 264,
@@ -18602,7 +19140,8 @@
         "updated-hoenn": 13,
         "galar": 32,
         "crown-tundra": 72
-      }
+      },
+      "vg": 143408
     },
     {
       "id": 265,
@@ -18657,7 +19196,8 @@
         "extended-sinnoh": 48,
         "updated-hoenn": 14,
         "hisui": 18
-      }
+      },
+      "vg": 795056
     },
     {
       "id": 266,
@@ -18708,7 +19248,8 @@
         "extended-sinnoh": 49,
         "updated-hoenn": 15,
         "hisui": 19
-      }
+      },
+      "vg": 795056
     },
     {
       "id": 267,
@@ -18764,7 +19305,8 @@
         "extended-sinnoh": 50,
         "updated-hoenn": 16,
         "hisui": 20
-      }
+      },
+      "vg": 795056
     },
     {
       "id": 268,
@@ -18815,7 +19357,8 @@
         "extended-sinnoh": 51,
         "updated-hoenn": 17,
         "hisui": 21
-      }
+      },
+      "vg": 795056
     },
     {
       "id": 269,
@@ -18871,7 +19414,8 @@
         "extended-sinnoh": 52,
         "updated-hoenn": 18,
         "hisui": 22
-      }
+      },
+      "vg": 795056
     },
     {
       "id": 270,
@@ -18931,7 +19475,8 @@
         "updated-hoenn": 19,
         "galar": 36,
         "kitakami": 104
-      }
+      },
+      "vg": 1191984
     },
     {
       "id": 271,
@@ -18991,7 +19536,8 @@
         "updated-hoenn": 20,
         "galar": 37,
         "kitakami": 105
-      }
+      },
+      "vg": 1191984
     },
     {
       "id": 272,
@@ -19051,7 +19597,8 @@
         "updated-hoenn": 21,
         "galar": 38,
         "kitakami": 106
-      }
+      },
+      "vg": 1191984
     },
     {
       "id": 273,
@@ -19109,7 +19656,8 @@
         "updated-hoenn": 22,
         "galar": 39,
         "kitakami": 54
-      }
+      },
+      "vg": 1187888
     },
     {
       "id": 274,
@@ -19168,7 +19716,8 @@
         "updated-hoenn": 23,
         "galar": 40,
         "kitakami": 55
-      }
+      },
+      "vg": 1187888
     },
     {
       "id": 275,
@@ -19227,7 +19776,8 @@
         "updated-hoenn": 24,
         "galar": 41,
         "kitakami": 56
-      }
+      },
+      "vg": 1187888
     },
     {
       "id": 276,
@@ -19281,7 +19831,8 @@
         "hoenn": 25,
         "kalos-coastal": 19,
         "updated-hoenn": 25
-      }
+      },
+      "vg": 12336
     },
     {
       "id": 277,
@@ -19335,7 +19886,8 @@
         "hoenn": 26,
         "kalos-coastal": 20,
         "updated-hoenn": 26
-      }
+      },
+      "vg": 12336
     },
     {
       "id": 278,
@@ -19409,7 +19961,8 @@
         "galar": 62,
         "isle-of-armor": 48,
         "paldea": 132
-      }
+      },
+      "vg": 1505712
     },
     {
       "id": 279,
@@ -19484,7 +20037,8 @@
         "isle-of-armor": 49,
         "paldea": 133,
         "champions": 279
-      }
+      },
+      "vg": 1505712
     },
     {
       "id": 280,
@@ -19550,7 +20104,8 @@
         "paldea": 62,
         "kitakami": 57,
         "lumiose-city": 87
-      }
+      },
+      "vg": 3813680
     },
     {
       "id": 281,
@@ -19616,7 +20171,8 @@
         "paldea": 63,
         "kitakami": 58,
         "lumiose-city": 88
-      }
+      },
+      "vg": 3813680
     },
     {
       "id": 282,
@@ -19683,7 +20239,8 @@
         "kitakami": 59,
         "lumiose-city": 89,
         "champions": 282
-      }
+      },
+      "vg": 3813680
     },
     {
       "id": 283,
@@ -19745,7 +20302,8 @@
         "updated-ulaula": 66,
         "paldea": 49,
         "kitakami": 149
-      }
+      },
+      "vg": 1110064
     },
     {
       "id": 284,
@@ -19807,7 +20365,8 @@
         "updated-ulaula": 67,
         "paldea": 50,
         "kitakami": 150
-      }
+      },
+      "vg": 1110064
     },
     {
       "id": 285,
@@ -19864,7 +20423,8 @@
         "hoenn": 34,
         "updated-hoenn": 35,
         "paldea": 106
-      }
+      },
+      "vg": 1056816
     },
     {
       "id": 286,
@@ -19922,7 +20482,8 @@
         "hoenn": 35,
         "updated-hoenn": 36,
         "paldea": 107
-      }
+      },
+      "vg": 1056816
     },
     {
       "id": 287,
@@ -19973,7 +20534,8 @@
         "updated-hoenn": 37,
         "paldea": 78,
         "blueberry": 59
-      }
+      },
+      "vg": 1058864
     },
     {
       "id": 288,
@@ -20024,7 +20586,8 @@
         "updated-hoenn": 38,
         "paldea": 79,
         "blueberry": 60
-      }
+      },
+      "vg": 1058864
     },
     {
       "id": 289,
@@ -20075,7 +20638,8 @@
         "updated-hoenn": 39,
         "paldea": 80,
         "blueberry": 61
-      }
+      },
+      "vg": 1058864
     },
     {
       "id": 290,
@@ -20130,7 +20694,8 @@
         "kalos-central": 111,
         "updated-hoenn": 43,
         "galar": 104
-      }
+      },
+      "vg": 143408
     },
     {
       "id": 291,
@@ -20185,7 +20750,8 @@
         "kalos-central": 112,
         "updated-hoenn": 44,
         "galar": 105
-      }
+      },
+      "vg": 143408
     },
     {
       "id": 292,
@@ -20236,7 +20802,8 @@
         "kalos-central": 113,
         "updated-hoenn": 45,
         "galar": 106
-      }
+      },
+      "vg": 143408
     },
     {
       "id": 293,
@@ -20290,7 +20857,8 @@
         "kalos-central": 140,
         "updated-hoenn": 46,
         "isle-of-armor": 148
-      }
+      },
+      "vg": 143408
     },
     {
       "id": 294,
@@ -20344,7 +20912,8 @@
         "kalos-central": 141,
         "updated-hoenn": 47,
         "isle-of-armor": 149
-      }
+      },
+      "vg": 143408
     },
     {
       "id": 295,
@@ -20398,7 +20967,8 @@
         "kalos-central": 142,
         "updated-hoenn": 48,
         "isle-of-armor": 150
-      }
+      },
+      "vg": 143408
     },
     {
       "id": 296,
@@ -20462,7 +21032,8 @@
         "updated-melemele": 68,
         "updated-poni": 22,
         "paldea": 116
-      }
+      },
+      "vg": 1110064
     },
     {
       "id": 297,
@@ -20526,7 +21097,8 @@
         "updated-melemele": 69,
         "updated-poni": 23,
         "paldea": 117
-      }
+      },
+      "vg": 1110064
     },
     {
       "id": 298,
@@ -20589,7 +21161,8 @@
         "updated-hoenn": 55,
         "isle-of-armor": 139,
         "paldea": 46
-      }
+      },
+      "vg": 1456560
     },
     {
       "id": 299,
@@ -20654,7 +21227,8 @@
         "updated-akala": 155,
         "hisui": 190,
         "kitakami": 107
-      }
+      },
+      "vg": 1636656
     },
     {
       "id": 300,
@@ -20712,7 +21286,8 @@
         "updated-unova": 78,
         "kalos-central": 78,
         "updated-hoenn": 63
-      }
+      },
+      "vg": 14384
     },
     {
       "id": 301,
@@ -20770,7 +21345,8 @@
         "updated-unova": 79,
         "kalos-central": 79,
         "updated-hoenn": 64
-      }
+      },
+      "vg": 14384
     },
     {
       "id": 302,
@@ -20840,7 +21416,8 @@
         "paldea": 297,
         "lumiose-city": 132,
         "champions": 302
-      }
+      },
+      "vg": 3338288
     },
     {
       "id": 303,
@@ -20905,7 +21482,8 @@
         "crown-tundra": 175,
         "lumiose-city": 133,
         "champions": 303
-      }
+      },
+      "vg": 2273328
     },
     {
       "id": 304,
@@ -20967,7 +21545,8 @@
         "updated-hoenn": 72,
         "crown-tundra": 191,
         "lumiose-city": 199
-      }
+      },
+      "vg": 2242608
     },
     {
       "id": 305,
@@ -21029,7 +21608,8 @@
         "updated-hoenn": 73,
         "crown-tundra": 192,
         "lumiose-city": 200
-      }
+      },
+      "vg": 2242608
     },
     {
       "id": 306,
@@ -21092,7 +21672,8 @@
         "crown-tundra": 193,
         "lumiose-city": 201,
         "champions": 306
-      }
+      },
+      "vg": 2242608
     },
     {
       "id": 307,
@@ -21150,7 +21731,8 @@
         "updated-hoenn": 78,
         "paldea": 161,
         "lumiose-city": 83
-      }
+      },
+      "vg": 3420592
     },
     {
       "id": 308,
@@ -21209,7 +21791,8 @@
         "paldea": 162,
         "lumiose-city": 84,
         "champions": 308
-      }
+      },
+      "vg": 3420592
     },
     {
       "id": 309,
@@ -21270,7 +21853,8 @@
         "updated-ulaula": 114,
         "galar": 66,
         "lumiose-city": 85
-      }
+      },
+      "vg": 2273328
     },
     {
       "id": 310,
@@ -21332,7 +21916,8 @@
         "galar": 67,
         "lumiose-city": 86,
         "champions": 310
-      }
+      },
+      "vg": 2273328
     },
     {
       "id": 311,
@@ -21387,7 +21972,8 @@
         "kalos-central": 96,
         "updated-hoenn": 82,
         "blueberry": 119
-      }
+      },
+      "vg": 1060912
     },
     {
       "id": 312,
@@ -21442,7 +22028,8 @@
         "kalos-central": 97,
         "updated-hoenn": 83,
         "blueberry": 120
-      }
+      },
+      "vg": 1060912
     },
     {
       "id": 313,
@@ -21501,7 +22088,8 @@
         "kalos-central": 133,
         "updated-hoenn": 89,
         "kitakami": 9
-      }
+      },
+      "vg": 1060912
     },
     {
       "id": 314,
@@ -21560,7 +22148,8 @@
         "kalos-central": 134,
         "updated-hoenn": 90,
         "kitakami": 10
-      }
+      },
+      "vg": 1060912
     },
     {
       "id": 315,
@@ -21624,7 +22213,8 @@
         "galar": 60,
         "hisui": 90,
         "lumiose-city": 30
-      }
+      },
+      "vg": 3029424
     },
     {
       "id": 316,
@@ -21683,7 +22273,8 @@
         "updated-hoenn": 100,
         "paldea": 139,
         "hyperspace": 92
-      }
+      },
+      "vg": 3158064
     },
     {
       "id": 317,
@@ -21742,7 +22333,8 @@
         "updated-hoenn": 101,
         "paldea": 140,
         "hyperspace": 93
-      }
+      },
+      "vg": 3158064
     },
     {
       "id": 318,
@@ -21802,7 +22394,8 @@
         "updated-poni": 92,
         "isle-of-armor": 111,
         "lumiose-city": 140
-      }
+      },
+      "vg": 2289712
     },
     {
       "id": 319,
@@ -21863,7 +22456,8 @@
         "isle-of-armor": 112,
         "lumiose-city": 141,
         "champions": 319
-      }
+      },
+      "vg": 2289712
     },
     {
       "id": 320,
@@ -21927,7 +22521,8 @@
         "updated-poni": 98,
         "galar": 356,
         "isle-of-armor": 190
-      }
+      },
+      "vg": 194608
     },
     {
       "id": 321,
@@ -21991,7 +22586,8 @@
         "updated-poni": 99,
         "galar": 357,
         "isle-of-armor": 191
-      }
+      },
+      "vg": 194608
     },
     {
       "id": 322,
@@ -22052,7 +22648,8 @@
         "paldea": 151,
         "blueberry": 125,
         "lumiose-city": 116
-      }
+      },
+      "vg": 3156016
     },
     {
       "id": 323,
@@ -22114,7 +22711,8 @@
         "blueberry": 126,
         "lumiose-city": 117,
         "champions": 323
-      }
+      },
+      "vg": 3156016
     },
     {
       "id": 324,
@@ -22181,7 +22779,8 @@
         "paldea": 150,
         "blueberry": 86,
         "champions": 324
-      }
+      },
+      "vg": 1241136
     },
     {
       "id": 325,
@@ -22242,7 +22841,8 @@
         "paldea": 111,
         "kitakami": 125,
         "hyperspace": 84
-      }
+      },
+      "vg": 3160112
     },
     {
       "id": 326,
@@ -22303,7 +22903,8 @@
         "paldea": 112,
         "kitakami": 126,
         "hyperspace": 85
-      }
+      },
+      "vg": 3160112
     },
     {
       "id": 327,
@@ -22365,7 +22966,8 @@
         "original-melemele": 105,
         "updated-alola": 128,
         "updated-melemele": 128
-      }
+      },
+      "vg": 61488
     },
     {
       "id": 328,
@@ -22429,7 +23031,8 @@
         "updated-ulaula": 125,
         "galar": 321,
         "blueberry": 44
-      }
+      },
+      "vg": 1243184
     },
     {
       "id": 329,
@@ -22486,7 +23089,8 @@
         "updated-ulaula": 126,
         "galar": 322,
         "blueberry": 45
-      }
+      },
+      "vg": 1243184
     },
     {
       "id": 330,
@@ -22543,7 +23147,8 @@
         "updated-ulaula": 127,
         "galar": 323,
         "blueberry": 46
-      }
+      },
+      "vg": 1243184
     },
     {
       "id": 331,
@@ -22596,7 +23201,8 @@
         "hoenn": 119,
         "updated-hoenn": 124,
         "paldea": 252
-      }
+      },
+      "vg": 1056816
     },
     {
       "id": 332,
@@ -22650,7 +23256,8 @@
         "hoenn": 120,
         "updated-hoenn": 125,
         "paldea": 253
-      }
+      },
+      "vg": 1056816
     },
     {
       "id": 333,
@@ -22710,7 +23317,8 @@
         "paldea": 219,
         "blueberry": 114,
         "lumiose-city": 93
-      }
+      },
+      "vg": 3291440
     },
     {
       "id": 334,
@@ -22771,7 +23379,8 @@
         "blueberry": 115,
         "lumiose-city": 94,
         "champions": 334
-      }
+      },
+      "vg": 3291440
     },
     {
       "id": 335,
@@ -22829,7 +23438,8 @@
         "paldea": 217,
         "blueberry": 70,
         "hyperspace": 106
-      }
+      },
+      "vg": 3160112
     },
     {
       "id": 336,
@@ -22887,7 +23497,8 @@
         "paldea": 218,
         "blueberry": 71,
         "hyperspace": 107
-      }
+      },
+      "vg": 3160112
     },
     {
       "id": 337,
@@ -22940,7 +23551,8 @@
         "kalos-coastal": 12,
         "updated-hoenn": 130,
         "galar": 362
-      }
+      },
+      "vg": 145456
     },
     {
       "id": 338,
@@ -22993,7 +23605,8 @@
         "kalos-coastal": 13,
         "updated-hoenn": 131,
         "galar": 363
-      }
+      },
+      "vg": 145456
     },
     {
       "id": 339,
@@ -23067,7 +23680,8 @@
         "hisui": 97,
         "paldea": 168,
         "kitakami": 162
-      }
+      },
+      "vg": 2027952
     },
     {
       "id": 340,
@@ -23141,7 +23755,8 @@
         "hisui": 98,
         "paldea": 169,
         "kitakami": 163
-      }
+      },
+      "vg": 2027952
     },
     {
       "id": 341,
@@ -23204,7 +23819,8 @@
         "galar": 102,
         "isle-of-armor": 91,
         "kitakami": 11
-      }
+      },
+      "vg": 1226800
     },
     {
       "id": 342,
@@ -23268,7 +23884,8 @@
         "galar": 103,
         "isle-of-armor": 92,
         "kitakami": 12
-      }
+      },
+      "vg": 1226800
     },
     {
       "id": 343,
@@ -23322,7 +23939,8 @@
         "updated-ulaula": 131,
         "galar": 82,
         "crown-tundra": 151
-      }
+      },
+      "vg": 174128
     },
     {
       "id": 344,
@@ -23376,7 +23994,8 @@
         "updated-ulaula": 132,
         "galar": 83,
         "crown-tundra": 152
-      }
+      },
+      "vg": 174128
     },
     {
       "id": 345,
@@ -23432,7 +24051,8 @@
         "updated-alola": 231,
         "updated-akala": 132,
         "crown-tundra": 183
-      }
+      },
+      "vg": 172080
     },
     {
       "id": 346,
@@ -23488,7 +24108,8 @@
         "updated-alola": 232,
         "updated-akala": 133,
         "crown-tundra": 184
-      }
+      },
+      "vg": 172080
     },
     {
       "id": 347,
@@ -23545,7 +24166,8 @@
         "updated-alola": 233,
         "updated-akala": 134,
         "crown-tundra": 185
-      }
+      },
+      "vg": 172080
     },
     {
       "id": 348,
@@ -23602,7 +24224,8 @@
         "updated-alola": 234,
         "updated-akala": 135,
         "crown-tundra": 186
-      }
+      },
+      "vg": 172080
     },
     {
       "id": 349,
@@ -23668,7 +24291,8 @@
         "crown-tundra": 188,
         "kitakami": 158,
         "hyperspace": 48
-      }
+      },
+      "vg": 3596720
     },
     {
       "id": 350,
@@ -23735,7 +24359,8 @@
         "kitakami": 159,
         "hyperspace": 49,
         "champions": 350
-      }
+      },
+      "vg": 3596720
     },
     {
       "id": 351,
@@ -23894,7 +24519,8 @@
         "updated-ulaula": 84,
         "updated-poni": 82,
         "champions": 351
-      }
+      },
+      "vg": 59440
     },
     {
       "id": 352,
@@ -23951,7 +24577,8 @@
         "updated-alola": 214,
         "updated-akala": 115,
         "hyperspace": 27
-      }
+      },
+      "vg": 2142256
     },
     {
       "id": 353,
@@ -24013,7 +24640,8 @@
         "updated-ulaula": 137,
         "paldea": 298,
         "lumiose-city": 111
-      }
+      },
+      "vg": 3192880
     },
     {
       "id": 354,
@@ -24076,7 +24704,8 @@
         "paldea": 299,
         "lumiose-city": 112,
         "champions": 354
-      }
+      },
+      "vg": 3192880
     },
     {
       "id": 355,
@@ -24133,7 +24762,8 @@
         "galar": 135,
         "hisui": 158,
         "kitakami": 139
-      }
+      },
+      "vg": 1712432
     },
     {
       "id": 356,
@@ -24190,7 +24820,8 @@
         "galar": 136,
         "hisui": 159,
         "kitakami": 140
-      }
+      },
+      "vg": 1712432
     },
     {
       "id": 357,
@@ -24253,7 +24884,8 @@
         "updated-alola": 354,
         "updated-poni": 101,
         "paldea": 246
-      }
+      },
+      "vg": 1091888
     },
     {
       "id": 358,
@@ -24309,7 +24941,8 @@
         "kitakami": 143,
         "hyperspace": 51,
         "champions": 358
-      }
+      },
+      "vg": 3944880
     },
     {
       "id": 359,
@@ -24376,7 +25009,8 @@
         "crown-tundra": 107,
         "lumiose-city": 134,
         "champions": 359
-      }
+      },
+      "vg": 2292016
     },
     {
       "id": 360,
@@ -24430,7 +25064,8 @@
         "kalos-coastal": 118,
         "updated-hoenn": 167,
         "galar": 216
-      }
+      },
+      "vg": 143408
     },
     {
       "id": 361,
@@ -24498,7 +25133,8 @@
         "paldea": 357,
         "kitakami": 172,
         "lumiose-city": 169
-      }
+      },
+      "vg": 3858736
     },
     {
       "id": 362,
@@ -24567,7 +25203,8 @@
         "kitakami": 173,
         "lumiose-city": 170,
         "champions": 362
-      }
+      },
+      "vg": 3858736
     },
     {
       "id": 363,
@@ -24628,7 +25265,8 @@
         "updated-hoenn": 182,
         "crown-tundra": 159,
         "hisui": 143
-      }
+      },
+      "vg": 665648
     },
     {
       "id": 364,
@@ -24689,7 +25327,8 @@
         "updated-hoenn": 183,
         "crown-tundra": 160,
         "hisui": 144
-      }
+      },
+      "vg": 665648
     },
     {
       "id": 365,
@@ -24750,7 +25389,8 @@
         "updated-hoenn": 184,
         "crown-tundra": 161,
         "hisui": 145
-      }
+      },
+      "vg": 665648
     },
     {
       "id": 366,
@@ -24806,7 +25446,8 @@
         "updated-alola": 140,
         "updated-melemele": 140,
         "updated-ulaula": 61
-      }
+      },
+      "vg": 45104
     },
     {
       "id": 367,
@@ -24862,7 +25503,8 @@
         "updated-alola": 141,
         "updated-melemele": 141,
         "updated-ulaula": 62
-      }
+      },
+      "vg": 45104
     },
     {
       "id": 368,
@@ -24918,7 +25560,8 @@
         "updated-alola": 142,
         "updated-melemele": 142,
         "updated-ulaula": 63
-      }
+      },
+      "vg": 45104
     },
     {
       "id": 369,
@@ -24982,7 +25625,8 @@
         "updated-alola": 343,
         "updated-poni": 90,
         "crown-tundra": 187
-      }
+      },
+      "vg": 192560
     },
     {
       "id": 370,
@@ -25044,7 +25688,8 @@
         "updated-akala": 43,
         "paldea": 332,
         "blueberry": 82
-      }
+      },
+      "vg": 1110064
     },
     {
       "id": 371,
@@ -25104,7 +25749,8 @@
         "crown-tundra": 113,
         "paldea": 276,
         "lumiose-city": 220
-      }
+      },
+      "vg": 3338288
     },
     {
       "id": 372,
@@ -25164,7 +25810,8 @@
         "crown-tundra": 114,
         "paldea": 277,
         "lumiose-city": 221
-      }
+      },
+      "vg": 3338288
     },
     {
       "id": 373,
@@ -25225,7 +25872,8 @@
         "crown-tundra": 115,
         "paldea": 278,
         "lumiose-city": 222
-      }
+      },
+      "vg": 3338288
     },
     {
       "id": 374,
@@ -25287,7 +25935,8 @@
         "crown-tundra": 129,
         "blueberry": 137,
         "lumiose-city": 225
-      }
+      },
+      "vg": 3336240
     },
     {
       "id": 375,
@@ -25349,7 +25998,8 @@
         "crown-tundra": 130,
         "blueberry": 138,
         "lumiose-city": 226
-      }
+      },
+      "vg": 3336240
     },
     {
       "id": 376,
@@ -25412,7 +26062,8 @@
         "blueberry": 139,
         "lumiose-city": 227,
         "champions": 376
-      }
+      },
+      "vg": 3336240
     },
     {
       "id": 377,
@@ -25466,7 +26117,8 @@
         "hoenn": 193,
         "updated-hoenn": 202,
         "crown-tundra": 197
-      }
+      },
+      "vg": 139312
     },
     {
       "id": 378,
@@ -25520,7 +26172,8 @@
         "hoenn": 194,
         "updated-hoenn": 203,
         "crown-tundra": 198
-      }
+      },
+      "vg": 139312
     },
     {
       "id": 379,
@@ -25575,7 +26228,8 @@
         "conquest-gallery": 193,
         "updated-hoenn": 204,
         "crown-tundra": 199
-      }
+      },
+      "vg": 139312
     },
     {
       "id": 380,
@@ -25626,7 +26280,8 @@
         "hoenn": 196,
         "updated-hoenn": 205,
         "hyperspace": 126
-      }
+      },
+      "vg": 2105392
     },
     {
       "id": 381,
@@ -25677,7 +26332,8 @@
         "hoenn": 197,
         "updated-hoenn": 206,
         "hyperspace": 127
-      }
+      },
+      "vg": 2105392
     },
     {
       "id": 382,
@@ -25727,7 +26383,8 @@
         "hoenn": 198,
         "updated-hoenn": 207,
         "hyperspace": 128
-      }
+      },
+      "vg": 2105392
     },
     {
       "id": 383,
@@ -25778,7 +26435,8 @@
         "conquest-gallery": 194,
         "updated-hoenn": 208,
         "hyperspace": 129
-      }
+      },
+      "vg": 2105392
     },
     {
       "id": 384,
@@ -25830,7 +26488,8 @@
         "conquest-gallery": 200,
         "updated-hoenn": 209,
         "hyperspace": 130
-      }
+      },
+      "vg": 2105392
     },
     {
       "id": 385,
@@ -25880,7 +26539,8 @@
         "national": 385,
         "hoenn": 201,
         "updated-hoenn": 210
-      }
+      },
+      "vg": 8240
     },
     {
       "id": 386,
@@ -26029,7 +26689,8 @@
         "national": 386,
         "hoenn": 202,
         "updated-hoenn": 211
-      }
+      },
+      "vg": 8240
     },
     {
       "id": 387,
@@ -26083,7 +26744,8 @@
         "extended-sinnoh": 1,
         "hisui": 130,
         "blueberry": 191
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 388,
@@ -26137,7 +26799,8 @@
         "extended-sinnoh": 2,
         "hisui": 131,
         "blueberry": 192
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 389,
@@ -26193,7 +26856,8 @@
         "hisui": 132,
         "blueberry": 193,
         "champions": 389
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 390,
@@ -26248,7 +26912,8 @@
         "conquest-gallery": 115,
         "hisui": 61,
         "blueberry": 194
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 391,
@@ -26304,7 +26969,8 @@
         "conquest-gallery": 116,
         "hisui": 62,
         "blueberry": 195
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 392,
@@ -26361,7 +27027,8 @@
         "hisui": 63,
         "blueberry": 196,
         "champions": 392
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 393,
@@ -26416,7 +27083,8 @@
         "conquest-gallery": 133,
         "hisui": 161,
         "blueberry": 197
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 394,
@@ -26471,7 +27139,8 @@
         "conquest-gallery": 134,
         "hisui": 162,
         "blueberry": 198
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 395,
@@ -26528,7 +27197,8 @@
         "hisui": 163,
         "blueberry": 199,
         "champions": 395
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 396,
@@ -26587,7 +27257,8 @@
         "paldea": 97,
         "kitakami": 28,
         "hyperspace": 81
-      }
+      },
+      "vg": 3936640
     },
     {
       "id": 397,
@@ -26646,7 +27317,8 @@
         "paldea": 98,
         "kitakami": 29,
         "hyperspace": 82
-      }
+      },
+      "vg": 3936640
     },
     {
       "id": 398,
@@ -26706,7 +27378,8 @@
         "kitakami": 30,
         "hyperspace": 83,
         "champions": 398
-      }
+      },
+      "vg": 3936640
     },
     {
       "id": 399,
@@ -26765,7 +27438,8 @@
         "conquest-gallery": 29,
         "kalos-central": 38,
         "hisui": 10
-      }
+      },
+      "vg": 790912
     },
     {
       "id": 400,
@@ -26825,7 +27499,8 @@
         "conquest-gallery": 30,
         "kalos-central": 39,
         "hisui": 11
-      }
+      },
+      "vg": 790912
     },
     {
       "id": 401,
@@ -26880,7 +27555,8 @@
         "hisui": 39,
         "paldea": 33,
         "kitakami": 61
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 402,
@@ -26935,7 +27611,8 @@
         "hisui": 40,
         "paldea": 34,
         "kitakami": 62
-      }
+      },
+      "vg": 1835392
     },
     {
       "id": 403,
@@ -26996,7 +27673,8 @@
         "hisui": 15,
         "paldea": 94,
         "kitakami": 109
-      }
+      },
+      "vg": 1966464
     },
     {
       "id": 404,
@@ -27057,7 +27735,8 @@
         "hisui": 16,
         "paldea": 95,
         "kitakami": 110
-      }
+      },
+      "vg": 1966464
     },
     {
       "id": 405,
@@ -27119,7 +27798,8 @@
         "paldea": 96,
         "kitakami": 111,
         "champions": 405
-      }
+      },
+      "vg": 1966464
     },
     {
       "id": 406,
@@ -27182,7 +27862,8 @@
         "galar": 59,
         "hisui": 89,
         "lumiose-city": 29
-      }
+      },
+      "vg": 3029376
     },
     {
       "id": 407,
@@ -27246,7 +27927,8 @@
         "hisui": 91,
         "lumiose-city": 31,
         "champions": 407
-      }
+      },
+      "vg": 3029376
     },
     {
       "id": 408,
@@ -27304,7 +27986,8 @@
         "updated-akala": 136,
         "hisui": 208,
         "blueberry": 107
-      }
+      },
+      "vg": 1884544
     },
     {
       "id": 409,
@@ -27363,7 +28046,8 @@
         "hisui": 209,
         "blueberry": 108,
         "champions": 409
-      }
+      },
+      "vg": 1884544
     },
     {
       "id": 410,
@@ -27423,7 +28107,8 @@
         "updated-akala": 138,
         "hisui": 210,
         "blueberry": 109
-      }
+      },
+      "vg": 1884544
     },
     {
       "id": 411,
@@ -27484,7 +28169,8 @@
         "hisui": 211,
         "blueberry": 110,
         "champions": 411
-      }
+      },
+      "vg": 1884544
     },
     {
       "id": 412,
@@ -27538,7 +28224,8 @@
         "extended-sinnoh": 45,
         "kalos-central": 44,
         "hisui": 43
-      }
+      },
+      "vg": 790912
     },
     {
       "id": 413,
@@ -27670,7 +28357,8 @@
         "extended-sinnoh": 46,
         "kalos-central": 45,
         "hisui": 44
-      }
+      },
+      "vg": 790912
     },
     {
       "id": 414,
@@ -27725,7 +28413,8 @@
         "extended-sinnoh": 47,
         "kalos-central": 46,
         "hisui": 45
-      }
+      },
+      "vg": 790912
     },
     {
       "id": 415,
@@ -27784,7 +28473,8 @@
         "isle-of-armor": 203,
         "hisui": 70,
         "paldea": 38
-      }
+      },
+      "vg": 1972608
     },
     {
       "id": 416,
@@ -27843,7 +28533,8 @@
         "isle-of-armor": 204,
         "hisui": 71,
         "paldea": 39
-      }
+      },
+      "vg": 1972608
     },
     {
       "id": 417,
@@ -27904,7 +28595,8 @@
         "hisui": 109,
         "paldea": 201,
         "kitakami": 63
-      }
+      },
+      "vg": 1839488
     },
     {
       "id": 418,
@@ -27960,7 +28652,8 @@
         "kalos-mountain": 58,
         "hisui": 41,
         "paldea": 51
-      }
+      },
+      "vg": 1841536
     },
     {
       "id": 419,
@@ -28016,7 +28709,8 @@
         "kalos-mountain": 59,
         "hisui": 42,
         "paldea": 52
-      }
+      },
+      "vg": 1841536
     },
     {
       "id": 420,
@@ -28066,7 +28760,8 @@
         "extended-sinnoh": 58,
         "galar": 128,
         "hisui": 66
-      }
+      },
+      "vg": 917888
     },
     {
       "id": 421,
@@ -28116,7 +28811,8 @@
         "extended-sinnoh": 59,
         "galar": 129,
         "hisui": 67
-      }
+      },
+      "vg": 917888
     },
     {
       "id": 422,
@@ -28179,7 +28875,8 @@
         "galar": 230,
         "hisui": 82,
         "paldea": 327
-      }
+      },
+      "vg": 2015616
     },
     {
       "id": 423,
@@ -28243,7 +28940,8 @@
         "galar": 231,
         "hisui": 83,
         "paldea": 328
-      }
+      },
+      "vg": 2015616
     },
     {
       "id": 424,
@@ -28304,7 +29002,8 @@
         "updated-poni": 116,
         "hisui": 79,
         "kitakami": 48
-      }
+      },
+      "vg": 1868672
     },
     {
       "id": 425,
@@ -28372,7 +29071,8 @@
         "isle-of-armor": 135,
         "hisui": 37,
         "paldea": 143
-      }
+      },
+      "vg": 2021760
     },
     {
       "id": 426,
@@ -28440,7 +29140,8 @@
         "isle-of-armor": 136,
         "hisui": 38,
         "paldea": 144
-      }
+      },
+      "vg": 2021760
     },
     {
       "id": 427,
@@ -28503,7 +29204,8 @@
         "isle-of-armor": 4,
         "hisui": 64,
         "lumiose-city": 109
-      }
+      },
+      "vg": 3049856
     },
     {
       "id": 428,
@@ -28567,7 +29269,8 @@
         "hisui": 65,
         "lumiose-city": 110,
         "champions": 428
-      }
+      },
+      "vg": 3049856
     },
     {
       "id": 429,
@@ -28622,7 +29325,8 @@
         "updated-poni": 120,
         "hisui": 198,
         "paldea": 115
-      }
+      },
+      "vg": 1884544
     },
     {
       "id": 430,
@@ -28686,7 +29390,8 @@
         "updated-melemele": 79,
         "hisui": 141,
         "paldea": 233
-      }
+      },
+      "vg": 1888640
     },
     {
       "id": 431,
@@ -28743,7 +29448,8 @@
         "original-sinnoh": 76,
         "extended-sinnoh": 76,
         "hisui": 152
-      }
+      },
+      "vg": 786816
     },
     {
       "id": 432,
@@ -28800,7 +29506,8 @@
         "original-sinnoh": 77,
         "extended-sinnoh": 77,
         "hisui": 153
-      }
+      },
+      "vg": 786816
     },
     {
       "id": 433,
@@ -28854,7 +29561,8 @@
         "hisui": 195,
         "kitakami": 142,
         "hyperspace": 50
-      }
+      },
+      "vg": 3944832
     },
     {
       "id": 434,
@@ -28915,7 +29623,8 @@
         "galar": 130,
         "hisui": 110,
         "paldea": 226
-      }
+      },
+      "vg": 1970560
     },
     {
       "id": 435,
@@ -28976,7 +29685,8 @@
         "galar": 131,
         "hisui": 111,
         "paldea": 227
-      }
+      },
+      "vg": 1970560
     },
     {
       "id": 436,
@@ -29039,7 +29749,8 @@
         "hisui": 180,
         "paldea": 153,
         "kitakami": 154
-      }
+      },
+      "vg": 1968512
     },
     {
       "id": 437,
@@ -29102,7 +29813,8 @@
         "hisui": 181,
         "paldea": 154,
         "kitakami": 155
-      }
+      },
+      "vg": 1968512
     },
     {
       "id": 438,
@@ -29169,7 +29881,8 @@
         "hisui": 123,
         "paldea": 87,
         "kitakami": 83
-      }
+      },
+      "vg": 2019712
     },
     {
       "id": 439,
@@ -29233,7 +29946,8 @@
         "crown-tundra": 10,
         "hisui": 76,
         "hyperspace": 108
-      }
+      },
+      "vg": 3051904
     },
     {
       "id": 440,
@@ -29303,7 +30017,8 @@
         "hisui": 86,
         "paldea": 43,
         "blueberry": 16
-      }
+      },
+      "vg": 2015616
     },
     {
       "id": 441,
@@ -29363,7 +30078,8 @@
         "extended-sinnoh": 102,
         "kalos-coastal": 138,
         "hisui": 157
-      }
+      },
+      "vg": 790912
     },
     {
       "id": 442,
@@ -29422,7 +30138,8 @@
         "hisui": 139,
         "paldea": 302,
         "champions": 442
-      }
+      },
+      "vg": 1966464
     },
     {
       "id": 443,
@@ -29486,7 +30203,8 @@
         "paldea": 126,
         "kitakami": 164,
         "lumiose-city": 128
-      }
+      },
+      "vg": 4116864
     },
     {
       "id": 444,
@@ -29550,7 +30268,8 @@
         "paldea": 127,
         "kitakami": 165,
         "lumiose-city": 129
-      }
+      },
+      "vg": 4116864
     },
     {
       "id": 445,
@@ -29615,7 +30334,8 @@
         "kitakami": 166,
         "lumiose-city": 130,
         "champions": 445
-      }
+      },
+      "vg": 4116864
     },
     {
       "id": 446,
@@ -29681,7 +30401,8 @@
         "crown-tundra": 172,
         "hisui": 51,
         "kitakami": 102
-      }
+      },
+      "vg": 2019712
     },
     {
       "id": 447,
@@ -29750,7 +30471,8 @@
         "paldea": 163,
         "kitakami": 64,
         "lumiose-city": 135
-      }
+      },
+      "vg": 4118912
     },
     {
       "id": 448,
@@ -29821,7 +30543,8 @@
         "kitakami": 65,
         "lumiose-city": 136,
         "champions": 448
-      }
+      },
+      "vg": 4118912
     },
     {
       "id": 449,
@@ -29878,7 +30601,8 @@
         "hisui": 107,
         "paldea": 265,
         "lumiose-city": 118
-      }
+      },
+      "vg": 4067712
     },
     {
       "id": 450,
@@ -29936,7 +30660,8 @@
         "paldea": 266,
         "lumiose-city": 119,
         "champions": 450
-      }
+      },
+      "vg": 4067712
     },
     {
       "id": 451,
@@ -29999,7 +30724,8 @@
         "galar": 285,
         "isle-of-armor": 50,
         "hisui": 148
-      }
+      },
+      "vg": 924032
     },
     {
       "id": 452,
@@ -30062,7 +30788,8 @@
         "galar": 286,
         "isle-of-armor": 51,
         "hisui": 149
-      }
+      },
+      "vg": 924032
     },
     {
       "id": 453,
@@ -30126,7 +30853,8 @@
         "isle-of-armor": 82,
         "hisui": 99,
         "paldea": 175
-      }
+      },
+      "vg": 1972608
     },
     {
       "id": 454,
@@ -30191,7 +30919,8 @@
         "hisui": 100,
         "paldea": 176,
         "champions": 454
-      }
+      },
+      "vg": 1972608
     },
     {
       "id": 455,
@@ -30244,7 +30973,8 @@
         "conquest-gallery": 186,
         "kalos-mountain": 29,
         "hisui": 92
-      }
+      },
+      "vg": 792960
     },
     {
       "id": 456,
@@ -30313,7 +31043,8 @@
         "hisui": 172,
         "paldea": 333,
         "blueberry": 83
-      }
+      },
+      "vg": 1884544
     },
     {
       "id": 457,
@@ -30382,7 +31113,8 @@
         "hisui": 173,
         "paldea": 334,
         "blueberry": 84
-      }
+      },
+      "vg": 1884544
     },
     {
       "id": 458,
@@ -30447,7 +31179,8 @@
         "galar": 354,
         "isle-of-armor": 46,
         "hisui": 164
-      }
+      },
+      "vg": 956800
     },
     {
       "id": 459,
@@ -30507,7 +31240,8 @@
         "paldea": 352,
         "blueberry": 159,
         "lumiose-city": 172
-      }
+      },
+      "vg": 4067712
     },
     {
       "id": 460,
@@ -30568,7 +31302,8 @@
         "blueberry": 160,
         "lumiose-city": 173,
         "champions": 460
-      }
+      },
+      "vg": 4067712
     },
     {
       "id": 461,
@@ -30634,7 +31369,8 @@
         "paldea": 231,
         "kitakami": 171,
         "champions": 461
-      }
+      },
+      "vg": 2021760
     },
     {
       "id": 462,
@@ -30703,7 +31439,8 @@
         "hisui": 179,
         "paldea": 211,
         "blueberry": 118
-      }
+      },
+      "vg": 1767680
     },
     {
       "id": 463,
@@ -30765,7 +31502,8 @@
         "updated-poni": 123,
         "isle-of-armor": 55,
         "hisui": 126
-      }
+      },
+      "vg": 695040
     },
     {
       "id": 464,
@@ -30829,7 +31567,8 @@
         "hisui": 122,
         "blueberry": 7,
         "champions": 464
-      }
+      },
+      "vg": 1716480
     },
     {
       "id": 465,
@@ -30888,7 +31627,8 @@
         "updated-unova": 218,
         "isle-of-armor": 81,
         "hisui": 96
-      }
+      },
+      "vg": 658176
     },
     {
       "id": 466,
@@ -30947,7 +31687,8 @@
         "crown-tundra": 17,
         "hisui": 184,
         "blueberry": 12
-      }
+      },
+      "vg": 1755392
     },
     {
       "id": 467,
@@ -31006,7 +31747,8 @@
         "crown-tundra": 20,
         "hisui": 176,
         "blueberry": 15
-      }
+      },
+      "vg": 1755392
     },
     {
       "id": 468,
@@ -31064,7 +31806,8 @@
         "extended-sinnoh": 175,
         "galar": 259,
         "hisui": 129
-      }
+      },
+      "vg": 655616
     },
     {
       "id": 469,
@@ -31125,7 +31868,8 @@
         "kalos-coastal": 88,
         "hisui": 106,
         "kitakami": 4
-      }
+      },
+      "vg": 1579776
     },
     {
       "id": 470,
@@ -31189,7 +31933,8 @@
         "paldea": 185,
         "lumiose-city": 106,
         "champions": 470
-      }
+      },
+      "vg": 3856640
     },
     {
       "id": 471,
@@ -31253,7 +31998,8 @@
         "paldea": 186,
         "lumiose-city": 107,
         "champions": 471
-      }
+      },
+      "vg": 3856640
     },
     {
       "id": 472,
@@ -31314,7 +32060,8 @@
         "hisui": 186,
         "kitakami": 122,
         "champions": 472
-      }
+      },
+      "vg": 1579264
     },
     {
       "id": 473,
@@ -31378,7 +32125,8 @@
         "hisui": 214,
         "kitakami": 52,
         "champions": 473
-      }
+      },
+      "vg": 1710848
     },
     {
       "id": 474,
@@ -31441,7 +32189,8 @@
         "hisui": 135,
         "blueberry": 131,
         "hyperspace": 13
-      }
+      },
+      "vg": 3850496
     },
     {
       "id": 475,
@@ -31507,7 +32256,8 @@
         "kitakami": 60,
         "lumiose-city": 90,
         "champions": 475
-      }
+      },
+      "vg": 3813632
     },
     {
       "id": 476,
@@ -31572,7 +32322,8 @@
         "updated-akala": 156,
         "hisui": 191,
         "kitakami": 108
-      }
+      },
+      "vg": 1636608
     },
     {
       "id": 477,
@@ -31628,7 +32379,8 @@
         "galar": 137,
         "hisui": 160,
         "kitakami": 141
-      }
+      },
+      "vg": 1712384
     },
     {
       "id": 478,
@@ -31693,7 +32445,8 @@
         "kitakami": 174,
         "lumiose-city": 171,
         "champions": 478
-      }
+      },
+      "vg": 3858688
     },
     {
       "id": 479,
@@ -31920,7 +32673,8 @@
         "blueberry": 41,
         "hyperspace": 22,
         "champions": 479
-      }
+      },
+      "vg": 3805440
     },
     {
       "id": 480,
@@ -31970,7 +32724,8 @@
         "original-sinnoh": 146,
         "extended-sinnoh": 146,
         "hisui": 225
-      }
+      },
+      "vg": 786816
     },
     {
       "id": 481,
@@ -32020,7 +32775,8 @@
         "original-sinnoh": 147,
         "extended-sinnoh": 147,
         "hisui": 226
-      }
+      },
+      "vg": 786816
     },
     {
       "id": 482,
@@ -32070,7 +32826,8 @@
         "original-sinnoh": 148,
         "extended-sinnoh": 148,
         "hisui": 227
-      }
+      },
+      "vg": 786816
     },
     {
       "id": 483,
@@ -32165,7 +32922,8 @@
         "extended-sinnoh": 149,
         "conquest-gallery": 195,
         "hisui": 235
-      }
+      },
+      "vg": 786816
     },
     {
       "id": 484,
@@ -32259,7 +33017,8 @@
         "original-sinnoh": 150,
         "extended-sinnoh": 150,
         "hisui": 236
-      }
+      },
+      "vg": 786816
     },
     {
       "id": 485,
@@ -32313,7 +33072,8 @@
         "national": 485,
         "hisui": 228,
         "hyperspace": 113
-      }
+      },
+      "vg": 2621440
     },
     {
       "id": 486,
@@ -32361,7 +33121,8 @@
       "dex": {
         "national": 486,
         "hisui": 229
-      }
+      },
+      "vg": 524288
     },
     {
       "id": 487,
@@ -32450,7 +33211,8 @@
         "national": 487,
         "extended-sinnoh": 210,
         "hisui": 237
-      }
+      },
+      "vg": 524544
     },
     {
       "id": 488,
@@ -32498,7 +33260,8 @@
       "dex": {
         "national": 488,
         "hisui": 230
-      }
+      },
+      "vg": 524288
     },
     {
       "id": 489,
@@ -32545,7 +33308,8 @@
       "dex": {
         "national": 489,
         "hisui": 239
-      }
+      },
+      "vg": 524288
     },
     {
       "id": 490,
@@ -32594,7 +33358,8 @@
         "original-sinnoh": 151,
         "extended-sinnoh": 151,
         "hisui": 240
-      }
+      },
+      "vg": 786816
     },
     {
       "id": 491,
@@ -32643,7 +33408,8 @@
         "national": 491,
         "hisui": 242,
         "hyperspace": 125
-      }
+      },
+      "vg": 2621440
     },
     {
       "id": 492,
@@ -32726,7 +33492,8 @@
       "dex": {
         "national": 492,
         "hisui": 241
-      }
+      },
+      "vg": 524288
     },
     {
       "id": 493,
@@ -32775,7 +33542,8 @@
         "national": 493,
         "conquest-gallery": 199,
         "hisui": 238
-      }
+      },
+      "vg": 524288
     },
     {
       "id": 494,
@@ -32825,7 +33593,8 @@
         "national": 494,
         "original-unova": 0,
         "updated-unova": 0
-      }
+      },
+      "vg": 3072
     },
     {
       "id": 495,
@@ -32879,7 +33648,8 @@
         "updated-unova": 1,
         "conquest-gallery": 118,
         "blueberry": 200
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 496,
@@ -32933,7 +33703,8 @@
         "updated-unova": 2,
         "conquest-gallery": 119,
         "blueberry": 201
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 497,
@@ -32988,7 +33759,8 @@
         "conquest-gallery": 120,
         "blueberry": 202,
         "champions": 497
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 498,
@@ -33043,7 +33815,8 @@
         "conquest-gallery": 121,
         "blueberry": 203,
         "lumiose-city": 4
-      }
+      },
+      "vg": 3148800
     },
     {
       "id": 499,
@@ -33099,7 +33872,8 @@
         "conquest-gallery": 122,
         "blueberry": 204,
         "lumiose-city": 5
-      }
+      },
+      "vg": 3148800
     },
     {
       "id": 500,
@@ -33156,7 +33930,8 @@
         "blueberry": 205,
         "lumiose-city": 6,
         "champions": 500
-      }
+      },
+      "vg": 3148800
     },
     {
       "id": 501,
@@ -33211,7 +33986,8 @@
         "conquest-gallery": 106,
         "hisui": 7,
         "blueberry": 206
-      }
+      },
+      "vg": 1575936
     },
     {
       "id": 502,
@@ -33266,7 +34042,8 @@
         "conquest-gallery": 107,
         "hisui": 8,
         "blueberry": 207
-      }
+      },
+      "vg": 1575936
     },
     {
       "id": 503,
@@ -33361,7 +34138,8 @@
         "hisui": 9,
         "blueberry": 208,
         "champions": 503
-      }
+      },
+      "vg": 1575936
     },
     {
       "id": 504,
@@ -33419,7 +34197,8 @@
         "updated-unova": 10,
         "kalos-mountain": 46,
         "lumiose-city": 27
-      }
+      },
+      "vg": 2104320
     },
     {
       "id": 505,
@@ -33478,7 +34257,8 @@
         "kalos-mountain": 47,
         "lumiose-city": 28,
         "champions": 505
-      }
+      },
+      "vg": 2104320
     },
     {
       "id": 506,
@@ -33539,7 +34319,8 @@
         "updated-alola": 150,
         "updated-akala": 51,
         "isle-of-armor": 113
-      }
+      },
+      "vg": 183296
     },
     {
       "id": 507,
@@ -33600,7 +34381,8 @@
         "updated-alola": 151,
         "updated-akala": 52,
         "isle-of-armor": 114
-      }
+      },
+      "vg": 183296
     },
     {
       "id": 508,
@@ -33661,7 +34443,8 @@
         "updated-alola": 152,
         "updated-akala": 53,
         "isle-of-armor": 115
-      }
+      },
+      "vg": 183296
     },
     {
       "id": 509,
@@ -33720,7 +34503,8 @@
         "kalos-mountain": 42,
         "galar": 44,
         "hyperspace": 53
-      }
+      },
+      "vg": 2235392
     },
     {
       "id": 510,
@@ -33780,7 +34564,8 @@
         "galar": 45,
         "hyperspace": 54,
         "champions": 510
-      }
+      },
+      "vg": 2235392
     },
     {
       "id": 511,
@@ -33835,7 +34620,8 @@
         "conquest-gallery": 136,
         "kalos-central": 29,
         "lumiose-city": 77
-      }
+      },
+      "vg": 2104320
     },
     {
       "id": 512,
@@ -33891,7 +34677,8 @@
         "kalos-central": 30,
         "lumiose-city": 78,
         "champions": 512
-      }
+      },
+      "vg": 2104320
     },
     {
       "id": 513,
@@ -33946,7 +34733,8 @@
         "conquest-gallery": 138,
         "kalos-central": 31,
         "lumiose-city": 79
-      }
+      },
+      "vg": 2104320
     },
     {
       "id": 514,
@@ -34002,7 +34790,8 @@
         "kalos-central": 32,
         "lumiose-city": 80,
         "champions": 514
-      }
+      },
+      "vg": 2104320
     },
     {
       "id": 515,
@@ -34057,7 +34846,8 @@
         "conquest-gallery": 140,
         "kalos-central": 33,
         "lumiose-city": 81
-      }
+      },
+      "vg": 2104320
     },
     {
       "id": 516,
@@ -34113,7 +34903,8 @@
         "kalos-central": 34,
         "lumiose-city": 82,
         "champions": 516
-      }
+      },
+      "vg": 2104320
     },
     {
       "id": 517,
@@ -34172,7 +34963,8 @@
         "conquest-gallery": 72,
         "galar": 90,
         "hyperspace": 55
-      }
+      },
+      "vg": 2231296
     },
     {
       "id": 518,
@@ -34232,7 +35024,8 @@
         "galar": 91,
         "hyperspace": 56,
         "champions": 518
-      }
+      },
+      "vg": 2231296
     },
     {
       "id": 519,
@@ -34290,7 +35083,8 @@
         "original-unova": 25,
         "updated-unova": 14,
         "galar": 26
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 520,
@@ -34348,7 +35142,8 @@
         "original-unova": 26,
         "updated-unova": 15,
         "galar": 27
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 521,
@@ -34406,7 +35201,8 @@
         "original-unova": 27,
         "updated-unova": 16,
         "galar": 28
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 522,
@@ -34464,7 +35260,8 @@
         "updated-unova": 147,
         "conquest-gallery": 74,
         "blueberry": 23
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 523,
@@ -34522,7 +35319,8 @@
         "updated-unova": 148,
         "conquest-gallery": 75,
         "blueberry": 24
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 524,
@@ -34588,7 +35386,8 @@
         "updated-poni": 60,
         "galar": 168,
         "isle-of-armor": 154
-      }
+      },
+      "vg": 187392
     },
     {
       "id": 525,
@@ -34654,7 +35453,8 @@
         "updated-poni": 61,
         "galar": 169,
         "isle-of-armor": 155
-      }
+      },
+      "vg": 187392
     },
     {
       "id": 526,
@@ -34720,7 +35520,8 @@
         "updated-poni": 62,
         "galar": 170,
         "isle-of-armor": 156
-      }
+      },
+      "vg": 187392
     },
     {
       "id": 527,
@@ -34780,7 +35581,8 @@
         "kalos-coastal": 55,
         "galar": 174,
         "isle-of-armor": 151
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 528,
@@ -34840,7 +35642,8 @@
         "kalos-coastal": 56,
         "galar": 175,
         "isle-of-armor": 152
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 529,
@@ -34900,7 +35703,8 @@
         "galar": 166,
         "blueberry": 99,
         "lumiose-city": 120
-      }
+      },
+      "vg": 3279872
     },
     {
       "id": 530,
@@ -34962,7 +35766,8 @@
         "blueberry": 100,
         "lumiose-city": 121,
         "champions": 530
-      }
+      },
+      "vg": 3279872
     },
     {
       "id": 531,
@@ -35024,7 +35829,8 @@
         "crown-tundra": 21,
         "lumiose-city": 95,
         "champions": 531
-      }
+      },
+      "vg": 2235392
     },
     {
       "id": 532,
@@ -35085,7 +35891,8 @@
         "galar": 171,
         "crown-tundra": 57,
         "kitakami": 85
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 533,
@@ -35146,7 +35953,8 @@
         "galar": 172,
         "crown-tundra": 58,
         "kitakami": 86
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 534,
@@ -35208,7 +36016,8 @@
         "crown-tundra": 59,
         "kitakami": 87,
         "champions": 534
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 535,
@@ -35265,7 +36074,8 @@
         "original-unova": 41,
         "updated-unova": 228,
         "galar": 132
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 536,
@@ -35323,7 +36133,8 @@
         "original-unova": 42,
         "updated-unova": 229,
         "galar": 133
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 537,
@@ -35381,7 +36192,8 @@
         "original-unova": 43,
         "updated-unova": 230,
         "galar": 134
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 538,
@@ -35441,7 +36253,8 @@
         "kalos-coastal": 97,
         "galar": 248,
         "hyperspace": 57
-      }
+      },
+      "vg": 2235392
     },
     {
       "id": 539,
@@ -35501,7 +36314,8 @@
         "kalos-coastal": 98,
         "galar": 249,
         "hyperspace": 58
-      }
+      },
+      "vg": 2235392
     },
     {
       "id": 540,
@@ -35560,7 +36374,8 @@
         "updated-unova": 17,
         "conquest-gallery": 124,
         "kitakami": 13
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 541,
@@ -35619,7 +36434,8 @@
         "updated-unova": 18,
         "conquest-gallery": 125,
         "kitakami": 14
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 542,
@@ -35678,7 +36494,8 @@
         "updated-unova": 19,
         "conquest-gallery": 126,
         "kitakami": 15
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 543,
@@ -35739,7 +36556,8 @@
         "kalos-central": 120,
         "isle-of-armor": 74,
         "lumiose-city": 68
-      }
+      },
+      "vg": 2235392
     },
     {
       "id": 544,
@@ -35800,7 +36618,8 @@
         "kalos-central": 121,
         "isle-of-armor": 75,
         "lumiose-city": 69
-      }
+      },
+      "vg": 2235392
     },
     {
       "id": 545,
@@ -35862,7 +36681,8 @@
         "isle-of-armor": 76,
         "lumiose-city": 70,
         "champions": 545
-      }
+      },
+      "vg": 2235392
     },
     {
       "id": 546,
@@ -35931,7 +36751,8 @@
         "galar": 262,
         "crown-tundra": 168,
         "blueberry": 56
-      }
+      },
+      "vg": 1231872
     },
     {
       "id": 547,
@@ -36001,7 +36822,8 @@
         "crown-tundra": 169,
         "blueberry": 57,
         "champions": 547
-      }
+      },
+      "vg": 1231872
     },
     {
       "id": 548,
@@ -36070,7 +36892,8 @@
         "hisui": 93,
         "paldea": 104,
         "kitakami": 66
-      }
+      },
+      "vg": 1756160
     },
     {
       "id": 549,
@@ -36182,7 +37005,8 @@
         "hisui": 94,
         "paldea": 105,
         "kitakami": 67
-      }
+      },
+      "vg": 1756160
     },
     {
       "id": 550,
@@ -36331,7 +37155,8 @@
         "hisui": 166,
         "paldea": 138,
         "kitakami": 194
-      }
+      },
+      "vg": 1743872
     },
     {
       "id": 551,
@@ -36398,7 +37223,8 @@
         "paldea": 267,
         "blueberry": 27,
         "lumiose-city": 122
-      }
+      },
+      "vg": 3333120
     },
     {
       "id": 552,
@@ -36465,7 +37291,8 @@
         "paldea": 268,
         "blueberry": 28,
         "lumiose-city": 123
-      }
+      },
+      "vg": 3333120
     },
     {
       "id": 553,
@@ -36533,7 +37360,8 @@
         "blueberry": 29,
         "lumiose-city": 124,
         "champions": 553
-      }
+      },
+      "vg": 3333120
     },
     {
       "id": 554,
@@ -36626,7 +37454,8 @@
         "conquest-gallery": 142,
         "galar": 367,
         "crown-tundra": 103
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 555,
@@ -36795,7 +37624,8 @@
         "conquest-gallery": 143,
         "galar": 368,
         "crown-tundra": 104
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 556,
@@ -36853,7 +37683,8 @@
         "original-unova": 62,
         "updated-unova": 119,
         "galar": 296
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 557,
@@ -36913,7 +37744,8 @@
         "kalos-coastal": 23,
         "galar": 86,
         "isle-of-armor": 122
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 558,
@@ -36973,7 +37805,8 @@
         "kalos-coastal": 24,
         "galar": 87,
         "isle-of-armor": 123
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 559,
@@ -37038,7 +37871,8 @@
         "isle-of-armor": 161,
         "blueberry": 121,
         "lumiose-city": 184
-      }
+      },
+      "vg": 3316736
     },
     {
       "id": 560,
@@ -37104,7 +37938,8 @@
         "blueberry": 122,
         "lumiose-city": 185,
         "champions": 560
-      }
+      },
+      "vg": 3316736
     },
     {
       "id": 561,
@@ -37164,7 +37999,8 @@
         "updated-unova": 120,
         "kalos-coastal": 90,
         "galar": 297
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 562,
@@ -37249,7 +38085,8 @@
         "updated-unova": 124,
         "galar": 327,
         "hyperspace": 59
-      }
+      },
+      "vg": 2231296
     },
     {
       "id": 563,
@@ -37300,7 +38137,8 @@
         "galar": 329,
         "hyperspace": 60,
         "champions": 563
-      }
+      },
+      "vg": 2231296
     },
     {
       "id": 564,
@@ -37362,7 +38200,8 @@
         "updated-alola": 241,
         "updated-akala": 142,
         "crown-tundra": 147
-      }
+      },
+      "vg": 183296
     },
     {
       "id": 565,
@@ -37424,7 +38263,8 @@
         "updated-alola": 242,
         "updated-akala": 143,
         "crown-tundra": 148
-      }
+      },
+      "vg": 183296
     },
     {
       "id": 566,
@@ -37478,7 +38318,8 @@
         "updated-alola": 239,
         "updated-akala": 140,
         "crown-tundra": 149
-      }
+      },
+      "vg": 183296
     },
     {
       "id": 567,
@@ -37532,7 +38373,8 @@
         "updated-alola": 240,
         "updated-akala": 141,
         "crown-tundra": 150
-      }
+      },
+      "vg": 183296
     },
     {
       "id": 568,
@@ -37595,7 +38437,8 @@
         "updated-ulaula": 85,
         "galar": 157,
         "lumiose-city": 49
-      }
+      },
+      "vg": 2284544
     },
     {
       "id": 569,
@@ -37659,7 +38502,8 @@
         "galar": 158,
         "lumiose-city": 50,
         "champions": 569
-      }
+      },
+      "vg": 2284544
     },
     {
       "id": 570,
@@ -37750,7 +38594,8 @@
         "isle-of-armor": 87,
         "hisui": 219,
         "paldea": 228
-      }
+      },
+      "vg": 1743872
     },
     {
       "id": 571,
@@ -37842,7 +38687,8 @@
         "hisui": 220,
         "paldea": 229,
         "champions": 571
-      }
+      },
+      "vg": 1743872
     },
     {
       "id": 572,
@@ -37903,7 +38749,8 @@
         "updated-ulaula": 87,
         "galar": 50,
         "blueberry": 111
-      }
+      },
+      "vg": 1215488
     },
     {
       "id": 573,
@@ -37964,7 +38811,8 @@
         "updated-ulaula": 88,
         "galar": 51,
         "blueberry": 112
-      }
+      },
+      "vg": 1215488
     },
     {
       "id": 574,
@@ -38026,7 +38874,8 @@
         "crown-tundra": 51,
         "paldea": 234,
         "blueberry": 101
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 575,
@@ -38088,7 +38937,8 @@
         "crown-tundra": 52,
         "paldea": 235,
         "blueberry": 102
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 576,
@@ -38150,7 +39000,8 @@
         "crown-tundra": 53,
         "paldea": 236,
         "blueberry": 103
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 577,
@@ -38210,7 +39061,8 @@
         "galar": 270,
         "crown-tundra": 54,
         "blueberry": 148
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 578,
@@ -38270,7 +39122,8 @@
         "galar": 271,
         "crown-tundra": 55,
         "blueberry": 149
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 579,
@@ -38331,7 +39184,8 @@
         "crown-tundra": 56,
         "blueberry": 150,
         "champions": 579
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 580,
@@ -38390,7 +39244,8 @@
         "updated-unova": 153,
         "kalos-central": 127,
         "kitakami": 181
-      }
+      },
+      "vg": 1055744
     },
     {
       "id": 581,
@@ -38449,7 +39304,8 @@
         "updated-unova": 154,
         "kalos-central": 128,
         "kitakami": 182
-      }
+      },
+      "vg": 1055744
     },
     {
       "id": 582,
@@ -38513,7 +39369,8 @@
         "galar": 72,
         "crown-tundra": 22,
         "lumiose-city": 113
-      }
+      },
+      "vg": 2284544
     },
     {
       "id": 583,
@@ -38577,7 +39434,8 @@
         "galar": 73,
         "crown-tundra": 23,
         "lumiose-city": 114
-      }
+      },
+      "vg": 2284544
     },
     {
       "id": 584,
@@ -38642,7 +39500,8 @@
         "crown-tundra": 24,
         "lumiose-city": 115,
         "champions": 584
-      }
+      },
+      "vg": 2284544
     },
     {
       "id": 585,
@@ -38701,7 +39560,8 @@
         "updated-unova": 159,
         "paldea": 190,
         "blueberry": 38
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 586,
@@ -38760,7 +39620,8 @@
         "updated-unova": 160,
         "paldea": 191,
         "blueberry": 39
-      }
+      },
+      "vg": 1051648
     },
     {
       "id": 587,
@@ -38823,7 +39684,8 @@
         "isle-of-armor": 102,
         "lumiose-city": 180,
         "champions": 587
-      }
+      },
+      "vg": 2284544
     },
     {
       "id": 588,
@@ -38883,7 +39745,8 @@
         "galar": 273,
         "isle-of-armor": 66,
         "crown-tundra": 95
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 589,
@@ -38944,7 +39807,8 @@
         "galar": 274,
         "isle-of-armor": 67,
         "crown-tundra": 96
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 590,
@@ -39001,7 +39865,8 @@
         "isle-of-armor": 77,
         "paldea": 205,
         "hyperspace": 111
-      }
+      },
+      "vg": 3283968
     },
     {
       "id": 591,
@@ -39058,7 +39923,8 @@
         "isle-of-armor": 78,
         "paldea": 206,
         "hyperspace": 112
-      }
+      },
+      "vg": 3283968
     },
     {
       "id": 592,
@@ -39119,7 +39985,8 @@
         "updated-ulaula": 139,
         "galar": 305,
         "isle-of-armor": 192
-      }
+      },
+      "vg": 166912
     },
     {
       "id": 593,
@@ -39180,7 +40047,8 @@
         "updated-ulaula": 140,
         "galar": 306,
         "isle-of-armor": 193
-      }
+      },
+      "vg": 166912
     },
     {
       "id": 594,
@@ -39244,7 +40112,8 @@
         "updated-akala": 92,
         "paldea": 336,
         "blueberry": 85
-      }
+      },
+      "vg": 1104896
     },
     {
       "id": 595,
@@ -39305,7 +40174,8 @@
         "galar": 64,
         "crown-tundra": 93,
         "blueberry": 132
-      }
+      },
+      "vg": 1182720
     },
     {
       "id": 596,
@@ -39366,7 +40236,8 @@
         "galar": 65,
         "crown-tundra": 94,
         "blueberry": 133
-      }
+      },
+      "vg": 1182720
     },
     {
       "id": 597,
@@ -39418,7 +40289,8 @@
         "kalos-coastal": 69,
         "galar": 189,
         "crown-tundra": 179
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 598,
@@ -39474,7 +40346,8 @@
         "kalos-coastal": 70,
         "galar": 190,
         "crown-tundra": 180
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 599,
@@ -39531,7 +40404,8 @@
         "original-unova": 105,
         "updated-unova": 130,
         "galar": 113
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 600,
@@ -39588,7 +40462,8 @@
         "original-unova": 106,
         "updated-unova": 131,
         "galar": 114
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 601,
@@ -39645,7 +40520,8 @@
         "original-unova": 107,
         "updated-unova": 132,
         "galar": 115
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 602,
@@ -39697,7 +40573,8 @@
         "kitakami": 175,
         "blueberry": 134,
         "lumiose-city": 142
-      }
+      },
+      "vg": 3148800
     },
     {
       "id": 603,
@@ -39749,7 +40626,8 @@
         "kitakami": 176,
         "blueberry": 135,
         "lumiose-city": 143
-      }
+      },
+      "vg": 3148800
     },
     {
       "id": 604,
@@ -39802,7 +40680,8 @@
         "blueberry": 136,
         "lumiose-city": 144,
         "champions": 604
-      }
+      },
+      "vg": 3148800
     },
     {
       "id": 605,
@@ -39861,7 +40740,8 @@
         "updated-alola": 275,
         "updated-ulaula": 96,
         "galar": 277
-      }
+      },
+      "vg": 166912
     },
     {
       "id": 606,
@@ -39920,7 +40800,8 @@
         "updated-alola": 276,
         "updated-ulaula": 97,
         "galar": 278
-      }
+      },
+      "vg": 166912
     },
     {
       "id": 607,
@@ -39983,7 +40864,8 @@
         "crown-tundra": 48,
         "kitakami": 146,
         "lumiose-city": 189
-      }
+      },
+      "vg": 3283968
     },
     {
       "id": 608,
@@ -40046,7 +40928,8 @@
         "crown-tundra": 49,
         "kitakami": 147,
         "lumiose-city": 190
-      }
+      },
+      "vg": 3283968
     },
     {
       "id": 609,
@@ -40110,7 +40993,8 @@
         "kitakami": 148,
         "lumiose-city": 191,
         "champions": 609
-      }
+      },
+      "vg": 3283968
     },
     {
       "id": 610,
@@ -40171,7 +41055,8 @@
         "galar": 324,
         "paldea": 155,
         "blueberry": 140
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 611,
@@ -40232,7 +41117,8 @@
         "galar": 325,
         "paldea": 156,
         "blueberry": 141
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 612,
@@ -40293,7 +41179,8 @@
         "galar": 326,
         "paldea": 157,
         "blueberry": 142
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 613,
@@ -40355,7 +41242,8 @@
         "crown-tundra": 121,
         "paldea": 355,
         "blueberry": 153
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 614,
@@ -40418,7 +41306,8 @@
         "paldea": 356,
         "blueberry": 154,
         "champions": 614
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 615,
@@ -40471,7 +41360,8 @@
         "crown-tundra": 30,
         "paldea": 360,
         "hyperspace": 29
-      }
+      },
+      "vg": 3283968
     },
     {
       "id": 616,
@@ -40531,7 +41421,8 @@
         "galar": 275,
         "isle-of-armor": 64,
         "crown-tundra": 97
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 617,
@@ -40591,7 +41482,8 @@
         "galar": 276,
         "isle-of-armor": 65,
         "crown-tundra": 98
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 618,
@@ -40688,7 +41580,8 @@
         "galar": 226,
         "lumiose-city": 157,
         "champions": 618
-      }
+      },
+      "vg": 2235392
     },
     {
       "id": 619,
@@ -40749,7 +41642,8 @@
         "updated-poni": 106,
         "isle-of-armor": 163,
         "kitakami": 137
-      }
+      },
+      "vg": 1219584
     },
     {
       "id": 620,
@@ -40810,7 +41704,8 @@
         "updated-poni": 107,
         "isle-of-armor": 164,
         "kitakami": 138
-      }
+      },
+      "vg": 1219584
     },
     {
       "id": 621,
@@ -40872,7 +41767,8 @@
         "updated-poni": 121,
         "isle-of-armor": 63,
         "crown-tundra": 119
-      }
+      },
+      "vg": 171008
     },
     {
       "id": 622,
@@ -40936,7 +41832,8 @@
         "crown-tundra": 153,
         "blueberry": 123,
         "hyperspace": 71
-      }
+      },
+      "vg": 3316736
     },
     {
       "id": 623,
@@ -41001,7 +41898,8 @@
         "blueberry": 124,
         "hyperspace": 72,
         "champions": 623
-      }
+      },
+      "vg": 3316736
     },
     {
       "id": 624,
@@ -41066,7 +41964,8 @@
         "isle-of-armor": 29,
         "paldea": 367,
         "kitakami": 186
-      }
+      },
+      "vg": 1219584
     },
     {
       "id": 625,
@@ -41131,7 +42030,8 @@
         "isle-of-armor": 30,
         "paldea": 368,
         "kitakami": 187
-      }
+      },
+      "vg": 1219584
     },
     {
       "id": 626,
@@ -41189,7 +42089,8 @@
         "original-unova": 132,
         "updated-unova": 269,
         "isle-of-armor": 53
-      }
+      },
+      "vg": 134144
     },
     {
       "id": 627,
@@ -41258,7 +42159,8 @@
         "hisui": 221,
         "paldea": 365,
         "blueberry": 32
-      }
+      },
+      "vg": 1756160
     },
     {
       "id": 628,
@@ -41370,7 +42272,8 @@
         "hisui": 222,
         "paldea": 366,
         "blueberry": 33
-      }
+      },
+      "vg": 1756160
     },
     {
       "id": 629,
@@ -41437,7 +42340,8 @@
         "isle-of-armor": 181,
         "kitakami": 127,
         "blueberry": 34
-      }
+      },
+      "vg": 1231872
     },
     {
       "id": 630,
@@ -41504,7 +42408,8 @@
         "isle-of-armor": 182,
         "kitakami": 128,
         "blueberry": 35
-      }
+      },
+      "vg": 1231872
     },
     {
       "id": 631,
@@ -41564,7 +42469,8 @@
         "kalos-mountain": 105,
         "galar": 317,
         "crown-tundra": 102
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 632,
@@ -41625,7 +42531,8 @@
         "kalos-mountain": 106,
         "galar": 316,
         "crown-tundra": 101
-      }
+      },
+      "vg": 138240
     },
     {
       "id": 633,
@@ -41679,7 +42586,8 @@
         "galar": 386,
         "crown-tundra": 136,
         "paldea": 370
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 634,
@@ -41733,7 +42641,8 @@
         "galar": 387,
         "crown-tundra": 137,
         "paldea": 371
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 635,
@@ -41788,7 +42697,8 @@
         "crown-tundra": 138,
         "paldea": 372,
         "champions": 635
-      }
+      },
+      "vg": 1186816
     },
     {
       "id": 636,
@@ -41846,7 +42756,8 @@
         "updated-akala": 104,
         "isle-of-armor": 186,
         "paldea": 274
-      }
+      },
+      "vg": 1215488
     },
     {
       "id": 637,
@@ -41905,7 +42816,8 @@
         "isle-of-armor": 187,
         "paldea": 275,
         "champions": 637
-      }
+      },
+      "vg": 1215488
     },
     {
       "id": 638,
@@ -41957,7 +42869,8 @@
         "updated-unova": 225,
         "crown-tundra": 205,
         "hyperspace": 115
-      }
+      },
+      "vg": 2231296
     },
     {
       "id": 639,
@@ -42010,7 +42923,8 @@
         "conquest-gallery": 191,
         "crown-tundra": 206,
         "hyperspace": 116
-      }
+      },
+      "vg": 2231296
     },
     {
       "id": 640,
@@ -42062,7 +42976,8 @@
         "updated-unova": 227,
         "crown-tundra": 207,
         "hyperspace": 117
-      }
+      },
+      "vg": 2231296
     },
     {
       "id": 641,
@@ -42150,7 +43065,8 @@
         "original-unova": 147,
         "updated-unova": 198,
         "hisui": 231
-      }
+      },
+      "vg": 527360
     },
     {
       "id": 642,
@@ -42240,7 +43156,8 @@
         "original-unova": 148,
         "updated-unova": 199,
         "hisui": 232
-      }
+      },
+      "vg": 527360
     },
     {
       "id": 643,
@@ -42291,7 +43208,8 @@
         "original-unova": 149,
         "updated-unova": 295,
         "conquest-gallery": 197
-      }
+      },
+      "vg": 3072
     },
     {
       "id": 644,
@@ -42342,7 +43260,8 @@
         "original-unova": 150,
         "updated-unova": 296,
         "conquest-gallery": 198
-      }
+      },
+      "vg": 3072
     },
     {
       "id": 645,
@@ -42432,7 +43351,8 @@
         "original-unova": 151,
         "updated-unova": 200,
         "hisui": 233
-      }
+      },
+      "vg": 527360
     },
     {
       "id": 646,
@@ -42551,7 +43471,8 @@
         "national": 646,
         "original-unova": 152,
         "updated-unova": 297
-      }
+      },
+      "vg": 3072
     },
     {
       "id": 647,
@@ -42602,7 +43523,8 @@
         "original-unova": 153,
         "updated-unova": 298,
         "hyperspace": 118
-      }
+      },
+      "vg": 2100224
     },
     {
       "id": 648,
@@ -42688,7 +43610,8 @@
         "original-unova": 154,
         "updated-unova": 299,
         "hyperspace": 119
-      }
+      },
+      "vg": 2100224
     },
     {
       "id": 649,
@@ -42739,7 +43662,8 @@
         "original-unova": 155,
         "updated-unova": 300,
         "hyperspace": 120
-      }
+      },
+      "vg": 2100224
     },
     {
       "id": 650,
@@ -42792,7 +43716,8 @@
         "kalos-central": 1,
         "blueberry": 209,
         "lumiose-city": 213
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 651,
@@ -42845,7 +43770,8 @@
         "kalos-central": 2,
         "blueberry": 210,
         "lumiose-city": 214
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 652,
@@ -42900,7 +43826,8 @@
         "blueberry": 211,
         "lumiose-city": 215,
         "champions": 652
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 653,
@@ -42953,7 +43880,8 @@
         "kalos-central": 4,
         "blueberry": 212,
         "lumiose-city": 217
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 654,
@@ -43006,7 +43934,8 @@
         "kalos-central": 5,
         "blueberry": 213,
         "lumiose-city": 218
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 655,
@@ -43061,7 +43990,8 @@
         "blueberry": 214,
         "lumiose-city": 219,
         "champions": 655
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 656,
@@ -43114,7 +44044,8 @@
         "kalos-central": 7,
         "blueberry": 215,
         "lumiose-city": 209
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 657,
@@ -43167,7 +44098,8 @@
         "kalos-central": 8,
         "blueberry": 216,
         "lumiose-city": 210
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 658,
@@ -43257,7 +44189,8 @@
         "blueberry": 217,
         "lumiose-city": 211,
         "champions": 658
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 659,
@@ -43314,7 +44247,8 @@
         "kalos-central": 10,
         "galar": 48,
         "lumiose-city": 13
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 660,
@@ -43373,7 +44307,8 @@
         "galar": 49,
         "lumiose-city": 14,
         "champions": 660
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 661,
@@ -43433,7 +44368,8 @@
         "paldea": 19,
         "blueberry": 87,
         "lumiose-city": 10
-      }
+      },
+      "vg": 3330048
     },
     {
       "id": 662,
@@ -43493,7 +44429,8 @@
         "paldea": 20,
         "blueberry": 88,
         "lumiose-city": 11
-      }
+      },
+      "vg": 3330048
     },
     {
       "id": 663,
@@ -43554,7 +44491,8 @@
         "blueberry": 89,
         "lumiose-city": 12,
         "champions": 663
-      }
+      },
+      "vg": 3330048
     },
     {
       "id": 664,
@@ -43611,7 +44549,8 @@
         "kalos-central": 20,
         "paldea": 35,
         "lumiose-city": 15
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 665,
@@ -43664,7 +44603,8 @@
         "kalos-central": 21,
         "paldea": 36,
         "lumiose-city": 16
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 666,
@@ -43723,7 +44663,8 @@
         "paldea": 37,
         "lumiose-city": 17,
         "champions": 666
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 667,
@@ -43784,7 +44725,8 @@
         "paldea": 224,
         "blueberry": 36,
         "lumiose-city": 45
-      }
+      },
+      "vg": 3182592
     },
     {
       "id": 668,
@@ -43846,7 +44788,8 @@
         "blueberry": 37,
         "lumiose-city": 46,
         "champions": 668
-      }
+      },
+      "vg": 3182592
     },
     {
       "id": 669,
@@ -43903,7 +44846,8 @@
         "updated-poni": 44,
         "paldea": 145,
         "lumiose-city": 38
-      }
+      },
+      "vg": 3182592
     },
     {
       "id": 670,
@@ -43999,7 +44943,8 @@
         "paldea": 146,
         "lumiose-city": 39,
         "champions": 670
-      }
+      },
+      "vg": 3182592
     },
     {
       "id": 671,
@@ -44057,7 +45002,8 @@
         "paldea": 147,
         "lumiose-city": 40,
         "champions": 671
-      }
+      },
+      "vg": 3182592
     },
     {
       "id": 672,
@@ -44110,7 +45056,8 @@
         "kalos-central": 89,
         "paldea": 221,
         "lumiose-city": 41
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 673,
@@ -44163,7 +45110,8 @@
         "kalos-central": 90,
         "paldea": 222,
         "lumiose-city": 42
-      }
+      },
+      "vg": 3149824
     },
     {
       "id": 674,
@@ -44224,7 +45172,8 @@
         "updated-ulaula": 105,
         "galar": 111,
         "lumiose-city": 47
-      }
+      },
+      "vg": 2281472
     },
     {
       "id": 675,
@@ -44287,7 +45236,8 @@
         "galar": 112,
         "lumiose-city": 48,
         "champions": 675
-      }
+      },
+      "vg": 2281472
     },
     {
       "id": 676,
@@ -44340,7 +45290,8 @@
         "updated-poni": 14,
         "lumiose-city": 158,
         "champions": 676
-      }
+      },
+      "vg": 2134016
     },
     {
       "id": 677,
@@ -44398,7 +45349,8 @@
         "galar": 208,
         "blueberry": 104,
         "lumiose-city": 43
-      }
+      },
+      "vg": 3280896
     },
     {
       "id": 678,
@@ -44499,7 +45451,8 @@
         "blueberry": 105,
         "lumiose-city": 44,
         "champions": 678
-      }
+      },
+      "vg": 3280896
     },
     {
       "id": 679,
@@ -44549,7 +45502,8 @@
         "kalos-central": 117,
         "galar": 330,
         "lumiose-city": 71
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 680,
@@ -44599,7 +45553,8 @@
         "kalos-central": 118,
         "galar": 331,
         "lumiose-city": 72
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 681,
@@ -44685,7 +45640,8 @@
         "galar": 332,
         "lumiose-city": 73,
         "champions": 681
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 682,
@@ -44738,7 +45694,8 @@
         "kalos-central": 129,
         "galar": 212,
         "lumiose-city": 96
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 683,
@@ -44792,7 +45749,8 @@
         "galar": 213,
         "lumiose-city": 97,
         "champions": 683
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 684,
@@ -44845,7 +45803,8 @@
         "kalos-central": 131,
         "galar": 210,
         "lumiose-city": 98
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 685,
@@ -44899,7 +45858,8 @@
         "galar": 211,
         "lumiose-city": 99,
         "champions": 685
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 686,
@@ -44962,7 +45922,8 @@
         "isle-of-armor": 108,
         "blueberry": 80,
         "lumiose-city": 159
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 687,
@@ -45026,7 +45987,8 @@
         "blueberry": 81,
         "lumiose-city": 160,
         "champions": 687
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 688,
@@ -45084,7 +46046,8 @@
         "kalos-coastal": 21,
         "galar": 234,
         "lumiose-city": 34
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 689,
@@ -45143,7 +46106,8 @@
         "galar": 235,
         "lumiose-city": 35,
         "champions": 689
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 690,
@@ -45204,7 +46168,8 @@
         "isle-of-armor": 194,
         "paldea": 337,
         "lumiose-city": 161
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 691,
@@ -45266,7 +46231,8 @@
         "paldea": 338,
         "lumiose-city": 162,
         "champions": 691
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 692,
@@ -45318,7 +46284,8 @@
         "isle-of-armor": 196,
         "paldea": 339,
         "lumiose-city": 163
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 693,
@@ -45371,7 +46338,8 @@
         "paldea": 340,
         "lumiose-city": 164,
         "champions": 693
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 694,
@@ -45429,7 +46397,8 @@
         "kalos-coastal": 46,
         "galar": 318,
         "lumiose-city": 202
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 695,
@@ -45488,7 +46457,8 @@
         "galar": 319,
         "lumiose-city": 203,
         "champions": 695
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 696,
@@ -45544,7 +46514,8 @@
         "updated-akala": 144,
         "crown-tundra": 83,
         "lumiose-city": 193
-      }
+      },
+      "vg": 2265088
     },
     {
       "id": 697,
@@ -45601,7 +46572,8 @@
         "crown-tundra": 84,
         "lumiose-city": 194,
         "champions": 697
-      }
+      },
+      "vg": 2265088
     },
     {
       "id": 698,
@@ -45657,7 +46629,8 @@
         "updated-akala": 146,
         "crown-tundra": 85,
         "lumiose-city": 195
-      }
+      },
+      "vg": 2265088
     },
     {
       "id": 699,
@@ -45714,7 +46687,8 @@
         "crown-tundra": 86,
         "lumiose-city": 196,
         "champions": 699
-      }
+      },
+      "vg": 2265088
     },
     {
       "id": 700,
@@ -45775,7 +46749,8 @@
         "paldea": 187,
         "lumiose-city": 108,
         "champions": 700
-      }
+      },
+      "vg": 3854336
     },
     {
       "id": 701,
@@ -45838,7 +46813,8 @@
         "paldea": 301,
         "lumiose-city": 181,
         "champions": 701
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 702,
@@ -45901,7 +46877,8 @@
         "paldea": 200,
         "lumiose-city": 51,
         "champions": 702
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 703,
@@ -45963,7 +46940,8 @@
         "crown-tundra": 128,
         "kitakami": 167,
         "lumiose-city": 131
-      }
+      },
+      "vg": 3330048
     },
     {
       "id": 704,
@@ -46032,7 +47010,8 @@
         "paldea": 172,
         "kitakami": 178,
         "lumiose-city": 165
-      }
+      },
+      "vg": 3854336
     },
     {
       "id": 705,
@@ -46144,7 +47123,8 @@
         "paldea": 173,
         "kitakami": 179,
         "lumiose-city": 166
-      }
+      },
+      "vg": 3854336
     },
     {
       "id": 706,
@@ -46257,7 +47237,8 @@
         "kitakami": 180,
         "lumiose-city": 167,
         "champions": 706
-      }
+      },
+      "vg": 3854336
     },
     {
       "id": 707,
@@ -46318,7 +47299,8 @@
         "paldea": 240,
         "lumiose-city": 188,
         "champions": 707
-      }
+      },
+      "vg": 3330048
     },
     {
       "id": 708,
@@ -46382,7 +47364,8 @@
         "crown-tundra": 33,
         "kitakami": 68,
         "lumiose-city": 182
-      }
+      },
+      "vg": 3330048
     },
     {
       "id": 709,
@@ -46447,7 +47430,8 @@
         "kitakami": 69,
         "lumiose-city": 183,
         "champions": 709
-      }
+      },
+      "vg": 3330048
     },
     {
       "id": 710,
@@ -46632,7 +47616,8 @@
         "kalos-mountain": 63,
         "galar": 191,
         "lumiose-city": 204
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 711,
@@ -46818,7 +47803,8 @@
         "galar": 192,
         "lumiose-city": 205,
         "champions": 711
-      }
+      },
+      "vg": 2232320
     },
     {
       "id": 712,
@@ -46878,7 +47864,8 @@
         "hisui": 215,
         "paldea": 363,
         "lumiose-city": 174
-      }
+      },
+      "vg": 3805184
     },
     {
       "id": 713,
@@ -46982,7 +47969,8 @@
         "paldea": 364,
         "lumiose-city": 175,
         "champions": 713
-      }
+      },
+      "vg": 3805184
     },
     {
       "id": 714,
@@ -47046,7 +48034,8 @@
         "paldea": 303,
         "kitakami": 88,
         "lumiose-city": 186
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 715,
@@ -47111,7 +48100,8 @@
         "kitakami": 89,
         "lumiose-city": 187,
         "champions": 715
-      }
+      },
+      "vg": 3313664
     },
     {
       "id": 716,
@@ -47160,7 +48150,8 @@
         "national": 716,
         "kalos-mountain": 148,
         "lumiose-city": 228
-      }
+      },
+      "vg": 2101248
     },
     {
       "id": 717,
@@ -47210,7 +48201,8 @@
         "national": 717,
         "kalos-mountain": 149,
         "lumiose-city": 229
-      }
+      },
+      "vg": 2101248
     },
     {
       "id": 718,
@@ -47331,7 +48323,8 @@
         "original-alola": 205,
         "updated-alola": 263,
         "lumiose-city": 230
-      }
+      },
+      "vg": 2150400
     },
     {
       "id": 719,
@@ -47380,7 +48373,8 @@
       "dex": {
         "national": 719,
         "lumiose-city": 231
-      }
+      },
+      "vg": 2097152
     },
     {
       "id": 720,
@@ -47464,7 +48458,8 @@
       "dex": {
         "national": 720,
         "hyperspace": 121
-      }
+      },
+      "vg": 2097152
     },
     {
       "id": 721,
@@ -47513,7 +48508,8 @@
       "dex": {
         "national": 721,
         "hyperspace": 114
-      }
+      },
+      "vg": 2097152
     },
     {
       "id": 722,
@@ -47570,7 +48566,8 @@
         "updated-melemele": 1,
         "hisui": 1,
         "blueberry": 218
-      }
+      },
+      "vg": 1622016
     },
     {
       "id": 723,
@@ -47627,7 +48624,8 @@
         "updated-melemele": 2,
         "hisui": 2,
         "blueberry": 219
-      }
+      },
+      "vg": 1622016
     },
     {
       "id": 724,
@@ -47724,7 +48722,8 @@
         "hisui": 3,
         "blueberry": 220,
         "champions": 724
-      }
+      },
+      "vg": 1622016
     },
     {
       "id": 725,
@@ -47779,7 +48778,8 @@
         "updated-alola": 4,
         "updated-melemele": 4,
         "blueberry": 221
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 726,
@@ -47834,7 +48834,8 @@
         "updated-alola": 5,
         "updated-melemele": 5,
         "blueberry": 222
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 727,
@@ -47891,7 +48892,8 @@
         "updated-melemele": 6,
         "blueberry": 223,
         "champions": 727
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 728,
@@ -47946,7 +48948,8 @@
         "updated-alola": 7,
         "updated-melemele": 7,
         "blueberry": 224
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 729,
@@ -48001,7 +49004,8 @@
         "updated-alola": 8,
         "updated-melemele": 8,
         "blueberry": 225
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 730,
@@ -48058,7 +49062,8 @@
         "updated-melemele": 9,
         "blueberry": 226,
         "champions": 730
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 731,
@@ -48124,7 +49129,8 @@
         "updated-ulaula": 1,
         "updated-poni": 1,
         "blueberry": 47
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 732,
@@ -48190,7 +49196,8 @@
         "updated-ulaula": 2,
         "updated-poni": 2,
         "blueberry": 48
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 733,
@@ -48257,7 +49264,8 @@
         "updated-poni": 3,
         "blueberry": 49,
         "champions": 733
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 734,
@@ -48322,7 +49330,8 @@
         "updated-ulaula": 4,
         "updated-poni": 4,
         "paldea": 27
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 735,
@@ -48387,7 +49396,8 @@
         "updated-ulaula": 5,
         "updated-poni": 5,
         "paldea": 28
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 736,
@@ -48443,7 +49453,8 @@
         "updated-ulaula": 12,
         "galar": 16,
         "kitakami": 112
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 737,
@@ -48500,7 +49511,8 @@
         "updated-ulaula": 13,
         "galar": 17,
         "kitakami": 113
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 738,
@@ -48557,7 +49569,8 @@
         "updated-ulaula": 14,
         "galar": 18,
         "kitakami": 114
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 739,
@@ -48624,7 +49637,8 @@
         "paldea": 118,
         "blueberry": 72,
         "hyperspace": 87
-      }
+      },
+      "vg": 3194880
     },
     {
       "id": 740,
@@ -48693,7 +49707,8 @@
         "blueberry": 73,
         "hyperspace": 88,
         "champions": 740
-      }
+      },
+      "vg": 3194880
     },
     {
       "id": 741,
@@ -48857,7 +49872,8 @@
         "paldea": 100,
         "kitakami": 115,
         "blueberry": 74
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 742,
@@ -48922,7 +49938,8 @@
         "updated-poni": 42,
         "galar": 187,
         "kitakami": 16
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 743,
@@ -48987,7 +50004,8 @@
         "updated-poni": 43,
         "galar": 188,
         "kitakami": 17
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 744,
@@ -49050,7 +50068,8 @@
         "isle-of-armor": 157,
         "paldea": 89,
         "kitakami": 70
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 745,
@@ -49189,7 +50208,8 @@
         "paldea": 90,
         "kitakami": 71,
         "champions": 745
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 746,
@@ -49280,7 +50300,8 @@
         "updated-ulaula": 60,
         "galar": 155,
         "isle-of-armor": 110
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 747,
@@ -49344,7 +50365,8 @@
         "galar": 307,
         "isle-of-armor": 127,
         "paldea": 344
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 748,
@@ -49409,7 +50431,8 @@
         "isle-of-armor": 128,
         "paldea": 345,
         "champions": 748
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 749,
@@ -49474,7 +50497,8 @@
         "galar": 84,
         "paldea": 272,
         "kitakami": 129
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 750,
@@ -49540,7 +50564,8 @@
         "paldea": 273,
         "kitakami": 130,
         "champions": 750
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 751,
@@ -49600,7 +50625,8 @@
         "galar": 214,
         "crown-tundra": 91,
         "blueberry": 90
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 752,
@@ -49661,7 +50687,8 @@
         "crown-tundra": 92,
         "blueberry": 91,
         "champions": 752
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 753,
@@ -49718,7 +50745,8 @@
         "isle-of-armor": 17,
         "paldea": 247,
         "kitakami": 31
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 754,
@@ -49775,7 +50803,8 @@
         "isle-of-armor": 18,
         "paldea": 248,
         "kitakami": 32
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 755,
@@ -49837,7 +50866,8 @@
         "updated-akala": 79,
         "updated-ulaula": 70,
         "galar": 340
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 756,
@@ -49899,7 +50929,8 @@
         "updated-akala": 80,
         "updated-ulaula": 71,
         "galar": 341
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 757,
@@ -49958,7 +50989,8 @@
         "isle-of-armor": 159,
         "paldea": 120,
         "kitakami": 168
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 758,
@@ -50018,7 +51050,8 @@
         "paldea": 121,
         "kitakami": 169,
         "champions": 758
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 759,
@@ -50080,7 +51113,8 @@
         "updated-akala": 106,
         "updated-poni": 76,
         "galar": 94
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 760,
@@ -50142,7 +51176,8 @@
         "updated-akala": 107,
         "updated-poni": 77,
         "galar": 95
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 761,
@@ -50202,7 +51237,8 @@
         "updated-akala": 108,
         "galar": 52,
         "paldea": 81
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 762,
@@ -50262,7 +51298,8 @@
         "updated-akala": 109,
         "galar": 53,
         "paldea": 82
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 763,
@@ -50323,7 +51360,8 @@
         "galar": 54,
         "paldea": 83,
         "champions": 763
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 764,
@@ -50384,7 +51422,8 @@
         "updated-akala": 111,
         "isle-of-armor": 79,
         "blueberry": 58
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 765,
@@ -50448,7 +51487,8 @@
         "isle-of-armor": 89,
         "paldea": 313,
         "champions": 765
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 766,
@@ -50507,7 +51547,8 @@
         "isle-of-armor": 90,
         "paldea": 314,
         "champions": 766
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 767,
@@ -50563,7 +51604,8 @@
         "galar": 232,
         "isle-of-armor": 124,
         "hyperspace": 62
-      }
+      },
+      "vg": 2277376
     },
     {
       "id": 768,
@@ -50619,7 +51661,8 @@
         "galar": 233,
         "isle-of-armor": 125,
         "hyperspace": 63
-      }
+      },
+      "vg": 2277376
     },
     {
       "id": 769,
@@ -50677,7 +51720,8 @@
         "isle-of-armor": 133,
         "paldea": 322,
         "hyperspace": 25
-      }
+      },
+      "vg": 3325952
     },
     {
       "id": 770,
@@ -50735,7 +51779,8 @@
         "isle-of-armor": 134,
         "paldea": 323,
         "hyperspace": 26
-      }
+      },
+      "vg": 3325952
     },
     {
       "id": 771,
@@ -50791,7 +51836,8 @@
         "updated-alola": 256,
         "updated-akala": 157,
         "galar": 156
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 772,
@@ -50840,7 +51886,8 @@
         "original-alola": 203,
         "updated-alola": 259,
         "galar": 381
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 773,
@@ -50889,7 +51936,8 @@
         "original-alola": 204,
         "updated-alola": 260,
         "galar": 382
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 774,
@@ -50977,7 +52025,8 @@
         "updated-alola": 277,
         "updated-ulaula": 98,
         "blueberry": 106
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 775,
@@ -51029,7 +52078,8 @@
         "updated-alola": 286,
         "updated-ulaula": 107,
         "paldea": 315
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 776,
@@ -51082,7 +52132,8 @@
         "updated-alola": 288,
         "updated-ulaula": 109,
         "galar": 347
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 777,
@@ -51143,7 +52194,8 @@
         "updated-alola": 292,
         "updated-ulaula": 113,
         "galar": 348
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 778,
@@ -51201,7 +52253,8 @@
         "kitakami": 189,
         "hyperspace": 68,
         "champions": 778
-      }
+      },
+      "vg": 3325952
     },
     {
       "id": 779,
@@ -51263,7 +52316,8 @@
         "updated-ulaula": 141,
         "paldea": 335,
         "blueberry": 55
-      }
+      },
+      "vg": 1097728
     },
     {
       "id": 780,
@@ -51326,7 +52380,8 @@
         "galar": 346,
         "lumiose-city": 224,
         "champions": 780
-      }
+      },
+      "vg": 2277376
     },
     {
       "id": 781,
@@ -51380,7 +52435,8 @@
         "updated-poni": 91,
         "galar": 360,
         "crown-tundra": 162
-      }
+      },
+      "vg": 180224
     },
     {
       "id": 782,
@@ -51441,7 +52497,8 @@
         "galar": 392,
         "isle-of-armor": 165,
         "kitakami": 131
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 783,
@@ -51503,7 +52560,8 @@
         "galar": 393,
         "isle-of-armor": 166,
         "kitakami": 132
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 784,
@@ -51566,7 +52624,8 @@
         "isle-of-armor": 167,
         "kitakami": 133,
         "champions": 784
-      }
+      },
+      "vg": 1228800
     },
     {
       "id": 785,
@@ -51622,7 +52681,8 @@
         "original-melemele": 120,
         "updated-alola": 383,
         "updated-melemele": 150
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 786,
@@ -51678,7 +52738,8 @@
         "original-akala": 130,
         "updated-alola": 384,
         "updated-akala": 160
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 787,
@@ -51734,7 +52795,8 @@
         "original-ulaula": 130,
         "updated-alola": 385,
         "updated-ulaula": 160
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 788,
@@ -51790,7 +52852,8 @@
         "original-poni": 100,
         "updated-alola": 386,
         "updated-poni": 130
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 789,
@@ -51838,7 +52901,8 @@
         "national": 789,
         "original-alola": 289,
         "updated-alola": 387
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 790,
@@ -51886,7 +52950,8 @@
         "national": 790,
         "original-alola": 290,
         "updated-alola": 388
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 791,
@@ -51935,7 +53000,8 @@
         "national": 791,
         "original-alola": 291,
         "updated-alola": 389
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 792,
@@ -51984,7 +53050,8 @@
         "national": 792,
         "original-alola": 292,
         "updated-alola": 390
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 793,
@@ -52034,7 +53101,8 @@
         "national": 793,
         "original-alola": 293,
         "updated-alola": 391
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 794,
@@ -52084,7 +53152,8 @@
         "national": 794,
         "original-alola": 294,
         "updated-alola": 394
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 795,
@@ -52134,7 +53203,8 @@
         "national": 795,
         "original-alola": 295,
         "updated-alola": 395
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 796,
@@ -52183,7 +53253,8 @@
         "national": 796,
         "original-alola": 296,
         "updated-alola": 396
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 797,
@@ -52233,7 +53304,8 @@
         "national": 797,
         "original-alola": 297,
         "updated-alola": 397
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 798,
@@ -52283,7 +53355,8 @@
         "national": 798,
         "original-alola": 298,
         "updated-alola": 398
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 799,
@@ -52333,7 +53406,8 @@
         "national": 799,
         "original-alola": 299,
         "updated-alola": 399
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 800,
@@ -52485,7 +53559,8 @@
         "national": 800,
         "original-alola": 300,
         "updated-alola": 400
-      }
+      },
+      "vg": 49152
     },
     {
       "id": 801,
@@ -52536,7 +53611,8 @@
         "original-alola": 301,
         "updated-alola": 401,
         "hyperspace": 131
-      }
+      },
+      "vg": 2146304
     },
     {
       "id": 802,
@@ -52587,7 +53663,8 @@
         "original-alola": 302,
         "updated-alola": 402,
         "hyperspace": 122
-      }
+      },
+      "vg": 2146304
     },
     {
       "id": 803,
@@ -52634,7 +53711,8 @@
       "dex": {
         "national": 803,
         "updated-alola": 261
-      }
+      },
+      "vg": 32768
     },
     {
       "id": 804,
@@ -52682,7 +53760,8 @@
       "dex": {
         "national": 804,
         "updated-alola": 262
-      }
+      },
+      "vg": 32768
     },
     {
       "id": 805,
@@ -52731,7 +53810,8 @@
       "dex": {
         "national": 805,
         "updated-alola": 392
-      }
+      },
+      "vg": 32768
     },
     {
       "id": 806,
@@ -52780,7 +53860,8 @@
       "dex": {
         "national": 806,
         "updated-alola": 393
-      }
+      },
+      "vg": 32768
     },
     {
       "id": 807,
@@ -52829,7 +53910,8 @@
         "national": 807,
         "updated-alola": 403,
         "hyperspace": 132
-      }
+      },
+      "vg": 2129920
     },
     {
       "id": 808,
@@ -52878,7 +53960,8 @@
         "national": 808,
         "letsgo-kanto": 152,
         "hyperspace": 123
-      }
+      },
+      "vg": 2162688
     },
     {
       "id": 809,
@@ -52927,7 +54010,8 @@
         "national": 809,
         "letsgo-kanto": 153,
         "hyperspace": 124
-      }
+      },
+      "vg": 2162688
     },
     {
       "id": 810,
@@ -52979,7 +54063,8 @@
         "national": 810,
         "galar": 1,
         "blueberry": 227
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 811,
@@ -53031,7 +54116,8 @@
         "national": 811,
         "galar": 2,
         "blueberry": 228
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 812,
@@ -53083,7 +54169,8 @@
         "national": 812,
         "galar": 3,
         "blueberry": 229
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 813,
@@ -53135,7 +54222,8 @@
         "national": 813,
         "galar": 4,
         "blueberry": 230
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 814,
@@ -53187,7 +54275,8 @@
         "national": 814,
         "galar": 5,
         "blueberry": 231
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 815,
@@ -53239,7 +54328,8 @@
         "national": 815,
         "galar": 6,
         "blueberry": 232
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 816,
@@ -53291,7 +54381,8 @@
         "national": 816,
         "galar": 7,
         "blueberry": 233
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 817,
@@ -53343,7 +54434,8 @@
         "national": 817,
         "galar": 8,
         "blueberry": 234
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 818,
@@ -53395,7 +54487,8 @@
         "national": 818,
         "galar": 9,
         "blueberry": 235
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 819,
@@ -53450,7 +54543,8 @@
         "crown-tundra": 5,
         "paldea": 29,
         "kitakami": 72
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 820,
@@ -53505,7 +54599,8 @@
         "crown-tundra": 6,
         "paldea": 30,
         "kitakami": 73
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 821,
@@ -53563,7 +54658,8 @@
         "crown-tundra": 163,
         "paldea": 40,
         "hyperspace": 73
-      }
+      },
+      "vg": 3276800
     },
     {
       "id": 822,
@@ -53621,7 +54717,8 @@
         "crown-tundra": 164,
         "paldea": 41,
         "hyperspace": 74
-      }
+      },
+      "vg": 3276800
     },
     {
       "id": 823,
@@ -53681,7 +54778,8 @@
         "paldea": 42,
         "hyperspace": 75,
         "champions": 823
-      }
+      },
+      "vg": 3276800
     },
     {
       "id": 824,
@@ -53737,7 +54835,8 @@
         "national": 824,
         "galar": 10,
         "isle-of-armor": 14
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 825,
@@ -53794,7 +54893,8 @@
         "national": 825,
         "galar": 11,
         "isle-of-armor": 15
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 826,
@@ -53851,7 +54951,8 @@
         "national": 826,
         "galar": 12,
         "isle-of-armor": 16
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 827,
@@ -53907,7 +55008,8 @@
         "national": 827,
         "galar": 29,
         "hyperspace": 64
-      }
+      },
+      "vg": 2228224
     },
     {
       "id": 828,
@@ -53963,7 +55065,8 @@
         "national": 828,
         "galar": 30,
         "hyperspace": 65
-      }
+      },
+      "vg": 2228224
     },
     {
       "id": 829,
@@ -54019,7 +55122,8 @@
         "national": 829,
         "galar": 126,
         "crown-tundra": 166
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 830,
@@ -54075,7 +55179,8 @@
         "national": 830,
         "galar": 127,
         "crown-tundra": 167
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 831,
@@ -54131,7 +55236,8 @@
         "national": 831,
         "galar": 34,
         "crown-tundra": 3
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 832,
@@ -54187,7 +55293,8 @@
         "national": 832,
         "galar": 35,
         "crown-tundra": 4
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 833,
@@ -54245,7 +55352,8 @@
         "isle-of-armor": 56,
         "paldea": 57,
         "kitakami": 183
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 834,
@@ -54304,7 +55412,8 @@
         "isle-of-armor": 57,
         "paldea": 58,
         "kitakami": 184
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 835,
@@ -54356,7 +55465,8 @@
         "national": 835,
         "galar": 46,
         "crown-tundra": 155
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 836,
@@ -54408,7 +55518,8 @@
         "national": 836,
         "galar": 47,
         "crown-tundra": 156
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 837,
@@ -54465,7 +55576,8 @@
         "galar": 161,
         "crown-tundra": 176,
         "paldea": 91
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 838,
@@ -54523,7 +55635,8 @@
         "galar": 162,
         "crown-tundra": 177,
         "paldea": 92
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 839,
@@ -54581,7 +55694,8 @@
         "galar": 163,
         "crown-tundra": 178,
         "paldea": 93
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 840,
@@ -54640,7 +55754,8 @@
         "isle-of-armor": 19,
         "paldea": 108,
         "kitakami": 33
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 841,
@@ -54700,7 +55815,8 @@
         "paldea": 109,
         "kitakami": 34,
         "champions": 841
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 842,
@@ -54760,7 +55876,8 @@
         "paldea": 110,
         "kitakami": 35,
         "champions": 842
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 843,
@@ -54817,7 +55934,8 @@
         "galar": 312,
         "isle-of-armor": 174,
         "paldea": 270
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 844,
@@ -54875,7 +55993,8 @@
         "isle-of-armor": 175,
         "paldea": 271,
         "champions": 844
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 845,
@@ -54926,7 +56045,8 @@
         "galar": 309,
         "isle-of-armor": 93,
         "kitakami": 185
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 846,
@@ -54980,7 +56100,8 @@
         "isle-of-armor": 96,
         "paldea": 136,
         "kitakami": 90
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 847,
@@ -55034,7 +56155,8 @@
         "isle-of-armor": 97,
         "paldea": 137,
         "kitakami": 91
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 848,
@@ -55092,7 +56214,8 @@
         "galar": 310,
         "paldea": 198,
         "hyperspace": 102
-      }
+      },
+      "vg": 3276800
     },
     {
       "id": 849,
@@ -55193,7 +56316,8 @@
         "galar": 311,
         "paldea": 199,
         "hyperspace": 103
-      }
+      },
+      "vg": 3276800
     },
     {
       "id": 850,
@@ -55250,7 +56374,8 @@
         "national": 850,
         "galar": 159,
         "crown-tundra": 99
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 851,
@@ -55307,7 +56432,8 @@
         "national": 851,
         "galar": 160,
         "crown-tundra": 100
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 852,
@@ -55360,7 +56486,8 @@
         "galar": 351,
         "isle-of-armor": 129,
         "hyperspace": 66
-      }
+      },
+      "vg": 2228224
     },
     {
       "id": 853,
@@ -55413,7 +56540,8 @@
         "galar": 352,
         "isle-of-armor": 130,
         "hyperspace": 67
-      }
+      },
+      "vg": 2228224
     },
     {
       "id": 854,
@@ -55467,7 +56595,8 @@
         "crown-tundra": 132,
         "paldea": 237,
         "blueberry": 127
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 855,
@@ -55522,7 +56651,8 @@
         "paldea": 238,
         "blueberry": 128,
         "champions": 855
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 856,
@@ -55580,7 +56710,8 @@
         "crown-tundra": 40,
         "paldea": 282,
         "kitakami": 92
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 857,
@@ -55638,7 +56769,8 @@
         "crown-tundra": 41,
         "paldea": 283,
         "kitakami": 93
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 858,
@@ -55698,7 +56830,8 @@
         "paldea": 284,
         "kitakami": 94,
         "champions": 858
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 859,
@@ -55757,7 +56890,8 @@
         "crown-tundra": 37,
         "paldea": 285,
         "kitakami": 190
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 860,
@@ -55816,7 +56950,8 @@
         "crown-tundra": 38,
         "paldea": 286,
         "kitakami": 191
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 861,
@@ -55876,7 +57011,8 @@
         "paldea": 287,
         "kitakami": 192,
         "champions": 861
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 862,
@@ -55933,7 +57069,8 @@
         "national": 862,
         "galar": 33,
         "crown-tundra": 73
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 863,
@@ -55989,7 +57126,8 @@
         "national": 863,
         "galar": 183,
         "hyperspace": 6
-      }
+      },
+      "vg": 2228224
     },
     {
       "id": 864,
@@ -56040,7 +57178,8 @@
       "dex": {
         "national": 864,
         "galar": 237
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 865,
@@ -56092,7 +57231,8 @@
         "national": 865,
         "galar": 219,
         "hyperspace": 8
-      }
+      },
+      "vg": 2228224
     },
     {
       "id": 866,
@@ -56151,7 +57291,8 @@
         "crown-tundra": 12,
         "hyperspace": 110,
         "champions": 866
-      }
+      },
+      "vg": 2228224
     },
     {
       "id": 867,
@@ -56201,7 +57342,8 @@
         "galar": 328,
         "hyperspace": 61,
         "champions": 867
-      }
+      },
+      "vg": 2228224
     },
     {
       "id": 868,
@@ -56253,7 +57395,8 @@
         "national": 868,
         "galar": 185,
         "blueberry": 42
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 869,
@@ -56306,7 +57449,8 @@
         "galar": 186,
         "blueberry": 43,
         "champions": 869
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 870,
@@ -56361,7 +57505,8 @@
         "paldea": 300,
         "lumiose-city": 212,
         "champions": 870
-      }
+      },
+      "vg": 3276800
     },
     {
       "id": 871,
@@ -56416,7 +57561,8 @@
         "isle-of-armor": 126,
         "crown-tundra": 158,
         "paldea": 321
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 872,
@@ -56470,7 +57616,8 @@
         "galar": 349,
         "crown-tundra": 1,
         "paldea": 350
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 873,
@@ -56524,7 +57671,8 @@
         "galar": 350,
         "crown-tundra": 2,
         "paldea": 351
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 874,
@@ -56574,7 +57722,8 @@
         "galar": 369,
         "crown-tundra": 89,
         "paldea": 319
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 875,
@@ -56658,7 +57807,8 @@
         "galar": 370,
         "crown-tundra": 90,
         "paldea": 320
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 876,
@@ -56762,7 +57912,8 @@
         "paldea": 241,
         "kitakami": 193,
         "hyperspace": 52
-      }
+      },
+      "vg": 3276800
     },
     {
       "id": 877,
@@ -56816,7 +57967,8 @@
         "kitakami": 95,
         "hyperspace": 70,
         "champions": 877
-      }
+      },
+      "vg": 3276800
     },
     {
       "id": 878,
@@ -56869,7 +58021,8 @@
         "galar": 302,
         "crown-tundra": 108,
         "paldea": 124
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 879,
@@ -56922,7 +58075,8 @@
         "galar": 303,
         "crown-tundra": 109,
         "paldea": 125
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 880,
@@ -56979,7 +58133,8 @@
       "dex": {
         "national": 880,
         "galar": 374
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 881,
@@ -57036,7 +58191,8 @@
       "dex": {
         "national": 881,
         "galar": 375
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 882,
@@ -57093,7 +58249,8 @@
       "dex": {
         "national": 882,
         "galar": 376
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 883,
@@ -57150,7 +58307,8 @@
       "dex": {
         "national": 883,
         "galar": 377
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 884,
@@ -57207,7 +58365,8 @@
         "national": 884,
         "galar": 371,
         "blueberry": 161
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 885,
@@ -57265,7 +58424,8 @@
         "galar": 395,
         "crown-tundra": 110,
         "paldea": 305
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 886,
@@ -57323,7 +58483,8 @@
         "galar": 396,
         "crown-tundra": 111,
         "paldea": 306
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 887,
@@ -57382,7 +58543,8 @@
         "crown-tundra": 112,
         "paldea": 307,
         "champions": 887
-      }
+      },
+      "vg": 1179648
     },
     {
       "id": 888,
@@ -57465,7 +58627,8 @@
       "dex": {
         "national": 888,
         "galar": 398
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 889,
@@ -57548,7 +58711,8 @@
       "dex": {
         "national": 889,
         "galar": 399
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 890,
@@ -57597,7 +58761,8 @@
       "dex": {
         "national": 890,
         "galar": 400
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 891,
@@ -57644,7 +58809,8 @@
       "dex": {
         "national": 891,
         "isle-of-armor": 100
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 892,
@@ -57727,7 +58893,8 @@
       "dex": {
         "national": 892,
         "isle-of-armor": 101
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 893,
@@ -57776,7 +58943,8 @@
       "dex": {
         "national": 893,
         "isle-of-armor": 211
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 894,
@@ -57824,7 +58992,8 @@
       "dex": {
         "national": 894,
         "crown-tundra": 200
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 895,
@@ -57872,7 +59041,8 @@
       "dex": {
         "national": 895,
         "crown-tundra": 201
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 896,
@@ -57920,7 +59090,8 @@
       "dex": {
         "national": 896,
         "crown-tundra": 208
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 897,
@@ -57968,7 +59139,8 @@
       "dex": {
         "national": 897,
         "crown-tundra": 209
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 898,
@@ -58086,7 +59258,8 @@
       "dex": {
         "national": 898,
         "crown-tundra": 210
-      }
+      },
+      "vg": 131072
     },
     {
       "id": 899,
@@ -58143,7 +59316,8 @@
         "national": 899,
         "hisui": 50,
         "champions": 899
-      }
+      },
+      "vg": 524288
     },
     {
       "id": 900,
@@ -58202,7 +59376,8 @@
         "blueberry": 21,
         "hyperspace": 69,
         "champions": 900
-      }
+      },
+      "vg": 3670016
     },
     {
       "id": 901,
@@ -58294,7 +59469,8 @@
         "national": 901,
         "hisui": 114,
         "kitakami": 196
-      }
+      },
+      "vg": 1572864
     },
     {
       "id": 902,
@@ -58395,7 +59571,8 @@
         "hisui": 167,
         "kitakami": 195,
         "champions": 902
-      }
+      },
+      "vg": 1572864
     },
     {
       "id": 903,
@@ -58452,7 +59629,8 @@
         "national": 903,
         "hisui": 203,
         "champions": 903
-      }
+      },
+      "vg": 524288
     },
     {
       "id": 904,
@@ -58511,7 +59689,8 @@
         "blueberry": 147,
         "hyperspace": 38,
         "champions": 904
-      }
+      },
+      "vg": 3670016
     },
     {
       "id": 905,
@@ -58599,7 +59778,8 @@
       "dex": {
         "national": 905,
         "hisui": 234
-      }
+      },
+      "vg": 524288
     },
     {
       "id": 906,
@@ -58650,7 +59830,8 @@
       "dex": {
         "national": 906,
         "paldea": 1
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 907,
@@ -58701,7 +59882,8 @@
       "dex": {
         "national": 907,
         "paldea": 2
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 908,
@@ -58754,7 +59936,8 @@
         "national": 908,
         "paldea": 3,
         "champions": 908
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 909,
@@ -58805,7 +59988,8 @@
       "dex": {
         "national": 909,
         "paldea": 4
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 910,
@@ -58856,7 +60040,8 @@
       "dex": {
         "national": 910,
         "paldea": 5
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 911,
@@ -58909,7 +60094,8 @@
         "national": 911,
         "paldea": 6,
         "champions": 911
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 912,
@@ -58960,7 +60146,8 @@
       "dex": {
         "national": 912,
         "paldea": 7
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 913,
@@ -59011,7 +60198,8 @@
       "dex": {
         "national": 913,
         "paldea": 8
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 914,
@@ -59064,7 +60252,8 @@
         "national": 914,
         "paldea": 9,
         "champions": 914
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 915,
@@ -59119,7 +60308,8 @@
       "dex": {
         "national": 915,
         "paldea": 10
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 916,
@@ -59216,7 +60406,8 @@
       "dex": {
         "national": 916,
         "paldea": 11
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 917,
@@ -59267,7 +60458,8 @@
       "dex": {
         "national": 917,
         "paldea": 12
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 918,
@@ -59318,7 +60510,8 @@
       "dex": {
         "national": 918,
         "paldea": 13
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 919,
@@ -59369,7 +60562,8 @@
       "dex": {
         "national": 919,
         "paldea": 14
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 920,
@@ -59421,7 +60615,8 @@
       "dex": {
         "national": 920,
         "paldea": 15
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 921,
@@ -59476,7 +60671,8 @@
       "dex": {
         "national": 921,
         "paldea": 22
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 922,
@@ -59532,7 +60728,8 @@
       "dex": {
         "national": 922,
         "paldea": 23
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 923,
@@ -59588,7 +60785,8 @@
       "dex": {
         "national": 923,
         "paldea": 24
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 924,
@@ -59644,7 +60842,8 @@
         "national": 924,
         "paldea": 71,
         "kitakami": 97
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 925,
@@ -59701,7 +60900,8 @@
         "paldea": 72,
         "kitakami": 98,
         "champions": 925
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 926,
@@ -59753,7 +60953,8 @@
         "national": 926,
         "paldea": 76,
         "hyperspace": 79
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 927,
@@ -59805,7 +61006,8 @@
         "national": 927,
         "paldea": 77,
         "hyperspace": 80
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 928,
@@ -59857,7 +61059,8 @@
       "dex": {
         "national": 928,
         "paldea": 84
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 929,
@@ -59909,7 +61112,8 @@
       "dex": {
         "national": 929,
         "paldea": 85
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 930,
@@ -59961,7 +61165,8 @@
       "dex": {
         "national": 930,
         "paldea": 86
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 931,
@@ -60062,7 +61267,8 @@
         "national": 931,
         "paldea": 113,
         "hyperspace": 86
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 932,
@@ -60118,7 +61324,8 @@
         "national": 932,
         "paldea": 129,
         "hyperspace": 89
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 933,
@@ -60174,7 +61381,8 @@
         "national": 933,
         "paldea": 130,
         "hyperspace": 90
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 934,
@@ -60231,7 +61439,8 @@
         "paldea": 131,
         "hyperspace": 91,
         "champions": 934
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 935,
@@ -60283,7 +61492,8 @@
         "national": 935,
         "paldea": 165,
         "hyperspace": 97
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 936,
@@ -60337,7 +61547,8 @@
         "paldea": 166,
         "hyperspace": 98,
         "champions": 936
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 937,
@@ -60391,7 +61602,8 @@
         "paldea": 167,
         "hyperspace": 99,
         "champions": 937
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 938,
@@ -60446,7 +61658,8 @@
       "dex": {
         "national": 938,
         "paldea": 170
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 939,
@@ -60502,7 +61715,8 @@
         "national": 939,
         "paldea": 171,
         "champions": 939
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 940,
@@ -60558,7 +61772,8 @@
       "dex": {
         "national": 940,
         "paldea": 177
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 941,
@@ -60614,7 +61829,8 @@
       "dex": {
         "national": 941,
         "paldea": 178
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 942,
@@ -60670,7 +61886,8 @@
         "national": 942,
         "paldea": 196,
         "hyperspace": 100
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 943,
@@ -60726,7 +61943,8 @@
         "national": 943,
         "paldea": 197,
         "hyperspace": 101
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 944,
@@ -60783,7 +62001,8 @@
         "national": 944,
         "paldea": 202,
         "hyperspace": 104
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 945,
@@ -60840,7 +62059,8 @@
         "national": 945,
         "paldea": 203,
         "hyperspace": 105
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 946,
@@ -60892,7 +62112,8 @@
       "dex": {
         "national": 946,
         "paldea": 242
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 947,
@@ -60944,7 +62165,8 @@
       "dex": {
         "national": 947,
         "paldea": 243
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 948,
@@ -60993,7 +62215,8 @@
         "national": 948,
         "paldea": 244,
         "kitakami": 74
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 949,
@@ -61042,7 +62265,8 @@
         "national": 949,
         "paldea": 245,
         "kitakami": 75
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 950,
@@ -61098,7 +62322,8 @@
       "dex": {
         "national": 950,
         "paldea": 249
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 951,
@@ -61154,7 +62379,8 @@
         "national": 951,
         "paldea": 250,
         "hyperspace": 14
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 952,
@@ -61212,7 +62438,8 @@
         "paldea": 251,
         "hyperspace": 15,
         "champions": 952
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 953,
@@ -61264,7 +62491,8 @@
         "national": 953,
         "paldea": 254,
         "blueberry": 30
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 954,
@@ -61317,7 +62545,8 @@
         "national": 954,
         "paldea": 255,
         "blueberry": 31
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 955,
@@ -61372,7 +62601,8 @@
       "dex": {
         "national": 955,
         "paldea": 263
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 956,
@@ -61428,7 +62658,8 @@
         "national": 956,
         "paldea": 264,
         "champions": 956
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 957,
@@ -61485,7 +62716,8 @@
         "national": 957,
         "paldea": 279,
         "hyperspace": 16
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 958,
@@ -61542,7 +62774,8 @@
         "national": 958,
         "paldea": 280,
         "hyperspace": 17
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 959,
@@ -61600,7 +62833,8 @@
         "paldea": 281,
         "hyperspace": 18,
         "champions": 959
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 960,
@@ -61655,7 +62889,8 @@
       "dex": {
         "national": 960,
         "paldea": 288
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 961,
@@ -61710,7 +62945,8 @@
       "dex": {
         "national": 961,
         "paldea": 289
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 962,
@@ -61768,7 +63004,8 @@
         "national": 962,
         "paldea": 290,
         "kitakami": 134
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 963,
@@ -61815,7 +63052,8 @@
       "dex": {
         "national": 963,
         "paldea": 291
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 964,
@@ -61897,7 +63135,8 @@
         "national": 964,
         "paldea": 292,
         "champions": 964
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 965,
@@ -61949,7 +63188,8 @@
       "dex": {
         "national": 965,
         "paldea": 293
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 966,
@@ -62001,7 +63241,8 @@
       "dex": {
         "national": 966,
         "paldea": 294
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 967,
@@ -62055,7 +63296,8 @@
         "national": 967,
         "paldea": 295,
         "hyperspace": 19
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 968,
@@ -62109,7 +63351,8 @@
         "paldea": 296,
         "kitakami": 96,
         "champions": 968
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 969,
@@ -62163,7 +63406,8 @@
         "paldea": 308,
         "kitakami": 156,
         "hyperspace": 20
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 970,
@@ -62218,7 +63462,8 @@
         "kitakami": 157,
         "hyperspace": 21,
         "champions": 970
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 971,
@@ -62270,7 +63515,8 @@
         "national": 971,
         "paldea": 311,
         "hyperspace": 23
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 972,
@@ -62323,7 +63569,8 @@
         "paldea": 312,
         "hyperspace": 24,
         "champions": 972
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 973,
@@ -62381,7 +63628,8 @@
         "national": 973,
         "paldea": 346,
         "hyperspace": 28
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 974,
@@ -62436,7 +63684,8 @@
       "dex": {
         "national": 974,
         "paldea": 361
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 975,
@@ -62491,7 +63740,8 @@
       "dex": {
         "national": 975,
         "paldea": 362
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 976,
@@ -62544,7 +63794,8 @@
       "dex": {
         "national": 976,
         "paldea": 373
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 977,
@@ -62601,7 +63852,8 @@
         "national": 977,
         "paldea": 374,
         "hyperspace": 30
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 978,
@@ -62655,7 +63907,8 @@
         "national": 978,
         "paldea": 375,
         "hyperspace": 31
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 979,
@@ -62714,7 +63967,8 @@
         "kitakami": 101,
         "hyperspace": 3,
         "champions": 979
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 980,
@@ -62770,7 +64024,8 @@
       "dex": {
         "national": 980,
         "paldea": 54
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 981,
@@ -62828,7 +64083,8 @@
         "paldea": 193,
         "blueberry": 26,
         "champions": 981
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 982,
@@ -62884,7 +64140,8 @@
         "national": 982,
         "paldea": 189,
         "kitakami": 161
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 983,
@@ -62942,7 +64199,8 @@
         "paldea": 369,
         "kitakami": 188,
         "champions": 983
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 984,
@@ -62991,7 +64249,8 @@
       "dex": {
         "national": 984,
         "paldea": 376
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 985,
@@ -63040,7 +64299,8 @@
       "dex": {
         "national": 985,
         "paldea": 377
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 986,
@@ -63089,7 +64349,8 @@
       "dex": {
         "national": 986,
         "paldea": 378
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 987,
@@ -63138,7 +64399,8 @@
       "dex": {
         "national": 987,
         "paldea": 379
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 988,
@@ -63187,7 +64449,8 @@
       "dex": {
         "national": 988,
         "paldea": 380
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 989,
@@ -63236,7 +64499,8 @@
       "dex": {
         "national": 989,
         "paldea": 381
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 990,
@@ -63285,7 +64549,8 @@
       "dex": {
         "national": 990,
         "paldea": 382
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 991,
@@ -63334,7 +64599,8 @@
       "dex": {
         "national": 991,
         "paldea": 383
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 992,
@@ -63383,7 +64649,8 @@
       "dex": {
         "national": 992,
         "paldea": 384
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 993,
@@ -63432,7 +64699,8 @@
       "dex": {
         "national": 993,
         "paldea": 385
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 994,
@@ -63481,7 +64749,8 @@
       "dex": {
         "national": 994,
         "paldea": 386
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 995,
@@ -63530,7 +64799,8 @@
       "dex": {
         "national": 995,
         "paldea": 387
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 996,
@@ -63583,7 +64853,8 @@
         "national": 996,
         "paldea": 388,
         "hyperspace": 32
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 997,
@@ -63636,7 +64907,8 @@
         "national": 997,
         "paldea": 389,
         "hyperspace": 33
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 998,
@@ -63689,7 +64961,8 @@
         "national": 998,
         "paldea": 390,
         "hyperspace": 34
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 999,
@@ -63771,7 +65044,8 @@
         "national": 999,
         "paldea": 391,
         "hyperspace": 35
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 1000,
@@ -63821,7 +65095,8 @@
         "paldea": 392,
         "hyperspace": 36,
         "champions": 1000
-      }
+      },
+      "vg": 3145728
     },
     {
       "id": 1001,
@@ -63870,7 +65145,8 @@
       "dex": {
         "national": 1001,
         "paldea": 393
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1002,
@@ -63919,7 +65195,8 @@
       "dex": {
         "national": 1002,
         "paldea": 394
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1003,
@@ -63968,7 +65245,8 @@
       "dex": {
         "national": 1003,
         "paldea": 395
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1004,
@@ -64017,7 +65295,8 @@
       "dex": {
         "national": 1004,
         "paldea": 396
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1005,
@@ -64066,7 +65345,8 @@
       "dex": {
         "national": 1005,
         "paldea": 397
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1006,
@@ -64115,7 +65395,8 @@
       "dex": {
         "national": 1006,
         "paldea": 398
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1007,
@@ -64164,7 +65445,8 @@
       "dex": {
         "national": 1007,
         "paldea": 399
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1008,
@@ -64213,7 +65495,8 @@
       "dex": {
         "national": 1008,
         "paldea": 400
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1009,
@@ -64262,7 +65545,8 @@
       "dex": {
         "national": 1009,
         "blueberry": 241
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1010,
@@ -64311,7 +65595,8 @@
       "dex": {
         "national": 1010,
         "blueberry": 242
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1011,
@@ -64367,7 +65652,8 @@
       "dex": {
         "national": 1011,
         "kitakami": 36
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1012,
@@ -64419,7 +65705,8 @@
       "dex": {
         "national": 1012,
         "kitakami": 76
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1013,
@@ -64472,7 +65759,8 @@
         "national": 1013,
         "kitakami": 77,
         "champions": 1013
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1014,
@@ -64525,7 +65813,8 @@
       "dex": {
         "national": 1014,
         "kitakami": 197
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1015,
@@ -64578,7 +65867,8 @@
       "dex": {
         "national": 1015,
         "kitakami": 198
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1016,
@@ -64631,7 +65921,8 @@
       "dex": {
         "national": 1016,
         "kitakami": 199
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1017,
@@ -64782,7 +66073,8 @@
       "dex": {
         "national": 1017,
         "kitakami": 200
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1018,
@@ -64839,7 +66131,8 @@
         "national": 1018,
         "blueberry": 162,
         "champions": 1018
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1019,
@@ -64896,7 +66189,8 @@
         "national": 1019,
         "blueberry": 163,
         "champions": 1019
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1020,
@@ -64945,7 +66239,8 @@
       "dex": {
         "national": 1020,
         "blueberry": 236
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1021,
@@ -64994,7 +66289,8 @@
       "dex": {
         "national": 1021,
         "blueberry": 237
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1022,
@@ -65043,7 +66339,8 @@
       "dex": {
         "national": 1022,
         "blueberry": 239
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1023,
@@ -65092,7 +66389,8 @@
       "dex": {
         "national": 1023,
         "blueberry": 238
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1024,
@@ -65207,7 +66505,8 @@
       "dex": {
         "national": 1024,
         "blueberry": 240
-      }
+      },
+      "vg": 1048576
     },
     {
       "id": 1025,
@@ -65256,7 +66555,8 @@
       "dex": {
         "national": 1025,
         "blueberry": 243
-      }
+      },
+      "vg": 1048576
     }
   ]
 }

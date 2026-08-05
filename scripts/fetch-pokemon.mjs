@@ -94,6 +94,38 @@ const STAT_MAP = {
 };
 const STAT_KEYS = ["hp", "atk", "def", "spa", "spd", "spe"];
 
+// ── 게임(버전 그룹) 수집 규칙 ─────────────────────────────────────────
+// "이 게임에서 자력으로 얻을 수 있는가" 는 해당 게임의 지역도감 등재 여부로 본다.
+// species.pokedex_numbers (= 출력의 dex) 에 그 게임 도감 슬러그가 있으면 입수 가능.
+// 야생 조우(/pokemon/{id}/encounters)는 스타팅·화석·선물·진화를 전부 놓치므로 쓰지 않는다.
+//
+// 아래는 목록에서 빼는 버전 그룹. PokeAPI 의 32개 중 22개만 남는다.
+const EXCLUDE_VERSION_GROUPS = new Set([
+  // DLC — 본편 버전 그룹의 pokedexes 에 이미 포함돼 있어 중복이다.
+  //   sword-shield  = galar + isle-of-armor + crown-tundra
+  //   scarlet-violet = paldea + kitakami + blueberry
+  //   legends-za    = lumiose-city + hyperspace
+  "the-isle-of-armor",
+  "the-crown-tundra",
+  "the-teal-mask",
+  "the-indigo-disk",
+  "mega-dimension",
+  // 일본판 초기 버전 — 도감이 kanto 로 red-blue 와 동일하다.
+  "red-green-japan",
+  "blue-japan",
+  // 스핀오프 — 지역도감 자체가 없어 등재 판정이 불가능하다.
+  "colosseum",
+  "xd",
+  // 배틀 전용 타이틀 — 필드에서 "얻는다" 는 개념이 없다.
+  "champions",
+]);
+
+// 버전 그룹 라벨은 소속 버전들의 한국어 이름을 "·" 로 잇는다 ("레드·블루").
+// PokeAPI /version/{name} 에 ko 가 없을 때만 아래 폴백을 쓴다.
+const VERSION_KO_FALLBACK = {
+  "legends-za": "LEGENDS Z-A",
+};
+
 // ── 세마포어 (동시 요청 제한, 직접 구현) ──────────────────────────────
 class Semaphore {
   #max;
@@ -155,7 +187,8 @@ function romanGenToInt(generationName) {
 // endpoint: "pokemon-species" | "pokemon" | "evolution-chain"
 // key:      캐시 파일 이름(보통 id)
 // transform: 네트워크 응답을 캐시에 저장하기 전 추려낼 함수 (선택)
-async function fetchCached(endpoint, key, { transform } = {}) {
+// url:       기본 규칙(BASE/endpoint/key)이 아닌 주소를 쓸 때 (목록 엔드포인트 등)
+async function fetchCached(endpoint, key, { transform, url: urlOverride } = {}) {
   const dir = path.join(CACHE_DIR, endpoint);
   const file = path.join(dir, `${key}.json`);
 
@@ -165,7 +198,7 @@ async function fetchCached(endpoint, key, { transform } = {}) {
   }
 
   // 2) 네트워크 요청 + 지수 백오프 재시도
-  const url = `${BASE}/${endpoint}/${key}`;
+  const url = urlOverride ?? `${BASE}/${endpoint}/${key}`;
   let lastErr;
   for (let attempt = 0; attempt <= MAX_RETRY; attempt++) {
     try {
@@ -282,6 +315,84 @@ function extractNames(namesArr) {
   const out = {};
   for (const lang of OUTPUT_LANGS) out[lang] = raw[lang] ?? en;
   return out;
+}
+
+// ── 버전 그룹(게임) 목록 수집 ─────────────────────────────────────────
+// 반환: [{ key, gen, label, versions, pokedexes }] — 배열 순서가 곧 비트 인덱스다.
+// 순서는 PokeAPI 의 version-group 목록 순서(= 대체로 발매순)를 그대로 따른다.
+// 앱과 스크립트가 인덱스를 각자 하드코딩하면 어긋나므로, 이 배열을 그대로
+// data/pokemon.json 에 실어 단일 출처로 삼는다.
+async function collectVersionGroups(sem) {
+  const list = await fetchCached("version-group", "_index", {
+    url: `${BASE}/version-group?limit=200`,
+    // 목록 응답은 name 만 있으면 된다.
+    transform: (j) => ({ results: j.results.map((r) => ({ name: r.name })) }),
+  });
+
+  const keys = list.results
+    .map((r) => r.name)
+    .filter((k) => !EXCLUDE_VERSION_GROUPS.has(k));
+
+  const details = new Map();
+  await Promise.all(
+    keys.map((key) =>
+      sem.run(async () => {
+        const vg = await fetchCached("version-group", key, {
+          transform: (j) => ({
+            name: j.name,
+            generation: { name: j.generation.name },
+            pokedexes: j.pokedexes.map((p) => ({ name: p.name })),
+            versions: j.versions.map((v) => ({ name: v.name })),
+          }),
+        });
+        details.set(key, vg);
+      })
+    )
+  );
+
+  // 버전 한국어 이름 (라벨 조립용)
+  const versionKeys = [
+    ...new Set(keys.flatMap((k) => details.get(k).versions.map((v) => v.name))),
+  ];
+  const versionKo = new Map();
+  await Promise.all(
+    versionKeys.map((v) =>
+      sem.run(async () => {
+        const json = await fetchCached("version", v, {
+          transform: (j) => ({ name: j.name, names: j.names }),
+        });
+        const ko = json.names.find((n) => n.language.name === "ko");
+        versionKo.set(v, ko?.name ?? VERSION_KO_FALLBACK[v] ?? json.name);
+      })
+    )
+  );
+
+  return keys.map((key) => {
+    const vg = details.get(key);
+    const versions = vg.versions.map((v) => v.name);
+    return {
+      key,
+      gen: romanGenToInt(vg.generation.name),
+      label: versions.map((v) => versionKo.get(v) ?? v).join("·"),
+      versions,
+      pokedexes: vg.pokedexes.map((p) => p.name),
+    };
+  });
+}
+
+// 한 종의 게임 비트마스크. dex(도감 슬러그 → 엔트리번호)에 그 게임의 도감이
+// 하나라도 있으면 해당 비트를 켠다. 어느 게임에도 없으면 0.
+function gameMaskOf(dex, versionGroups) {
+  let mask = 0;
+  for (let i = 0; i < versionGroups.length; i++) {
+    for (const pd of versionGroups[i].pokedexes) {
+      if (pd in dex) {
+        mask |= 1 << i;
+        break;
+      }
+    }
+  }
+  return mask;
 }
 
 // ── 진행률 (stderr 한 줄 갱신) ────────────────────────────────────────
@@ -558,10 +669,25 @@ async function main() {
   // id 오름차순 보장
   pokemonOut.sort((a, b) => a.id - b.id);
 
+  // ── 3.2단계: 게임(버전 그룹)별 입수 가능 비트마스크 ──────────────────
+  // 이미 모아둔 dex(지역도감 등재 목록)만으로 계산하므로 추가 종 조회가 없다.
+  const versionGroups = await collectVersionGroups(sem);
+  if (versionGroups.length > 31) {
+    // 32비트 정수 한 칸을 넘으면 마스크 표현이 깨진다. 넘칠 일이 생기면
+    // 배열/BigInt 로 스키마를 바꿔야 하므로 조용히 넘어가지 않는다.
+    throw new Error(
+      `버전 그룹이 ${versionGroups.length}개로 31개를 넘었습니다. vg 마스크 스키마를 바꿔야 합니다.`
+    );
+  }
+  for (const p of pokemonOut) {
+    p.vg = gameMaskOf(p.dex, versionGroups);
+  }
+
   const generatedAt = new Date().toISOString();
   const output = {
     generatedAt,
     count: pokemonOut.length,
+    versionGroups,
     pokemon: pokemonOut,
   };
   await writeFile(
@@ -622,6 +748,15 @@ async function main() {
     regional: allForms.filter((f) => f.isRegional).length,
     speciesWithForms: pokemonOut.filter((p) => p.forms.length > 0).length,
   };
+
+  // 게임별 입수 가능 종 수 (스팟체크용 — 칸토 151, 갈라르 400 등과 대조한다)
+  const gameCounts = {};
+  versionGroups.forEach((vg, i) => {
+    const bit = 1 << i;
+    gameCounts[vg.key] = pokemonOut.filter((p) => (p.vg & bit) !== 0).length;
+  });
+  // 어느 게임 지역도감에도 없는 종 (전국도감에만 있는 경우)
+  const noGameCount = pokemonOut.filter((p) => p.vg === 0).length;
 
   // 종족값 총합 분포
   const totals = pokemonOut.map((p) => p.stats.total);
@@ -773,6 +908,11 @@ async function main() {
     stageDistribution: stageDist,
     requiresTradeCount: tradeCount,
     forms: formStats,
+    games: {
+      versionGroupCount: versionGroups.length,
+      countsByGame: gameCounts,
+      noGameCount,
+    },
     statTotal: {
       min: totalMin,
       max: totalMax,
